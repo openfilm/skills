@@ -1,0 +1,11 @@
+{
+  "name": "openfilm-skills",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=22.2"
+  }
+}
