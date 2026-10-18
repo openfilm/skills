@@ -21,7 +21,6 @@ proof, so the viewer leaves knowing what it is and wanting it. Surprise us; the 
 
 ## What you have
 
-OpenFilm's own headless browser captures the live product with nothing to install: `npx openfilm capture --help`.
 Anything you can make pictures and motion with: the web platform and any library on it, Blender or any renderer whose
 output becomes a clip, any font whose license allows it, music and sound from `npx openfilm get`, your own built-in
 tools, and services the person has keys for. OpenFilm's own rules still hold: the picture at t depends on t alone, a

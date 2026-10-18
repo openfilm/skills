@@ -36,8 +36,8 @@ brief, in five parts.
    - what can be measured is measured, apart from whatever made it, and reported in numbers ("each word within two
      frames of the voice");
    - the film belongs to its material: "If the same film could carry any other song, it is not done."
-4. **What you have.** What OpenFilm offers that an agent cannot guess: `npx openfilm get`, `look` and `capture`, the
-   rules that matter for this film (the picture at t depends on t alone, a page has no sound, a recording is trimmed,
+4. **What you have.** What OpenFilm offers that an agent cannot guess: `npx openfilm get` and `look`, the rules
+   that matter for this film (the picture at t depends on t alone, a page has no sound, a recording is trimmed,
    never re-encoded), the agent's own built-in tools, the services the person has keys for. Open everything else in a
    sentence ("the web platform and any library on it, Blender or any renderer whose output becomes a clip") instead of
    listing techniques. Ask before anything large is downloaded.
