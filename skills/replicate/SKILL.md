@@ -1,13 +1,14 @@
 ---
 name: replicate
-description: Remake a reference video in OpenFilm, as close as the person wants it, from frame for frame to its structure, rhythm, look and motion carrying their own content. Use when the person gives a video, as a file or a link, and asks for an exact copy of it, one like it, its style or pacing, or a remake for their product or topic (复刻, 照着做, 做个同款, 一模一样, 仿这个视频).
+description: Remake a reference video in OpenFilm, as close as the person wants it, from frame for frame to its structure, rhythm, look and motion carrying their own content. Use when the person gives a video, as a file or a link, and asks for an exact copy of it, one like it, its style or pacing, or a remake for their product or topic (复刻, 照着做, 做个同款, 一模一样, 仿这个视频, 按这种包装剪我的素材).
 ---
 
 # Replicate a video
 
-Remake a video the person admires, as close as they want it: the same film frame for frame, or its form (the parts,
-the rhythm, the look, the way things move) carrying their own content. When their words do not say which, ask. Either
-way it is made again in OpenFilm, so every part of it can be changed.
+Remake a video the person admires, as close as they want it. Most often they want its packaging (the rhythm, the look,
+the type and the way things move, the sound) put on their own material and story; sometimes the same film frame for
+frame. When their words do not say which, ask. Either way it is made again in OpenFilm, so every part of it can be
+changed.
 
 ## What has to be true
 
@@ -31,10 +32,18 @@ your own built-in tools, and services the person has keys for. OpenFilm's own ru
 depends on t alone, a page has no sound, and what you render elsewhere enters as a clip under `assets/` with the script
 that made it. Ask before downloading anything large onto the person's computer.
 
+Two scripts measure what looking frame by frame cannot. `node <this skill's folder>/scripts/breakdown.mjs <reference>`
+writes the reference shot by shot into `references/`: its cuts, each shot's frames, where its picture changes and its
+sounds hit, and its words once `npx openfilm get asr` has transcribed it.
+`node <this skill's folder>/scripts/compare.mjs <reference> <video of the film>` takes the same measurements of a
+render of the film, reports how many frames each moment is off, and finds any picture, sound or line of the reference
+that got into the film.
+
 ## With the person
 
 What they ask for comes before anything here. The reference (a file, or a link you can download), how close they want
 it, what their version is about and the material they have (footage, product shots, a logo, their voice), and where it
 will be posted. Ask without holding up the work. When done, tell them in a few lines what was kept, what changed and
 why, how close it is, and, if they will post it, which parts belong to someone else (footage, music, voice, faces, a
-logo, words, typefaces).
+logo, words, typefaces). When they took the packaging, offer to keep it as a skill of their own, its brief written
+from what you measured, so their next films can wear it too (`npx openfilm skill add <folder>`).
