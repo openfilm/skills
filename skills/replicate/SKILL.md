@@ -33,11 +33,11 @@ depends on t alone, a page has no sound, and what you render elsewhere enters as
 that made it. Ask before downloading anything large onto the person's computer.
 
 Two scripts measure what looking frame by frame cannot. `node <this skill's folder>/scripts/breakdown.mjs <reference>`
-writes the reference shot by shot into `references/`: its cuts, each shot's frames, where its picture changes and its
-sounds hit, and its words once `npx openfilm get asr` has transcribed it.
+writes the reference shot by shot into `references/`: its cuts, each shot's frames, motion and colours, where its
+picture changes and its sounds hit, and its words once `npx openfilm get asr` has transcribed it.
 `node <this skill's folder>/scripts/compare.mjs <reference> <video of the film>` takes the same measurements of a
-render of the film, reports how many frames each moment is off, and finds any picture, sound or line of the reference
-that got into the film.
+render of the film, reports how many frames each moment is off and how far each shot's colour is, and finds any
+picture, sound or line of the reference that got into the film.
 
 ## With the person
 

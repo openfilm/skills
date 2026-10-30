@@ -9,7 +9,8 @@
  * appears), where a sound hits, and when each word is said, read from the WebVTT beside the video as
  * `openfilm get asr` writes it (for the film, else from the transcripts of its clips in film.html). Each moment of the
  * reference is paired with the film's nearest, the film's times scaled when the two lengths differ, and the gap is
- * reported in frames. Then what must never be in the film: a frame of the reference (a perceptual hash, then a pixel
+ * reported in frames; each shot's colour (brightness, saturation, warmth) against the film's over the same time.
+ * Then what must never be in the film: a frame of the reference (a perceptual hash, then a pixel
  * check), a stretch of its sound (spectral landmarks), a clip whose file is the reference; and how many of its words
  * the film repeats. Exits 1 when a picture, a sound or a file of the reference is in the film.
  *
@@ -38,7 +39,8 @@ const RUN_CJK = 12, RUN_WORDS = 8;
 
 /**
  * @typedef {{ t: number, end: number, text: string }} Word
- * @typedef {{ t: number, mafd: number, hash: Uint32Array, cropHash?: Uint32Array, small: Uint8Array, cropSmall?: Uint8Array }} Frame
+ * @typedef {{ brightness: number, saturation: number, warmth: number }} Colour
+ * @typedef {{ t: number, mafd: number, rgb: Uint8Array, colour: Colour, hash: Uint32Array, cropHash?: Uint32Array, small: Uint8Array, cropSmall?: Uint8Array }} Frame
  * @typedef {{ x: number, y: number, w: number, h: number }} Crop
  */
 
@@ -54,7 +56,7 @@ function run(cmd, args, onData) {
     p.on('close', (code) => {
       const said = Buffer.concat(err).toString();
       if (code === 0) ok({ out: Buffer.concat(out), err: said });
-      else fail(new Error(`${cmd} ${args.includes('-i') ? args[args.indexOf('-i') + 1] : ''}: ${said.trim().split('\n').slice(-2).join(' ')}`));
+      else fail(new Error(`${cmd} ${args.includes('-i') ? args[args.indexOf('-i') + 1] : args.at(-1)}:${said.trim().split('\n').slice(-2).join(' ')}`));
     });
   });
 }
@@ -115,7 +117,49 @@ function phash(/** @type {Uint8Array} */ px) {
 const bits = (/** @type {number} */ v) => { v -= (v >>> 1) & 0x55555555; v = (v & 0x33333333) + ((v >>> 2) & 0x33333333); return (((v + (v >>> 4)) & 0x0f0f0f0f) * 0x01010101) >>> 24; };
 const distance = (/** @type {Uint32Array} */ a, /** @type {Uint32Array} */ b) => bits(a[0] ^ b[0]) + bits(a[1] ^ b[1]);
 
-/** Every frame: its time, how much it moved from the last, its hash and a 48×48 grey copy; `crop` adds the same of that part. @param {string} file @param {Crop} [crop] */
+/** Brightness and saturation (0 to 1) and warmth (red less blue, -1 to 1) of an interleaved RGB picture. @returns {Colour} */
+export function colourOf(/** @type {Uint8Array} */ rgb) {
+  let light = 0, sat = 0, warm = 0;
+  const n = rgb.length / 3;
+  for (let i = 0; i < rgb.length; i += 3) {
+    const r = rgb[i], g = rgb[i + 1], b = rgb[i + 2], hi = Math.max(r, g, b);
+    light += (r * 77 + g * 150 + b * 29) / 256;
+    sat += hi ? (hi - Math.min(r, g, b)) / hi : 0;
+    warm += r - b;
+  }
+  return { brightness: round(light / n / 255, 3), saturation: round(sat / n, 3), warmth: round(warm / n / 255, 3) };
+}
+
+/** The main colours of an interleaved RGB picture: k-means from dark to light seeds, each as hex with its share. */
+export function palette(/** @type {Uint8Array} */ rgb, k = 4) {
+  const n = rgb.length / 3;
+  const sum = (/** @type {number} */ i) => rgb[i * 3] + rgb[i * 3 + 1] + rgb[i * 3 + 2];
+  const order = Array.from({ length: n }, (_, i) => i).sort((a, b) => sum(a) - sum(b));
+  let centres = Array.from({ length: k }, (_, j) => { const i = order[Math.floor((j + 0.5) * n / k)]; return [rgb[i * 3], rgb[i * 3 + 1], rgb[i * 3 + 2]]; });
+  const near = new Uint8Array(n);
+  for (let pass = 0; pass < 10; pass += 1) {
+    const sums = centres.map(() => [0, 0, 0, 0]);
+    for (let i = 0; i < n; i += 1) {
+      let best = 0, bestD = Infinity;
+      centres.forEach((c, j) => {
+        const d = (rgb[i * 3] - c[0]) ** 2 + (rgb[i * 3 + 1] - c[1]) ** 2 + (rgb[i * 3 + 2] - c[2]) ** 2;
+        if (d < bestD) { bestD = d; best = j; }
+      });
+      near[i] = best;
+      const s = sums[best];
+      s[0] += rgb[i * 3]; s[1] += rgb[i * 3 + 1]; s[2] += rgb[i * 3 + 2]; s[3] += 1;
+    }
+    centres = centres.map((c, j) => (sums[j][3] ? sums[j].slice(0, 3).map((v) => v / sums[j][3]) : c));
+  }
+  const hex = (/** @type {number[]} */ c) => `#${c.map((v) => Math.round(v).toString(16).padStart(2, '0')).join('')}`;
+  return centres.map((c, j) => ({ colour: hex(c), share: round(near.filter((x) => x === j).length / n, 2) }))
+    .filter((c) => c.share >= 0.05).sort((a, b) => b.share - a.share);
+}
+
+/**
+ * Every frame: its time, how much it moved from the last, its colour and a 32×32 copy, its hash and a 48×48 grey copy;
+ * `crop` adds the hash and grey copy of that part. @param {string} file @param {Crop} [crop]
+ */
 async function pictures(file, crop) {
   const size = SIDE * SIDE * 3;
   /** @type {Omit<Frame, 't'>[]} */
@@ -134,7 +178,7 @@ async function pictures(file, crop) {
       mafd = mafd / coarse.length / 255 * 100;
     }
     last = coarse;
-    const frame = { mafd, hash: phash(shrink(grey, SIDE, 1, 0, whole, 32)), small: shrink(grey, SIDE, 1, 0, whole, 48) };
+    const frame = { mafd, rgb: coarse, colour: colourOf(coarse), hash: phash(shrink(grey, SIDE, 1, 0, whole, 32)), small: shrink(grey, SIDE, 1, 0, whole, 48) };
     if (crop) Object.assign(frame, { cropHash: phash(shrink(grey, SIDE, 1, 0, crop, 32)), cropSmall: shrink(grey, SIDE, 1, 0, crop, 48) });
     frames.push(frame);
   };
@@ -340,23 +384,27 @@ export const transcriptOf = (file) => file.slice(0, file.length - extname(file).
 
 /** film.html's clips: element, file (relative to film.html), in and out points, place, speed, heard. @param {string} html */
 function clips(html) {
-  const body = readFileSync(html, 'utf8');
+  const body = readFileSync(html, 'utf8').replace(/<!--[\s\S]*?-->/g, '');
+  /* attributes, a quoted value may hold a ">" (the person's overrides) */
+  const attrs = String.raw`((?:[^>"']|"[^"]*"|'[^']*')*)`;
   const out = [];
-  for (const [, track, inner] of body.matchAll(/<section\b([^>]*)>([\s\S]*?)<\/section>/g)) {
+  for (const [, track, inner] of body.matchAll(new RegExp(String.raw`<section\b${attrs}>([\s\S]*?)<\/section>`, 'g'))) {
     const off = /(?:^|\s)(hidden|muted)(?=[\s=>]|$)/.test(track);
-    for (const [, tag, attrs] of inner.matchAll(/<(iframe|video|img|audio)\b([^>]*)>/g)) {
+    for (const [, tag, own] of inner.matchAll(new RegExp(String.raw`<(iframe|video|img|audio)\b${attrs}>`, 'g'))) {
       const attr = (/** @type {string} */ name) => {
-        const m = new RegExp(`(?:^|\\s)${name}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))`).exec(attrs);
+        const m = new RegExp(`(?:^|\\s)${name}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))`).exec(own);
         return m ? (m[1] ?? m[2] ?? m[3]) : undefined;
       };
       const src = attr('src');
       if (!src) continue;
       const [path, fragment = ''] = src.split('#');
       const t = /t=([\d.]*)(?:,([\d.]+))?/.exec(fragment);
+      let file = path.replace(/&amp;/g, '&');
+      try { file = decodeURI(file); } catch { /* an escape that is not one: the path as written */ }
       out.push({
-        tag, path: decodeURI(path), from: Number(t?.[1] || 0), to: t?.[2] ? Number(t[2]) : Infinity,
+        tag, path: file, from: Number(t?.[1] || 0), to: t?.[2] ? Number(t[2]) : Infinity,
         at: Number(attr('at') ?? 0), speed: Number(attr('speed') ?? 1),
-        heard: !off && !/(?:^|\s)muted(?=[\s=>]|$)/.test(attrs),
+        heard: !off && !/(?:^|\s)muted(?=[\s=>]|$)/.test(own) && Number(attr('volume') ?? 1) > 0,
       });
     }
   }
@@ -569,6 +617,16 @@ function leakedFiles(/** @type {string} */ html, /** @type {string} */ reference
 
 const fmt = (/** @type {number} */ t) => t.toFixed(2);
 
+/** What a colour is measured by. */
+const COLOUR = /** @type {const} */ (['brightness', 'saturation', 'warmth']);
+
+/** The mean colour of some frames; null when there are none. @param {Frame[]} frames @returns {Colour | null} */
+export function meanColour(frames) {
+  if (!frames.length) return null;
+  const of = (/** @type {keyof Colour} */ c) => round(frames.reduce((s, f) => s + f.colour[c], 0) / frames.length, 3);
+  return { brightness: of('brightness'), saturation: of('saturation'), warmth: of('warmth') };
+}
+
 /** The compare report: lines of text, and the numbers. */
 export async function compare(/** @type {string} */ refFile, /** @type {string} */ filmFile, { fps = 30, scale = true, film: html = /** @type {string | null} */ (null) } = {}) {
   const [refInfo, filmInfo] = await Promise.all([probe(refFile), probe(filmFile)]);
@@ -610,6 +668,25 @@ export async function compare(/** @type {string} */ refFile, /** @type {string} 
   else lines.push(`Words       not measured: ${!ref.words ? `no ${transcriptOf(refFile)} (npx openfilm get asr --src ${refFile})` : `no words for the film (a ${transcriptOf(filmFile)}, or clips with transcripts in film.html)`}`);
   const hits = (/** @type {{ t: number, strength: number }[]} */ list) => list.filter((o) => o.strength >= HIT).map((o) => o.t);
   if (refInfo.sound || filmInfo.sound) moments('Sound hits ', hits(ref.sounds), hits(film.sounds), 0.25);
+  /* the colour of each of the reference's shots against the film's frames over the same time */
+  const edges = [0, ...ref.cuts, ref.duration];
+  const shots = [];
+  for (let i = 0; i + 1 < edges.length; i += 1) {
+    const a = edges[i], b = edges[i + 1];
+    const r = meanColour(ref.frames.filter((f) => f.t >= a && f.t < b));
+    const f = meanColour(film.frames.filter((x) => x.t * k >= a && x.t * k < b));
+    if (r && f) shots.push({ from: a, to: b, reference: r, film: f, off: Math.max(...COLOUR.map((c) => Math.abs(f[c] - r[c]))) });
+  }
+  result.colour = shots;
+  if (shots.length) {
+    const mean = (/** @type {keyof Colour} */ c) => (shots.reduce((s, x) => s + Math.abs(x.film[c] - x.reference[c]) * (x.to - x.from), 0) / shots.reduce((s, x) => s + x.to - x.from, 0)).toFixed(2);
+    const worst = shots.filter((s) => s.off > 0.1).sort((x, y) => y.off - x.off).slice(0, 5).map((s) => {
+      const c = COLOUR.reduce((m, n) => (Math.abs(s.film[n] - s.reference[n]) > Math.abs(s.film[m] - s.reference[m]) ? n : m));
+      const d = s.film[c] - s.reference[c];
+      return `${fmt(s.from)}–${fmt(s.to)} (${c} ${d > 0 ? '+' : ''}${d.toFixed(2)})`;
+    });
+    lines.push(`Colour      off by ${COLOUR.map((c) => `${c} ${mean(c)}`).join(', ')} on average, shot by shot${worst.length ? `; most off: ${worst.join(', ')}` : ''}`);
+  }
   const pictures = leakedPictures(ref.frames, film.frames);
   const sound = leakedSound(ref.landmarks, film.landmarks);
   const files = html ? leakedFiles(html, refFile) : [];
@@ -618,7 +695,7 @@ export async function compare(/** @type {string} */ refFile, /** @type {string} 
   const leaked = pictures.length + sound.length + files.length > 0;
   lines.push('');
   if (leaked) {
-    lines.push('THE REFERENCE IS IN THE FILM. It never goes in unless the person asked for that part:');
+    lines.push('THE REFERENCE IS IN THE FILM. It never goes in unless the person asked for that part, or gave you the same material:');
     for (const f of files) lines.push(`  file     film.html plays ${f}`);
     for (const p of pictures) lines.push(`  picture  film ${fmt(p.from)}–${fmt(p.to)} s shows the reference's frames from ${fmt(p.refFrom)} s (pixels ${p.score.toFixed(2)} alike)`);
     for (const s of sound) lines.push(`  sound    film ${fmt(s.from)}–${fmt(s.to)} s plays the reference's sound from ${fmt(s.refFrom)} s (${s.count} landmarks)`);
@@ -636,8 +713,8 @@ export async function compare(/** @type {string} */ refFile, /** @type {string} 
 const HELP = `node compare.mjs <reference video> <film video> [options]
 
   Measures both videos the same way and reports, in frames, how far each cut, change, word and sound hit of the
-  reference is from the film's; then whether any frame, sound or file of the reference is in the film, and how many
-  of its words the film repeats. Exits 1 when a picture, a sound or a file of the reference is in the film.
+  reference is from the film's, and how far each shot's colour is; then whether any frame, sound or file of the
+  reference is in the film, and how many of its words the film repeats. Exits 1 when a picture, a sound or a file of the reference is in the film.
 
   The film video: render one for measuring, e.g. npx openfilm render --subtitles --out .film/cache/replicate/film.mp4
   Words: the WebVTT beside each video (npx openfilm get asr --src <video>); for the film, else its clips' transcripts.
