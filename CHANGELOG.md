@@ -1,6 +1,15 @@
 # Changes
 
-Each skill has its own version, in its `openfilm.json`. Newest first.
+What changed in this index, the spec and the checks. Each skill keeps its own changes in its own repository. Newest
+first.
+
+## The index
+
+The skills moved out: each one now lives in a repository of its own, and this repository lists them in `index.json`,
+each pinned to one commit. The spec says how a skill's repository is laid out, `template/` is one to start from, and
+its check is a workflow any skill's repository calls.
+
+The first ten briefs are retired. The last of them is at commit `1111136`.
 
 ## keynote 0.1.1, screen-demo 0.1.1
 

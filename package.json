@@ -3,7 +3,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "pin": "node scripts/pin.mjs"
   },
   "engines": {
     "node": ">=22.2"

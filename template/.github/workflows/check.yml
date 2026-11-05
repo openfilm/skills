@@ -1,0 +1,11 @@
+name: check
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    uses: openfilm/skills/.github/workflows/skill.yml@main

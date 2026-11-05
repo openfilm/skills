@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0",
+  "repository": "https://github.com/you/skill-my-skill/tree/main/skills/my-skill",
+  "kind": "workflow",
+  "icon": "film",
+  "title": { "en": "My skill", "zh-CN": "我的 skill", "ja": "マイスキル", "ko": "내 스킬", "es": "Mi skill" },
+  "summary": {
+    "en": "One line on the film it makes.",
+    "zh-CN": "一句话说它做什么片子。",
+    "ja": "どんな映像を作るかを一行で。",
+    "ko": "어떤 영상을 만드는지 한 줄로.",
+    "es": "Una línea sobre el video que hace."
+  },
+  "details": {
+    "en": "Best for: …\nWhat it does: …",
+    "zh-CN": "适合：…\n它会：…",
+    "ja": "おすすめ：…\nできること：…",
+    "ko": "추천 대상: …\n하는 일: …",
+    "es": "Ideal para: …\nQué hace: …"
+  }
+}

@@ -8,17 +8,27 @@ better than the telling.
 A skill is read by everyone who uses it. Whatever look it carries, every film made with it ends up carrying, so the
 look has to come from the person's own material and the agent's ideas, never from the skill.
 
-## The folder
+## The repository
+
+Each skill has a repository of its own, so it has its own issues, versions and history. Start from
+[template/](template):
 
 ```
-my-skill/
-  SKILL.md         the brief (required)
-  openfilm.json    how OpenFilm shows it: its title, summary, version and cover
-  cover.jpg        its picture in OpenFilm, 16:9
+skill-my-skill/
+  skills/my-skill/     the skill: what the agent gets, and nothing else
+    SKILL.md           the brief (required)
+    openfilm.json      how OpenFilm shows it: its title, summary, version and cover
+    cover.jpg          its picture in OpenFilm, 16:9
+  evals/               the real requests it is tried on, and what was measured
+  README.md  CHANGELOG.md  LICENSE
+  .github/workflows/check.yml
 ```
 
-What is in the folder gets used, so it holds nothing else: no code for making the film, no example films, no notes.
-A script belongs here only when it gives the agent an ability it cannot get any other way.
+What is in the skill's folder gets used, so it holds nothing else: no code for making the film, no example films, no
+notes. A script belongs there only when it gives the agent an ability it cannot get any other way. Everything for
+making and trying the skill stays beside it, in the repository.
+
+OpenFilm and `npx skills add` both find the skill in `skills/`, so the repository's address is all anyone needs to add it.
 
 ## SKILL.md
 
@@ -70,7 +80,7 @@ Every sentence has to earn its place. Before one stays, ask:
 ```json
 {
   "version": "0.1.0",
-  "repository": "https://github.com/you/your-skills/tree/main/my-skill",
+  "repository": "https://github.com/you/skill-my-skill/tree/main/skills/my-skill",
   "kind": "style",
   "icon": "film",
   "cover": "cover.jpg",
@@ -82,8 +92,8 @@ Every sentence has to earn its place. Before one stays, ask:
 
 | Field | |
 | --- | --- |
-| `version` | `x.y.z`; raise it with every change |
-| `repository` | where its source is; OpenFilm links to it |
+| `version` | `x.y.z`; raise it with every change, and tag the commit `v<version>` |
+| `repository` | its folder's address: `https://github.com/<owner>/<repo>/tree/main/skills/<name>`; OpenFilm links to it |
 | `kind` | `workflow`, a way of turning material into a film, or `style`, a kind of look |
 | `icon` | `copy`, `scissors`, `monitor`, `shapes`, `pip`, `pen`, `film`, `music`, `presentation` or `layers` |
 | `cover` | a picture in the folder, 16:9 |
@@ -97,10 +107,32 @@ Everything here is optional: without it, OpenFilm shows the name and description
 
 Give an agent the same real request, with real material, once with the skill and once without, and watch both films
 in Studio. A skill ships only when it is clearly better, and keeps only the sentences that make it so. Measure what
-can be measured, with a script anyone can run again. When models change, try again: a sentence an agent no longer
-needs comes out.
+can be measured, with a script anyone can run again. The requests, the material and the scripts go in `evals/`. When
+models change, try again: a sentence an agent no longer needs comes out.
 
 ## Checks
 
-`node scripts/check.mjs` checks every skill here: the name and description, `openfilm.json` with its five languages,
-the cover, every file a brief names, the length. It runs on every pull request.
+A skill's repository runs the same check as this one, on every pull request:
+
+```yaml
+jobs:
+  check:
+    uses: openfilm/skills/.github/workflows/skill.yml@main
+```
+
+It checks every skill in `skills/`: the name and description, `openfilm.json` with its five languages and its link
+back to the repository, the cover, every file a brief names and nothing it does not, the length and the size. To run
+it yourself, in a checkout of this repository: `node scripts/check.mjs <your repository>`.
+
+## Listing it
+
+[index.json](index.json) lists the skills OpenFilm shows, each pinned to one commit of its repository:
+
+```json
+{ "name": "my-skill", "repo": "https://github.com/you/skill-my-skill", "path": "skills/my-skill",
+  "version": "0.1.0", "commit": "<the whole commit id>" }
+```
+
+`node scripts/pin.mjs <repository> [tag]` adds a repository's skills, or moves them to a newer commit, with the version
+each `openfilm.json` says. `node scripts/check.mjs` then fetches every skill at its commit and checks it. Everything
+OpenFilm shows about a skill comes from its `openfilm.json`; the index only says where it is.

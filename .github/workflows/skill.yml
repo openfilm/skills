@@ -1,0 +1,24 @@
+# The check a skill's own repository runs. In that repository's .github/workflows/check.yml:
+#
+#   jobs:
+#     check:
+#       uses: openfilm/skills/.github/workflows/skill.yml@main
+name: skill
+on:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: openfilm/skills
+          path: .openfilm-skills
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node .openfilm-skills/scripts/check.mjs .
