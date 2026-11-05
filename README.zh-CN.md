@@ -15,7 +15,11 @@ skill 本身不放在这里。每个 skill 有自己的仓库，有自己的 iss
 
 ## 现有的 skill
 
-暂时还没有。我们一个一个地做，每个都用真实需求实测，明显比不用 skill 好，才登记进来。
+| | | |
+| --- | --- | --- |
+| [视频复刻](https://github.com/openfilm/skill-replicate) | `openfilm/replicate` | 在 OpenFilm 里把一条视频重新做出来：外观和节奏都一样，内容换成你的；也可以逐帧一模一样。 |
+
+我们一个一个地做，每个都用真实需求实测。OpenFilm 的「发现」读的就是 [index.json](index.json)，登记进来的 skill 会马上出现在每个 OpenFilm 里。
 
 ## skill 的定位
 

@@ -18,8 +18,12 @@ requests it is tried on. This repository says where they are.
 
 ## The skills
 
-None are listed yet. Each one is made in turn, tried on real requests, and listed only when it is clearly better than
-no skill at all.
+| | | |
+| --- | --- | --- |
+| [Replicate a video](https://github.com/openfilm/skill-replicate) | `openfilm/replicate` | A video made again in OpenFilm: its look and timing, with your own content, or frame for frame. |
+
+Each one is made in turn and tried on real requests. OpenFilm's Discover reads [index.json](index.json), so a skill
+listed there shows in every OpenFilm at once.
 
 ## What skills are for
 
