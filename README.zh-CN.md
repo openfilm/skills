@@ -15,11 +15,24 @@ skill 本身不放在这里。每个 skill 有自己的仓库，有自己的 iss
 
 ## 现有的 skill
 
-| | | |
-| --- | --- | --- |
-| [视频复刻](https://github.com/openfilm/skill-replicate) | `openfilm/replicate` | 在 OpenFilm 里把一条视频重新做出来：外观和节奏都一样，内容换成你的；也可以逐帧一模一样。 |
+| | | 作者 | |
+| --- | --- | --- | --- |
+| [视频复刻](https://github.com/openfilm/skill-replicate) | `openfilm/replicate` | OpenFilm | 在 OpenFilm 里把一条视频重新做出来：外观和节奏都一样，内容换成你的；也可以逐帧一模一样。 |
 
 我们一个一个地做，每个都用真实需求实测。OpenFilm 的「发现」读的就是 [index.json](index.json)，登记进来的 skill 会马上出现在每个 OpenFilm 里。
+
+## 整体怎么运作
+
+1. **每个 skill 是一个独立的仓库**，谁都可以做：需求书放在 `skills/<名字>/`，用来实测的真实需求放在 `evals/`，版本用
+   标签记录，有自己的 issue 和 pull request。模板自带的 workflow 会在每次推送时跑这个仓库的检查。skill 的名字是
+   `<所有者>/<名字>`，取自仓库所有者：`openfilm/replicate` 是我们的；放在别人账号下的 skill 属于他们，在任何地方展示都带
+   着他们的名字。
+2. **这个仓库登记值得展示的 skill。** `index.json` 里的每一条都固定到 skill 仓库的某一个提交，所以大家拿到的就是审核过的
+   那一版，重新固定之前不会变。登记一个 skill 或升级到新版本，用 `pin.mjs` 生成改动再提 pull request。登记的条件：检查
+   通过，需求书符合 [SPEC.md](SPEC.md)，仓库写明了许可证，并且用真实需求做过带和不带它的对比实测。
+3. **OpenFilm 读取这个索引。** 「发现」里每个登记的 skill，展示内容来自它自己的 `openfilm.json`（按固定的提交读取）；安
+   装就是复制那个提交。索引固定到更新的提交时，已安装的 skill 会提示更新；从索引里移除后，已安装的仍然保留，并标明已不
+   在索引里。没有登记的 skill，也可以从文件夹或链接添加。
 
 ## skill 的定位
 
