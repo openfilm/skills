@@ -5,8 +5,8 @@
       "name": "replicate",
       "repo": "https://github.com/openfilm/skill-replicate",
       "path": "skills/replicate",
-      "version": "0.1.2",
-      "commit": "546bd595a99bb4227f01af44768c4edb8c391381"
+      "version": "0.1.3",
+      "commit": "eef1ee5eda2a2aaeec60a3f133d73b86dd53c053"
     }
   ]
 }
