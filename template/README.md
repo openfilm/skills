@@ -19,7 +19,7 @@ A skill for [OpenFilm](https://github.com/openfilm/openfilm): one line on the fi
 | | |
 | --- | --- |
 | `skills/my-skill/` | the skill: everything in it is what the agent gets |
-| `evals/` | the real requests it is tried on, and what was measured |
+| `evals/README.md` | the real requests it was tried on, with and without it, and what came of them |
 | `CHANGELOG.md` | what changed in each version |
 
 How a skill for OpenFilm is written: [SPEC.md](https://github.com/openfilm/skills/blob/main/SPEC.md).

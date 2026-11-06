@@ -1,15 +1,10 @@
 # Evals
 
-How this skill is tried. Nothing here goes to the agent: only `skills/` is installed.
+How this skill was tried. Nothing here goes to the agent: only `skills/` is installed.
 
-Keep one folder per real request:
+Give an agent each real request twice, once with the skill and once without, and watch both films in Studio. Write
+each request here word for word, with the skill's version, the agent and model, the numbers you measured and what you
+saw. Material that is not yours to publish (someone's video, a person's footage) stays on your computer.
 
-```
-evals/<request>/
-  task.md     what the person asks, word for word
-  material/   what they give: footage, photos, a song, a script
-  measure.*   a script anyone can run on the film, for what can be measured
-```
-
-Give an agent each request twice, once with the skill and once without, and watch both films in Studio. Write down
-what you saw and the numbers here, with the skill's version and the agent and model you used.
+| request (word for word) | skill | with | without | seen |
+| --- | --- | --- | --- | --- |

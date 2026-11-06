@@ -19,7 +19,7 @@ skill-my-skill/
     SKILL.md           the brief (required)
     openfilm.json      how OpenFilm shows it: its title, summary, version and cover
     cover.jpg          its picture in OpenFilm, 16:9
-  evals/               the real requests it is tried on, and what was measured
+  evals/README.md      the real requests it was tried on, with and without it, and what came of them
   README.md  CHANGELOG.md  LICENSE
   .github/workflows/check.yml
 ```
@@ -121,7 +121,7 @@ Everything here is optional: without it, OpenFilm shows the name and description
 
 Give an agent the same real request, with real material, once with the skill and once without, and watch both films
 in Studio. A skill ships only when it is clearly better, and keeps only the sentences that make it so. Measure what
-can be measured, with a script anyone can run again. The requests, the material and the scripts go in `evals/`. When
+can be measured, with a script anyone can run again. Write each request word for word in `evals/README.md`, with the skill's version, the agent and model, the numbers and what was seen; a script to measure goes beside it only when anyone could run it again. Material that is not yours to publish (someone's video, a person's footage) stays on your computer, out of the repository. When
 models change, try again: a sentence an agent no longer needs comes out.
 
 ## Checks
@@ -153,7 +153,7 @@ A skill is listed when:
 2. its brief follows this document;
 3. its repository says its licence;
 4. its version is tagged;
-5. `evals/` holds how it was tried, with and without it, on real requests.
+5. `evals/README.md` says how it was tried, with and without it, on real requests.
 
 OpenFilm's own come first in Discover; a community skill is shown under its owner's name, in the index's order. A
 listed skill is pinned to the commit that was looked at: a newer one is listed by pinning it again. One that stops

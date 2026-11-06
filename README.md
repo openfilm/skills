@@ -28,7 +28,7 @@ listed there shows in every OpenFilm at once.
 ## How it fits together
 
 1. **A skill is a repository of its own**, by anyone: its brief in `skills/<name>/`, the real requests it is tried on in
-   `evals/`, its versions as tags, its own issues and pull requests. The template's workflow runs this repository's
+   `evals/README.md`, its versions as tags, its own issues and pull requests. The template's workflow runs this repository's
    check on every push. A skill's name is `<owner>/<name>`, after its repository's owner: `openfilm/replicate` is
    ours, a skill under someone else's account is theirs, and keeps their name wherever it is shown.
 2. **This repository lists the skills worth showing.** Each entry in `index.json` pins one commit of a skill's
