@@ -13,7 +13,7 @@
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
+import { join, posix, resolve } from 'node:path';
 
 const ROOT = join(import.meta.dirname, '..');
 const LANGUAGES = ['en', 'zh-CN', 'ja', 'ko', 'es'];
@@ -33,7 +33,8 @@ const say = (/** @type {string} */ who, /** @type {string} */ what) => problems.
 
 /** The front matter's fields, one line each. @param {string} text */
 function frontMatter(text) {
-  const m = /^---\n([\s\S]*?)\n---\n/.exec(text);
+  // A Windows checkout may have CRLF line ends
+  const m = /^---\n([\s\S]*?)\n---\n/.exec(text.replace(/\r\n/g, '\n'));
   if (!m) return null;
   /** @type {Record<string, string>} */
   const fields = {};
@@ -47,7 +48,7 @@ function frontMatter(text) {
 /** Every file in a folder, by its path inside it, dot files left out (git leaves them out too). @param {string} dir */
 const files = (dir, base = '') => readdirSync(join(dir, base), { withFileTypes: true })
   .filter((e) => !e.name.startsWith('.'))
-  .flatMap((e) => (e.isDirectory() ? files(dir, join(base, e.name)) : [join(base, e.name)]));
+  .flatMap((e) => (e.isDirectory() ? files(dir, posix.join(base, e.name)) : [posix.join(base, e.name)]));
 
 /**
  * One skill's folder. `repo`, when known, is the repository it comes from, which its openfilm.json links back to.

@@ -3,6 +3,10 @@
 What changed in this index, the spec and the checks. Each skill keeps its own changes in its own repository. Newest
 first.
 
+## The check on Windows
+
+`check.mjs` passes on a Windows checkout: a brief's CRLF front matter is read, and a skill's files are named with `/`.
+
 ## The index
 
 The skills moved out: each one now lives in a repository of its own, and this repository lists them in `index.json`,
