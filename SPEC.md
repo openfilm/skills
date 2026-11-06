@@ -24,6 +24,18 @@ skill-my-skill/
   .github/workflows/check.yml
 ```
 
+### Its full name
+
+Every skill has a full name, `<owner>/<name>`, and OpenFilm uses it everywhere: in Studio, in `openfilm skill`, and
+for the agent. The owner is the account its repository is under (`openfilm` for OpenFilm's own, `webgrs` for a
+skill in github.com/WEBGRS); the name is its SKILL.md's `name`. Two skills may share a name; their full names tell
+them apart. A skill the person made, or added from a folder, is `local/<name>`, and one kept in a project is
+`project/<name>`; an account named `local` or `project` is `github-local` or `github-project`.
+
+An agent is given each skill by its full name: in a Claude Code plugin, one for each owner, as `owner:name`
+(`openfilm:replicate`); in a skills folder, as `owner-name` (`openfilm-replicate`), with the first line of its text
+saying its full name and who made it.
+
 What is in the skill's folder gets used, so it holds nothing else: no code for making the film, no example films, no
 notes. A script belongs there only when it gives the agent an ability it cannot get any other way. Everything for
 making and trying the skill stays beside it, in the repository.
@@ -98,7 +110,9 @@ Every sentence has to earn its place. Before one stays, ask:
 | `icon` | `copy`, `scissors`, `monitor`, `shapes`, `pip`, `pen`, `film`, `music`, `presentation` or `layers` |
 | `cover` | a picture in the folder, 16:9 |
 | `preview` | a short video in the folder, played on the skill's page instead of the cover |
-| `order` | a whole number: lower comes first |
+| `order` | a whole number: lower comes first, among OpenFilm's own; a community skill is shown in the index's order |
+| `needs` | what it needs beyond OpenFilm, by language: `{ "en": "Windows 10 or 11, FFmpeg 8", "zh-CN": "…" }` |
+| `platforms` | the computers it runs on, any of `macos`, `windows`, `linux`; without it, every one. OpenFilm says so where it cannot run, and does not install it there |
 | `title`, `summary`, `details` | what OpenFilm shows, by language (`en`, `zh-CN`, `ja`, `ko`, `es`); `details` is a few lines |
 
 Everything here is optional: without it, OpenFilm shows the name and description from SKILL.md.
@@ -132,6 +146,18 @@ it yourself, in a checkout of this repository: `node scripts/check.mjs <your rep
 { "name": "my-skill", "repo": "https://github.com/you/skill-my-skill", "path": "skills/my-skill",
   "version": "0.1.0", "commit": "<the whole commit id>" }
 ```
+
+A skill is listed when:
+
+1. `node scripts/check.mjs` passes on it;
+2. its brief follows this document;
+3. its repository says its licence;
+4. its version is tagged;
+5. `evals/` holds how it was tried, with and without it, on real requests.
+
+OpenFilm's own come first in Discover; a community skill is shown under its owner's name, in the index's order. A
+listed skill is pinned to the commit that was looked at: a newer one is listed by pinning it again. One that stops
+working, or whose owner asks, leaves the index; those installed stay, marked as no longer listed.
 
 `node scripts/pin.mjs <repository> [tag]` adds a repository's skills, or moves them to a newer commit, with the version
 each `openfilm.json` says. `node scripts/check.mjs` then fetches every skill at its commit and checks it. Everything

@@ -18,6 +18,7 @@ import { join, resolve } from 'node:path';
 const ROOT = join(import.meta.dirname, '..');
 const LANGUAGES = ['en', 'zh-CN', 'ja', 'ko', 'es'];
 const KINDS = ['workflow', 'style'];
+const PLATFORMS = ['macos', 'windows', 'linux'];
 const ICONS = ['copy', 'scissors', 'monitor', 'shapes', 'pip', 'pen', 'film', 'music', 'presentation', 'layers'];
 const NAME = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const VERSION = /^\d+\.\d+\.\d+$/;
@@ -79,6 +80,15 @@ function checkSkill(dir, name, { repo, who = name } = {}) {
   if (!KINDS.includes(shown.kind)) say(who, `its kind is ${KINDS.join(' or ')}`);
   if (!ICONS.includes(shown.icon)) say(who, `its icon is one of ${ICONS.join(', ')}`);
   if (shown.order !== undefined && !Number.isInteger(shown.order)) say(who, 'its order is a whole number');
+  if (shown.needs !== undefined) {
+    const langs = shown.needs && typeof shown.needs === 'object' && !Array.isArray(shown.needs) ? Object.entries(shown.needs) : null;
+    if (!langs || !langs.length || langs.some(([lang, text]) => !LANGUAGES.includes(lang) || typeof text !== 'string' || !text.trim())) {
+      say(who, `its needs say, by language (${LANGUAGES.join(', ')}), what it needs beyond OpenFilm`);
+    }
+  }
+  if (shown.platforms !== undefined && (!Array.isArray(shown.platforms) || !shown.platforms.length || shown.platforms.some((p) => !PLATFORMS.includes(p)))) {
+    say(who, `its platforms are some of ${PLATFORMS.join(', ')}`);
+  }
   for (const field of ['title', 'summary', 'details']) {
     for (const lang of LANGUAGES) if (!shown[field]?.[lang]) say(who, `no ${field} in ${lang}`);
   }
