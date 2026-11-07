@@ -21,6 +21,8 @@ requests it is tried on. This repository says where they are.
 | | | by | |
 | --- | --- | --- | --- |
 | [Replicate a video](https://github.com/openfilm/skill-replicate) | `openfilm/replicate` | OpenFilm | A video made again in OpenFilm: its look and timing, with your own content, or frame for frame. |
+| [Desktop app demo](https://github.com/WEBGRS/openfilm-app-demo) | `webgrs/app-demo` | WEBGRS | A demo of a Windows program, filmed while you work it, with a smooth pointer and a camera that moves in on each click. |
+| [Preview first](https://github.com/WEBGRS/openfilm-preview-first) | `webgrs/preview-first` | WEBGRS | The whole film as a quick placeholder preview first; pictures after you approve it, voice and music last. |
 
 Each one is made in turn and tried on real requests. OpenFilm's Discover reads [index.json](index.json), so a skill
 listed there shows in every OpenFilm at once.
