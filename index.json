@@ -2,11 +2,60 @@
   "version": 1,
   "skills": [
     {
+      "name": "beat-cut",
+      "repo": "https://github.com/WEBGRS/openfilm-beat-cut",
+      "path": "skills/beat-cut",
+      "version": "0.2.2",
+      "commit": "aa0c85248f9c78ec21384a0580bdd56af8fb8145"
+    },
+    {
+      "name": "dub",
+      "repo": "https://github.com/WEBGRS/openfilm-dub",
+      "path": "skills/dub",
+      "version": "0.2.0",
+      "commit": "c5949358b675df94f2df5ee42f5ec68f7dbea24d"
+    },
+    {
+      "name": "footage-cut",
+      "repo": "https://github.com/WEBGRS/openfilm-footage-cut",
+      "path": "skills/footage-cut",
+      "version": "0.2.2",
+      "commit": "842d71a2ee1a9074d72052618531eec5d7443b93"
+    },
+    {
+      "name": "pip-promo",
+      "repo": "https://github.com/WEBGRS/openfilm-pip-promo",
+      "path": "skills/pip-promo",
+      "version": "0.2.2",
+      "commit": "f229aa6a17671c7306f2a39f62349f6d84b8ba5e"
+    },
+    {
+      "name": "reframe",
+      "repo": "https://github.com/WEBGRS/openfilm-reframe",
+      "path": "skills/reframe",
+      "version": "0.2.0",
+      "commit": "8973df568933ddfce082a95ff8b4e5a7cf57228d"
+    },
+    {
       "name": "replicate",
       "repo": "https://github.com/openfilm/skill-replicate",
       "path": "skills/replicate",
       "version": "0.1.3",
       "commit": "eef1ee5eda2a2aaeec60a3f133d73b86dd53c053"
+    },
+    {
+      "name": "talking-head",
+      "repo": "https://github.com/WEBGRS/openfilm-talking-head",
+      "path": "skills/talking-head",
+      "version": "0.3.1",
+      "commit": "50f8180889680c08f094a9118f723377b620b9f1"
+    },
+    {
+      "name": "web-demo",
+      "repo": "https://github.com/WEBGRS/openfilm-web-demo",
+      "path": "skills/web-demo",
+      "version": "0.5.0",
+      "commit": "150d7245c8f966432931081e59d1dcda89316026"
     }
   ]
 }

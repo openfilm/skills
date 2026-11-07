@@ -18,6 +18,13 @@ skill 本身不放在这里。每个 skill 有自己的仓库，有自己的 iss
 | | | 作者 | |
 | --- | --- | --- | --- |
 | [视频复刻](https://github.com/openfilm/skill-replicate) | `openfilm/replicate` | OpenFilm | 在 OpenFilm 里把一条视频重新做出来：外观和节奏都一样，内容换成你的；也可以逐帧一模一样。 |
+| [口播精剪](https://github.com/WEBGRS/openfilm-talking-head) | `webgrs/talking-head` | WEBGRS | 你的口播录像：只在停顿处下刀，去掉能干净取出的口癖和空档，再加上重点词、人物名片和封面。 |
+| [素材剪成片](https://github.com/WEBGRS/openfilm-footage-cut) | `webgrs/footage-cut` | WEBGRS | 用你自己拍的素材剪成片：每个镜头都配着当时说的话，跟着你的解说，或者素材里讲出来的故事。 |
+| [音乐卡点](https://github.com/WEBGRS/openfilm-beat-cut) | `webgrs/beat-cut` | WEBGRS | 跟着音乐剪：每次换画面都踩在拍子上，安静段镜头更长，音乐起来的那一秒正好换镜头。 |
+| [横屏转竖屏](https://github.com/WEBGRS/openfilm-reframe) | `webgrs/reframe` | WEBGRS | 把横屏素材做成竖屏或方形：先测每个镜头的主体，把画框画在帧上，测错的地方再靠看图改。 |
+| [换语种配音](https://github.com/WEBGRS/openfilm-dub) | `webgrs/dub` | WEBGRS | 把配好音的片子做成另一种语言：重新配音，画面文字和字幕一起换，每个画面仍然踩在它的词上。 |
+| [小窗口播产品推广](https://github.com/WEBGRS/openfilm-pip-promo) | `webgrs/pip-promo` | WEBGRS | 产品的真实画面按你说的话依次出现；你在小窗里讲，小窗自己让开正在演示的地方。 |
+| [可重录的网页演示](https://github.com/WEBGRS/openfilm-web-demo) | `webgrs/web-demo` | WEBGRS | 按步骤从线上产品录出的演示，每次改版后按原步骤重录，剪辑原样保留。 |
 
 我们一个一个地做，每个都用真实需求实测。OpenFilm 的「发现」读的就是 [index.json](index.json)，登记进来的 skill 会马上出现在每个 OpenFilm 里。
 
