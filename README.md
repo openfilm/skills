@@ -21,6 +21,13 @@ requests it is tried on. This repository says where they are.
 | | | by | |
 | --- | --- | --- | --- |
 | [Replicate a video](https://github.com/openfilm/skill-replicate) | `openfilm/replicate` | OpenFilm | A video made again in OpenFilm: its look and timing, with your own content, or frame for frame. |
+| [Talking head](https://github.com/WEBGRS/openfilm-talking-head) | `webgrs/talking-head` | WEBGRS | Your talking recording cut only in its pauses, with the ums and dead air that can come out cleanly gone, plus key words, a name card and a cover. |
+| [Cut my footage](https://github.com/WEBGRS/openfilm-footage-cut) | `webgrs/footage-cut` | WEBGRS | Your own clips cut into a film, each shot chosen for what is being said, to your narration or the story in the footage. |
+| [Cut on the beat](https://github.com/WEBGRS/openfilm-beat-cut) | `webgrs/beat-cut` | WEBGRS | A film cut to its music: every change on a beat, longer shots in the quiet parts, a cut on the second the music lifts. |
+| [Reframe for vertical](https://github.com/WEBGRS/openfilm-reframe) | `webgrs/reframe` | WEBGRS | Landscape footage made vertical or square: each shot's subject measured, the crop drawn on the frames, and moved by eye where the measure is wrong. |
+| [Another language](https://github.com/WEBGRS/openfilm-dub) | `webgrs/dub` | WEBGRS | Your voiced film in another language: voice-over said again, text and subtitles translated, every picture still on its word. |
+| [Product promo, speaker in a window](https://github.com/WEBGRS/openfilm-pip-promo) | `webgrs/pip-promo` | WEBGRS | Your product's real screens, each brought on at the words you tie it to, while you talk from a small window that steps out of the way. |
+| [Web demo you can refilm](https://github.com/WEBGRS/openfilm-web-demo) | `webgrs/web-demo` | WEBGRS | A demo filmed from your live web product by steps, and filmed again after each release with the cut kept. |
 
 Each one is made in turn and tried on real requests. OpenFilm's Discover reads [index.json](index.json), so a skill
 listed there shows in every OpenFilm at once.
