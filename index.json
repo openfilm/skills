@@ -2,6 +2,20 @@
   "version": 1,
   "skills": [
     {
+      "name": "app-demo",
+      "repo": "https://github.com/WEBGRS/openfilm-app-demo",
+      "path": "skills/app-demo",
+      "version": "0.4.0",
+      "commit": "47f67f802f27962257a973f5b02e66b2211c10c9"
+    },
+    {
+      "name": "preview-first",
+      "repo": "https://github.com/WEBGRS/openfilm-preview-first",
+      "path": "skills/preview-first",
+      "version": "0.2.2",
+      "commit": "c8720e5add225b23fb028d575f0282cb901e02ca"
+    },
+    {
       "name": "replicate",
       "repo": "https://github.com/openfilm/skill-replicate",
       "path": "skills/replicate",

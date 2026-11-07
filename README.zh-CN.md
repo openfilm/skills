@@ -18,6 +18,8 @@ skill 本身不放在这里。每个 skill 有自己的仓库，有自己的 iss
 | | | 作者 | |
 | --- | --- | --- | --- |
 | [视频复刻](https://github.com/openfilm/skill-replicate) | `openfilm/replicate` | OpenFilm | 在 OpenFilm 里把一条视频重新做出来：外观和节奏都一样，内容换成你的；也可以逐帧一模一样。 |
+| [桌面软件演示](https://github.com/WEBGRS/openfilm-app-demo) | `webgrs/app-demo` | WEBGRS | 你操作 Windows 软件时录下的演示，指针平滑，每次点击镜头自动推近。 |
+| [先出预览](https://github.com/WEBGRS/openfilm-preview-first) | `webgrs/preview-first` | WEBGRS | 先用几分钟出一版完整的占位预览，你确认后再做画面，配音和音乐最后做。 |
 
 我们一个一个地做，每个都用真实需求实测。OpenFilm 的「发现」读的就是 [index.json](index.json)，登记进来的 skill 会马上出现在每个 OpenFilm 里。
 
