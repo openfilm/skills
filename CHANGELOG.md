@@ -3,6 +3,15 @@
 What changed in this index, the spec and the checks. Each skill keeps its own changes in its own repository. Newest
 first.
 
+## The Community
+
+This repository becomes the front door of the OpenFilm Community: the kinds of items (`kinds.json`), the schema of
+`openfilm.json` with its `permissions`, the policies (community guidelines, developer policy, review standard,
+licensing, takedown and appeals, canned responses), `SECURITY.md` and the public log of removals, `REMOVED.md`.
+`index.json` may carry `revoked`, what every OpenFilm disables, and `check.mjs` checks it. `scan.mjs` reads an item for
+what the policy bans, and `review.mjs` has an AI model review every version against the standard; both run on pull
+requests, reading items as data. The template's brief has no HTML comment, which the scan reports.
+
 ## The check on Windows
 
 `check.mjs` passes on a Windows checkout: a brief's CRLF front matter is read, and a skill's files are named with `/`.

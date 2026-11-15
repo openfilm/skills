@@ -4,7 +4,10 @@
   "license": "MIT",
   "scripts": {
     "check": "node scripts/check.mjs",
-    "pin": "node scripts/pin.mjs"
+    "scan": "node scripts/scan.mjs",
+    "review": "node scripts/review.mjs",
+    "pin": "node scripts/pin.mjs",
+    "test": "node --test scripts/*.test.mjs"
   },
   "engines": {
     "node": ">=22.2"

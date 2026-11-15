@@ -114,8 +114,10 @@ Every sentence has to earn its place. Before one stays, ask:
 | `needs` | what it needs beyond OpenFilm, by language: `{ "en": "Windows 10 or 11, FFmpeg 8", "zh-CN": "…" }` |
 | `platforms` | the computers it runs on, any of `macos`, `windows`, `linux`; without it, every one. OpenFilm says so where it cannot run, and does not install it there |
 | `title`, `summary`, `details` | what OpenFilm shows, by language (`en`, `zh-CN`, `ja`, `ko`, `es`); `details` is a few lines |
+| `permissions` | what it does beyond its own folder, each with a reason: `network` (the hosts it reaches, enforced for pages), `project`, `program`, `secrets`, `agent`; see the [developer policy](POLICIES/developer-policy.md) |
 
-Everything here is optional: without it, OpenFilm shows the name and description from SKILL.md.
+Everything here is optional: without it, OpenFilm shows the name and description from SKILL.md. Every field, with what
+it accepts, is in [schema/openfilm.schema.json](schema/openfilm.schema.json).
 
 ## Trying it
 

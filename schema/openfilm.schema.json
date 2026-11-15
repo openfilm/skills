@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/openfilm/skills/blob/main/schema/openfilm.schema.json",
+  "title": "openfilm.json",
+  "description": "How OpenFilm shows a skill, a workbench or a connector, and what it declares it does. It sits beside SKILL.md in the item's folder. Every field is optional; OpenFilm leaves out anything missing or wrong. A listed skill also passes scripts/check.mjs, which asks for more (see SPEC.md).",
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": {
+      "description": "x.y.z, raised with every change; the commit is tagged v<version>.",
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "repository": {
+      "description": "The address of its folder: https://github.com/<owner>/<repo>/tree/main/skills/<name>.",
+      "type": "string",
+      "pattern": "^https://\\S{4,300}$"
+    },
+    "kind": {
+      "description": "For a skill: a way of turning material into a film, or a kind of look.",
+      "enum": ["workflow", "style"]
+    },
+    "icon": {
+      "description": "A mark's name. A listed skill uses one of copy, scissors, monitor, shapes, pip, pen, film, music, presentation, layers.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,23}$"
+    },
+    "cover": { "description": "A picture in the folder, 16:9.", "$ref": "#/$defs/file" },
+    "preview": { "description": "A short video in the folder, played on its page instead of the cover.", "$ref": "#/$defs/file" },
+    "order": { "description": "Lower comes first, among OpenFilm's own.", "type": "integer" },
+    "title": { "description": "Its name, by language.", "$ref": "#/$defs/words" },
+    "summary": { "description": "One line on what it does, by language.", "$ref": "#/$defs/words" },
+    "details": { "description": "A few lines: who it is for and what it does, by language.", "$ref": "#/$defs/words" },
+    "needs": { "description": "What it needs beyond OpenFilm, by language: \"FFmpeg 8\".", "$ref": "#/$defs/words" },
+    "platforms": {
+      "description": "The computers it runs on; without it, every one. OpenFilm does not install it elsewhere.",
+      "type": "array",
+      "items": { "enum": ["macos", "windows", "linux"] },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "requires": {
+      "description": "The skills an agent reads before this one, by name.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/name" },
+      "uniqueItems": true
+    },
+    "tab": {
+      "description": "Shown as a tab of the library drawer instead of as a workbench: true, or its own name and mark.",
+      "oneOf": [
+        { "const": true },
+        {
+          "type": "object",
+          "properties": {
+            "title": { "$ref": "#/$defs/words" },
+            "icon": { "type": "string", "pattern": "^[a-z][a-z0-9-]{0,23}$" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "blocks": {
+      "description": "The blocks its workbench is laid out in: another workbench's name to use its arrangement, or the blocks it draws and those of other workbenches it borrows (\"owner:id\").",
+      "oneOf": [
+        { "$ref": "#/$defs/workbench" },
+        {
+          "type": "array",
+          "maxItems": 12,
+          "items": {
+            "oneOf": [
+              { "type": "string", "pattern": "^[a-z][a-z0-9-]{0,31}:[a-z][a-z0-9-]{0,31}$" },
+              {
+                "type": "object",
+                "required": ["id"],
+                "properties": {
+                  "id": { "$ref": "#/$defs/workbench" },
+                  "title": { "$ref": "#/$defs/words" },
+                  "edge": { "enum": ["center", "left", "right", "top", "bottom"] },
+                  "size": { "type": "number", "minimum": 0 },
+                  "open": { "const": false },
+                  "min": { "$ref": "#/$defs/pair" },
+                  "range": { "$ref": "#/$defs/pair" }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "category": {
+      "description": "What it helps make: material (shots, pictures, sets), edit (cutting and reviewing), picture (color, motion, compositing), sound, recipe (a whole way of making a kind of film) or tool.",
+      "enum": ["material", "edit", "picture", "sound", "recipe", "tool"]
+    },
+    "difficulty": { "description": "How hard it is to start with: 1 anyone at once, 5 a professional's.", "$ref": "#/$defs/rating" },
+    "ease": { "description": "How little work a result takes once started: 1 all by hand, 5 a sentence.", "$ref": "#/$defs/rating" },
+    "audience": { "description": "Who it is for, by language.", "$ref": "#/$defs/words" },
+    "cost": {
+      "description": "Whether using it costs money: generation, when it makes media with a paid service.",
+      "enum": ["free", "generation"]
+    },
+    "permissions": {
+      "description": "What it does beyond reading its own folder, each with a reason people are shown before they add it. network is enforced: a page reaches only these hosts. The rest are declared and shown, and reviewed against what the code does.",
+      "type": "object",
+      "properties": {
+        "network": {
+          "description": "Enforced. The hosts its page may reach, over https: a host name, or every host under one with a leading \"*.\". A page reaches nothing else. Scripts and programs are reviewed against the same list.",
+          "type": "object",
+          "required": ["domains"],
+          "properties": {
+            "domains": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "uniqueItems": true,
+              "items": { "type": "string", "pattern": "^(\\*\\.)?(?=.{1,253}$)([a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z]{2,63}$" }
+            },
+            "why": { "$ref": "#/$defs/why" }
+          },
+          "additionalProperties": false
+        },
+        "project": {
+          "description": "Declared. Whether it reads or changes the project's files. OpenFilm asks the person before a plugin changes a project.",
+          "type": "object",
+          "properties": {
+            "read": { "type": "boolean" },
+            "write": { "type": "boolean" },
+            "why": { "$ref": "#/$defs/why" }
+          },
+          "additionalProperties": false
+        },
+        "program": {
+          "description": "Declared. It runs a program of its own on the computer (package.json scripts.start). OpenFilm asks the person before it starts.",
+          "type": "object",
+          "properties": { "why": { "$ref": "#/$defs/why" } },
+          "additionalProperties": false
+        },
+        "secrets": {
+          "description": "Declared. The keys it uses, each by name.",
+          "type": "array",
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]{0,63}$" },
+              "why": { "$ref": "#/$defs/why" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "agent": {
+          "description": "Declared. Whether its brief has the agent run its scripts, which run with the agent's own permissions.",
+          "type": "object",
+          "properties": {
+            "scripts": { "type": "boolean" },
+            "why": { "$ref": "#/$defs/why" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "language": { "type": "string", "pattern": "^[a-z]{2}(-[A-Za-z]{2,4})?$" },
+    "words": {
+      "description": "Words by language (en, zh-CN, ja, ko, es), or one string, read as English.",
+      "oneOf": [
+        { "type": "string", "minLength": 1, "maxLength": 1000 },
+        {
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/language" },
+          "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 1000 }
+        }
+      ]
+    },
+    "why": {
+      "description": "Why it needs this, by language, in a sentence people read before they add it.",
+      "oneOf": [
+        { "type": "string", "minLength": 1, "maxLength": 200 },
+        {
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/language" },
+          "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 200 }
+        }
+      ]
+    },
+    "file": { "type": "string", "pattern": "^(?!.*(^|/)\\.\\.(/|$))[\\w./-]{1,200}$" },
+    "name": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,63}$" },
+    "workbench": { "type": "string", "pattern": "^[a-z][a-z0-9-]{0,31}$" },
+    "rating": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "pair": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 }
+  }
+}
