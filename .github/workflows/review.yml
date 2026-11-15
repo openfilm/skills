@@ -1,0 +1,69 @@
+# The AI review of every entry a pull request adds to index.json or pins again, as POLICIES/review-standard.md says,
+# posted on the pull request as a comment. It is advice: a maintainer merges every listing.
+#
+# Why this is safe, though it runs for pull requests from forks and holds a secret:
+# - pull_request_target runs this workflow as it is on the base branch, and the checkout below is the base branch. No
+#   file from the pull request is checked out or run, so a pull request cannot change what runs here or what it does
+#   with the key.
+# - The pull request's index.json is read with `git show`, as data. review.mjs parses it as JSON and takes only entries
+#   that name a GitHub repository, a whole commit id and a skill's path. Each item is fetched at its commit with git, as
+#   files: nothing in it is installed, built, imported or run.
+# - The item reaches the model as text, between markers it cannot forge. The model's answer becomes a comment and
+#   nothing else, and review.mjs raises to a person whatever the standard says a person decides, whatever the answer.
+# - The token can write pull request comments and nothing else. The key is in the review step alone.
+# - No value from the pull request is written into a command: the number and commit id go through env.
+name: review
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+    paths: [index.json]
+permissions:
+  pull-requests: write
+concurrency:
+  group: review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Read the pull request's index.json as data
+        env:
+          PR: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          git fetch --no-tags --depth=1 origin "+refs/pull/${PR}/head:refs/remotes/pr/head"
+          git show "${HEAD_SHA}:index.json" > "$RUNNER_TEMP/pr-index.json"
+          git show "HEAD:index.json" > "$RUNNER_TEMP/base-index.json"
+      - name: Review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # read the publisher's account on GitHub's public API, so its age is known
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/review.mjs --changed "$RUNNER_TEMP/base-index.json" --index "$RUNNER_TEMP/pr-index.json" --out "$RUNNER_TEMP/review"
+      - name: Comment on the pull request
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          if [ -f "$RUNNER_TEMP/review/review.md" ]; then
+            head -c 60000 "$RUNNER_TEMP/review/review.md" > "$RUNNER_TEMP/comment.md"
+          else
+            printf 'The review did not finish; a maintainer reviews this pull request. See the run: %s/%s/actions/runs/%s\n' \
+              "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$RUNNER_TEMP/comment.md"
+          fi
+          gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/comment.md"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: review
+          path: ${{ runner.temp }}/review
+          if-no-files-found: ignore
