@@ -2,6 +2,13 @@
   "version": 1,
   "skills": [
     {
+      "name": "maizi-motion",
+      "repo": "https://github.com/erikzeng2008-del/skill-maizi-motion",
+      "path": "skills/maizi-motion",
+      "version": "0.1.2",
+      "commit": "79d756862727ab451045b922257b90de2b32b40d"
+    },
+    {
       "name": "replicate",
       "repo": "https://github.com/openfilm/skill-replicate",
       "path": "skills/replicate",
