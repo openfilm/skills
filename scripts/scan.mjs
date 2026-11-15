@@ -3,8 +3,10 @@
 // run, imported or installed.
 //
 //   node scripts/scan.mjs <folder>                   one folder; its openfilm.json says what it declares
-//   node scripts/scan.mjs --changed <base index>     every entry of index.json added or moved since <base index>,
-//                                                    fetched at its commit as data
+//   node scripts/scan.mjs --changed <base index> [--index <index>]
+//                                                    every listing added or moved since <base index>, fetched at its
+//                                                    commit as data; the listings are <index>, or the build of
+//                                                    registry/ (scripts/build-index.mjs)
 //
 // Prints JSON and exits 1 when anything is high. A scan says what it found, never that an item is safe: what it
 // finds goes to the review (POLICIES/review-standard.md), which reads the whole item.
@@ -283,10 +285,11 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   if (changed >= 0) {
     const { fetchAt } = await import('./check.mjs');
     const base = JSON.parse(readFileSync(resolve(args[changed + 1]), 'utf8'));
-    const index = JSON.parse(readFileSync(join(import.meta.dirname, '..', 'index.json'), 'utf8'));
+    const at = args.indexOf('--index');
+    const index = at >= 0 ? JSON.parse(readFileSync(resolve(args[at + 1]), 'utf8')) : (await import('./build-index.mjs')).build();
     for (const entry of changedEntries(base, index)) {
       if (!fetchable(entry)) {
-        results.push({ item: String(entry.name), findings: [{ severity: 'high', rule: 'entry-invalid', file: 'index.json', quote: quoteOf(JSON.stringify(entry)) }] });
+        results.push({ item: String(entry.name), findings: [{ severity: 'high', rule: 'entry-invalid', file: 'registry/', quote: quoteOf(JSON.stringify(entry)) }] });
         continue;
       }
       let dir;
@@ -294,15 +297,15 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
         dir = fetchAt(entry.repo, entry.commit);
         results.push({ item: `${entry.repo}/tree/${entry.commit}/${entry.path}`, commit: entry.commit, findings: scanFolder(join(dir, entry.path)) });
       } catch (e) {
-        results.push({ item: entry.repo, commit: entry.commit, findings: [{ severity: 'high', rule: 'fetch-failed', file: 'index.json', quote: quoteOf(String(/** @type {any} */ (e).stderr ?? e)) }] });
+        results.push({ item: entry.repo, commit: entry.commit, findings: [{ severity: 'high', rule: 'fetch-failed', file: 'registry/', quote: quoteOf(String(/** @type {any} */ (e).stderr ?? e)) }] });
       } finally {
         if (dir) rmSync(dir, { recursive: true, force: true });
       }
     }
   } else {
-    const folder = args.find((a) => !a.startsWith('--'));
+    const folder = args.find((a, i) => !a.startsWith('--') && args[i - 1] !== '--index');
     if (!folder) {
-      console.error('scan: name a folder (node scripts/scan.mjs <folder>) or a base index (node scripts/scan.mjs --changed <base index.json>)');
+      console.error('scan: name a folder (node scripts/scan.mjs <folder>) or a base index (node scripts/scan.mjs --changed <base index.json> [--index <index.json>])');
       process.exit(2);
     }
     results.push({ item: folder, findings: scanFolder(resolve(folder)) });

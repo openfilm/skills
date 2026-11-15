@@ -4,7 +4,7 @@ import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
-import { checkRevoked, problems, uidOf } from './check.mjs';
+import { buildIndex, checkListing, checkRegistry, checkRevoked, checkUnique, indexText, problems, uidOf } from './check.mjs';
 import { folderDigest } from './digest.mjs';
 
 const listed = [{ name: 'replicate', repo: 'https://github.com/openfilm/skill-replicate', commit: 'e'.repeat(40) }];
@@ -23,7 +23,7 @@ test('a full name is the owner, lowercased, and the name', () => {
 test('withdrawals as OpenFilm reads them pass', () => {
   assert.deepEqual(said([]), []);
   assert.deepEqual(said([
-    { uid: 'someone/bad-skill', reason: 'malware', note: 'Sent project files to an undeclared host.', advisory: 'https://github.com/openfilm/skills/security/advisories/GHSA-xxxx', date: '2026-11-15' },
+    { uid: 'someone/bad-skill', reason: 'malware', note: 'Sent project files to an undeclared host.', advisory: 'https://github.com/openfilm/community/security/advisories/GHSA-xxxx', date: '2026-11-15' },
     { uid: 'someone/old', commits: ['a'.repeat(40)], reason: 'broken' },
     { uid: 'someone/copy', digests: ['b'.repeat(64)], reason: 'impersonation' },
     { uid: 'openfilm/replicate', commits: ['c'.repeat(40)], reason: 'policy' },
@@ -48,7 +48,7 @@ test('a malformed withdrawal is said', () => {
   assert.match(out[4], /advisory/);
   assert.match(out[5], /date/);
   assert.match(out[6], /why is not a field/);
-  assert.match(said({})[0], /revoked is a list/);
+  assert.match(said({})[0], /revoked.json: it is a list/);
 });
 
 test('a version withdrawn cannot stay listed', () => {
@@ -70,5 +70,83 @@ test('a folder digest is the app\'s: paths, sizes and bytes in name order', () =
     assert.equal(folderDigest(dir), digest);
   } finally {
     rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+const KINDS = ['workbench', 'skill', 'connector'];
+const LISTED = { name: 'my-skill', repo: 'https://github.com/Someone/skill-my-skill', path: 'skills/my-skill', version: '0.1.0', commit: 'a'.repeat(40) };
+/** What checkListing says of a file, and what it gives. @param {string} file @param {unknown} entry */
+function listing(file, entry) {
+  problems.length = 0;
+  const out = checkListing(file, typeof entry === 'string' ? entry : JSON.stringify(entry), KINDS);
+  return { out, said: problems.splice(0) };
+}
+
+test('a listing is its file, under its kind, its owner and its name', () => {
+  const { out, said } = listing('registry/skill/someone/my-skill.json', LISTED);
+  assert.deepEqual(said, []);
+  assert.deepEqual(out, { kind: 'skill', ...LISTED });
+  const files = [{ path: 'SKILL.md', size: 10, sha256: 'c'.repeat(64) }, { path: 'scripts/a.mjs', size: 4, sha256: 'd'.repeat(64) }];
+  assert.deepEqual(listing('registry/workbench/someone/my-skill.json', { ...LISTED, files }).out, { kind: 'workbench', ...LISTED, files });
+  // pasted from a web page, on one line
+  assert.deepEqual(listing('registry/skill/someone/my-skill.json', JSON.stringify(LISTED)).said, []);
+});
+
+test('nobody lists under someone else\'s name', () => {
+  const { out, said } = listing('registry/skill/openfilm/my-skill.json', LISTED);
+  assert.equal(out, null);
+  assert.equal(said.length, 1);
+  assert.match(said[0], /its repository is Someone's, so it is listed under someone: registry\/skill\/someone\/my-skill\.json/);
+  assert.match(listing('registry/skill/someone/my-skill.json', { ...LISTED, repo: 'https://github.com/openfilm/skill-my-skill' }).said[0], /listed under openfilm/);
+});
+
+test('a listing out of place or malformed is said', () => {
+  const said = (/** @type {string} */ file, /** @type {unknown} */ entry) => listing(file, entry).said;
+  assert.match(said('registry/skill/someone/My-Skill.json', LISTED)[0], /registry\/<kind>\/<owner>\/<name>\.json/);
+  assert.match(said('registry/someone/my-skill.json', LISTED)[0], /registry\/<kind>\/<owner>\/<name>\.json/);
+  assert.match(said('registry/template/someone/my-skill.json', LISTED)[0], /its kind is one of workbench, skill, connector, not template/);
+  assert.match(said('registry/skill/someone/other.json', LISTED)[0], /its name is my-skill, so its file is registry\/skill\/someone\/my-skill\.json/);
+  assert.match(said('registry/skill/someone/my-skill.json', '{ "name": ')[0], /JSON/);
+  assert.match(said('registry/skill/someone/my-skill.json', [LISTED])[0], /a listing is an object/);
+  assert.match(said('registry/skill/someone/my-skill.json', { ...LISTED, kind: 'skill' })[0], /kind is not a field/);
+  assert.match(said('registry/skill/someone/my-skill.json', { ...LISTED, path: 'my-skill' })[0], /its path is skills\/my-skill/);
+  assert.match(said('registry/skill/someone/my-skill.json', { ...LISTED, version: 'v1' })[0], /its version is x\.y\.z/);
+  assert.match(said('registry/skill/someone/my-skill.json', { ...LISTED, commit: 'abc1234' })[0], /whole 40-character id/);
+  assert.match(said('registry/skill/someone/my-skill.json', { ...LISTED, repo: 'https://gitlab.com/someone/x' })[0], /its repo is https:\/\/github\.com/);
+  assert.match(said('registry/skill/someone/my-skill.json', { ...LISTED, files: [{ path: '../x', size: 1, sha256: 'c'.repeat(64) }] })[0], /inside the folder/);
+  assert.match(said('registry/skill/someone/my-skill.json', { ...LISTED, files: [{ path: 'a.md', size: 1, sha256: 'c'.repeat(64) }] })[0], /SKILL\.md/);
+});
+
+test('one full name is listed once, whatever its kind', () => {
+  problems.length = 0;
+  checkUnique([{ ...LISTED, kind: 'skill' }, { ...LISTED, kind: 'workbench' }, { ...LISTED, name: 'other', kind: 'skill' }]);
+  const out = problems.splice(0);
+  assert.equal(out.length, 1);
+  assert.match(out[0], /someone\/my-skill is listed twice/);
+});
+
+test('the check reads registry/, revoked.json, and whether index.json is their build', async () => {
+  const root = mkdtempSync(join(tmpdir(), 'openfilm-registry-'));
+  try {
+    mkdirSync(join(root, 'registry', 'skill', 'someone'), { recursive: true });
+    writeFileSync(join(root, 'registry', 'skill', 'someone', 'my-skill.json'), JSON.stringify(LISTED));
+    writeFileSync(join(root, 'revoked.json'), '[]\n');
+    problems.length = 0;
+    assert.equal(await checkRegistry({ root, fetch: false, index: false }), 1);
+    assert.deepEqual(problems.splice(0), []);
+    assert.equal(await checkRegistry({ root, fetch: false }), 1);
+    assert.match(problems.splice(0)[0], /index\.json: it is not the build/);
+    writeFileSync(join(root, 'index.json'), indexText(buildIndex([{ kind: 'skill', ...LISTED }], [])));
+    await checkRegistry({ root, fetch: false });
+    assert.deepEqual(problems.splice(0), []);
+    // a stray file, and a withdrawal of what is still listed
+    writeFileSync(join(root, 'registry', 'README.md'), 'hi');
+    writeFileSync(join(root, 'revoked.json'), JSON.stringify([{ uid: 'someone/my-skill', reason: 'malware' }]));
+    await checkRegistry({ root, fetch: false });
+    const out = problems.splice(0);
+    assert.ok(out.some((p) => /^registry\/README\.md: a listing is registry/.test(p)), out.join('\n'));
+    assert.ok(out.some((p) => /still listed/.test(p)), out.join('\n'));
+  } finally {
+    rmSync(root, { recursive: true, force: true });
   }
 });

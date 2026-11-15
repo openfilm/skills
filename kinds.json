@@ -1,8 +1,14 @@
 {
   "version": 1,
   "tracks": {
-    "code": "Lives in its publisher's own open-source repository; listed in index.json here, pinned to one commit.",
-    "asset": "Files with no code, in openfilm/library for now, published by its maintainers to the library's catalog."
+    "code": {
+      "home": "registry/",
+      "about": "Lives in its publisher's own open-source repository; listed here in registry/<kind>/<owner>/<name>.json, pinned to one commit, and built into index.json."
+    },
+    "asset": {
+      "home": "assets/",
+      "about": "Files with no code, in assets/ here, published by its maintainers to the catalog OpenFilm reads."
+    }
   },
   "places": {
     "workbench": "A surface of its own beside the edit and the canvas, picked from the workbench switch at the top right.",

@@ -6,7 +6,9 @@
 //   node scripts/review.mjs --repo <url> --commit <sha> --path skills/<name> [--previous-commit <sha>]
 //                                                                          an item at one commit of its repository
 //   node scripts/review.mjs --changed <base index.json> [--index <index.json>]
-//                                                                          every entry added or pinned again
+//                                                                          every listing added or pinned again; the
+//                                                                          listings are <index.json>, or the build of
+//                                                                          registry/ (scripts/build-index.mjs)
 //   --out <folder>   where review.json and review.md go (default: the current folder)
 //   --dry-run        print the prompt and stop: no call to the model, nor to GitHub's API
 //
@@ -409,14 +411,15 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const fetched = (/** @type {string} */ repo, /** @type {string} */ commit) => { const d = fetchAt(repo, commit); temporary.push(d); return d; };
   const results = [];
   try {
-    const known = (() => { try { return JSON.parse(readFileSync(join(ROOT, 'index.json'), 'utf8')); } catch { return { skills: [] }; } })();
+    const { build } = await import('./build-index.mjs');
+    const known = (() => { try { return build(); } catch { return { skills: [] }; } })();
     const owners = (/** @type {any} */ index) => new Set((index?.skills ?? []).filter(fetchable).map((/** @type {any} */ s) => uidOf(s.repo, s.name).split('/')[0]));
     /** @type {{ repo: string, commit: string, path: string, name: string, previous?: string }[]} */
     let entries = [];
     let base = known;
     if (opt('--changed')) {
       base = JSON.parse(readFileSync(resolve(/** @type {string} */ (opt('--changed'))), 'utf8'));
-      const index = JSON.parse(readFileSync(resolve(opt('--index') ?? join(ROOT, 'index.json')), 'utf8'));
+      const index = opt('--index') ? JSON.parse(readFileSync(resolve(/** @type {string} */ (opt('--index'))), 'utf8')) : build();
       entries = changedEntries(base, index);
       const bad = entries.filter((e) => !fetchable(e));
       if (bad.length) fail(`not entries that can be fetched: ${bad.map((e) => JSON.stringify(e)).join(', ')}`);
@@ -456,7 +459,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     mkdirSync(out, { recursive: true });
     const one = results.length === 1 && !opt('--changed');
     writeFileSync(join(out, 'review.json'), `${JSON.stringify(one ? results[0] : results, null, 2)}\n`);
-    const md = results.length ? results.map(toMarkdown).join('\n---\n\n') : 'No entry of index.json was added or pinned again: nothing to review.\n';
+    const md = results.length ? results.map(toMarkdown).join('\n---\n\n') : 'No listing in registry/ was added or pinned again: nothing to review.\n';
     const here = process.env.GITHUB_REPOSITORY ? `${process.env.GITHUB_SERVER_URL ?? 'https://github.com'}/${process.env.GITHUB_REPOSITORY}/blob/HEAD/` : '';
     writeFileSync(join(out, 'review.md'), `## OpenFilm Community review\n\n${md}\nThis review is advice: a maintainer merges every listing. See [the review standard](${here}POLICIES/review-standard.md).\n`);
     for (const r of results) console.log(`${r.uid}: ${r.verdict}${r.reasons.length ? ` (${r.reasons.join('; ')})` : ''}`);
