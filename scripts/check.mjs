@@ -6,6 +6,11 @@
 //   node scripts/check.mjs --no-fetch      the same, without fetching the pinned skills
 //   node scripts/check.mjs <repository>    a skill's own repository: every skill in its skills/ folder
 //
+// index.json may also carry `revoked`: what OpenFilm has withdrawn, which every OpenFilm disables wherever it is
+// installed. Each entry names a `uid` (`owner/name`), a `reason`, and optionally the `commits` or folder `digests` it
+// covers (none: every version), a `note`, an `advisory` (https) and a `date` (YYYY-MM-DD). See
+// POLICIES/takedown-and-appeals.md.
+//
 // A skill is whole when it has a SKILL.md named as its folder with a description; an openfilm.json with its version,
 // its link back to its source, its kind and icon, and its title, summary and details in each language OpenFilm shows;
 // every file the brief names and nothing it does not (what is in the folder gets used); a brief short enough to read
@@ -14,6 +19,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, posix, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const ROOT = join(import.meta.dirname, '..');
 const LANGUAGES = ['en', 'zh-CN', 'ja', 'ko', 'es'];
@@ -23,12 +29,16 @@ const ICONS = ['copy', 'scissors', 'monitor', 'shapes', 'pip', 'pen', 'film', 'm
 const NAME = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const VERSION = /^\d+\.\d+\.\d+$/;
 const REPO = /^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/;
+/* as OpenFilm reads a withdrawal: whose it is and its name */
+const UID = /^[a-z0-9][a-z0-9-]{0,63}\/[a-z0-9][a-z0-9-]{0,63}$/;
+const REASONS = ['malware', 'impersonation', 'rights', 'broken', 'policy'];
+const REVOKED_FIELDS = ['uid', 'commits', 'digests', 'reason', 'note', 'advisory', 'date'];
 /* the agent reads the whole brief each time it is used */
 const MAX_WORDS = 800;
 /* a skill is a brief, a picture or two, and only the scripts and references it needs */
 const MAX_BYTES = 2 * 1024 * 1024;
 
-const problems = [];
+export const problems = [];
 const say = (/** @type {string} */ who, /** @type {string} */ what) => problems.push(`${who}: ${what}`);
 
 /** The front matter's fields, one line each. @param {string} text */
@@ -110,14 +120,76 @@ function checkRepository(dir, repo) {
   return names.length;
 }
 
-/** A repository at one commit, in a new folder of its own. @param {string} repo @param {string} commit */
-function fetchAt(repo, commit) {
+/**
+ * A repository at one commit, in a new folder of its own: its files as data, nothing in it run. The caller removes it.
+ * @param {string} repo @param {string} commit
+ */
+export function fetchAt(repo, commit) {
   const dir = mkdtempSync(join(tmpdir(), 'openfilm-skill-'));
   const git = (/** @type {string[]} */ a) => execFileSync('git', ['-C', dir, ...a], { stdio: ['ignore', 'ignore', 'pipe'] });
   git(['init', '-q']);
   git(['fetch', '-q', '--depth', '1', repo, commit]);
   git(['checkout', '-q', 'FETCH_HEAD']);
   return dir;
+}
+
+/**
+ * A listed skill's full name, as OpenFilm gives it: its repository's owner, lowercased, and its name (SPEC.md).
+ * @param {string} repo @param {string} name
+ */
+export function uidOf(repo, name) {
+  const owner = repo.split('/')[3].toLowerCase();
+  return `${owner === 'local' || owner === 'project' ? `github-${owner}` : owner}/${name}`;
+}
+
+/**
+ * index.json's `revoked`, when there is one: each entry well formed, and nothing it withdraws still listed.
+ * @param {unknown} revoked @param {{ name?: string, repo?: string, commit?: string }[]} skills
+ */
+export function checkRevoked(revoked, skills) {
+  if (!Array.isArray(revoked)) { say('index.json', 'revoked is a list'); return; }
+  const listed = new Map(skills.filter((s) => typeof s?.repo === 'string' && REPO.test(s.repo) && typeof s.name === 'string')
+    .map((s) => [uidOf(/** @type {string} */ (s.repo), /** @type {string} */ (s.name)), s.commit]));
+  revoked.forEach((entry, i) => {
+    const who = `index.json revoked[${i}] ${typeof entry?.uid === 'string' ? entry.uid : '?'}`;
+    if (!entry || typeof entry !== 'object' || Array.isArray(entry)) { say(who, 'an entry is an object'); return; }
+    const extra = Object.keys(entry).filter((k) => !REVOKED_FIELDS.includes(k));
+    if (extra.length) say(who, `${extra.join(', ')} is not a field; an entry has ${REVOKED_FIELDS.join(', ')}`);
+    if (typeof entry.uid !== 'string' || !UID.test(entry.uid)) say(who, 'its uid is <owner>/<name>, lowercase');
+    if (!REASONS.includes(entry.reason)) say(who, `its reason is one of ${REASONS.join(', ')}`);
+    for (const [field, pattern, what] of /** @type {const} */ ([['commits', /^[0-9a-f]{40}$/, 'whole 40-character commit ids'], ['digests', /^[0-9a-f]{64}$/, '64-character sha256 digests of the folder']])) {
+      if (entry[field] === undefined) continue;
+      if (!Array.isArray(entry[field]) || !entry[field].length || entry[field].some((v) => typeof v !== 'string' || !pattern.test(v))) say(who, `its ${field} are ${what}`);
+    }
+    if (entry.note !== undefined && (typeof entry.note !== 'string' || !entry.note.trim() || entry.note.length > 500)) say(who, 'its note is a sentence, 500 characters at most');
+    if (entry.advisory !== undefined && (typeof entry.advisory !== 'string' || !/^https:\/\/\S{4,300}$/.test(entry.advisory))) say(who, 'its advisory is an https address');
+    if (entry.date !== undefined && (typeof entry.date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(entry.date)
+      || Number.isNaN(Date.parse(`${entry.date}T00:00:00Z`)) || new Date(`${entry.date}T00:00:00Z`).toISOString().slice(0, 10) !== entry.date)) {
+      say(who, 'its date is YYYY-MM-DD');
+    }
+    const commit = listed.get(entry.uid);
+    if (commit !== undefined && !entry.digests && (!entry.commits || entry.commits.includes(commit))) {
+      say(who, `still listed at ${String(commit).slice(0, 7)}: a withdrawn version leaves skills`);
+    }
+  });
+}
+
+/** kinds.json: each kind named in every language, on a track, landing in a place, at a tier it describes. */
+function checkKinds() {
+  let kinds;
+  try { kinds = JSON.parse(readFileSync(join(ROOT, 'kinds.json'), 'utf8')); }
+  catch (e) { say('kinds.json', e instanceof Error ? e.message : String(e)); return; }
+  const seen = new Set();
+  for (const kind of Array.isArray(kinds?.kinds) ? kinds.kinds : []) {
+    const who = `kinds.json ${kind?.id ?? '?'}`;
+    if (typeof kind?.id !== 'string' || !NAME.test(kind.id) || seen.has(kind.id)) say(who, 'its id is a name of its own');
+    seen.add(kind?.id);
+    for (const lang of LANGUAGES) if (typeof kind?.names?.[lang] !== 'string' || !kind.names[lang]) say(who, `no name in ${lang}`);
+    for (const [field, list] of [['track', 'tracks'], ['lands', 'places'], ['tier', 'tiers']]) {
+      if (!Object.hasOwn(kinds[list] ?? {}, kind?.[field])) say(who, `its ${field} is one of ${list}: ${Object.keys(kinds[list] ?? {}).join(', ')}`);
+    }
+  }
+  if (!seen.size) say('kinds.json', 'kinds is a list');
 }
 
 /** index.json: every entry well formed and in order, and, unless `fetch` is false, the skill it pins. */
@@ -127,6 +199,7 @@ function checkIndex({ fetch = true } = {}) {
   catch (e) { say('index.json', e instanceof Error ? e.message : String(e)); return 0; }
   if (index.version !== 1) say('index.json', 'its version is 1');
   if (!Array.isArray(index.skills)) { say('index.json', 'skills is a list'); return 0; }
+  if (index.revoked !== undefined) checkRevoked(index.revoked, index.skills);
   const seen = new Set();
   /** @type {Map<string, string>} fetched folders, by repository and commit */
   const fetched = new Map();
@@ -162,21 +235,24 @@ function checkIndex({ fetch = true } = {}) {
   return index.skills.length;
 }
 
-const args = process.argv.slice(2);
-const target = args.find((a) => !a.startsWith('--'));
-let summary;
-if (target) {
-  const dir = resolve(target);
-  const repo = process.env.GITHUB_REPOSITORY ? `${process.env.GITHUB_SERVER_URL ?? 'https://github.com'}/${process.env.GITHUB_REPOSITORY}` : undefined;
-  const n = checkRepository(dir, repo);
-  summary = `${n} ${n === 1 ? 'skill' : 'skills'}, each whole`;
-} else {
-  const n = checkIndex({ fetch: !args.includes('--no-fetch') });
-  checkRepository(join(ROOT, 'template'));
-  summary = `index.json lists ${n} ${n === 1 ? 'skill' : 'skills'}, each whole; the template is whole`;
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const args = process.argv.slice(2);
+  const target = args.find((a) => !a.startsWith('--'));
+  let summary;
+  if (target) {
+    const dir = resolve(target);
+    const repo = process.env.GITHUB_REPOSITORY ? `${process.env.GITHUB_SERVER_URL ?? 'https://github.com'}/${process.env.GITHUB_REPOSITORY}` : undefined;
+    const n = checkRepository(dir, repo);
+    summary = `${n} ${n === 1 ? 'skill' : 'skills'}, each whole`;
+  } else {
+    const n = checkIndex({ fetch: !args.includes('--no-fetch') });
+    checkRepository(join(ROOT, 'template'));
+    checkKinds();
+    summary = `index.json lists ${n} ${n === 1 ? 'skill' : 'skills'}, each whole; the template and kinds.json are whole`;
+  }
+  if (problems.length) {
+    for (const p of problems) console.error(p);
+    process.exit(1);
+  }
+  console.log(summary);
 }
-if (problems.length) {
-  for (const p of problems) console.error(p);
-  process.exit(1);
-}
-console.log(summary);

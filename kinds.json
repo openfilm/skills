@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "tracks": {
+    "code": "Lives in its publisher's own open-source repository; listed in index.json here, pinned to one commit.",
+    "asset": "Files with no code, in openfilm/library for now, published by its maintainers to the library's catalog."
+  },
+  "places": {
+    "workbench": "A surface of its own beside the edit and the canvas, picked from the workbench switch at the top right.",
+    "agent": "Given to the agent in the conversation, by its full name.",
+    "agent-connectors": "Connects the agent to an outside service; turned on in the agent's connectors.",
+    "library": "A tab of the library drawer, the tab named after the kind."
+  },
+  "tiers": {
+    "A": "Files, no code. Format, rights and provenance checked; a maintainer reviews the first version and every change.",
+    "B": "A brief for the agent, sometimes with scripts. Automatic checks, scan and AI review of every version; a person on escalation.",
+    "C": "A page, a program or an element. As B, with every version's diff reviewed and the page held to the hosts it declares."
+  },
+  "kinds": [
+    {
+      "id": "workbench",
+      "names": { "en": "Workbenches", "zh-CN": "工作台", "ja": "ワークベンチ", "ko": "작업대", "es": "Mesas de trabajo" },
+      "track": "code",
+      "lands": "workbench",
+      "tier": "C"
+    },
+    {
+      "id": "skill",
+      "names": { "en": "Skills", "zh-CN": "技能", "ja": "スキル", "ko": "스킬", "es": "Habilidades" },
+      "track": "code",
+      "lands": "agent",
+      "tier": "B"
+    },
+    {
+      "id": "connector",
+      "names": { "en": "Connectors", "zh-CN": "连接器", "ja": "コネクタ", "ko": "커넥터", "es": "Conectores" },
+      "track": "code",
+      "lands": "agent-connectors",
+      "tier": "C"
+    },
+    {
+      "id": "template",
+      "names": { "en": "Templates", "zh-CN": "模板", "ja": "テンプレート", "ko": "템플릿", "es": "Plantillas" },
+      "track": "asset",
+      "lands": "library",
+      "tier": "A"
+    },
+    {
+      "id": "text",
+      "names": { "en": "Text", "zh-CN": "文本", "ja": "テキスト", "ko": "텍스트", "es": "Texto" },
+      "track": "asset",
+      "lands": "library",
+      "tier": "A"
+    },
+    {
+      "id": "sticker",
+      "names": { "en": "Stickers", "zh-CN": "贴纸", "ja": "ステッカー", "ko": "스티커", "es": "Stickers" },
+      "track": "asset",
+      "lands": "library",
+      "tier": "A"
+    },
+    {
+      "id": "effect",
+      "names": { "en": "Effects", "zh-CN": "特效", "ja": "エフェクト", "ko": "효과", "es": "Efectos" },
+      "track": "asset",
+      "lands": "library",
+      "tier": "A"
+    },
+    {
+      "id": "transition",
+      "names": { "en": "Transitions", "zh-CN": "转场", "ja": "トランジション", "ko": "전환", "es": "Transiciones" },
+      "track": "asset",
+      "lands": "library",
+      "tier": "A"
+    },
+    {
+      "id": "filter",
+      "names": { "en": "Filters", "zh-CN": "滤镜", "ja": "フィルター", "ko": "필터", "es": "Filtros" },
+      "track": "asset",
+      "lands": "library",
+      "tier": "A"
+    },
+    {
+      "id": "sound",
+      "names": { "en": "Sounds", "zh-CN": "音效", "ja": "効果音", "ko": "효과음", "es": "Sonidos" },
+      "track": "asset",
+      "lands": "library",
+      "tier": "A"
+    },
+    {
+      "id": "music",
+      "names": { "en": "Music", "zh-CN": "音乐", "ja": "音楽", "ko": "음악", "es": "Música" },
+      "track": "asset",
+      "lands": "library",
+      "tier": "A"
+    }
+  ]
+}
