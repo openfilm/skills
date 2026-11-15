@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ROOT, hash, reviewed, text } from './check.mjs';
+import { LANGUAGES, ROOT, hash, reviewed, reviewedPacks, text } from './check.mjs';
 
 const CSP = "default-src 'none'; base-uri 'none'; form-action 'none'; style-src 'unsafe-inline';";
 const MAX_ITEMS = 1000;
@@ -27,12 +27,12 @@ function wave(bytes) {
   { input: bytes, timeout: 20_000, maxBuffer: 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'] });
 }
 
-export function build({ mediaDir, source } = {}) {
+export function build({ root = ROOT, mediaDir, source } = {}) {
   const items = [];
   const blobs = new Map();
-  const rows = reviewed({ mediaDir });
+  const rows = reviewed({ root, mediaDir });
   if (rows.length > MAX_ITEMS) throw new Error(`Limit of ${MAX_ITEMS} items in one catalog`);
-  const revoked = revokedAt();
+  const revoked = revokedAt(root);
   for (const { id, slug, item, inputs, fingerprint } of rows) {
     if (revoked.has(fingerprint)) throw new Error(`${id}: approved version was revoked`);
     const files = {};
@@ -57,13 +57,43 @@ export function build({ mediaDir, source } = {}) {
     const revision = hash(text([fingerprint, files]));
     items.push({ id, name, about, tags, by, durationMs, version, revision, fingerprint, files });
   }
-  const catalog = text({ version: 1, source, items });
+  const packs = [];
+  for (const { id, slug, pack, cover, fingerprint } of reviewedPacks({ root })) {
+    if (revoked.has(fingerprint)) throw new Error(`${id}: approved version was revoked`);
+    if (cover) blobs.set(hash(cover), { bytes: cover, type: 'image/jpeg' });
+    const shown = {
+      name: Object.fromEntries(LANGUAGES.map((lang) => [lang, pack.name[lang]])),
+      about: pack.about, by: pack.by, license: pack.license, items: pack.items,
+      ...(cover && { cover: { sha256: hash(cover), bytes: cover.length } }),
+    };
+    // Its canonical JSON, its cover by digest: the same pack always has the same revision.
+    const revision = hash(text({ id: slug, version: pack.version, ...shown }));
+    packs.push({ id: slug, version: pack.version, revision, ...shown });
+  }
+  // A catalog with no packs is exactly what it was before packs.
+  const catalog = text(packs.length ? { version: 1, source, items, packs } : { version: 1, source, items });
   if (catalog.length > MAX_CATALOG) throw new Error('Catalog exceeds 2 MiB');
   return { catalog, blobs, release: hash(catalog) };
 }
 
-export function revokedAt() {
-  const list = JSON.parse(readFileSync(join(ROOT, 'revoked.json'), 'utf8'));
+// Every blob a catalog points to: its items' files and its packs' covers.
+export function blobsOf(catalog) {
+  return [...catalog.items.flatMap((entry) => Object.values(entry.files)), ...(catalog.packs ?? []).flatMap((pack) => pack.cover ? [pack.cover] : [])];
+}
+
+// A published version never changes: an item or pack whose content differs from the active catalog needs a higher version.
+export function versionsRaised(before, after) {
+  for (const [list, key, prefix] of [['items', 'fingerprint', ''], ['packs', 'revision', 'packs/']]) {
+    const prior = new Map((before[list] ?? []).map((entry) => [entry.id, entry]));
+    for (const entry of after[list] ?? []) {
+      const old = prior.get(entry.id);
+      if (old && old[key] !== entry[key] && old.version >= entry.version) throw new Error(`${prefix}${entry.id}: raise its version when changing the reviewed content`);
+    }
+  }
+}
+
+export function revokedAt(root = ROOT) {
+  const list = JSON.parse(readFileSync(join(root, 'revoked.json'), 'utf8'));
   if (!Array.isArray(list) || !list.every((value) => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value))) throw new Error('Invalid revocation list');
   return new Set(list);
 }

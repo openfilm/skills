@@ -12,6 +12,9 @@ export const HEX = /^[a-f0-9]{64}$/;
 export const MB = 1024 * 1024;
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const ITEM_KEYS = ['cat', 'name', 'about', 'tags', 'by', 'license', 'source', 'version', 'files', 'main', 'durationMs'];
+const PACK_KEYS = ['name', 'about', 'by', 'license', 'version', 'items'];
+export const MAX_PACKS = 200;
+export const MAX_PACK_ITEMS = 200;
 export const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 export const text = (value) => Buffer.from(JSON.stringify(value) + '\n');
 
@@ -68,17 +71,21 @@ function cssIsValid(bytes) {
   'overlay.css must be local CSS with no external resources or HTML');
 }
 
-export function idsIn(root = ROOT) {
-  return CATEGORIES.flatMap((cat) => {
-    let entries;
-    try { entries = readdirSync(join(root, cat), { withFileTypes: true }); }
-    catch (error) { if (error.code === 'ENOENT') return []; throw error; }
-    return entries.map((entry) => {
-      requireThat(entry.isDirectory(), `${cat}/${entry.name}: expected an item directory`);
-      return `${cat}/${entry.name}`;
-    });
-  }).sort();
+function foldersIn(root, top, what) {
+  let entries;
+  try { entries = readdirSync(join(root, top), { withFileTypes: true }); }
+  catch (error) { if (error.code === 'ENOENT') return []; throw error; }
+  return entries.map((entry) => {
+    requireThat(entry.isDirectory(), `${top}/${entry.name}: expected ${what} directory`);
+    return `${top}/${entry.name}`;
+  });
 }
+
+export function idsIn(root = ROOT) {
+  return CATEGORIES.flatMap((cat) => foldersIn(root, cat, 'an item')).sort();
+}
+
+export const packIdsIn = (root = ROOT) => foldersIn(root, 'packs', 'a pack').sort();
 
 export function inspect(id, { root = ROOT, mediaDir, allowMissing = false } = {}) {
   const [cat, slug, extra] = id.split('/');
@@ -143,18 +150,82 @@ export function inspect(id, { root = ROOT, mediaDir, allowMissing = false } = {}
   return { id, slug, item, inputs, fingerprint, missing };
 }
 
-export function reviewed({ root = ROOT, mediaDir } = {}) {
-  const approvals = JSON.parse(fileAt(join(root, 'approvals.json'), MB));
-  requireThat(record(approvals), 'approvals.json must be an object');
+// A pack lists items of one contributor under one name: packs/<slug>/pack.json, and an optional cover.jpg.
+export function inspectPack(id, { root = ROOT } = {}) {
+  const need = (ok, message) => requireThat(ok, `${id}: ${message}`);
+  const [top, slug, extra] = id.split('/');
+  need(top === 'packs' && SLUG.test(slug ?? '') && slug.length <= 64 && extra === undefined, 'expected packs/<slug>, a slug of at most 64 characters');
+  const dir = join(root, 'packs', slug);
+  need(lstatSync(join(root, 'packs')).isDirectory() && lstatSync(dir).isDirectory(), 'pack must be a real directory');
+  const metadata = fileAt(join(dir, 'pack.json'), 32 * 1024);
+  const pack = JSON.parse(metadata);
+  const covered = record(pack) && Object.hasOwn(pack, 'cover');
+  need(exact(pack, covered ? [...PACK_KEYS, 'cover'] : PACK_KEYS), 'invalid pack.json fields');
+  need(exact(pack.name, LANGUAGES) && LANGUAGES.every((lang) => cleanText(pack.name[lang], 1, 60)), 'a name in all five languages is required');
+  need(cleanText(pack.about, 10, 300), 'about must be 10–300 characters');
+  need(typeof pack.by === 'string' && /^[a-zA-Z0-9-]{1,39}$/.test(pack.by), 'by must be the contributor’s GitHub login');
+  need(pack.license === 'CC0-1.0', 'CC0-1.0 is required');
+  need(Number.isSafeInteger(pack.version) && pack.version >= 1, 'version must be a positive integer');
+  need(Array.isArray(pack.items) && pack.items.length >= 1 && pack.items.length <= MAX_PACK_ITEMS, `a pack lists 1–${MAX_PACK_ITEMS} items`);
+  need(new Set(pack.items).size === pack.items.length, 'a pack lists each item once');
   const ids = idsIn(root);
-  requireThat(Object.keys(approvals).every((id) => ids.includes(id)), 'remove approvals for withdrawn items');
+  for (const item of pack.items) {
+    need(typeof item === 'string' && ids.includes(item), `${item} is not an item of the library`);
+    need(JSON.parse(fileAt(join(root, item, 'item.json'), 32 * 1024)).by === pack.by, `${item} is by someone else; a pack holds its contributor’s own items`);
+  }
+  const allowed = new Set(['pack.json']);
+  let cover;
+  if (covered) {
+    need(pack.cover === 'cover.jpg', 'cover must be "cover.jpg"');
+    let info;
+    try { info = lstatSync(join(dir, 'cover.jpg')); } catch {}
+    need(info?.isFile() && info.size > 0 && info.size <= MB, 'cover.jpg must be a JPEG of at most 1 MiB');
+    cover = readFileSync(join(dir, 'cover.jpg'));
+    pictureIsValid(cover, 'cover.jpg', 'mjpeg');
+    allowed.add('cover.jpg');
+  }
+  for (const filename of readdirSync(dir)) need(allowed.has(filename), `unexpected file: ${filename}`);
+  const fingerprint = hash(text([hash(metadata), ...(cover ? [hash(cover)] : [])]));
+  return { id, slug, pack, cover, fingerprint };
+}
+
+export function inspectPacks({ root = ROOT } = {}) {
+  const ids = packIdsIn(root);
+  requireThat(ids.length <= MAX_PACKS, `Limit of ${MAX_PACKS} packs`);
+  const packOf = new Map();
   return ids.map((id) => {
-    const entry = inspect(id, { root, mediaDir });
-    const approval = approvals[id];
-    requireThat(exact(approval, ['fingerprint', 'evidence']) && approval.fingerprint === entry.fingerprint &&
-      cleanText(approval.evidence, 12, 2000), `${id}: maintainer approval must record matching fingerprint and provenance evidence`);
+    const entry = inspectPack(id, { root });
+    for (const item of entry.pack.items) {
+      requireThat(!packOf.has(item), `${item} is in ${packOf.get(item)} and ${id}; an item is in at most one pack`);
+      packOf.set(item, id);
+    }
     return entry;
   });
+}
+
+function approvalsAt(root) {
+  const approvals = JSON.parse(fileAt(join(root, 'approvals.json'), MB));
+  requireThat(record(approvals), 'approvals.json must be an object');
+  const ids = [...idsIn(root), ...packIdsIn(root)];
+  requireThat(Object.keys(approvals).every((id) => ids.includes(id)), 'remove approvals for withdrawn items');
+  return approvals;
+}
+
+function approved(approvals, entry) {
+  const approval = approvals[entry.id];
+  requireThat(exact(approval, ['fingerprint', 'evidence']) && approval.fingerprint === entry.fingerprint &&
+    cleanText(approval.evidence, 12, 2000), `${entry.id}: maintainer approval must record matching fingerprint and provenance evidence`);
+  return entry;
+}
+
+export function reviewed({ root = ROOT, mediaDir } = {}) {
+  const approvals = approvalsAt(root);
+  return idsIn(root).map((id) => approved(approvals, inspect(id, { root, mediaDir })));
+}
+
+export function reviewedPacks({ root = ROOT } = {}) {
+  const approvals = approvalsAt(root);
+  return inspectPacks({ root }).map((entry) => approved(approvals, entry));
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
@@ -163,10 +234,20 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const mediaDir = at < 0 ? undefined : args.splice(at, 2)[1];
   const strict = args.includes('--approved');
   const ids = args.filter((arg) => arg !== '--approved');
+  const packIds = ids.filter((id) => id.startsWith('packs/'));
+  const itemIds = ids.filter((id) => !packIds.includes(id));
   try {
     if (at >= 0 && !mediaDir) throw new Error('--media-dir needs a directory');
-    const items = strict ? reviewed({ mediaDir }) : (ids.length ? ids : idsIn()).map((id) => inspect(id, { mediaDir, allowMissing: true }));
+    const items = strict ? reviewed({ mediaDir }) : (ids.length ? itemIds : idsIn()).map((id) => inspect(id, { mediaDir, allowMissing: true }));
+    let packs = [];
+    if (strict) packs = reviewedPacks();
+    else if (!ids.length || packIds.length) {
+      // A pack's rules span every pack, so naming one still checks them all.
+      packs = inspectPacks();
+      if (ids.length) packs = packIds.map((id) => packs.find((entry) => entry.id === id) ?? inspectPack(id));
+    }
     for (const { id, fingerprint, missing } of items) console.log(`${id} ${fingerprint}${missing.length ? ' (attachment pending maintainer verification)' : ''}`);
-    console.log(`${items.length} item(s) checked`);
+    for (const { id, fingerprint } of packs) console.log(`${id} ${fingerprint}`);
+    console.log(`${items.length} item(s)${packs.length ? ` and ${packs.length} pack(s)` : ''} checked`);
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }

@@ -4,7 +4,7 @@ import { existsSync, lstatSync, mkdtempSync, readFileSync, rmSync, writeFileSync
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { ROOT, hash, HEX, idsIn, inspect, MB } from './check.mjs';
-import { build, commit, revokedAt } from './build.mjs';
+import { blobsOf, build, commit, revokedAt, versionsRaised } from './build.mjs';
 
 const [command, channel, value, ...extra] = process.argv.slice(2);
 const prefixes = { preview: 'library/community-preview/v1', production: 'library/community/v1' };
@@ -66,12 +66,10 @@ function activate(catalog, current) {
 
 function verifySnapshot(catalog) {
   const revoked = revokedAt();
-  for (const entry of catalog.items) {
-    if (revoked.has(entry.fingerprint)) throw new Error(`${entry.id} was revoked; choose another release`);
-    for (const file of Object.values(entry.files)) {
-      const object = request('GET', `blobs/${file.sha256}`);
-      if (object.status !== 200 || object.bytes.length !== file.bytes || hash(object.bytes) !== file.sha256) throw new Error(`Missing or incorrect object ${file.sha256}`);
-    }
+  for (const entry of catalog.items) if (revoked.has(entry.fingerprint)) throw new Error(`${entry.id} was revoked; choose another release`);
+  for (const file of blobsOf(catalog)) {
+    const object = request('GET', `blobs/${file.sha256}`);
+    if (object.status !== 200 || object.bytes.length !== file.bytes || hash(object.bytes) !== file.sha256) throw new Error(`Missing or incorrect object ${file.sha256}`);
   }
 }
 
@@ -127,11 +125,7 @@ try {
     verifyMain();
     if (command === 'publish') {
       const { catalog, blobs, release } = buildFromSources(value);
-      const prior = new Map(old.items.map((entry) => [entry.id, entry]));
-      for (const item of JSON.parse(catalog).items) {
-        const before = prior.get(item.id);
-        if (before && before.fingerprint !== item.fingerprint && before.version >= item.version) throw new Error(`${item.id}: raise its version when changing the reviewed content`);
-      }
+      versionsRaised(old, JSON.parse(catalog));
       for (const [digest, { bytes, type }] of blobs) immutable(`blobs/${digest}`, bytes, type);
       immutable(`releases/${release}`, catalog, 'application/json');
       activate(catalog, current);

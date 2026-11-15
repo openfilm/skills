@@ -24,4 +24,4 @@ jobs:
           node-version: 22
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: node scripts/check.mjs
-      - run: node --test scripts/check.test.mjs
+      - run: node --test scripts/*.test.mjs
