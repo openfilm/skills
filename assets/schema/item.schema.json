@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/openfilm/library/schema/item.schema.json",
+  "title": "An item of the OpenFilm Library",
+  "type": "object",
+  "required": [
+    "cat",
+    "name",
+    "about",
+    "tags",
+    "by",
+    "license",
+    "source",
+    "version",
+    "files",
+    "main",
+    "durationMs"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "cat": {
+      "enum": [
+        "sound",
+        "music",
+        "transition",
+        "effect"
+      ],
+      "description": "Its category: the folder it is in."
+    },
+    "name": {
+      "type": "object",
+      "description": "Its name in each of OpenFilm's languages.",
+      "required": [
+        "en",
+        "zh-CN",
+        "ja",
+        "ko",
+        "es"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "zh-CN": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "ja": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "ko": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        }
+      }
+    },
+    "about": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 300,
+      "description": "What it is and what it is for, in English, one or two sentences."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "maxLength": 40
+      },
+      "minItems": 1,
+      "maxItems": 12,
+      "uniqueItems": true
+    },
+    "by": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9-]{1,39}$",
+      "description": "The GitHub login of who added it; none for OpenFilm's own."
+    },
+    "license": {
+      "const": "CC0-1.0"
+    },
+    "source": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "own"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "url"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "cc0"
+            },
+            "url": {
+              "type": "string",
+              "pattern": "^https://"
+            }
+          }
+        }
+      ]
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Raised with every change: a published version never changes."
+    },
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Its files: those in the folder, and those kept in OpenFilm's storage by their sha256.",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "bytes"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9._-]*$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8388608
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      },
+      "maxItems": 3
+    },
+    "main": {
+      "type": "string",
+      "description": "The file a film uses: a page's HTML, a sound's audio.",
+      "enum": [
+        "overlay.css",
+        "sound.m4a",
+        "sound.mp3",
+        "music.m4a",
+        "music.mp3"
+      ]
+    },
+    "durationMs": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3600000
+    }
+  }
+}
