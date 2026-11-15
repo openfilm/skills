@@ -1,0 +1,66 @@
+# index.json is built from registry/ and revoked.json (scripts/build-index.mjs). A pull request adds or changes one
+# listing's file; once a maintainer merges it, this rebuilds index.json and commits it when it changed. Released
+# OpenFilm reads index.json at https://raw.githubusercontent.com/openfilm/skills/main/index.json, which GitHub
+# redirects here, so its shape stays what it was.
+#
+# Trusted: it runs on main after a merge, with main's own code; no pull request's code runs here. The build job can
+# push to this repository, and pushes index.json and nothing else; the check job after it is read-only. A commit pushed
+# with this token starts no workflow, so this never runs on its own commit.
+name: index
+on:
+  push:
+    branches: [main]
+    paths:
+      - registry/**
+      - revoked.json
+      - index.json
+      - kinds.json
+      - scripts/**
+      - .github/workflows/index.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+# One at a time, each from main as it is when it starts.
+concurrency:
+  group: index
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Rebuild index.json, and commit it when it changed
+        id: commit
+        run: |
+          node scripts/build-index.mjs
+          if ! git diff --quiet -- index.json; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -q -m 'Index: rebuilt from registry/ and revoked.json' -- index.json
+            git push origin HEAD:main
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+  # The whole check on what main now is, index.json included: every listing fetched at its commit and checked.
+  check:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.build.outputs.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/check.mjs
