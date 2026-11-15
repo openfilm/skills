@@ -3,6 +3,16 @@
 What changed in this index, the spec and the checks. Each skill keeps its own changes in its own repository. Newest
 first.
 
+## openfilm/community: the registry, and the assets
+
+This repository is `openfilm/community`; it was `openfilm/skills`, and GitHub redirects the old name, the old raw
+address of `index.json` included. Each listing is a file of its own, `registry/<kind>/<owner>/<name>.json`, so one can
+be proposed from GitHub's web editor; withdrawals are `revoked.json`. `index.json` keeps its shape for every OpenFilm
+that reads it, each entry with its `kind` added, and is built from both by `build-index.mjs` once a pull request is
+merged. `check.mjs` checks every listing, its owner its repository's, and that `index.json` is their build; `pin.mjs`
+writes a listing. The OpenFilm Library joined as `assets/`, with its history: the assets track, its checks and its
+publishing, to the same catalog at the same addresses.
+
 ## The Community
 
 This repository becomes the front door of the OpenFilm Community: the kinds of items (`kinds.json`), the schema of

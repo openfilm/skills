@@ -22,7 +22,7 @@ A skill for [OpenFilm](https://github.com/openfilm/openfilm): one line on the fi
 | `evals/README.md` | the real requests it was tried on, with and without it, and what came of them |
 | `CHANGELOG.md` | what changed in each version |
 
-How a skill for OpenFilm is written: [SPEC.md](https://github.com/openfilm/skills/blob/main/SPEC.md).
+How a skill for OpenFilm is written: [SPEC.md](https://github.com/openfilm/community/blob/main/SPEC.md).
 
 ## License
 

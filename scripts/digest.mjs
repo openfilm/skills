@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// The digest of an item's folder, as OpenFilm computes it, for `digests` in index.json's `revoked`.
+// The digest of an item's folder, as OpenFilm computes it, for `digests` in revoked.json.
 //
 //   node scripts/digest.mjs <folder>
 //

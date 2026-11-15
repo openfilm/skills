@@ -8,4 +8,4 @@ permissions:
   contents: read
 jobs:
   check:
-    uses: openfilm/skills/.github/workflows/skill.yml@main
+    uses: openfilm/community/.github/workflows/skill.yml@main

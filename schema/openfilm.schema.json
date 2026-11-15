@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/openfilm/skills/blob/main/schema/openfilm.schema.json",
+  "$id": "https://github.com/openfilm/community/blob/main/schema/openfilm.schema.json",
   "title": "openfilm.json",
   "description": "How OpenFilm shows a skill, a workbench or a connector, and what it declares it does. It sits beside SKILL.md in the item's folder. Every field is optional; OpenFilm leaves out anything missing or wrong. A listed skill also passes scripts/check.mjs, which asks for more (see SPEC.md).",
   "type": "object",
