@@ -42,7 +42,19 @@ jobs:
           git fetch --no-tags --depth=1 origin "+refs/pull/${PR}/head:refs/remotes/pr/head"
           git show "${HEAD_SHA}:index.json" > "$RUNNER_TEMP/pr-index.json"
           git show "HEAD:index.json" > "$RUNNER_TEMP/base-index.json"
+      # The review costs money and anyone can open a pull request: it runs for an author whose GitHub account is at
+      # least 7 days old (the publishing rule, POLICIES/developer-policy.md); a younger one is told so, and waits.
+      - name: Gate on the author's account age
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          created=$(gh api "users/${AUTHOR}" --jq .created_at)
+          age=$(( ( $(date -u +%s) - $(date -u -d "$created" +%s) ) / 86400 ))
+          if [ "$age" -ge 7 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; mkdir -p "$RUNNER_TEMP/review"; printf 'This account is %s days old. Publishing needs a GitHub account at least 7 days old (POLICIES/developer-policy.md), so the review waits until then; push again after that.\n' "$age" > "$RUNNER_TEMP/review/review.md"; fi
       - name: Review
+        if: steps.gate.outputs.ok == 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           # read the publisher's account on GitHub's public API, so its age is known
