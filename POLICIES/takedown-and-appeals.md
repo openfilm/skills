@@ -22,7 +22,7 @@ straight to step 3.
    misleading description.
 2. **Hide.** The item leaves Discover. Those who added it keep it, with a note: while a report is looked into, or
    until the publisher fixes it.
-3. **Withdraw.** The item leaves the index and is added to `revoked` in [index.json](../index.json): every OpenFilm
+3. **Withdraw.** The item leaves the index and is added to [revoked.json](../revoked.json): every OpenFilm
    disables it wherever it is installed, and tells the person why, with the advisory when there is one. Films already
    made with it are not changed.
 4. **Ban.** The publisher's other items are reviewed, and their account may not publish again: for malware, repeated
@@ -36,8 +36,8 @@ takes effect.
 
 A maintainer opens a pull request that:
 
-1. removes the item's entry from `skills` (or, for a version, pins the last good one);
-2. adds an entry to `revoked`:
+1. removes the item's listing from `registry/` (or, for a version, pins the last good one);
+2. adds an entry to [revoked.json](../revoked.json):
 
    ```json
    { "uid": "someone/bad-skill", "commits": ["<the whole commit id>"], "reason": "malware",
@@ -49,7 +49,8 @@ A maintainer opens a pull request that:
    `policy`;
 3. adds a line to [REMOVED.md](../REMOVED.md).
 
-`node scripts/check.mjs` checks the entry. Assets are withdrawn in openfilm/library, through its `revoked.json`.
+`node scripts/check.mjs` checks the entry; `index.json` is rebuilt with it once the pull request is merged. Assets are
+withdrawn in [assets/](../assets), through [assets/revoked.json](../assets/revoked.json).
 
 ## The public log
 

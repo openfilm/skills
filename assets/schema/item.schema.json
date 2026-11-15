@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/openfilm/library/schema/item.schema.json",
+  "$id": "https://github.com/openfilm/community/blob/main/assets/schema/item.schema.json",
   "title": "An item of the OpenFilm Library",
   "type": "object",
   "required": [

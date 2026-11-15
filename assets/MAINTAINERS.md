@@ -1,18 +1,23 @@
 # Reviewing and publishing community assets
 
-The GitHub repository holds submissions and approval records. The production R2 bucket holds the catalog and the approved media. The publisher runs from a trusted maintainer checkout, and the GitHub PR workflow has read-only permissions and no R2 keys.
+The assets track lives in `assets/` of [openfilm/community](https://github.com/openfilm/community), where it moved from openfilm/library with its history. The GitHub repository holds submissions and approval records. The production R2 bucket holds the catalog and the approved media. The publisher runs from a trusted maintainer checkout, and the GitHub PR workflow has read-only permissions and no R2 keys.
 
 ## Review
 
-1. Check the source, CC0 eligibility, Content ID declaration, item quality and attribution. For an external attachment, extract the audio alone, compare `node scripts/prepare.mjs <file>` with `item.json`, and copy the audio to a private local staging directory as `<sha256>` with no extension. Keep any private evidence off GitHub.
+Run every command here from `assets/`.
+
+1. Check the source, CC0 eligibility, the content-claiming declaration, item quality and attribution. For an external attachment, extract the audio alone, compare `node scripts/prepare.mjs <file>` with `item.json`, and copy the audio to a private local staging directory as `<sha256>` with no extension. Keep any private evidence off GitHub.
 2. Run `node scripts/check.mjs --media-dir <staging-dir> <category>/<slug>`. Add the resulting fingerprint and a public, non-sensitive description of the provenance evidence to `approvals.json`. Reviewers own that file. Changed bytes or metadata invalidate the previous approval.
 3. Run `node scripts/check.mjs --approved --media-dir <staging-dir>` and preview the result. Stage newly approved files locally. Once published, subsequent releases can reuse the verified bytes already in the same R2 channel. Original review requires a maintainer and passing CI.
 
 ## Release
 
+Moving into openfilm/community changed where the commands run, nothing else: the published catalog is the same. The publisher writes to the same `openfilm-assets` bucket under the same prefixes, `library/community-preview/v1` and `library/community/v1`, so every catalog, blob and release URL stays what it was, and OpenFilm reads it as before. Run the same commands as before, from `assets/` in a clean checkout of openfilm/community: a production release needs the whole checkout clean and its `HEAD` to be the current `origin/main` of openfilm/community. A catalog's `source` is now a commit of openfilm/community, and an item's files are under `assets/` in it.
+
 Set `R2_ENDPOINT` to the account's HTTPS S3 endpoint and supply the `openfilm-assets` credentials as `R2_ACCESS_KEY_ID` and `R2_SECRET_ACCESS_KEY` in the maintainer shell. Use Node.js 22+, FFmpeg and a curl with SigV4 support.
 
 ```sh
+cd assets
 node scripts/build.mjs /tmp/openfilm-library-preview /path/to/staging
 node scripts/publish.mjs publish preview /path/to/staging
 node scripts/publish.mjs status preview
@@ -27,7 +32,7 @@ Omit the staging path when every source file is in Git or already published to t
 
 ## Withdraw and roll back
 
-Remove the item's folder and approval, then publish. For a rights or safety withdrawal, add the old approval fingerprint to `revoked.json` in that PR. Rollback refuses snapshots that contain a revoked fingerprint or missing blob. A successful catalog refresh stops Studio from offering or serving withdrawn items from its cache. Media already copied into a project is the project's own file.
+Remove the item's folder and approval, then publish. For a rights or safety withdrawal, add the old approval fingerprint to `assets/revoked.json` in that PR, and log it in [REMOVED.md](../REMOVED.md). Rollback refuses snapshots that contain a revoked fingerprint or missing blob. A successful catalog refresh stops Studio from offering or serving withdrawn items from its cache. Media already copied into a project is the project's own file.
 
 To restore a previously published catalog, use its SHA-256 from the publisher:
 

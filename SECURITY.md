@@ -17,8 +17,8 @@ same way.
 ## What happens next
 
 - **Within 48 hours** you get a first reply from a person.
-- **Within 24 hours of confirming an item is malicious**, it is withdrawn: added to `revoked` in
-  [index.json](index.json), so every OpenFilm disables it wherever it is installed and tells the person why
+- **Within 24 hours of confirming an item is malicious**, it is withdrawn: added to
+  [revoked.json](revoked.json), so every OpenFilm disables it wherever it is installed and tells the person why
   ([takedown and appeals](POLICIES/takedown-and-appeals.md)). Its publisher may lose the right to publish.
 - **An advisory** is published on this repository and linked from the withdrawal and from [REMOVED.md](REMOVED.md). It
   says:

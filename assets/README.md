@@ -1,6 +1,6 @@
 # OpenFilm Library
 
-Original and independently verified CC0 assets for [OpenFilm](https://github.com/openfilm/openfilm). The community catalog starts with sounds, music, and CSS overlays that Studio can use as effects or transitions.
+The assets track of the [OpenFilm Community](../README.md): original and independently verified CC0 assets for [OpenFilm](https://github.com/openfilm/openfilm). The community catalog starts with sounds, music, and CSS overlays that Studio can use as effects or transitions.
 
 ## Use a community asset
 
@@ -12,4 +12,4 @@ Each item's `item.json` identifies its contributor and source. Community submiss
 
 ## Contribute
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for formats, file limits and review. See [MAINTAINERS.md](MAINTAINERS.md) for staging, release and takedown. [Glitch](transition/glitch/) and [Glass Pulse](sound/glass-pulse/) show the two supported asset formats.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for formats, file limits and review. See [MAINTAINERS.md](MAINTAINERS.md) for staging, release and takedown. The library lived in its own repository, openfilm/library, until it joined [openfilm/community](https://github.com/openfilm/community) as `assets/`, its history kept; its scripts run from this folder. [Glitch](transition/glitch/) and [Glass Pulse](sound/glass-pulse/) show the two supported asset formats.

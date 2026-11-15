@@ -29,7 +29,7 @@ and only from publishers already known to the Community.
 
 ## What to read
 
-**Tier A** (in openfilm/library, by its maintainers, with this standard): `item.json` (source, author, version, names
+**Tier A** (in [assets/](../assets), by its maintainers, with this standard): `item.json` (source, author, version, names
 in five languages), every file, the provenance evidence, the preview. For CSS: every rule, and nothing that loads
 anything (`@import`, `url()` to an outside address).
 

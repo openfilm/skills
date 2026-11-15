@@ -23,9 +23,8 @@ Templates, text styles, stickers, effects, transitions, filters, sounds and musi
   permission.
 - Do not register an asset with a system that claims matching uploads.
 
-Assets are submitted to [openfilm/library](https://github.com/openfilm/library) for now; its
-[CONTRIBUTING.md](https://github.com/openfilm/library/blob/main/CONTRIBUTING.md) says how, and what evidence a maintainer
-needs.
+Assets are submitted to [assets/](../assets) in this repository; its [CONTRIBUTING.md](../assets/CONTRIBUTING.md) says
+how, and what evidence a maintainer needs.
 
 ## AI-generated work
 

@@ -7,13 +7,13 @@ body:
     attributes:
       value: |
         Thanks for telling us. A maintainer answers here.
-        **A security problem or malware?** Report it privately instead, as [SECURITY.md](https://github.com/openfilm/skills/blob/main/SECURITY.md) says. **Personal evidence?** Email it to support@openfilm.dev and say so here.
+        **A security problem or malware?** Report it privately instead, as [SECURITY.md](https://github.com/openfilm/community/blob/main/SECURITY.md) says. **Personal evidence?** Email it to support@openfilm.dev and say so here.
   - type: input
     id: uid
     attributes:
       label: Item
-      description: Its full name, as OpenFilm shows it.
-      placeholder: owner/name
+      description: Its full name, as OpenFilm shows it; for an asset, its id.
+      placeholder: owner/name, or category/slug for an asset
     validations:
       required: true
   - type: input
