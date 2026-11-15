@@ -52,7 +52,8 @@ Kinds are an open list ([kinds.json](kinds.json)); a new kind is one more entry.
   changes until it is pinned again.
 - **Assets** are files with no code, in [assets/](assets), with their own [checks](assets/CONTRIBUTING.md) and
   approvals. Its maintainers publish them to the catalog OpenFilm reads, as [MAINTAINERS.md](assets/MAINTAINERS.md)
-  says. Assets joined from the library's own repository, openfilm/library, with their history.
+  says. Assets joined from the library's own repository, openfilm/library, with their history. Many assets by one
+  contributor can be listed together as a pack, such as a music pack of 40 tracks.
 
 ## How review works
 

@@ -11,7 +11,8 @@ be proposed from GitHub's web editor; withdrawals are `revoked.json`. `index.jso
 that reads it, each entry with its `kind` added, and is built from both by `build-index.mjs` once a pull request is
 merged. `check.mjs` checks every listing, its owner its repository's, and that `index.json` is their build; `pin.mjs`
 writes a listing. The OpenFilm Library joined as `assets/`, with its history: the assets track, its checks and its
-publishing, to the same catalog at the same addresses.
+publishing, to the same catalog at the same addresses. An asset pack, `assets/packs/<slug>/pack.json`, lists many of one
+contributor's items as one listing; the catalog gains `packs` only when there is one.
 
 ## The Community
 

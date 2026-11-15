@@ -7,7 +7,7 @@ The assets track lives in `assets/` of [openfilm/community](https://github.com/o
 Run every command here from `assets/`.
 
 1. Check the source, CC0 eligibility, the content-claiming declaration, item quality and attribution. For an external attachment, extract the audio alone, compare `node scripts/prepare.mjs <file>` with `item.json`, and copy the audio to a private local staging directory as `<sha256>` with no extension. Keep any private evidence off GitHub.
-2. Run `node scripts/check.mjs --media-dir <staging-dir> <category>/<slug>`. Add the resulting fingerprint and a public, non-sensitive description of the provenance evidence to `approvals.json`. Reviewers own that file. Changed bytes or metadata invalidate the previous approval.
+2. Run `node scripts/check.mjs --media-dir <staging-dir> <category>/<slug>`. Add the resulting fingerprint and a public, non-sensitive description of the provenance evidence to `approvals.json`. Reviewers own that file. Changed bytes or metadata invalidate the previous approval. A pack is approved the same way, under `packs/<slug>`, after `node scripts/check.mjs packs/<slug>`; its cover needs the same provenance as an item.
 3. Run `node scripts/check.mjs --approved --media-dir <staging-dir>` and preview the result. Stage newly approved files locally. Once published, subsequent releases can reuse the verified bytes already in the same R2 channel. Original review requires a maintainer and passing CI.
 
 ## Release
@@ -32,7 +32,7 @@ Omit the staging path when every source file is in Git or already published to t
 
 ## Withdraw and roll back
 
-Remove the item's folder and approval, then publish. For a rights or safety withdrawal, add the old approval fingerprint to `assets/revoked.json` in that PR, and log it in [REMOVED.md](../REMOVED.md). Rollback refuses snapshots that contain a revoked fingerprint or missing blob. A successful catalog refresh stops Studio from offering or serving withdrawn items from its cache. Media already copied into a project is the project's own file.
+Remove the item's folder and approval, then publish. If the item is in a pack, remove it from the pack's `items` (or remove the pack when it was the last one), raise the pack's version and approve it again. For a rights or safety withdrawal, add the old approval fingerprint to `assets/revoked.json` in that PR, and log it in [REMOVED.md](../REMOVED.md). Rollback refuses snapshots that contain a revoked fingerprint or missing blob. A successful catalog refresh stops Studio from offering or serving withdrawn items from its cache. Media already copied into a project is the project's own file.
 
 To restore a previously published catalog, use its SHA-256 from the publisher:
 

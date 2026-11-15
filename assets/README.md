@@ -10,6 +10,10 @@ In Studio, open the library and choose **Community** under Sounds, Music, Transi
 
 Each item's `item.json` identifies its contributor and source. Community submissions in this repository use [CC0 1.0](LICENSE). The built-in assets in the OpenFilm application have their own inventory and notices.
 
+## Packs
+
+A pack shows many items as one listing, such as a music pack of 40 tracks. It is a folder `packs/<slug>/` with a [pack.json](schema/pack.schema.json) that names the pack in five languages, says what it holds and lists its items by ID, and an optional `cover.jpg`. The items stay where they are and keep their own format; a pack may mix categories. Each item is in at most one pack, and every item in a pack is by the pack's contributor. An item in no pack is shown on its own.
+
 ## Contribute
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for formats, file limits and review. See [MAINTAINERS.md](MAINTAINERS.md) for staging, release and takedown. The library lived in its own repository, openfilm/library, until it joined [openfilm/community](https://github.com/openfilm/community) as `assets/`, its history kept; its scripts run from this folder. [Glitch](transition/glitch/) and [Glass Pulse](sound/glass-pulse/) show the two supported asset formats.

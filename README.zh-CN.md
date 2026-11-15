@@ -40,7 +40,7 @@
 | 模板、文本、贴纸、特效、转场、滤镜、音效、音乐 | 素材 | 素材库里对应种类的标签页 | A |
 
 - **代码**放在发布者自己的仓库里，有自己的 issue 和版本。这个仓库在 [registry/](registry) 里给每个作品一个文件登记它，固定到一个提交：大家拿到的就是审核过的那一版，重新固定之前不会变。
-- **素材**是没有代码的文件，放在 [assets/](assets)，有自己的[检查](assets/CONTRIBUTING.md)和批准记录，由维护者按 [MAINTAINERS.md](assets/MAINTAINERS.md) 发布到 OpenFilm 读取的目录。素材原先在独立的 openfilm/library 仓库，连同历史一起并入。
+- **素材**是没有代码的文件，放在 [assets/](assets)，有自己的[检查](assets/CONTRIBUTING.md)和批准记录，由维护者按 [MAINTAINERS.md](assets/MAINTAINERS.md) 发布到 OpenFilm 读取的目录。素材原先在独立的 openfilm/library 仓库，连同历史一起并入。同一位作者的多个素材可以合成一个素材包一起上架，比如一套 40 首的音乐包。
 
 ## 怎么审核
 

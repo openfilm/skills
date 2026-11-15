@@ -14,6 +14,15 @@ Make one folder `assets/<category>/<slug>/` in [openfilm/community](https://gith
 - **Transitions and effects.** `overlay.css` styles the generated page's `<div class="l"></div>`. The page may use local CSS and `@keyframes`; HTML, JavaScript, remote resources and imports are excluded. Add a JPEG poster and a silent H.264 MP4 preview of up to ten seconds and 2 MiB. See [Glitch](transition/glitch/overlay.css) for the overlay pattern. A transition plays over a cut.
 - Open a [proposal issue](https://github.com/openfilm/community/issues/new) for other asset types.
 
+## Propose a pack
+
+A pack groups items you contributed into one listing, such as a music pack of 40 tracks. Make one folder `assets/packs/<slug>/` (a lowercase slug of up to 64 characters) with a [pack.json](schema/pack.schema.json): a name in the same five languages, an English description of 10–300 characters, your GitHub login, `CC0-1.0`, a version and the item IDs it holds, in the order you want them shown.
+
+- A pack lists 1–200 existing items, each once, of any category. Each item can be in one pack only, and every item must have the same `by` as the pack.
+- A cover is optional: add `"cover": "cover.jpg"` and a JPEG of at most 1 MiB and 1920×1080 beside it. It must be CC0 like the items.
+- Start at version 1 and raise it whenever `pack.json` or the cover changes. The items keep their own versions.
+- Run `node scripts/check.mjs packs/<slug>`. The pack can arrive in the same pull request as its items or after them; a maintainer approves it like an item.
+
 ## Submit and follow the review
 
 Run the commands below from `assets/` in a checkout of [openfilm/community](https://github.com/openfilm/community).
