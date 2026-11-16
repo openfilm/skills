@@ -4,6 +4,7 @@ import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync,
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
+import { fileManifest } from './files.mjs';
 import { pinSkills } from './pin.mjs';
 
 const commit = 'f'.repeat(40);
@@ -29,7 +30,7 @@ test('pin writes each skill\'s listing in registry/ and rebuilds index.json', (t
   const pinned = pinSkills({ dir, repo, commit, root });
   assert.deepEqual(pinned.map((p) => p.file), ['registry/skill/someone/my-skill.json', 'registry/skill/someone/other.json']);
   assert.deepEqual(JSON.parse(readFileSync(join(root, 'registry/skill/someone/my-skill.json'), 'utf8')),
-    { name: 'my-skill', repo, path: 'skills/my-skill', version: '0.2.0', commit });
+    { name: 'my-skill', repo, path: 'skills/my-skill', version: '0.2.0', commit, files: fileManifest(join(dir, 'skills', 'my-skill')) });
   const index = JSON.parse(readFileSync(join(root, 'index.json'), 'utf8'));
   assert.deepEqual(index.skills.map((/** @type {any} */ s) => `${s.kind} ${s.name} ${s.version}`), ['skill my-skill 0.2.0', 'skill other 1.0.0']);
   assert.deepEqual(index.revoked, []);

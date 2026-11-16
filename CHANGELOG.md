@@ -3,6 +3,12 @@
 What changed in this index, the spec and the checks. Each skill keeps its own changes in its own repository. Newest
 first.
 
+## File manifests
+
+A listing can carry `files`, every file of the pinned skill folder with its size and SHA-256, written by `pin.mjs`
+(`scripts/files.mjs`) and compared with the folder by the check. OpenFilm fetches pinned files without GitHub's
+anonymous tree API and detects an incomplete download. `replicate` carries one. Listings without it stay valid.
+
 ## openfilm/community: the registry, and the assets
 
 This repository is `openfilm/community`; it was `openfilm/skills`, and GitHub redirects the old name, the old raw

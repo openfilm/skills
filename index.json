@@ -7,7 +7,29 @@
       "repo": "https://github.com/openfilm/skill-replicate",
       "path": "skills/replicate",
       "version": "0.1.3",
-      "commit": "eef1ee5eda2a2aaeec60a3f133d73b86dd53c053"
+      "commit": "eef1ee5eda2a2aaeec60a3f133d73b86dd53c053",
+      "files": [
+        {
+          "path": "cover.jpg",
+          "size": 96264,
+          "sha256": "2f5531bd0b35850d7aa96d935ca635814d84e0a6f0db74d06e0a8a247ab0eae8"
+        },
+        {
+          "path": "openfilm.json",
+          "size": 2382,
+          "sha256": "63dafed27bd0887bc177d9576f7a8a2f1f178e8b685104b97b95f1c0e47d8fc1"
+        },
+        {
+          "path": "scripts/measure.mjs",
+          "size": 67844,
+          "sha256": "5a61681559f835e1f10d9dd4da023eddbf8ded405ebb0ccf9b6c3cf64984b1d6"
+        },
+        {
+          "path": "SKILL.md",
+          "size": 4628,
+          "sha256": "e32a4c83633bc975e6c3c59ebab6237e2c34c94e33d8ca994034c19bff007cd9"
+        }
+      ]
     }
   ],
   "revoked": []

@@ -154,6 +154,11 @@ The file is under the skill's kind, its repository's owner in lowercase, and its
 OpenFilm reads, is built from `registry/` once a listing is merged. A listing can be proposed from GitHub's web editor,
 without git, as the [README](README.md#propose-a-listing-from-the-web) says.
 
+A listing may also have `files`, which `pin.mjs` writes: every file of the pinned skill folder by its path, with its
+size in bytes and its SHA-256. OpenFilm fetches the files from it without GitHub's tree API, and knows when a download
+is whole; the check compares it with the folder at the commit. A listing without it is valid. It is delivery
+information only: a skill's title and description still come from its `openfilm.json`.
+
 A skill is listed when:
 
 1. `node scripts/check.mjs` passes on it;

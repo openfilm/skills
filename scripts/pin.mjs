@@ -14,6 +14,7 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { build, indexText } from './build-index.mjs';
+import { fileManifest } from './files.mjs';
 import { LISTING, listedKinds, uidOf } from './check.mjs';
 
 const ROOT = join(import.meta.dirname, '..');
@@ -29,7 +30,7 @@ export function pinSkills({ dir, repo, commit, kind = 'skill', root = ROOT }) {
   const skills = join(dir, 'skills');
   const names = existsSync(skills) ? readdirSync(skills).filter((n) => existsSync(join(skills, n, 'SKILL.md'))).sort() : [];
   if (!names.length) throw new Error(`${repo} has no skills: each one is a folder in skills/ with a SKILL.md`);
-  /** @type {{ file: string, entry: { name: string, repo: string, path: string, version: string, commit: string } }[]} */
+  /** @type {{ file: string, entry: { name: string, repo: string, path: string, version: string, commit: string, files: { path: string, size: number, sha256: string }[] } }[]} */
   const out = [];
   for (const name of names) {
     let version;
@@ -45,7 +46,12 @@ export function pinSkills({ dir, repo, commit, kind = 'skill', root = ROOT }) {
       const listed = JSON.parse(readFileSync(there, 'utf8'));
       if (listed.repo !== repo) throw new Error(`${uid} is already listed, from ${listed.repo}`);
     }
-    out.push({ file, entry: { name, repo, path: `skills/${name}`, version, commit } });
+    /* every file of the skill's folder at the commit, with its size and sha256: OpenFilm fetches it without GitHub's tree API, and knows a download is whole */
+    /* read as committed (a checkout may have changed line endings), or as they are when it is a plain folder */
+    const files = existsSync(join(dir, '.git'))
+      ? fileManifest(join(skills, name), (path) => execFileSync('git', ['-C', dir, 'show', `${commit}:skills/${name}/${path}`], { stdio: ['ignore', 'pipe', 'pipe'], maxBuffer: 64 << 20 }))
+      : fileManifest(join(skills, name));
+    out.push({ file, entry: { name, repo, path: `skills/${name}`, version, commit, files } });
   }
   for (const { file, entry } of out) {
     mkdirSync(join(root, file, '..'), { recursive: true });
