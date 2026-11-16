@@ -1,0 +1,24 @@
+{
+  "name": "maizi-motion",
+  "repo": "https://github.com/erikzeng2008-del/skill-maizi-motion",
+  "path": "skills/maizi-motion",
+  "version": "0.1.2",
+  "commit": "79d756862727ab451045b922257b90de2b32b40d",
+  "files": [
+    {
+      "path": "cover.jpg",
+      "size": 49125,
+      "sha256": "a487367cd2fef4ab94d95873e6cb4f4a037b7e8ec7d2fd938412870585579fad"
+    },
+    {
+      "path": "openfilm.json",
+      "size": 1901,
+      "sha256": "77db5d55b1b54a38e4d5ae9d9d17e273ac15e5fc225b0a0f3be33dee987833a8"
+    },
+    {
+      "path": "SKILL.md",
+      "size": 2527,
+      "sha256": "3409ced6e2447b2801ee4ebdc102618337b79b3a44599a8ce06af090553d0f8c"
+    }
+  ]
+}
