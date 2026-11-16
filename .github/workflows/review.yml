@@ -1,0 +1,87 @@
+# The AI review of every listing a pull request adds to registry/ or pins again, as POLICIES/review-standard.md says,
+# posted on the pull request as a comment. It is advice: a maintainer merges every listing.
+#
+# Why this is safe, though it runs for pull requests from forks and holds a secret:
+# - pull_request_target runs this workflow as it is on the base branch, and the checkout below is the base branch. No
+#   file from the pull request is checked out or run, so a pull request cannot change what runs here or what it does
+#   with the key.
+# - The pull request's listings are read from git as data: GitHub names the files it changes, and build-index.mjs reads
+#   those in registry/ at its head commit with git, parses each as JSON and keeps only well-formed listings, each
+#   naming a GitHub repository, a whole commit id and a skill's path. review.mjs fetches each item at its commit with
+#   git, as files: nothing in it is installed, built, imported or run.
+# - The item reaches the model as text, between markers it cannot forge. The model's answer becomes a comment and
+#   nothing else, and review.mjs raises to a person whatever the standard says a person decides, whatever the answer.
+# - The token can write pull request comments and nothing else. The key is in the review step alone.
+# - No value from the pull request is written into a command: the number, commit id and file names go through env and
+#   files.
+name: review
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+    paths: [registry/**, revoked.json]
+permissions:
+  pull-requests: write
+concurrency:
+  group: review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # The files the pull request changes, as GitHub lists them; of those, the listings at its head, read from git as
+      # data; and the base branch's listings, to say what each one was before.
+      - name: Read the pull request's listings as data
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          git fetch --no-tags --depth=1 origin "+refs/pull/${PR}/head:refs/remotes/pr/head"
+          gh api --paginate "repos/${GITHUB_REPOSITORY}/pulls/${PR}/files" --jq '.[].filename' > "$RUNNER_TEMP/changed.txt"
+          node scripts/build-index.mjs --at "${HEAD_SHA}" --only "$RUNNER_TEMP/changed.txt" --out "$RUNNER_TEMP/pr-index.json"
+          node scripts/build-index.mjs --at HEAD --out "$RUNNER_TEMP/base-index.json"
+      # The review costs money and anyone can open a pull request: it runs for an author whose GitHub account is at
+      # least 7 days old (the publishing rule, POLICIES/developer-policy.md); a younger one is told so, and waits.
+      - name: Gate on the author's account age
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          created=$(gh api "users/${AUTHOR}" --jq .created_at)
+          age=$(( ( $(date -u +%s) - $(date -u -d "$created" +%s) ) / 86400 ))
+          if [ "$age" -ge 7 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; mkdir -p "$RUNNER_TEMP/review"; printf 'This account is %s days old. Publishing needs a GitHub account at least 7 days old (POLICIES/developer-policy.md), so the review waits until then; push again after that.\n' "$age" > "$RUNNER_TEMP/review/review.md"; fi
+      - name: Review
+        if: steps.gate.outputs.ok == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # read the publisher's account on GitHub's public API, so its age is known
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/review.mjs --changed "$RUNNER_TEMP/base-index.json" --index "$RUNNER_TEMP/pr-index.json" --out "$RUNNER_TEMP/review"
+      - name: Comment on the pull request
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          if [ -f "$RUNNER_TEMP/review/review.md" ]; then
+            head -c 60000 "$RUNNER_TEMP/review/review.md" > "$RUNNER_TEMP/comment.md"
+          else
+            printf 'The review did not finish; a maintainer reviews this pull request. See the run: %s/%s/actions/runs/%s\n' \
+              "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$RUNNER_TEMP/comment.md"
+          fi
+          gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/comment.md"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: review
+          path: ${{ runner.temp }}/review
+          if-no-files-found: ignore

@@ -1,49 +1,89 @@
 #!/usr/bin/env node
-// Lists a repository's skills in index.json, or moves them to a newer commit.
+// Lists a repository's skills, or moves them to a newer commit: writes each one's file in registry/, then rebuilds
+// index.json.
 //
-//   node scripts/pin.mjs <repository>          its skills at the tip of its default branch
-//   node scripts/pin.mjs <repository> <ref>    at a branch, a tag (v1.2.0) or a commit
+//   node scripts/pin.mjs <repository>                   its skills at the tip of its default branch
+//   node scripts/pin.mjs <repository> <ref>             at a branch, a tag (v1.2.0) or a commit
+//   node scripts/pin.mjs <repository> [ref] --kind <k>  listed as another kind of kinds.json's code track (skill)
 //
-// Each skill in its skills/ folder gets an entry pinned to that commit, with the version its openfilm.json says.
-// Then run `node scripts/check.mjs` and open a pull request.
+// Each skill in its skills/ folder gets registry/<kind>/<owner>/<name>.json, pinned to that commit, with the version
+// its openfilm.json says. Then run `node scripts/check.mjs` and open a pull request.
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { build, indexText } from './build-index.mjs';
+import { fileManifest } from './files.mjs';
+import { LISTING, listedKinds, uidOf } from './check.mjs';
 
-const INDEX = join(import.meta.dirname, '..', 'index.json');
-const [input, ref = 'HEAD'] = process.argv.slice(2);
-const fail = (/** @type {string} */ why) => { console.error(`pin: ${why}`); process.exit(1); };
-if (!input) fail('name a repository: node scripts/pin.mjs https://github.com/<owner>/<name> [ref]');
-const repo = input.replace(/\/+$/, '').replace(/\.git$/, '');
-if (!/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/.test(repo)) fail(`${input} is not https://github.com/<owner>/<name>`);
+const ROOT = join(import.meta.dirname, '..');
 
-const dir = mkdtempSync(join(tmpdir(), 'openfilm-pin-'));
-try {
-  const git = (/** @type {string[]} */ a) => execFileSync('git', ['-C', dir, ...a], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
-  git(['init', '-q']);
-  try { git(['fetch', '-q', '--depth', '1', repo, ref]); }
-  catch { fail(`cannot fetch ${ref} from ${repo}`); }
-  git(['checkout', '-q', 'FETCH_HEAD']);
-  const commit = git(['rev-parse', 'HEAD']);
+/**
+ * Writes the listing of each skill in a repository's checkout, at one commit, and rebuilds index.json. Throws, saying
+ * why, when one cannot be listed. → the listings written, by their files.
+ * @param {{ dir: string, repo: string, commit: string, kind?: string, root?: string }} o
+ */
+export function pinSkills({ dir, repo, commit, kind = 'skill', root = ROOT }) {
+  const kinds = listedKinds(root);
+  if (!kinds.includes(kind)) throw new Error(`a kind is one of ${kinds.join(', ')}`);
   const skills = join(dir, 'skills');
   const names = existsSync(skills) ? readdirSync(skills).filter((n) => existsSync(join(skills, n, 'SKILL.md'))).sort() : [];
-  if (!names.length) fail(`${repo} has no skills: each one is a folder in skills/ with a SKILL.md`);
-
-  const index = JSON.parse(readFileSync(INDEX, 'utf8'));
+  if (!names.length) throw new Error(`${repo} has no skills: each one is a folder in skills/ with a SKILL.md`);
+  /** @type {{ file: string, entry: { name: string, repo: string, path: string, version: string, commit: string, files: { path: string, size: number, sha256: string }[] } }[]} */
+  const out = [];
   for (const name of names) {
     let version;
     try { version = JSON.parse(readFileSync(join(skills, name, 'openfilm.json'), 'utf8')).version; }
-    catch { fail(`${name} has no openfilm.json to read its version from`); }
-    const entry = { name, repo, path: `skills/${name}`, version, commit };
-    const at = index.skills.findIndex((/** @type {{ name: string }} */ s) => s.name === name);
-    if (at >= 0 && index.skills[at].repo !== repo) fail(`${name} is already listed, from ${index.skills[at].repo}`);
-    if (at >= 0) index.skills[at] = entry;
-    else index.skills.push(entry);
-    console.log(`${name} ${version} at ${commit.slice(0, 7)}`);
+    catch { throw new Error(`${name} has no openfilm.json to read its version from`); }
+    const uid = uidOf(repo, name);
+    const file = `registry/${kind}/${uid}.json`;
+    if (!LISTING.test(file)) throw new Error(`${uid} cannot be listed: an owner and a name are lowercase letters, digits and hyphens`);
+    for (const other of kinds) {
+      const there = join(root, 'registry', other, `${uid}.json`);
+      if (!existsSync(there)) continue;
+      if (other !== kind) throw new Error(`${uid} is already listed as a ${other}: registry/${other}/${uid}.json`);
+      const listed = JSON.parse(readFileSync(there, 'utf8'));
+      if (listed.repo !== repo) throw new Error(`${uid} is already listed, from ${listed.repo}`);
+    }
+    /* every file of the skill's folder at the commit, with its size and sha256: OpenFilm fetches it without GitHub's tree API, and knows a download is whole */
+    /* read as committed (a checkout may have changed line endings), or as they are when it is a plain folder */
+    const files = existsSync(join(dir, '.git'))
+      ? fileManifest(join(skills, name), (path) => execFileSync('git', ['-C', dir, 'show', `${commit}:skills/${name}/${path}`], { stdio: ['ignore', 'pipe', 'pipe'], maxBuffer: 64 << 20 }))
+      : fileManifest(join(skills, name));
+    out.push({ file, entry: { name, repo, path: `skills/${name}`, version, commit, files } });
   }
-  index.skills.sort((/** @type {{ name: string }} */ a, /** @type {{ name: string }} */ b) => (a.name < b.name ? -1 : 1));
-  writeFileSync(INDEX, `${JSON.stringify(index, null, 2)}\n`);
-} finally {
-  rmSync(dir, { recursive: true, force: true });
+  for (const { file, entry } of out) {
+    mkdirSync(join(root, file, '..'), { recursive: true });
+    writeFileSync(join(root, file), `${JSON.stringify(entry, null, 2)}\n`);
+  }
+  writeFileSync(join(root, 'index.json'), indexText(build({ root })));
+  return out;
+}
+
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const args = process.argv.slice(2);
+  const k = args.indexOf('--kind');
+  const kind = k >= 0 ? args.splice(k, 2)[1] : 'skill';
+  const [input, ref = 'HEAD'] = args;
+  const fail = (/** @type {string} */ why) => { console.error(`pin: ${why}`); process.exit(1); };
+  if (!input) fail('name a repository: node scripts/pin.mjs https://github.com/<owner>/<name> [ref] [--kind skill]');
+  const repo = input.replace(/\/+$/, '').replace(/\.git$/, '');
+  if (!/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/.test(repo)) fail(`${input} is not https://github.com/<owner>/<name>`);
+
+  const dir = mkdtempSync(join(tmpdir(), 'openfilm-pin-'));
+  try {
+    const git = (/** @type {string[]} */ a) => execFileSync('git', ['-C', dir, ...a], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+    git(['init', '-q']);
+    try { git(['fetch', '-q', '--depth', '1', repo, ref]); }
+    catch { fail(`cannot fetch ${ref} from ${repo}`); }
+    git(['checkout', '-q', 'FETCH_HEAD']);
+    const commit = git(['rev-parse', 'HEAD']);
+    let pinned = [];
+    try { pinned = pinSkills({ dir, repo, commit, kind }); }
+    catch (e) { fail(e instanceof Error ? e.message : String(e)); }
+    for (const { file, entry } of pinned) console.log(`${file}: ${entry.version} at ${commit.slice(0, 7)}`);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 }

@@ -3,6 +3,32 @@
 What changed in this index, the spec and the checks. Each skill keeps its own changes in its own repository. Newest
 first.
 
+## File manifests
+
+A listing can carry `files`, every file of the pinned skill folder with its size and SHA-256, written by `pin.mjs`
+(`scripts/files.mjs`) and compared with the folder by the check. OpenFilm fetches pinned files without GitHub's
+anonymous tree API and detects an incomplete download. `replicate` carries one. Listings without it stay valid.
+
+## openfilm/community: the registry, and the assets
+
+This repository is `openfilm/community`; it was `openfilm/skills`, and GitHub redirects the old name, the old raw
+address of `index.json` included. Each listing is a file of its own, `registry/<kind>/<owner>/<name>.json`, so one can
+be proposed from GitHub's web editor; withdrawals are `revoked.json`. `index.json` keeps its shape for every OpenFilm
+that reads it, each entry with its `kind` added, and is built from both by `build-index.mjs` once a pull request is
+merged. `check.mjs` checks every listing, its owner its repository's, and that `index.json` is their build; `pin.mjs`
+writes a listing. The OpenFilm Library joined as `assets/`, with its history: the assets track, its checks and its
+publishing, to the same catalog at the same addresses. An asset pack, `assets/packs/<slug>/pack.json`, lists many of one
+contributor's items as one listing; the catalog gains `packs` only when there is one.
+
+## The Community
+
+This repository becomes the front door of the OpenFilm Community: the kinds of items (`kinds.json`), the schema of
+`openfilm.json` with its `permissions`, the policies (community guidelines, developer policy, review standard,
+licensing, takedown and appeals, canned responses), `SECURITY.md` and the public log of removals, `REMOVED.md`.
+`index.json` may carry `revoked`, what every OpenFilm disables, and `check.mjs` checks it. `scan.mjs` reads an item for
+what the policy bans, and `review.mjs` has an AI model review every version against the standard; both run on pull
+requests, reading items as data. The template's brief has no HTML comment, which the scan reports.
+
 ## The check on Windows
 
 `check.mjs` passes on a Windows checkout: a brief's CRLF front matter is read, and a skill's files are named with `/`.

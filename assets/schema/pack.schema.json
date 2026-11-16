@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/openfilm/community/blob/main/assets/schema/pack.schema.json",
+  "title": "A pack of the OpenFilm Library",
+  "description": "Many items of one contributor shown as one listing: packs/<slug>/pack.json, with an optional cover.jpg beside it.",
+  "type": "object",
+  "required": [
+    "name",
+    "about",
+    "by",
+    "license",
+    "version",
+    "items"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "object",
+      "description": "Its name in each of OpenFilm’s languages.",
+      "required": [
+        "en",
+        "zh-CN",
+        "ja",
+        "ko",
+        "es"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "zh-CN": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "ja": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "ko": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        }
+      }
+    },
+    "about": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 300,
+      "description": "What the pack holds and what it is for, in English, one or two sentences."
+    },
+    "by": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9-]{1,39}$",
+      "description": "The GitHub login of who added it: every item in the pack is by the same login."
+    },
+    "license": {
+      "const": "CC0-1.0"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Raised with every change to pack.json or the cover: a published version never changes."
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 200,
+      "uniqueItems": true,
+      "description": "Its items, in the order shown: existing item IDs, each in at most one pack, of any category.",
+      "items": {
+        "type": "string",
+        "pattern": "^(sound|music|transition|effect)/[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "cover": {
+      "const": "cover.jpg",
+      "description": "A JPEG of at most 1 MiB and 1920×1080 beside pack.json."
+    }
+  }
+}

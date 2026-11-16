@@ -1,10 +1,14 @@
 {
-  "name": "openfilm-skills",
+  "name": "openfilm-community",
   "private": true,
   "license": "MIT",
   "scripts": {
     "check": "node scripts/check.mjs",
-    "pin": "node scripts/pin.mjs"
+    "scan": "node scripts/scan.mjs",
+    "review": "node scripts/review.mjs",
+    "pin": "node scripts/pin.mjs",
+    "build-index": "node scripts/build-index.mjs",
+    "test": "node --test scripts/*.test.mjs"
   },
   "engines": {
     "node": ">=22.2"

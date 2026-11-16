@@ -5,8 +5,6 @@ description: The film this skill makes and when to use it, in the words people a
 
 # My skill
 
-<!-- The five parts of a brief, as SPEC.md in openfilm/skills says. About one screen: the agent reads all of it. -->
-
 ## The result
 
 What the viewer gets from the film, who it is for, and how good it has to be.

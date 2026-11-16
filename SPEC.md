@@ -114,8 +114,10 @@ Every sentence has to earn its place. Before one stays, ask:
 | `needs` | what it needs beyond OpenFilm, by language: `{ "en": "Windows 10 or 11, FFmpeg 8", "zh-CN": "…" }` |
 | `platforms` | the computers it runs on, any of `macos`, `windows`, `linux`; without it, every one. OpenFilm says so where it cannot run, and does not install it there |
 | `title`, `summary`, `details` | what OpenFilm shows, by language (`en`, `zh-CN`, `ja`, `ko`, `es`); `details` is a few lines |
+| `permissions` | what it does beyond its own folder, each with a reason: `network` (the hosts it reaches, enforced for pages), `project`, `program`, `secrets`, `agent`; see the [developer policy](POLICIES/developer-policy.md) |
 
-Everything here is optional: without it, OpenFilm shows the name and description from SKILL.md.
+Everything here is optional: without it, OpenFilm shows the name and description from SKILL.md. Every field, with what
+it accepts, is in [schema/openfilm.schema.json](schema/openfilm.schema.json).
 
 ## Trying it
 
@@ -131,7 +133,7 @@ A skill's repository runs the same check as this one, on every pull request:
 ```yaml
 jobs:
   check:
-    uses: openfilm/skills/.github/workflows/skill.yml@main
+    uses: openfilm/community/.github/workflows/skill.yml@main
 ```
 
 It checks every skill in `skills/`: the name and description, `openfilm.json` with its five languages and its link
@@ -140,12 +142,22 @@ it yourself, in a checkout of this repository: `node scripts/check.mjs <your rep
 
 ## Listing it
 
-[index.json](index.json) lists the skills OpenFilm shows, each pinned to one commit of its repository:
+[registry/](registry) lists the skills OpenFilm shows, one file each, pinned to one commit of its repository.
+`registry/skill/you/my-skill.json`:
 
 ```json
 { "name": "my-skill", "repo": "https://github.com/you/skill-my-skill", "path": "skills/my-skill",
   "version": "0.1.0", "commit": "<the whole commit id>" }
 ```
+
+The file is under the skill's kind, its repository's owner in lowercase, and its name. [index.json](index.json), what
+OpenFilm reads, is built from `registry/` once a listing is merged. A listing can be proposed from GitHub's web editor,
+without git, as the [README](README.md#propose-a-listing-from-the-web) says.
+
+A listing may also have `files`, which `pin.mjs` writes: every file of the pinned skill folder by its path, with its
+size in bytes and its SHA-256. OpenFilm fetches the files from it without GitHub's tree API, and knows when a download
+is whole; the check compares it with the folder at the commit. A listing without it is valid. It is delivery
+information only: a skill's title and description still come from its `openfilm.json`.
 
 A skill is listed when:
 
@@ -159,6 +171,6 @@ OpenFilm's own come first in Discover; a community skill is shown under its owne
 listed skill is pinned to the commit that was looked at: a newer one is listed by pinning it again. One that stops
 working, or whose owner asks, leaves the index; those installed stay, marked as no longer listed.
 
-`node scripts/pin.mjs <repository> [tag]` adds a repository's skills, or moves them to a newer commit, with the version
-each `openfilm.json` says. `node scripts/check.mjs` then fetches every skill at its commit and checks it. Everything
+`node scripts/pin.mjs <repository> [tag]` writes a repository's skills' listings, or moves them to a newer commit, with
+the version each `openfilm.json` says. `node scripts/check.mjs` then fetches every skill at its commit and checks it. Everything
 OpenFilm shows about a skill comes from its `openfilm.json`; the index only says where it is.

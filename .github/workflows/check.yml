@@ -1,18 +1,59 @@
 name: check
+# The code track: registry/, revoked.json and what checks them. A listing proposed from the web adds only its file in
+# registry/; index.json is rebuilt on main once it is merged (index.yml), which also checks that it is their build.
+# index.json is here too, so a pull request that edits it by hand is caught.
 on:
   push:
     branches: [main]
+    paths:
+      - registry/**
+      - revoked.json
+      - index.json
+      - kinds.json
+      - schema/**
+      - template/**
+      - scripts/**
+      - package.json
+      - .github/workflows/check.yml
   pull_request:
+    paths:
+      - registry/**
+      - revoked.json
+      - index.json
+      - kinds.json
+      - schema/**
+      - template/**
+      - scripts/**
+      - package.json
+      - .github/workflows/check.yml
   workflow_dispatch:
+# Read-only, and no secrets: this runs the pull request's own scripts, so it holds nothing worth taking.
 permissions:
   contents: read
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/check.mjs
+      - run: node --test scripts/*.test.mjs
+      # Every listing well formed, fetched at its commit and checked; revoked.json; and that they build.
+      - run: node scripts/check.mjs --no-index
+      # A pull request leaves index.json as it is, or rebuilds it; it never writes an entry of its own there. On a pull
+      # request the checkout is its merge into the base branch, whose first parent is the base.
+      - name: index.json is left as it is, or rebuilt
+        if: github.event_name == 'pull_request'
+        run: git diff --quiet HEAD^1 HEAD -- index.json || node scripts/build-index.mjs --check
+      # Each listing the pull request adds or pins again, fetched at its commit as files and read, never run.
+      - name: Scan the listings added or pinned again
+        if: github.event_name == 'pull_request'
+        run: |
+          node scripts/build-index.mjs --at HEAD^1 --out "$RUNNER_TEMP/base-index.json"
+          node scripts/build-index.mjs --out "$RUNNER_TEMP/pr-index.json"
+          node scripts/scan.mjs --changed "$RUNNER_TEMP/base-index.json" --index "$RUNNER_TEMP/pr-index.json"

@@ -1,0 +1,10 @@
+{
+  "sound/glass-pulse": {
+    "fingerprint": "d55cb4c5d6e95bb6c8cf0dcb8cb296463ac4e462af9ca09998b0af64ac34ed39",
+    "evidence": "Original OpenFilm starter asset synthesized from two sine waves with ffmpeg. No samples or generated audio service."
+  },
+  "transition/glitch": {
+    "fingerprint": "8351f60ef6e0cfb6f0f12342f49fd3ca14d667562a4fd81a6a61175acb4b4e5e",
+    "evidence": "Original CC0 OpenFilm Glitch overlay with a new preview made from its CSS and a synthetic background."
+  }
+}

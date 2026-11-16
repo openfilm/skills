@@ -1,0 +1,51 @@
+name: Report an item
+description: Something listed in the OpenFilm Community breaks the rules, harms people, or is not what it says.
+title: "Report: "
+labels: [report]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for telling us. A maintainer answers here.
+        **A security problem or malware?** Report it privately instead, as [SECURITY.md](https://github.com/openfilm/community/blob/main/SECURITY.md) says. **Personal evidence?** Email it to support@openfilm.dev and say so here.
+  - type: input
+    id: uid
+    attributes:
+      label: Item
+      description: Its full name, as OpenFilm shows it; for an asset, its id.
+      placeholder: owner/name, or category/slug for an asset
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The version or commit you saw it in, if you know it.
+      placeholder: 0.1.3
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Reason
+      options:
+        - malware (it harms people or their computer)
+        - impersonation (it passes itself off as someone else's)
+        - rights (it shares work without the right to)
+        - broken (it does not work)
+        - policy (it breaks the developer policy or the community guidelines)
+        - something else
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: What you saw, where (file and line, or what you did in OpenFilm), and why it is a problem. Quote the exact text when you can.
+    validations:
+      required: true
+  - type: checkboxes
+    id: public
+    attributes:
+      label: This report is public
+      options:
+        - label: It holds no personal data, and no passwords or keys.
+          required: true

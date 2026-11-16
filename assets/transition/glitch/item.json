@@ -1,0 +1,40 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Glitch",
+    "zh-CN": "信号故障",
+    "ja": "グリッチ",
+    "ko": "글리치",
+    "es": "Fallo"
+  },
+  "about": "Pink and cyan bars with a dark frame jump sideways for a moment, like a broken signal. For techy, fast cuts.",
+  "tags": [
+    "glitch",
+    "intense",
+    "shake",
+    "tech",
+    "transition"
+  ],
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 2,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 613
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 1578
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 8791
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 600,
+  "by": "openfilm"
+}
