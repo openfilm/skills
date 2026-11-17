@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Short Whoosh",
+    "zh-CN": "短嗖声",
+    "ja": "短いウーッシュ",
+    "ko": "짧은 휙 소리",
+    "es": "Barrido corto"
+  },
+  "about": "A quick whoosh for a fast cut, a swipe or text flying in.",
+  "tags": [
+    "whoosh",
+    "transition",
+    "swipe"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/whoosh-5-s1797.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 316,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 7114,
+      "sha256": "5f592afa25e89a1e707a7d251853784770efe957674c497b0eff9d4ba2c34f99"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": {
+    "en": "Everyday & Comedy",
+    "zh-CN": "生活与搞笑",
+    "ja": "日常とコメディ",
+    "ko": "일상과 코미디",
+    "es": "Cotidiano y comedia"
+  },
+  "about": "Real-life sounds and comic accents: a shutter, typing, a door, applause, boings and fails.",
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "sound/camera-shutter",
+    "sound/keyboard-typing",
+    "sound/page-turn",
+    "sound/door-open",
+    "sound/champagne-cork",
+    "sound/clock-tick",
+    "sound/heartbeat",
+    "sound/applause",
+    "sound/boing",
+    "sound/ruler-boing",
+    "sound/sad-trombone",
+    "sound/sad-trumpet"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": {
+    "en": "Ambience Beds",
+    "zh-CN": "环境铺底",
+    "ja": "環境音",
+    "ko": "환경음",
+    "es": "Ambientes"
+  },
+  "about": "Long real-world ambiences to lay under a scene: a cafe, a street, rain, thunder, birds.",
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "sound/coffee-shop",
+    "sound/paris-street",
+    "sound/rain-thunder",
+    "sound/thunder",
+    "sound/birds-morning"
+  ]
+}

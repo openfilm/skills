@@ -1,0 +1,32 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Downtown Boogie",
+    "zh-CN": "市中心律动",
+    "ja": "ダウンタウン・ブギー",
+    "ko": "다운타운 부기",
+    "es": "Boogie en el centro"
+  },
+  "about": "A grooving, funky track for city scenes, lifestyle and fun edits.",
+  "tags": [
+    "upbeat",
+    "funk",
+    "groove"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/chill/Downtown%20Boogie.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 131467,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 2712420,
+      "sha256": "275da5005009f0560bc30841ce755497f8006f800127ddbc7746033e23bf94ce"
+    }
+  ]
+}

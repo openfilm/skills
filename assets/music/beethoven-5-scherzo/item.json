@@ -1,0 +1,32 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Beethoven 5: Scherzo",
+    "zh-CN": "贝多芬第五：谐谑曲",
+    "ja": "ベートーヴェン第5番：スケルツォ",
+    "ko": "베토벤 5번: 스케르초",
+    "es": "Beethoven 5: Scherzo"
+  },
+  "about": "Beethoven's Fifth Symphony, third movement, played by a full orchestra.",
+  "tags": [
+    "classical",
+    "orchestra",
+    "dramatic"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_iii._allegro.ogg"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 336100,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 6803116,
+      "sha256": "3d65e23d0d6b4af1939f1ab541a5bb6841e3e4bf695071e2d18d6f567d6d1cd7"
+    }
+  ]
+}

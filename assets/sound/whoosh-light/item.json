@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Light Whoosh",
+    "zh-CN": "轻嗖声",
+    "ja": "軽いウーッシュ",
+    "ko": "가벼운 휙 소리",
+    "es": "Barrido suave"
+  },
+  "about": "A light stereo whoosh made for transitions between shots.",
+  "tags": [
+    "whoosh",
+    "transition",
+    "stereo"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/xkeril/sounds/701104/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 1438,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 29756,
+      "sha256": "61b0255afda430c668313f091acba6f9f25eef6ead2100ace90dce97def72171"
+    }
+  ]
+}

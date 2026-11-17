@@ -1,0 +1,32 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Adding the Sun",
+    "zh-CN": "加点阳光",
+    "ja": "太陽をひとさじ",
+    "ko": "햇살 한 스푼",
+    "es": "Un poco de sol"
+  },
+  "about": "A bright, easy-going track for vlogs, travel and everyday moments.",
+  "tags": [
+    "upbeat",
+    "vlog",
+    "bright"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/chill/Adding%20the%20Sun.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 173500,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 3660400,
+      "sha256": "6e8fbec67ea72c162f6218305e73d9779ef6359660550c97de223d7e868f3f39"
+    }
+  ]
+}

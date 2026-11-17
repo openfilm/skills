@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Metallic Boom",
+    "zh-CN": "金属重击",
+    "ja": "金属ブーム",
+    "ko": "금속성 붐",
+    "es": "Golpe metálico"
+  },
+  "about": "A long, deep metallic boom for a heavy hit.",
+  "tags": [
+    "boom",
+    "impact",
+    "metal"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/ROHHSADOTCOM/sounds/826217/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 4188,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 85120,
+      "sha256": "7beab43df46aaceee99ee319807b7ff314d80095dc1f9d5b78da1daa409034c7"
+    }
+  ]
+}

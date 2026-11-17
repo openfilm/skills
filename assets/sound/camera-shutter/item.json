@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Camera Shutter",
+    "zh-CN": "相机快门",
+    "ja": "カメラのシャッター",
+    "ko": "카메라 셔터",
+    "es": "Obturador"
+  },
+  "about": "A camera shutter for a photo, a freeze frame or a snapshot.",
+  "tags": [
+    "camera",
+    "shutter",
+    "photo"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/triggering-camera-s0307.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 355,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 8240,
+      "sha256": "dacf6f583e8d8914986eb248c6ebfcdd2702cd50b5ca2e5b1aa53f4cc82373cf"
+    }
+  ]
+}

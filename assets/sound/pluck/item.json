@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Pluck",
+    "zh-CN": "拨弦",
+    "ja": "プラック",
+    "ko": "퉁김",
+    "es": "Pulsación"
+  },
+  "about": "A soft pluck for a gentle pop-up or a light accent.",
+  "tags": [
+    "pluck",
+    "pop",
+    "accent"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 112,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 3343,
+      "sha256": "68694b3b54619197b7d8dd7a8338085919ed0271af60382dd109f20b45e0b864"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Ruler Twang",
+    "zh-CN": "尺子弹响",
+    "ja": "定規のビヨーン",
+    "ko": "자 튕김",
+    "es": "Regla vibrando"
+  },
+  "about": "A ruler twanging on a desk, for a silly or awkward beat.",
+  "tags": [
+    "boing",
+    "twang",
+    "funny"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/KiddoFish86/sounds/274176/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 20000,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 400579,
+      "sha256": "3ef87dc2b99b663a1c893c025f12d817c49cf9b9728ab2d1abad4741a8d29107"
+    }
+  ]
+}

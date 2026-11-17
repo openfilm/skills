@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Confirm",
+    "zh-CN": "确认",
+    "ja": "確認",
+    "ko": "확인",
+    "es": "Confirmar"
+  },
+  "about": "A bright confirmation tone for something done or correct.",
+  "tags": [
+    "confirm",
+    "success",
+    "ui"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 294,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 6186,
+      "sha256": "47311b37ef775bc2c5f5f1bd388a6a3d6132bf78e05ee7fa929cccd4d4b7d86e"
+    }
+  ]
+}

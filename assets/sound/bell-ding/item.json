@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Bell Ding",
+    "zh-CN": "铃声叮",
+    "ja": "ベルのチーン",
+    "ko": "종 딩",
+    "es": "Campanita"
+  },
+  "about": "A clear bell ding for a point made or something ready.",
+  "tags": [
+    "ding",
+    "bell",
+    "accent"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/5ro4/sounds/611113/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 1525,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 31969,
+      "sha256": "3f886613c49d3ebbfc9b6040ec3eea49ee25ecfd9422c4a6c1e9be99ed41acd0"
+    }
+  ]
+}

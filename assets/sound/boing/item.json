@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Boing",
+    "zh-CN": "弹簧声",
+    "ja": "ボヨン",
+    "ko": "뾰잉",
+    "es": "Boing"
+  },
+  "about": "A cartoon boing for a bounce, a jump or a funny moment.",
+  "tags": [
+    "boing",
+    "cartoon",
+    "funny"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/TinTinOko/sounds/277291/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 3661,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 75819,
+      "sha256": "f94e6c7b37cd16ffe32198c849d8c9cc4a6ed6546cc08925116233dae759aa7f"
+    }
+  ]
+}

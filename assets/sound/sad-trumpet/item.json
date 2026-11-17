@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Sad Trumpet",
+    "zh-CN": "失败小号",
+    "ja": "悲しいトランペット",
+    "ko": "슬픈 트럼펫",
+    "es": "Trompeta triste"
+  },
+  "about": "A trumpet sliding down wah-wah, for a fail or a joke.",
+  "tags": [
+    "fail",
+    "trumpet",
+    "funny"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/SpliceSound/sounds/369873/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 20000,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 380388,
+      "sha256": "fd0cbe659914d76af4245b4d2b26d42e0f461b481a91f59e2798825ed97a2cc8"
+    }
+  ]
+}

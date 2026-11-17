@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Rain and Thunder",
+    "zh-CN": "雨和雷",
+    "ja": "雨と雷",
+    "ko": "비와 천둥",
+    "es": "Lluvia y truenos"
+  },
+  "about": "Steady rain with rolling thunder, for a moody or cozy scene.",
+  "tags": [
+    "ambience",
+    "rain",
+    "storm"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/rain-and-storm-s0124.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 42800,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 523417,
+      "sha256": "1afeacdbfb1068cc320e3b74ec33ff61fd016c9b427e2710170e79704a166d9a"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Glass Tap",
+    "zh-CN": "玻璃轻响",
+    "ja": "グラスタップ",
+    "ko": "유리 톡",
+    "es": "Toque de cristal"
+  },
+  "about": "A light glassy tap for a sparkle or a small highlight.",
+  "tags": [
+    "glass",
+    "tap",
+    "highlight"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 129,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 3468,
+      "sha256": "40a807791ecf92f3b14a87e97df96158eaacf29669831150ec654936733fed55"
+    }
+  ]
+}

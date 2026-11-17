@@ -1,0 +1,32 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Busybody",
+    "zh-CN": "忙忙碌碌",
+    "ja": "おせっかい",
+    "ko": "참견쟁이",
+    "es": "Entrometido"
+  },
+  "about": "A playful, sneaky comedy track for funny and mischievous moments.",
+  "tags": [
+    "comedy",
+    "playful",
+    "quirky"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/comedy/Busybody.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 86200,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 1793381,
+      "sha256": "3422d3d1994e9659ef33ad229139d418e1cd77d90c2326ad38ae168941b0e7e7"
+    }
+  ]
+}

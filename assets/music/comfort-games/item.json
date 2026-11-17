@@ -1,0 +1,32 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Comfort Games",
+    "zh-CN": "舒适游戏",
+    "ja": "コンフォート・ゲーム",
+    "ko": "컴포트 게임",
+    "es": "Juegos tranquilos"
+  },
+  "about": "A calm lo-fi game track for study, chill and cozy scenes.",
+  "tags": [
+    "lofi",
+    "chill",
+    "game"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freemusicarchive.org/music/holiznacc0/retro-gamer-soundtrack/comfort-games-5"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 141300,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 2874665,
+      "sha256": "a79e91e27ed9f1cea4e1ff4d04ae80a447228383c06aa876a849791011cb1895"
+    }
+  ]
+}

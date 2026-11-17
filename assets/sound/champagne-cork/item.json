@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Champagne Cork",
+    "zh-CN": "香槟开瓶",
+    "ja": "シャンパンの栓",
+    "ko": "샴페인 코르크",
+    "es": "Corcho de champán"
+  },
+  "about": "A champagne cork popping, for a celebration or good news.",
+  "tags": [
+    "cork",
+    "pop",
+    "celebration"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/champagne-cork-s0211.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 2632,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 44050,
+      "sha256": "bde50af34208b7a73713476fa85a447499dffe1c068f110b25b7fee41092492c"
+    }
+  ]
+}

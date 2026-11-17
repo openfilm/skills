@@ -1,0 +1,32 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Adventure",
+    "zh-CN": "冒险",
+    "ja": "アドベンチャー",
+    "ko": "모험",
+    "es": "Aventura"
+  },
+  "about": "A sweeping orchestral track for journeys, nature and big openings.",
+  "tags": [
+    "epic",
+    "orchestral",
+    "adventure"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/epic/Adventure.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 84700,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 1722338,
+      "sha256": "318727ed82f9f65dad88e158f91fd4e1420508e7ec6dbd5fc094eddac0575ca4"
+    }
+  ]
+}

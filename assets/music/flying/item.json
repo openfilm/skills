@@ -1,0 +1,32 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Flying",
+    "zh-CN": "飞翔",
+    "ja": "フライング",
+    "ko": "플라잉",
+    "es": "Volando"
+  },
+  "about": "A retro game style track with a sense of flight and play.",
+  "tags": [
+    "retro",
+    "game",
+    "electronic"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freemusicarchive.org/music/holiznacc0/retro-gamer-soundtrack/flying-1"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 256000,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 5467523,
+      "sha256": "d9d5daf0d8107f1e4896286edb19785aedb06fd11e5b294684bb7444ee972552"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Ding Ding",
+    "zh-CN": "叮叮",
+    "ja": "チンチン",
+    "ko": "딩딩",
+    "es": "Din don"
+  },
+  "about": "A double ding for an alert or a round starting.",
+  "tags": [
+    "ding",
+    "alert",
+    "bell"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/ConBlast/sounds/562976/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 3376,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 69423,
+      "sha256": "bacaf37aa1c5e1c396646513f2209ebd75d387e10682e3ae5600318c5dc7b494"
+    }
+  ]
+}

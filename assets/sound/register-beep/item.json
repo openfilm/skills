@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Register Beep",
+    "zh-CN": "收银滴",
+    "ja": "レジのピッ",
+    "ko": "계산대 삑",
+    "es": "Pitido de caja"
+  },
+  "about": "A cash register beep for prices, shopping or scanning.",
+  "tags": [
+    "beep",
+    "shopping",
+    "price"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/beep-of-a-cash-register-s1417.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 176,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 4572,
+      "sha256": "68d7ba35df893f7a41ab93136138047f102864963fb764c75587a61ba3ca7a48"
+    }
+  ]
+}

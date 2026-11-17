@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Question",
+    "zh-CN": "疑问",
+    "ja": "疑問",
+    "ko": "물음",
+    "es": "Pregunta"
+  },
+  "about": "A curious little tone for a question or a moment of doubt.",
+  "tags": [
+    "question",
+    "curious",
+    "ui"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 338,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 6897,
+      "sha256": "41452b5444bbd91b2e2cb6062ca3ebee357cabff712072a49aac29fd4d646179"
+    }
+  ]
+}

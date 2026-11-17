@@ -1,10 +1,262 @@
 {
-  "sound/glass-pulse": {
-    "fingerprint": "d55cb4c5d6e95bb6c8cf0dcb8cb296463ac4e462af9ca09998b0af64ac34ed39",
-    "evidence": "Original OpenFilm starter asset synthesized from two sine waves with ffmpeg. No samples or generated audio service."
+  "music/action-strike": {
+    "fingerprint": "237b2b6631b651c12cbc1d8372880fbdb4ca88f4b1607afeb025ac47d16baf32",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
   },
-  "transition/glitch": {
-    "fingerprint": "8351f60ef6e0cfb6f0f12342f49fd3ca14d667562a4fd81a6a61175acb4b4e5e",
-    "evidence": "Original CC0 OpenFilm Glitch overlay with a new preview made from its CSS and a synthetic background."
+  "music/adding-the-sun": {
+    "fingerprint": "40ccc83403c8608bba84464dd3ee4788becfcca0ad92604423f9c181d75d525d",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/adventure": {
+    "fingerprint": "54bdeb59b0103aab704c6eacd4a7f815033e062faf439fe14376a84d0816b589",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/backbeat": {
+    "fingerprint": "460cebbe5ba9f525aa39fb84a06f7cdf8b6d80f0e92f6d38a70337e2d3ca56b3",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/barroom-ballet": {
+    "fingerprint": "383250a503baeffd02670f2312781f908fcd65181e9e49697414b5ea51fb8ca3",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/beethoven-5-scherzo": {
+    "fingerprint": "5931f6e759b5a7e7521e2bd861574abe33abcd87046093ef4a6d5137bd10e095",
+    "evidence": "Wikimedia Commons: a Musopen recording of a public-domain work, marked Public Domain on its file page. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/busybody": {
+    "fingerprint": "26fc45bbfd1718daa8343e4dedf876cf1edebff3dc3471f4f2d07951140e0249",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/city-run": {
+    "fingerprint": "6b6872d7f016240852ac189b9c39e9defcadb09597d961efa467d2df31ce667b",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/comfort-games": {
+    "fingerprint": "6760b7888041f69d11eae6be408e15ef7bd7476c27bcffbd8befc217808b18b3",
+    "evidence": "Free Music Archive: the track's page by HoliznaCC0 lists the CC0 1.0 Universal licence. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/downtown-boogie": {
+    "fingerprint": "3b08846578c6b534cb33e7dddfc121899db57a7869464b7a6726df6d4e5510fc",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/emotional-blockbuster": {
+    "fingerprint": "b42a56c9b649824893d83c300b41eac367bfc52366f9c53ea5134b37d0d21e2c",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/energizing": {
+    "fingerprint": "911ccf443104d68fa24e70c67e6df49130da55231c60d28be6b9ebd37dffb283",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/flying": {
+    "fingerprint": "657b8dcb5dd9e0a44bed73a9a024b72223c679edd1497bde64d524076a521570",
+    "evidence": "Free Music Archive: the track's page by HoliznaCC0 lists the CC0 1.0 Universal licence. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/lovely-piano": {
+    "fingerprint": "d10189f4a876326de305c97bcdc4b016495e0c3c4eb1fe4b187b10a1c9768dbd",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/martini-sunset": {
+    "fingerprint": "cf34bf2bc78d7aad110690ee90a4c7bc063b916465beea3443f0079880e7670b",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "music/nostalgic-piano": {
+    "fingerprint": "27ef58650e91c4e43d8885c731f2b18709ea70a54938dcb7a009c14bdd8ef6cb",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC by OpenFilm."
+  },
+  "sound/applause": {
+    "fingerprint": "2080defb9b83db2baf65e4d49ac9c589d61be774896c67b37440220343c7d2e1",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/bell-ding": {
+    "fingerprint": "83a0f9b21d376d57a014259720c2357228e6fbe8d525d398944403c2ae23379a",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/birds-morning": {
+    "fingerprint": "9272f280bfab34f34e87ba1051f13dc791b5e563e5654c405645beccae66502c",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/boing": {
+    "fingerprint": "950183760e7e410b46bc73aaef39fcc55f981cb2a2b26524e8c6152ddc5ff20b",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/boom-metal": {
+    "fingerprint": "24109d8a6836d891cd689213c730af236eb1192fe6c2124c901153915b573282",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/boom-trailer": {
+    "fingerprint": "6eca526002d97fa68d66a5b11e64a3959e30ff9b4fa0390e0c2a1c4e95f781e9",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/camera-shutter": {
+    "fingerprint": "41931014648dfc1ebedcba96a8cc44744097564725af4d5d290580ce5857cd41",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/champagne-cork": {
+    "fingerprint": "ce8e36b19b6975e4f54f7119f16de7573122e03dd0916d4da78c4be9a77c7ba4",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/click": {
+    "fingerprint": "5a83136c79b7f98e29bd97c4cb517b4f88432251f9cde2fe862f1c7e01027cef",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC by OpenFilm."
+  },
+  "sound/clock-tick": {
+    "fingerprint": "1467f69b03561852bbc0da65a83a689c72c7ba82ae704e542c70b6d94ec6c8df",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/coffee-shop": {
+    "fingerprint": "0028ad750984614f551abe16a4d64524b3f727e2e2367782db8ad85647291194",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/confirm": {
+    "fingerprint": "83f499dd7c6961540c53e18297576d07b02e463a498fc09eb3e67d04e39dd252",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC by OpenFilm."
+  },
+  "sound/ding-ding": {
+    "fingerprint": "9f4f0a76fe38fa45938303299bcb7b13ea0ad4194888e881095f912093a1f996",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/door-open": {
+    "fingerprint": "d94e5fbed993e06facaf8781323474ad2f094e08c52e45e1bc60e2f66b2ee7b9",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/drop": {
+    "fingerprint": "511373d14c365a0424cf70ed4c77fd4e80aba022195fa93143b9f6af3cc09017",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC by OpenFilm."
+  },
+  "sound/error": {
+    "fingerprint": "ec5c8df2a6feeb9233baefcdff241be2be816a2faf838ad6123a88b496b03fb0",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC by OpenFilm."
+  },
+  "sound/expand": {
+    "fingerprint": "175524fb33eddbdcdc30b6fc364529a5225914d3e4b63a6abfc6e47d882377bf",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC by OpenFilm."
+  },
+  "sound/glass-tap": {
+    "fingerprint": "e29e8f2c21b2f82df1a68310abb5aede138f27fdf6b10263657094ca82917cf5",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC by OpenFilm."
+  },
+  "sound/glitch-growl": {
+    "fingerprint": "d3a104c36a6e826316564cb8e9196ba9de87bd024c059d539f810da444171d41",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/glitch-short": {
+    "fingerprint": "f261859263115c47408a314c01d1ed12e88dea6311fe2bd58e50f117adccff7d",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/glitch-ui": {
+    "fingerprint": "20d495125e14b86710c028d95dadfa64b7832d69e98828ba38dc83899b611bdb",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC by OpenFilm."
+  },
+  "sound/heartbeat": {
+    "fingerprint": "dc1457890299f7874ff6decc47d379265b059bfb76cf3850311b8c4e1ca51ff1",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/idea": {
+    "fingerprint": "be9512dc01fd3ed77cddbb0d4a79880bc8252c753fe4ba377dbe1c09a063a87a",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/keyboard-typing": {
+    "fingerprint": "8b6dea2482d47015433d51cad9fa57cfb0c4b918f48c4f190e922b037d35f6bf",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/message": {
+    "fingerprint": "5e7500101b5f9fea3a6b861d93e203e210c2a62125981fb76857b54b401d4558",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/page-turn": {
+    "fingerprint": "3765a64a2c45266f76fe556527ecf824e5811bd24e808ca0420fa6173ef86498",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/paris-street": {
+    "fingerprint": "f24989e96a776c3e454829f6048732efa58b6962f0379a89bc564068e7318def",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/pluck": {
+    "fingerprint": "cd37aa474b650cd434e776c2fc921fba154e3116556bbed506e86f0e8e3e70fc",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC by OpenFilm."
+  },
+  "sound/question": {
+    "fingerprint": "e64edb316f7bf47e8f5d73adcb6922a66ffd315e4a081a687828e4c62800cc19",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC by OpenFilm."
+  },
+  "sound/rain-thunder": {
+    "fingerprint": "3ddec7c5ad4692bdd020eca33b103718934e390af51b3cf33b662032de2380fd",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/register-beep": {
+    "fingerprint": "5b9b529180494a1b6d6bc279d97323cd0bd56787c0eed1d706837f23908c0a9a",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/riser-doppler": {
+    "fingerprint": "e65197d42621ba6339a276b26c400a05d1a98411c5df2b215ef2660c4a63c76d",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/riser-noise": {
+    "fingerprint": "0bb9be824644ac6526657ff38970aae95fb135f6ea4dbacf754831c9152db76f",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/ruler-boing": {
+    "fingerprint": "4b2d37d24a661a83a31930ce9eccbe633e5221f4107c7dc09bbedfdf13fdf7d0",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/sad-trombone": {
+    "fingerprint": "ed451654b2fbe3d6ca195b367690bd6934269c0c29784e204b51a9e505cbe684",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/sad-trumpet": {
+    "fingerprint": "fbd98456a6f40f36800c2e69b97bb9de6f850a88b7602bc281c0d73848c35d82",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/switch": {
+    "fingerprint": "f758b364d9212d1ea88650c479346a2ee773b8cdfd04b0b930f5c704dcad24c7",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC by OpenFilm."
+  },
+  "sound/thunder": {
+    "fingerprint": "3143d4691d380eb36f5dbd97e294d52dc5254283a268fc5bdfcfa322918bd4c1",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/whoosh-light": {
+    "fingerprint": "bb603cfaaf3a54dbfe8302cb273719355f17a05f92015df83b856d27b650601f",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/whoosh-long": {
+    "fingerprint": "12de7ee985d28535a7ae157efa34868b250ca62523fa7d672b07ee412976fc64",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/whoosh-short": {
+    "fingerprint": "713468eaa6e3b949d145da9467c0fa964092031405f123b9c7278dd598d174f1",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "sound/whoosh-swing": {
+    "fingerprint": "3542012c5c00b2da5bcdbc5d1bbb6d3ab924498496c22864f8e76e73158b4cee",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
+  },
+  "packs/ambience": {
+    "fingerprint": "75224ba152f0889b3073d50916f83bef977689ec2903938b261800ade155bb33",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+  },
+  "packs/clicks-alerts": {
+    "fingerprint": "097fbc4a6095e712ceffcf1fcc28b8d0197b1737c83c113fb9d1e43b0a5371ee",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+  },
+  "packs/epic-tension": {
+    "fingerprint": "fd3273d348392f59b053bffb4a109113c7118a774638a718af89c551c5371e7b",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+  },
+  "packs/everyday-comedy": {
+    "fingerprint": "502f7beb8b6cc59080747fa0fe10547b2e1941cd808eb9e73832ab79b06d2a76",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+  },
+  "packs/piano-classical": {
+    "fingerprint": "ba844959c402639a6599690250b35a6853a9c60059872f5aad7a0335879da2ef",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+  },
+  "packs/upbeat-comedy": {
+    "fingerprint": "dc3423936cc634da93d562bf62a1c835b25bb9654477c054d8e6cefcc57a0c05",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+  },
+  "packs/whooshes-hits": {
+    "fingerprint": "6ed214bbebf3c1704da708f9faabea14386b0a1f41d49dbe7ff1c378f21a23c6",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
   }
 }

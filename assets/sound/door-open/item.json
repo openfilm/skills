@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Door Opening",
+    "zh-CN": "开门",
+    "ja": "ドアを開ける",
+    "ko": "문 열림",
+    "es": "Puerta abriéndose"
+  },
+  "about": "An apartment door opening, for an entrance or coming home.",
+  "tags": [
+    "door",
+    "home",
+    "entrance"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/apartment-door-opening-1-s1702.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 4495,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 91783,
+      "sha256": "db17f654929a5cb8511f0c2c799cc6995855525d0dafdde731e3fb539936101c"
+    }
+  ]
+}

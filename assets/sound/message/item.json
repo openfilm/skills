@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Message",
+    "zh-CN": "消息提示",
+    "ja": "メッセージ",
+    "ko": "메시지 알림",
+    "es": "Mensaje"
+  },
+  "about": "A message alert for a phone notification on screen.",
+  "tags": [
+    "message",
+    "notification",
+    "phone"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/message-1-s1111.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 2794,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 49900,
+      "sha256": "4470555a86d617042ef62e3e35c957572028df0a31d214f1e8b44d6a548257fa"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Noise Riser",
+    "zh-CN": "噪声上升音",
+    "ja": "ノイズライザー",
+    "ko": "노이즈 라이저",
+    "es": "Subida de ruido"
+  },
+  "about": "A rising noise that builds tension before a reveal or a drop.",
+  "tags": [
+    "riser",
+    "build-up",
+    "tension"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/rubenrox/sounds/487698/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 19500,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 393782,
+      "sha256": "883351cd15299642123e88c30f45e67e77ad344545999c9f61cd3fb6f7da1bee"
+    }
+  ]
+}

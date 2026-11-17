@@ -1,0 +1,32 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Backbeat",
+    "zh-CN": "反拍",
+    "ja": "バックビート",
+    "ko": "백비트",
+    "es": "Contratiempo"
+  },
+  "about": "A short electronic beat for tech, intros and fast cuts.",
+  "tags": [
+    "electronic",
+    "beat",
+    "tech"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/electronic/Backbeat.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 46201,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 1058891,
+      "sha256": "eb2f1dc6e7c90f16fd8b8feb8daa3ce9b27ff53b79b1ba3b89da5ff187fb72c4"
+    }
+  ]
+}

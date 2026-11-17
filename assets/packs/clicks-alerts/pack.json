@@ -1,0 +1,29 @@
+{
+  "name": {
+    "en": "Clicks & Alerts",
+    "zh-CN": "点击与提示",
+    "ja": "クリックと通知",
+    "ko": "클릭과 알림",
+    "es": "Clics y avisos"
+  },
+  "about": "Clicks, dings, confirmations and alerts for on-screen text, UI and key points.",
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "sound/click",
+    "sound/confirm",
+    "sound/error",
+    "sound/question",
+    "sound/drop",
+    "sound/glass-tap",
+    "sound/expand",
+    "sound/pluck",
+    "sound/switch",
+    "sound/message",
+    "sound/idea",
+    "sound/register-beep",
+    "sound/bell-ding",
+    "sound/ding-ding"
+  ]
+}

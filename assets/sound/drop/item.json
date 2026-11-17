@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Drop",
+    "zh-CN": "落下",
+    "ja": "ドロップ",
+    "ko": "떨어짐",
+    "es": "Caída"
+  },
+  "about": "A soft drop for an item landing or text settling in.",
+  "tags": [
+    "drop",
+    "ui",
+    "pop"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 201,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 5008,
+      "sha256": "cc9a4319dafcf7fba14e85f31fc51396a9457c9684216373e7bdc7a3c83528c5"
+    }
+  ]
+}

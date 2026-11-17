@@ -1,0 +1,26 @@
+{
+  "name": {
+    "en": "Whooshes & Hits",
+    "zh-CN": "转场与重击",
+    "ja": "ウーッシュとヒット",
+    "ko": "휙 소리와 타격",
+    "es": "Barridos y golpes"
+  },
+  "about": "Whooshes, risers, booms and glitches for transitions, titles and reveals.",
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "sound/whoosh-long",
+    "sound/whoosh-short",
+    "sound/whoosh-light",
+    "sound/whoosh-swing",
+    "sound/riser-noise",
+    "sound/riser-doppler",
+    "sound/boom-trailer",
+    "sound/boom-metal",
+    "sound/glitch-growl",
+    "sound/glitch-short",
+    "sound/glitch-ui"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Switch",
+    "zh-CN": "开关",
+    "ja": "スイッチ",
+    "ko": "스위치",
+    "es": "Interruptor"
+  },
+  "about": "A switch click for turning something on or off.",
+  "tags": [
+    "switch",
+    "toggle",
+    "ui"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 503,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 7549,
+      "sha256": "99fdd5d5270a072976147e6382a062fa0d707768cb25dc7ebbcc14d30061e2a9"
+    }
+  ]
+}

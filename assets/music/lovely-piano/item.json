@@ -1,0 +1,32 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Lovely Piano Song",
+    "zh-CN": "温柔钢琴曲",
+    "ja": "やさしいピアノ曲",
+    "ko": "사랑스러운 피아노",
+    "es": "Canción de piano"
+  },
+  "about": "A gentle piano piece for family, memories and warm stories.",
+  "tags": [
+    "piano",
+    "warm",
+    "emotional"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/romantic/Lovely%20Piano%20Song.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 95900,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 1937128,
+      "sha256": "4c809e0c19665d0cbea3c8c4d6defb598fde6423b1593268a9e0c21f49387e8c"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Tiny Glitch",
+    "zh-CN": "小故障",
+    "ja": "小さなグリッチ",
+    "ko": "작은 글리치",
+    "es": "Glitch mínimo"
+  },
+  "about": "A tiny electronic glitch for a screen, a tech title or an error.",
+  "tags": [
+    "glitch",
+    "digital",
+    "ui"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 36,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 1962,
+      "sha256": "5339d44e355a7ee578fa3053539f406dd4a2483527062191f8701192910bef59"
+    }
+  ]
+}

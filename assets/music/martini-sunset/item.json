@@ -1,0 +1,32 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Martini Sunset",
+    "zh-CN": "马提尼日落",
+    "ja": "マティーニ・サンセット",
+    "ko": "마티니 선셋",
+    "es": "Atardecer con martini"
+  },
+  "about": "Relaxed jazz for food, travel, a bar or a slow evening.",
+  "tags": [
+    "jazz",
+    "relaxed",
+    "lounge"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/jazz/Martini%20Sunset.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 171600,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 3574090,
+      "sha256": "5061990a093c48423788bb00abd779442c80e9b375288ed61269977cb39dadfb"
+    }
+  ]
+}

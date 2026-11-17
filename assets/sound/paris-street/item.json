@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Small City Street",
+    "zh-CN": "城市小街",
+    "ja": "街の小道",
+    "ko": "도시 골목",
+    "es": "Calle de ciudad"
+  },
+  "about": "A small Paris street with steps, voices and distant traffic.",
+  "tags": [
+    "ambience",
+    "city",
+    "street"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/little-parisian-street-s1713.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 116900,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 1428314,
+      "sha256": "fc608538d17c44e5b8253462ff6af8c3feaab1160f4c5a4c1fba32403b88992c"
+    }
+  ]
+}

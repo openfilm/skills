@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Expand",
+    "zh-CN": "展开",
+    "ja": "展開",
+    "ko": "펼치기",
+    "es": "Expandir"
+  },
+  "about": "A rising tone for something opening or growing on screen.",
+  "tags": [
+    "expand",
+    "open",
+    "ui"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 212,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 5508,
+      "sha256": "9b73b2ed47acc725456bd98bb6c78c6c4358d4a76a142b987f5c35fc1462efda"
+    }
+  ]
+}

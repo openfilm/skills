@@ -1,0 +1,32 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Trailer Boom",
+    "zh-CN": "预告片重击",
+    "ja": "トレーラーブーム",
+    "ko": "트레일러 붐",
+    "es": "Golpe de tráiler"
+  },
+  "about": "A deep trailer boom for a title, a reveal or the end of a riser.",
+  "tags": [
+    "boom",
+    "impact",
+    "trailer"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/harrisonlace/sounds/816376/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 5200,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 105040,
+      "sha256": "8d4f8aca144ce367afac591adec278e8a36a0c80de2f5019c04a023f4bb16940"
+    }
+  ]
+}
