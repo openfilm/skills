@@ -22,5 +22,6 @@
     "sound/glitch-growl",
     "sound/glitch-short",
     "sound/glitch-ui"
-  ]
+  ],
+  "cover": "cover.jpg"
 }

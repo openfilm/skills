@@ -25,5 +25,6 @@
     "sound/register-beep",
     "sound/bell-ding",
     "sound/ding-ding"
-  ]
+  ],
+  "cover": "cover.jpg"
 }

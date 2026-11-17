@@ -16,5 +16,6 @@
     "sound/rain-thunder",
     "sound/thunder",
     "sound/birds-morning"
-  ]
+  ],
+  "cover": "cover.jpg"
 }

@@ -232,31 +232,31 @@
     "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC by OpenFilm."
   },
   "packs/ambience": {
-    "fingerprint": "75224ba152f0889b3073d50916f83bef977689ec2903938b261800ade155bb33",
-    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+    "fingerprint": "edf0506cfcd18744d3aac446c2d0cb87d327f4fa83bd851e51704593380c34dd",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names. Its cover is OpenFilm's own, drawn in code from the pack's own audio."
   },
   "packs/clicks-alerts": {
-    "fingerprint": "097fbc4a6095e712ceffcf1fcc28b8d0197b1737c83c113fb9d1e43b0a5371ee",
-    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+    "fingerprint": "194d9c04e98add0f3675c9173eecc566da6008410df08824fd8e6e7ca8b7c7bf",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names. Its cover is OpenFilm's own, drawn in code from the pack's own audio."
   },
   "packs/epic-tension": {
-    "fingerprint": "fd3273d348392f59b053bffb4a109113c7118a774638a718af89c551c5371e7b",
-    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+    "fingerprint": "50dcf40541549b6547d93376a539e0a9f9ca3182b1d65e247cd55db9eef0def6",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names. Its cover is OpenFilm's own, drawn in code from the pack's own audio."
   },
   "packs/everyday-comedy": {
-    "fingerprint": "502f7beb8b6cc59080747fa0fe10547b2e1941cd808eb9e73832ab79b06d2a76",
-    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+    "fingerprint": "2a56e0c02511d6929104b583d92908e66119cf230c1f349cc35ed078d30da129",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names. Its cover is OpenFilm's own, drawn in code from the pack's own audio."
   },
   "packs/piano-classical": {
-    "fingerprint": "ba844959c402639a6599690250b35a6853a9c60059872f5aad7a0335879da2ef",
-    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+    "fingerprint": "239ddb14db6957abf9847f942aacf0b1ed0332e51ad5fe43b8b0f9faf507f6fb",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names. Its cover is OpenFilm's own, drawn in code from the pack's own audio."
   },
   "packs/upbeat-comedy": {
-    "fingerprint": "dc3423936cc634da93d562bf62a1c835b25bb9654477c054d8e6cefcc57a0c05",
-    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+    "fingerprint": "767ec11cf01aa54b0e713276587bb575be8a1b93725a1b6016d37a6fc1a85b19",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names. Its cover is OpenFilm's own, drawn in code from the pack's own audio."
   },
   "packs/whooshes-hits": {
-    "fingerprint": "6ed214bbebf3c1704da708f9faabea14386b0a1f41d49dbe7ff1c378f21a23c6",
-    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names; no cover."
+    "fingerprint": "fad2ed6c5d1997f868ec22eb984efe66db6ee9efa6df6218deac110ea8400f30",
+    "evidence": "OpenFilm's own pack of items it gathered from the CC0 and public-domain sources each item names. Its cover is OpenFilm's own, drawn in code from the pack's own audio."
   }
 }

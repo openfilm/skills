@@ -23,5 +23,6 @@
     "sound/ruler-boing",
     "sound/sad-trombone",
     "sound/sad-trumpet"
-  ]
+  ],
+  "cover": "cover.jpg"
 }
