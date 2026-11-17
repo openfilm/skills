@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { LANGUAGES, ROOT, hash, reviewed, reviewedPacks, text } from './check.mjs';
@@ -21,10 +22,18 @@ function overlay(css, durationMs) {
 `);
 }
 
-function wave(bytes) {
-  return execFileSync('ffmpeg', ['-nostdin', '-v', 'error', '-protocol_whitelist', 'pipe', '-i', 'pipe:0',
-    '-filter_complex', 'showwavespic=s=960x80:colors=white', '-frames:v', '1', '-c:v', 'png', '-f', 'image2pipe', 'pipe:1'],
-  { input: bytes, timeout: 20_000, maxBuffer: 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'] });
+// Drawn from a file, not a pipe: an M4A with its index at the end cannot be read from a pipe, and gave an empty picture.
+function wave(bytes, ext) {
+  const dir = mkdtempSync(join(tmpdir(), 'openfilm-wave-'));
+  try {
+    const input = join(dir, `audio.${ext}`);
+    writeFileSync(input, bytes);
+    const png = execFileSync('ffmpeg', ['-nostdin', '-v', 'error', '-protocol_whitelist', 'file,pipe', '-i', input,
+      '-filter_complex', 'showwavespic=s=960x80:colors=white', '-frames:v', '1', '-c:v', 'png', '-f', 'image2pipe', 'pipe:1'],
+    { timeout: 20_000, maxBuffer: 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'] });
+    if (!png.length) throw new Error('could not draw a waveform');
+    return png;
+  } finally { rmSync(dir, { recursive: true, force: true }); }
 }
 
 export function build({ root = ROOT, mediaDir, source } = {}) {
@@ -46,7 +55,7 @@ export function build({ root = ROOT, mediaDir, source } = {}) {
       const ext = item.main.split('.').pop();
       const name = `community-${item.cat}-${slug}`;
       put(`${name}.${ext}`, bytes, ext === 'm4a' ? 'audio/mp4' : 'audio/mpeg');
-      put(`waves/${name}.png`, wave(bytes), 'image/png');
+      put(`waves/${name}.png`, wave(bytes, ext), 'image/png');
     } else {
       put('saved.json', text({ version: 2, kind: 'clip', clip: { src: 'overlay.html' }, durationMs: item.durationMs }), 'application/json');
       put('files/overlay.html', overlay(inputs.get('overlay.css').toString('utf8'), item.durationMs), 'text/html; charset=utf-8');

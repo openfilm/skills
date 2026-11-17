@@ -39,8 +39,11 @@ export function probe(bytes, options = []) {
   }));
 }
 
-function audioIsValid(bytes, main) {
-  const { streams, format } = probe(bytes);
+// Read from the file, not a pipe: an M4A with its index first ends ffprobe before the pipe is drained (EPIPE).
+function audioIsValid(path, main) {
+  const { streams, format } = JSON.parse(execFileSync('ffprobe', ['-v', 'error', '-protocol_whitelist', 'file', '-show_streams', '-show_format', '-of', 'json', path], {
+    timeout: 15_000, maxBuffer: MB, stdio: ['ignore', 'pipe', 'pipe'],
+  }));
   const codec = main.endsWith('.m4a') ? 'aac' : 'mp3';
   const container = main.endsWith('.m4a') ? 'm4a' : 'mp3';
   requireThat(format.format_name?.split(',').includes(container) && streams.length === 1 && streams[0].codec_type === 'audio' &&
@@ -134,7 +137,7 @@ export function inspect(id, { root = ROOT, mediaDir, allowMissing = false } = {}
     requireThat(file.bytes === bytes.length && (!external || file.sha256 === sha), `${file.path}: size or SHA-256 mismatch`);
     inputs.set(file.path, bytes);
     if (audio) {
-      audioIsValid(bytes, item.main);
+      audioIsValid(path, item.main);
       requireThat(Math.abs(durationOf(path) * 1000 - item.durationMs) <= 150, 'declared audio duration differs from the file');
     } else if (file.path === 'overlay.css') cssIsValid(bytes);
     else if (file.path === 'poster.jpg') pictureIsValid(bytes, file.path, 'mjpeg');

@@ -1,0 +1,4 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l { animation: g 0.6s steps(1) both; background: repeating-linear-gradient(0deg, rgba(255, 0, 90, 0.8) 0 3px, transparent 3px 9px, rgba(0, 220, 255, 0.75) 9px 12px, #050505 12px 22px); }
+@keyframes g { 0% { opacity: 0; } 25% { opacity: 1; transform: translateX(-6%); } 35% { transform: translateX(8%) scaleY(1.4); } 45% { transform: translateX(-3%); background: #050505; } 55% { transform: translateX(5%); } 70% { opacity: 1; transform: none; } 80%, 100% { opacity: 0; } }
