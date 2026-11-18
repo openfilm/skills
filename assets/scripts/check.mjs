@@ -6,13 +6,29 @@ import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const ROOT = fileURLToPath(new URL('../', import.meta.url));
-export const CATEGORIES = ['sound', 'music', 'transition', 'effect'];
+export const CATEGORIES = ['media', 'sound', 'music', 'transition', 'effect', 'text', 'sticker', 'filter', 'template'];
+// Kinds that are data, not a length: a text style's variables, a filter's grade. Their durationMs is 0 or left out.
+const TIMELESS = ['text', 'filter'];
+// A text style sets the variables of OpenFilm's text component; a sticker is a picture; a filter is a grade.
+const TEXT_VAR = /^--[a-z][a-z0-9-]{0,39}$/;
+const CURVE_KEYS = ['all', 'r', 'g', 'b'];
+// How a sticker may move while it is shown: build.mjs draws the same keyframes on its page.
+export const STICKER_IDLE = ['bounce', 'wiggle', 'pulse', 'float', 'spin', 'pop'];
 export const LANGUAGES = ['en', 'zh-CN', 'ja', 'ko', 'es'];
 export const HEX = /^[a-f0-9]{64}$/;
 export const MB = 1024 * 1024;
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const ITEM_KEYS = ['cat', 'name', 'about', 'tags', 'by', 'license', 'source', 'version', 'files', 'main', 'durationMs'];
 const PACK_KEYS = ['name', 'about', 'by', 'license', 'version', 'items'];
+// Media: plain files for the person's own library. Its main file is media.<ext>; a video has a poster.jpg beside it.
+export const MEDIA = {
+  video: { exts: ['mp4', 'mov', 'webm'], max: 50 * MB, ms: 60_000, poster: true, what: 'a video', limit: 'up to 60 seconds' },
+  image: { exts: ['jpg', 'jpeg', 'png', 'webp'], max: 10 * MB, ms: 0, poster: false, what: 'an image' },
+  audio: { exts: ['m4a', 'mp3', 'wav'], max: 20 * MB, ms: 600_000, poster: false, what: 'audio', limit: 'up to 10 minutes' },
+};
+const VIDEO_CODECS = { h264: 'H.264', hevc: 'HEVC', vp9: 'VP9', av1: 'AV1' };
+const IMAGE_CODECS = { jpg: 'mjpeg', jpeg: 'mjpeg', png: 'png', webp: 'webp' };
+const AUDIO_CODECS = { m4a: ['AAC', (codec) => codec === 'aac'], mp3: ['MP3', (codec) => codec === 'mp3'], wav: ['PCM', (codec) => /^pcm_/.test(codec)] };
 export const MAX_PACKS = 200;
 export const MAX_PACK_ITEMS = 200;
 export const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
@@ -39,20 +55,71 @@ export function probe(bytes, options = []) {
   }));
 }
 
-function audioIsValid(bytes, main) {
-  const { streams, format } = probe(bytes);
+// Read from the file, not a pipe: an M4A with its index first ends ffprobe before the pipe is drained (EPIPE).
+function audioIsValid(path, main) {
+  const { streams, format } = JSON.parse(execFileSync('ffprobe', ['-v', 'error', '-protocol_whitelist', 'file', '-show_streams', '-show_format', '-of', 'json', path], {
+    timeout: 15_000, maxBuffer: MB, stdio: ['ignore', 'pipe', 'pipe'],
+  }));
   const codec = main.endsWith('.m4a') ? 'aac' : 'mp3';
   const container = main.endsWith('.m4a') ? 'm4a' : 'mp3';
   requireThat(format.format_name?.split(',').includes(container) && streams.length === 1 && streams[0].codec_type === 'audio' &&
     streams[0].codec_name === codec, 'main must contain a single AAC or MP3 audio stream');
 }
 
-function pictureIsValid(bytes, file, codec) {
-  const { streams, format } = probe(bytes);
+// A sticker: one PNG or WebP picture of at most 1024×1024, with its transparency.
+function stickerIsValid(bytes, main) {
+  const { streams } = probe(bytes);
+  const stream = streams[0];
+  requireThat(streams.length === 1 && stream.codec_type === 'video' && stream.codec_name === (main.endsWith('.png') ? 'png' : 'webp') &&
+    stream.width > 0 && stream.height > 0 && stream.width <= 1024 && stream.height <= 1024, `${main}: expected one picture of at most 1024×1024`);
+}
+
+// A picture or a preview: read from its file when there is one (a video with its index first ends ffprobe before a pipe
+// is drained), else from its bytes.
+function pictureIsValid(bytes, file, codec, path) {
+  const { streams, format } = path ? probeFile(path) : probe(bytes);
   const stream = streams[0];
   requireThat(streams.length === 1 && stream.codec_type === 'video' && stream.codec_name === codec && stream.width <= 1920 &&
     stream.height <= 1080 && stream.width > 0 && stream.height > 0 &&
     (codec !== 'h264' || format.format_name?.split(',').includes('mp4')), `${file}: expected a single ${codec} picture stream up to 1920×1080`);
+}
+
+function probeFile(path) {
+  return JSON.parse(execFileSync('ffprobe', ['-v', 'error', '-protocol_whitelist', 'file', '-show_streams', '-show_format', '-of', 'json', path], {
+    timeout: 15_000, maxBuffer: MB, stdio: ['ignore', 'pipe', 'pipe'],
+  }));
+}
+
+// A media file is what its name says: the container of its extension, the streams and codecs it allows, its length.
+function mediaIsValid(path, item) {
+  const { main, media, durationMs } = item;
+  const ext = main.split('.').pop();
+  const { streams = [], format = {} } = probeFile(path);
+  const of = (type) => streams.filter((stream) => stream.codec_type === type);
+  if (media === 'image') {
+    const [picture] = streams;
+    requireThat(streams.length === 1 && picture.codec_type === 'video' && picture.codec_name === IMAGE_CODECS[ext],
+      `${main}: expected one ${ext === 'jpeg' ? 'jpg' : ext} picture, as its extension says`);
+    requireThat(picture.width > 0 && picture.height > 0 && picture.width <= 8192 && picture.height <= 8192, `${main}: an image is at most 8192 px a side`);
+    return;
+  }
+  requireThat(format.format_name?.split(',').includes(ext), `${main}: the file is not ${ext}, as its extension says`);
+  if (media === 'video') {
+    const [video] = of('video');
+    requireThat(of('video').length === 1 && of('audio').length <= 1 && streams.length === of('video').length + of('audio').length,
+      `${main}: expected one video stream and at most one audio stream, nothing else`);
+    const codecs = ext === 'webm' ? ['vp9', 'av1'] : Object.keys(VIDEO_CODECS);
+    requireThat(codecs.includes(video.codec_name), `${main}: the video must be ${codecs.map((codec) => VIDEO_CODECS[codec]).join(', ')}`);
+    requireThat(video.width > 0 && video.height > 0 && Math.max(video.width, video.height) <= 3840 && Math.min(video.width, video.height) <= 2160,
+      `${main}: a video is at most 3840×2160`);
+  } else {
+    const [name, codec] = AUDIO_CODECS[ext];
+    requireThat(streams.length === 1 && streams[0].codec_type === 'audio' && codec(streams[0].codec_name), `${main}: expected a single ${name} audio stream`);
+  }
+  const { ms, what, limit } = MEDIA[media];
+  const length = Number(format.duration) * 1000;
+  requireThat(Number.isFinite(length) && length > 0 && length <= ms, `${main}: ${what} is ${limit}`);
+  requireThat(Math.abs(length - durationMs) <= 150, `${main}: declared durationMs differs from the file`);
 }
 
 function durationOf(path) {
@@ -69,6 +136,62 @@ function cssIsValid(bytes) {
     !/[<\\]/.test(css) && !/@(?!keyframes\s)/i.test(body) &&
     !/\b(?:url|(?:-webkit-)?image-set|image|src|paint|element)\s*\(/i.test(body),
   'overlay.css must be local CSS with no external resources or HTML');
+}
+
+// A text style's style.json: {"vars": {"--name": "value"}}, values plain CSS with nothing loaded and nothing nested.
+export function styleIsValid(bytes) {
+  let style;
+  try { style = JSON.parse(bytes.toString('utf8')); } catch { style = null; }
+  const vars = style?.vars;
+  requireThat(exact(style, ['vars']) && record(vars) && Object.keys(vars).length >= 1 && Object.keys(vars).length <= 24 &&
+    Object.entries(vars).every(([key, value]) => TEXT_VAR.test(key) && typeof value === 'string' && value.length <= 200 &&
+      /^[\x20-\x7e]*$/.test(value) && !/[<>{};\\@]/.test(value) && !/\b(?:url|image-set|image|src|expression|var)\s*\(/i.test(value)),
+  'style.json must be {"vars": {...}}: 1–24 variables named --like-this, each a plain CSS value with nothing loaded');
+  return style;
+}
+
+// A filter's grade.json, as OpenFilm's own looks: a 3×4 colour matrix (mix), saturation (sat), and 17-point curves.
+export function gradeIsValid(bytes) {
+  let grade;
+  try { grade = JSON.parse(bytes.toString('utf8')); } catch { grade = null; }
+  const num = (v, lo, hi) => typeof v === 'number' && Number.isFinite(v) && v >= lo && v <= hi;
+  const keys = record(grade) ? Object.keys(grade) : [];
+  requireThat(keys.length >= 1 && keys.every((key) => ['mix', 'sat', ...CURVE_KEYS].includes(key)) &&
+    (grade.mix === undefined || (Array.isArray(grade.mix) && grade.mix.length === 12 && grade.mix.every((v) => num(v, -4, 4)))) &&
+    (grade.sat === undefined || num(grade.sat, 0, 4)) &&
+    CURVE_KEYS.every((key) => grade[key] === undefined || (Array.isArray(grade[key]) && grade[key].length === 17 && grade[key].every((v) => num(v, 0, 1)))),
+  'grade.json must hold mix (12 numbers), sat (a number) and curves all, r, g, b (17 numbers from 0 to 1 each)');
+  return grade;
+}
+
+// A template's page: markup only (no scripts, links, pictures or handlers), elements with classes, and its CSS beside it.
+const PAGE_TAGS = new Set(['div', 'span', 'p', 'b', 'i', 'em', 'strong', 'small', 'br', 'h1', 'h2', 'h3', 'sup', 'sub', 'u', 's']);
+export function pageIsValid(bytes) {
+  const html = bytes.toString('utf8');
+  const tags = [...html.matchAll(/<\/?([a-zA-Z0-9]+)([^>]*)>/g)];
+  requireThat(html.trim() && /^[\x09\x0a\x0d\x20-\x7e\u00a0-\uffff]+$/.test(html) && !/<!|<\?|&#|javascript:/i.test(html) &&
+    html.replace(/<\/?[a-zA-Z0-9]+[^>]*>/g, '').indexOf('<') < 0 &&
+    tags.every(([, tag, attrs]) => PAGE_TAGS.has(tag.toLowerCase()) && /^(?:\s+class="[a-zA-Z0-9 _-]*")?\s*\/?$/.test(attrs)),
+  'a template page is markup only: div, span, p, b, i, em, strong, small, br, h1–h3, sup, sub, u, s, each with at most a class');
+}
+
+// A template's template.json: its clips on tracks, each a page of its own or one of its pictures (the slots).
+export function templateIsValid(bytes, names) {
+  let tpl;
+  try { tpl = JSON.parse(bytes.toString('utf8')); } catch { tpl = null; }
+  const num = (v, lo, hi) => typeof v === 'number' && Number.isFinite(v) && v >= lo && v <= hi;
+  const clipOk = (c) => record(c) && Object.keys(c).every((k) => ['track', 'at', 'time', 'page', 'picture', 'size', 'place', 'texts', 'fade', 'props'].includes(k)) &&
+    Number.isInteger(c.track) && c.track >= 0 && c.track <= 7 && num(c.at, 0, 60) &&
+    Array.isArray(c.time) && c.time.length === 2 && num(c.time[0], 0, 60) && num(c.time[1], c.time[0] + 0.05, 60) &&
+    ((typeof c.page === 'string' && c.picture === undefined && names.pages.has(c.page)) || (typeof c.picture === 'string' && c.page === undefined && names.pictures.has(c.picture))) &&
+    (c.size === undefined || (record(c.size) && exact(c.size, ['w', 'h']) && num(c.size.w, 16, 3840) && num(c.size.h, 16, 3840))) &&
+    (c.place === undefined || (record(c.place) && Object.keys(c.place).every((k) => ['x', 'y', 'fit'].includes(k) && num(c.place[k], 0, 1)))) &&
+    (c.texts === undefined || (record(c.texts) && Object.entries(c.texts).every(([at, text]) => /^\.[a-z][a-z0-9-]{0,30}$/.test(at) && cleanText(text, 0, 120)))) &&
+    (c.fade === undefined || (Array.isArray(c.fade) && c.fade.length === 2 && c.fade.every((v) => num(v, 0, 10)))) &&
+    (c.props === undefined || (Array.isArray(c.props) && c.props.length <= 8 && c.props.every((p) => exact(p, ['name', 'type', 'at']) && p.type === 'text' && cleanText(p.name, 1, 40) && /^\.[a-z][a-z0-9-]{0,30}$/.test(p.at))));
+  requireThat(exact(tpl, ['clips']) && Array.isArray(tpl.clips) && tpl.clips.length >= 1 && tpl.clips.length <= 40 && tpl.clips.every(clipOk),
+    'template.json must be {"clips": [...]}: up to 40 clips, each on a track 0–7 with at and time in seconds, and a page or a picture of the template');
+  return tpl;
 }
 
 function foldersIn(root, top, what) {
@@ -94,7 +217,12 @@ export function inspect(id, { root = ROOT, mediaDir, allowMissing = false } = {}
   requireThat(lstatSync(join(root, cat)).isDirectory() && lstatSync(dir).isDirectory(), 'item must be a real directory');
   const metadata = fileAt(join(dir, 'item.json'), 32 * 1024);
   const item = JSON.parse(metadata);
-  requireThat(exact(item, ITEM_KEYS) && item.cat === cat, 'invalid item.json fields or category');
+  const media = cat === 'media';
+  const timeless = TIMELESS.includes(cat);
+  // A media item says what it is; an image, a text style and a filter have no length: their durationMs is 0 or left out.
+  const optional = ITEM_KEYS.filter((key) => key !== 'durationMs' || Object.hasOwn(item ?? {}, key));
+  const keys = media ? [...optional, 'media'] : timeless ? optional : cat === 'sticker' && Object.hasOwn(item ?? {}, 'idle') ? [...ITEM_KEYS, 'idle'] : ITEM_KEYS;
+  requireThat(exact(item, keys) && item.cat === cat, 'invalid item.json fields or category');
   requireThat(exact(item.name, LANGUAGES) && LANGUAGES.every((lang) => cleanText(item.name[lang], 1, 60)), 'a name in all five languages is required');
   requireThat(cleanText(item.about, 10, 300), 'about must be 10–300 characters');
   requireThat(Array.isArray(item.tags) && item.tags.length > 0 && item.tags.length <= 12 &&
@@ -106,12 +234,42 @@ export function inspect(id, { root = ROOT, mediaDir, allowMissing = false } = {}
   requireThat((exact(source, ['kind']) && source.kind === 'own') ||
     (exact(source, ['kind', 'url']) && source.kind === 'cc0' && https(source.url)), 'provide an original work or its public CC0 source URL');
   requireThat(Number.isSafeInteger(item.version) && item.version >= 1, 'version must be a positive integer');
-  requireThat(Number.isInteger(item.durationMs) && item.durationMs >= 1 && item.durationMs <= 3_600_000, 'invalid durationMs');
   const audio = cat === 'sound' || cat === 'music';
-  const allowed = audio ? [item.main] : ['overlay.css', 'poster.jpg', 'preview.mp4'];
-  requireThat(audio ? typeof item.main === 'string' && /^(sound|music)\.(m4a|mp3)$/.test(item.main) && item.main.startsWith(cat + '.')
-    : item.main === 'overlay.css' && item.durationMs <= 10_000, 'invalid main file or overlay duration');
-  requireThat(Array.isArray(item.files) && item.files.length === allowed.length &&
+  let rule;
+  if (media) {
+    requireThat(Object.hasOwn(MEDIA, item.media), 'media must be "video", "image" or "audio"');
+    rule = MEDIA[item.media];
+    const names = rule.exts.map((ext) => `media.${ext}`);
+    requireThat(names.includes(item.main), `main: ${rule.what} is ${names.slice(0, -1).join(', ')} or ${names.at(-1)}`);
+    if (rule.ms) {
+      requireThat(Number.isInteger(item.durationMs) && item.durationMs >= 1 && item.durationMs <= rule.ms,
+        `durationMs: ${rule.what} is ${rule.limit}; give its length in milliseconds`);
+    } else requireThat((item.durationMs ?? 0) === 0, 'durationMs: an image has no length; write 0 or leave it out');
+    const paths = Array.isArray(item.files) ? item.files.map((file) => file?.path) : [];
+    requireThat(!rule.poster || paths.includes('poster.jpg'), 'a video needs a poster.jpg: a JPEG of at most 1 MiB and 1920×1080');
+    requireThat(rule.poster || !paths.includes('poster.jpg'), `poster.jpg is for a video only, not ${rule.what}`);
+  } else if (timeless) {
+    requireThat((item.durationMs ?? 0) === 0, `durationMs: a ${cat === 'text' ? 'text style' : 'filter'} has no length; write 0 or leave it out`);
+    requireThat(item.main === (cat === 'text' ? 'style.json' : 'grade.json'), `main: a ${cat === 'text' ? 'text style is style.json' : 'filter is grade.json'}`);
+  } else if (cat === 'template') {
+    requireThat(Number.isInteger(item.durationMs) && item.durationMs >= 1000 && item.durationMs <= 60_000, 'durationMs: a template is 1–60 seconds');
+    requireThat(item.main === 'template.json', 'main: a template is template.json');
+  } else if (cat === 'sticker') {
+    requireThat(Number.isInteger(item.durationMs) && item.durationMs >= 1 && item.durationMs <= 10_000, 'durationMs: a sticker is 1–10 000 ms');
+    requireThat(item.main === 'sticker.png' || item.main === 'sticker.webp', 'main: a sticker is sticker.png or sticker.webp');
+    requireThat(item.idle === undefined || STICKER_IDLE.includes(item.idle), `idle: a sticker moves as ${STICKER_IDLE.join(', ')}, or not at all`);
+  } else {
+    requireThat(Number.isInteger(item.durationMs) && item.durationMs >= 1 && item.durationMs <= 3_600_000, 'invalid durationMs');
+    requireThat(audio ? typeof item.main === 'string' && /^(sound|music)\.(m4a|mp3)$/.test(item.main) && item.main.startsWith(cat + '.')
+      : item.main === 'overlay.css' && item.durationMs <= 10_000, 'invalid main file or overlay duration');
+  }
+  /* a template: its template.json, poster and preview, and its pages (name.html with name.css) and pictures (name.jpg) */
+  const tplFile = /^[a-z0-9][a-z0-9-]{0,30}\.(?:html|css|jpg)$/;
+  const allowed = cat === 'template'
+    ? ['template.json', 'poster.jpg', 'preview.mp4', ...(Array.isArray(item.files) ? item.files.map((file) => file?.path).filter((path) => typeof path === 'string' && tplFile.test(path) && path !== 'poster.jpg') : [])]
+    : media ? (rule.poster ? [item.main, 'poster.jpg'] : [item.main]) : audio || cat === 'text' || cat === 'sticker' ? [item.main]
+      : cat === 'filter' ? ['grade.json', 'sample.jpg'] : ['overlay.css', 'poster.jpg', 'preview.mp4'];
+  requireThat(Array.isArray(item.files) && item.files.length === allowed.length && item.files.length <= 32 &&
     new Set(item.files.map((file) => file?.path)).size === allowed.length, 'missing, duplicate or unexpected files');
   const allowedLocal = new Set(['item.json']);
   const inputs = new Map();
@@ -119,9 +277,13 @@ export function inspect(id, { root = ROOT, mediaDir, allowMissing = false } = {}
   for (const file of item.files) {
     const external = file?.sha256 !== undefined;
     requireThat(exact(file, external ? ['path', 'bytes', 'sha256'] : ['path', 'bytes']) && allowed.includes(file.path), 'invalid file entry');
-    requireThat(!external || (audio && typeof file.sha256 === 'string' && HEX.test(file.sha256)), 'only audio can use an external SHA-256');
-    const limit = file.path.endsWith('.css') ? 32 * 1024 : cat === 'music' ? 8 * MB : 2 * MB;
-    requireThat(Number.isInteger(file.bytes) && file.bytes > 0 && file.bytes <= limit, `${file.path}: invalid size`);
+    requireThat(!external || ((audio || (media && file.path === item.main)) && typeof file.sha256 === 'string' && HEX.test(file.sha256)),
+      'only audio and a media file can use an external SHA-256');
+    const limit = file.path.endsWith('.css') || file.path.endsWith('.json') || file.path.endsWith('.html') ? 32 * 1024 : media ? (file.path === 'poster.jpg' ? MB : rule.max)
+      : cat === 'template' ? (file.path === 'preview.mp4' ? 4 * MB : MB)
+      : cat === 'filter' ? MB : cat === 'music' ? 8 * MB : 2 * MB;
+    requireThat(Number.isInteger(file.bytes) && file.bytes > 0 && file.bytes <= limit,
+      `${file.path}: invalid size${media ? `; it is at most ${limit / MB} MiB` : ''}`);
     if (!external) allowedLocal.add(file.path);
     let path;
     if (external) {
@@ -133,18 +295,42 @@ export function inspect(id, { root = ROOT, mediaDir, allowMissing = false } = {}
     const sha = hash(bytes);
     requireThat(file.bytes === bytes.length && (!external || file.sha256 === sha), `${file.path}: size or SHA-256 mismatch`);
     inputs.set(file.path, bytes);
-    if (audio) {
-      audioIsValid(bytes, item.main);
+    if (media) {
+      if (file.path === 'poster.jpg') pictureIsValid(bytes, file.path, 'mjpeg');
+      else mediaIsValid(path, item);
+    } else if (audio) {
+      audioIsValid(path, item.main);
       requireThat(Math.abs(durationOf(path) * 1000 - item.durationMs) <= 150, 'declared audio duration differs from the file');
-    } else if (file.path === 'overlay.css') cssIsValid(bytes);
+    } else if (cat === 'template') {
+      if (file.path.endsWith('.html')) pageIsValid(bytes);
+      else if (file.path.endsWith('.css')) cssIsValid(bytes);
+      else if (file.path.endsWith('.jpg')) pictureIsValid(bytes, file.path, 'mjpeg');
+      else if (file.path === 'preview.mp4') {
+        pictureIsValid(bytes, file.path, 'h264', path);
+        const length = durationOf(path);
+        requireThat(Number.isFinite(length) && length > 0 && length <= 60, 'preview must be at most 60 seconds');
+      }
+    } else if (file.path === 'style.json') styleIsValid(bytes);
+    else if (file.path === 'grade.json') gradeIsValid(bytes);
+    else if (file.path === 'sample.jpg') pictureIsValid(bytes, file.path, 'mjpeg');
+    else if (cat === 'sticker') stickerIsValid(bytes, item.main);
+    else if (file.path === 'overlay.css') cssIsValid(bytes);
     else if (file.path === 'poster.jpg') pictureIsValid(bytes, file.path, 'mjpeg');
     else {
-      pictureIsValid(bytes, file.path, 'h264');
+      pictureIsValid(bytes, file.path, 'h264', path);
       const length = durationOf(path);
       requireThat(Number.isFinite(length) && length > 0 && length <= 10, 'preview must be at most 10 seconds');
     }
   }
   for (const filename of readdirSync(dir)) requireThat(allowedLocal.has(filename), `unexpected file: ${filename}`);
+  if (cat === 'template') {
+    // every page has its CSS and is used; every picture is a slot; the clips name only what is here
+    const pages = new Set(item.files.filter((f) => f.path.endsWith('.html')).map((f) => f.path.slice(0, -5)));
+    const pictures = new Set(item.files.filter((f) => f.path.endsWith('.jpg') && f.path !== 'poster.jpg').map((f) => f.path.slice(0, -4)));
+    requireThat([...pages].every((name) => inputs.has(`${name}.css`)) && item.files.filter((f) => f.path.endsWith('.css')).every((f) => pages.has(f.path.slice(0, -4))),
+      'each template page is name.html with its name.css');
+    templateIsValid(inputs.get('template.json'), { pages, pictures });
+  }
   // Metadata already contains the digest of external files, so it identifies the reviewed content in both review modes.
   const fingerprint = hash(text([hash(metadata), ...item.files.map((file) => file.sha256 ?? hash(inputs.get(file.path)))]));
   return { id, slug, item, inputs, fingerprint, missing };

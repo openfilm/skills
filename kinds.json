@@ -14,7 +14,8 @@
     "workbench": "A surface of its own beside the edit and the canvas, picked from the workbench switch at the top right.",
     "agent": "Given to the agent in the conversation, by its full name.",
     "agent-connectors": "Connects the agent to an outside service; turned on in the agent's connectors.",
-    "library": "A tab of the library drawer, the tab named after the kind."
+    "library": "A tab of the library drawer, the tab named after the kind.",
+    "library-media": "The library's first tab, Media: a pack's files are copied into a folder of the person's own."
   },
   "tiers": {
     "A": "Files, no code. Format, rights and provenance checked; a maintainer reviews the first version and every change.",
@@ -42,6 +43,13 @@
       "track": "code",
       "lands": "agent-connectors",
       "tier": "C"
+    },
+    {
+      "id": "media",
+      "names": { "en": "Media", "zh-CN": "素材", "ja": "素材", "ko": "소재", "es": "Medios" },
+      "track": "asset",
+      "lands": "library-media",
+      "tier": "A"
     },
     {
       "id": "template",

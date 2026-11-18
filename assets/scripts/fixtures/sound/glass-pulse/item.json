@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Glass Pulse",
+    "zh-CN": "玻璃脉冲",
+    "ja": "ガラスのパルス",
+    "ko": "유리 펄스",
+    "es": "Pulso de cristal"
+  },
+  "about": "A short synthesized glass chime for a subtle cue, reveal or button press.",
+  "tags": [
+    "chime",
+    "glass",
+    "cue",
+    "short"
+  ],
+  "by": "openfilm",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 700,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 5690
+    }
+  ]
+}

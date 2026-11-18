@@ -3,13 +3,17 @@ import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } f
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
-import { ROOT, inspect, reviewed } from './check.mjs';
+import { inspect, reviewed } from './check.mjs';
+import { fileURLToPath } from 'node:url';
+
+/* the two starter items, kept here as test material since the Community's library was emptied */
+const FIXTURES = fileURLToPath(new URL('./fixtures/', import.meta.url));
 
 function fixture(t, id) {
   const root = mkdtempSync(join(tmpdir(), 'openfilm-review-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));
   const dir = join(root, id);
-  cpSync(join(ROOT, id), dir, { recursive: true });
+  cpSync(join(FIXTURES, id), dir, { recursive: true });
   const metadata = join(dir, 'item.json');
   const item = JSON.parse(readFileSync(metadata, 'utf8'));
   return { root, dir, item, save: () => writeFileSync(metadata, JSON.stringify(item)) };

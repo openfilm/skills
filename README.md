@@ -28,8 +28,9 @@ It has two tracks: **code** (skills, workbenches, connectors), each in its publi
 
 1. **Use.** Open the Community in OpenFilm and add what you like. No account is needed. Everything listed is free, and
    assets are free to use commercially.
-2. **Share assets.** Templates, text styles, stickers, effects, transitions, filters, sounds and music, made by you and
-   shared under CC0, in [assets/](assets): see its [CONTRIBUTING.md](assets/CONTRIBUTING.md).
+2. **Share assets.** Media (footage, pictures, recordings), templates, text styles, stickers, effects, transitions,
+   filters, sounds and music, made by you and shared under CC0, in [assets/](assets): see its
+   [CONTRIBUTING.md](assets/CONTRIBUTING.md).
 3. **Build.** Skills, workbenches and connectors, in a repository of your own, open source, listed here. Start from
    [template/](template) and read the [developer policy](POLICIES/developer-policy.md). You can
    [propose a listing from the web](#propose-a-listing-from-the-web), without git.
@@ -45,6 +46,7 @@ Kinds are an open list ([kinds.json](kinds.json)); a new kind is one more entry.
 | Workbenches | code | a surface of its own, from the workbench switch | C |
 | Skills | code | given to the agent | B |
 | Connectors | code | the agent's connectors | C |
+| Media | asset | the library's first tab, Media: a pack's files copied into a folder of your own | A |
 | Templates, text, stickers, effects, transitions, filters, sounds, music | asset | the library tab of its kind | A |
 
 - **Code** lives in its publisher's own repository, with its own issues and versions. This repository lists it in

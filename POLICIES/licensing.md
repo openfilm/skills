@@ -28,9 +28,8 @@ how, and what evidence a maintainer needs.
 
 ## AI-generated work
 
-Anything made in whole or in part with a generative tool says so: in the pull request, and in the item's source
-record. Undisclosed generated work is withdrawn. The library says which sources it accepts at a given time; at launch it
-accepts no generated assets.
+Generated work is welcome. Anything made in whole or in part with a generative tool says so in the pull request, and
+the tool's terms must let the contributor dedicate its output under CC0. Undisclosed generated work is withdrawn.
 
 Code written with an AI assistant is fine. You are its author, and it is reviewed like any other code.
 

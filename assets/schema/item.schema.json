@@ -13,19 +13,31 @@
     "source",
     "version",
     "files",
-    "main",
-    "durationMs"
+    "main"
   ],
   "additionalProperties": false,
   "properties": {
     "cat": {
       "enum": [
+        "media",
         "sound",
         "music",
         "transition",
-        "effect"
+        "effect",
+        "text",
+        "sticker",
+        "filter",
+        "template"
       ],
       "description": "Its category: the folder it is in."
+    },
+    "media": {
+      "enum": [
+        "video",
+        "image",
+        "audio"
+      ],
+      "description": "What a media item is; for media items only."
     },
     "name": {
       "type": "object",
@@ -132,7 +144,7 @@
     "files": {
       "type": "array",
       "minItems": 1,
-      "description": "Its files: those in the folder, and those kept in OpenFilm's storage by their sha256.",
+      "description": "Its files: those in the folder, and those kept in OpenFilm's storage by their sha256. At most 3, a template's at most 32.",
       "items": {
         "type": "object",
         "required": [
@@ -148,7 +160,7 @@
           "bytes": {
             "type": "integer",
             "minimum": 1,
-            "maximum": 8388608
+            "maximum": 52428800
           },
           "sha256": {
             "type": "string",
@@ -156,23 +168,380 @@
           }
         }
       },
-      "maxItems": 3
+      "maxItems": 32
     },
     "main": {
       "type": "string",
-      "description": "The file a film uses: a page's HTML, a sound's audio.",
+      "description": "The file a film uses: a page's CSS, a sound's audio, a media item's media.<ext>, a text style's style.json, a filter's grade.json, a sticker's picture.",
       "enum": [
         "overlay.css",
         "sound.m4a",
         "sound.mp3",
         "music.m4a",
-        "music.mp3"
+        "music.mp3",
+        "media.mp4",
+        "media.mov",
+        "media.webm",
+        "media.jpg",
+        "media.jpeg",
+        "media.png",
+        "media.webp",
+        "media.m4a",
+        "media.mp3",
+        "media.wav",
+        "style.json",
+        "grade.json",
+        "sticker.png",
+        "sticker.webp",
+        "template.json"
       ]
     },
     "durationMs": {
       "type": "integer",
-      "minimum": 1,
-      "maximum": 3600000
+      "minimum": 0,
+      "maximum": 3600000,
+      "description": "Its length in milliseconds: 0 or left out for an image."
+    },
+    "idle": {
+      "enum": [
+        "bounce",
+        "wiggle",
+        "pulse",
+        "float",
+        "spin",
+        "pop"
+      ],
+      "description": "How a sticker moves while it is shown; stickers only."
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "cat": {
+            "const": "media"
+          }
+        },
+        "required": [
+          "cat"
+        ]
+      },
+      "then": {
+        "required": [
+          "media"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "media"
+          ]
+        },
+        "properties": {
+          "files": {
+            "items": {
+              "properties": {
+                "bytes": {
+                  "maximum": 8388608
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cat": {
+            "enum": [
+              "media",
+              "text",
+              "filter"
+            ]
+          }
+        },
+        "required": [
+          "cat"
+        ]
+      },
+      "then": {},
+      "else": {
+        "required": [
+          "durationMs"
+        ],
+        "properties": {
+          "durationMs": {
+            "minimum": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cat": {
+            "const": "media"
+          },
+          "media": {
+            "const": "video"
+          }
+        },
+        "required": [
+          "cat",
+          "media"
+        ]
+      },
+      "then": {
+        "required": [
+          "durationMs"
+        ],
+        "properties": {
+          "main": {
+            "enum": [
+              "media.mp4",
+              "media.mov",
+              "media.webm"
+            ]
+          },
+          "durationMs": {
+            "minimum": 1,
+            "maximum": 60000
+          },
+          "files": {
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "properties": {
+                "bytes": {
+                  "maximum": 52428800
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cat": {
+            "const": "media"
+          },
+          "media": {
+            "const": "image"
+          }
+        },
+        "required": [
+          "cat",
+          "media"
+        ]
+      },
+      "then": {
+        "properties": {
+          "main": {
+            "enum": [
+              "media.jpg",
+              "media.jpeg",
+              "media.png",
+              "media.webp"
+            ]
+          },
+          "durationMs": {
+            "const": 0
+          },
+          "files": {
+            "maxItems": 1,
+            "items": {
+              "properties": {
+                "bytes": {
+                  "maximum": 10485760
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cat": {
+            "const": "media"
+          },
+          "media": {
+            "const": "audio"
+          }
+        },
+        "required": [
+          "cat",
+          "media"
+        ]
+      },
+      "then": {
+        "required": [
+          "durationMs"
+        ],
+        "properties": {
+          "main": {
+            "enum": [
+              "media.m4a",
+              "media.mp3",
+              "media.wav"
+            ]
+          },
+          "durationMs": {
+            "minimum": 1,
+            "maximum": 600000
+          },
+          "files": {
+            "maxItems": 1,
+            "items": {
+              "properties": {
+                "bytes": {
+                  "maximum": 20971520
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cat": {
+            "enum": [
+              "text",
+              "filter"
+            ]
+          }
+        },
+        "required": [
+          "cat"
+        ]
+      },
+      "then": {
+        "properties": {
+          "durationMs": {
+            "const": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cat": {
+            "const": "text"
+          }
+        },
+        "required": [
+          "cat"
+        ]
+      },
+      "then": {
+        "properties": {
+          "main": {
+            "const": "style.json"
+          },
+          "files": {
+            "maxItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cat": {
+            "const": "filter"
+          }
+        },
+        "required": [
+          "cat"
+        ]
+      },
+      "then": {
+        "properties": {
+          "main": {
+            "const": "grade.json"
+          },
+          "files": {
+            "minItems": 2,
+            "maxItems": 2
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cat": {
+            "const": "sticker"
+          }
+        },
+        "required": [
+          "cat"
+        ]
+      },
+      "then": {
+        "properties": {
+          "main": {
+            "enum": [
+              "sticker.png",
+              "sticker.webp"
+            ]
+          },
+          "files": {
+            "maxItems": 1
+          },
+          "durationMs": {
+            "maximum": 10000
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cat": {
+            "not": {
+              "const": "template"
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "files": {
+            "maxItems": 3
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cat": {
+            "const": "template"
+          }
+        },
+        "required": [
+          "cat"
+        ]
+      },
+      "then": {
+        "properties": {
+          "main": {
+            "const": "template.json"
+          },
+          "durationMs": {
+            "minimum": 1000,
+            "maximum": 60000
+          }
+        }
+      }
+    }
+  ]
 }
