@@ -1,0 +1,14 @@
+/* A sticker badge: a star-edged seal pops on, keeps wiggling, with two short lines on it. 2.4 s. */
+.w { position: fixed; inset: 0; display: grid; place-items: center; font-family: -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  animation: out 0.3s 1.5s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.badge { position: relative; display: grid; place-items: center; width: 76vh; height: 76vh; animation: pop 0.6s cubic-bezier(0.3, 1.7, 0.5, 1) both, wig 1.6s 0.6s ease-in-out infinite; }
+.sq { position: absolute; inset: 9vh; background: #e4572e; border-radius: 4vh; box-shadow: 0 2vh 6vh rgba(0, 0, 0, 0.3); }
+.sq.a { transform: rotate(0deg); }
+.sq.b { transform: rotate(45deg); }
+.core { position: absolute; inset: 15vh; border-radius: 50%; border: 1vh dashed #fff4e0; }
+.tx { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2.5vh; color: #fff4e0; text-align: center; transform: rotate(-8deg); }
+.t1 { font-size: 11vh; font-weight: 900; line-height: 1; letter-spacing: 0.04em; white-space: nowrap; }
+.t2 { font-size: 5.6vh; font-weight: 700; line-height: 1; white-space: nowrap; color: #ffe2a8; }
+@keyframes pop { from { opacity: 0; transform: scale(0) rotate(-140deg); } }
+@keyframes wig { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(5deg) scale(1.04); } }
+@keyframes out { to { opacity: 0; transform: scale(0.6); } }

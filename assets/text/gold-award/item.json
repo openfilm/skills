@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Gold Award",
+    "zh-CN": "金色奖杯字",
+    "ja": "ゴールドアワード",
+    "ko": "골드 어워드",
+    "es": "Oro"
+  },
+  "about": "Gold gradient letters with a dark brown outline and soft shadow. For winners, rankings and big announcements.",
+  "tags": [
+    "gold",
+    "award",
+    "title"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 337
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "vars": {
+    "--font": "'Smiley Sans', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', 'Hiragino Sans GB', sans-serif",
+    "--weight": "900",
+    "--color": "#fffaf0",
+    "--glow": "drop-shadow(0.06em 0em 0 #ff5a1f) drop-shadow(-0.06em 0em 0 #ff5a1f) drop-shadow(0em 0.06em 0 #ff5a1f) drop-shadow(0em -0.06em 0 #ff5a1f)"
+  }
+}

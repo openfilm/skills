@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Harbour City at Night",
+    "zh-CN": "夜晚的港城",
+    "ja": "夜の港町",
+    "ko": "밤의 항구 도시",
+    "es": "Ciudad portuaria de noche"
+  },
+  "about": "A port city glows orange at night under dark hills: container terminals, a cable-stayed bridge and lit roads seen from high above Hong Kong.",
+  "tags": [
+    "city",
+    "night",
+    "harbour",
+    "lights",
+    "aerial",
+    "port"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Harbour_view_from_International_Commerce_Center_Building.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 2015975,
+      "sha256": "c128f6ce8ff2c17ab1ffde83e74e4b7448ce3e0eb019d3c6207f1c033e25a54e"
+    }
+  ]
+}

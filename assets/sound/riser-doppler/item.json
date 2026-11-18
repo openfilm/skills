@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Doppler Riser",
+    "zh-CN": "多普勒上升音",
+    "ja": "ドップラーライザー",
+    "ko": "도플러 라이저",
+    "es": "Subida Doppler"
+  },
+  "about": "A riser that rushes past, for a transition with energy.",
+  "tags": [
+    "riser",
+    "doppler",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/WildBurne/sounds/555672/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 9126,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 154611
+    }
+  ]
+}

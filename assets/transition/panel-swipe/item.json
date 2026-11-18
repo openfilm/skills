@@ -1,0 +1,42 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Panel Swipe",
+    "zh-CN": "叠板滑动",
+    "ja": "パネルスワイプ",
+    "ko": "패널 스와이프",
+    "es": "Barrido de paneles"
+  },
+  "about": "White, grey and black panels slide in from the right one after another, cover the cut, then slide out to the left. A clean, modern wipe for vlogs, promos and lists.",
+  "tags": [
+    "wipe",
+    "swipe",
+    "slide",
+    "panels",
+    "clean",
+    "modern",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 3469
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 11720
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 395786
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 800
+}

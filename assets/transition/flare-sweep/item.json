@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Flare Sweep",
+    "zh-CN": "镜头光斑扫过",
+    "ja": "フレアスイープ",
+    "ko": "플레어 스윕",
+    "es": "Barrido de destello"
+  },
+  "about": "A light crosses the lens with a blue anamorphic streak and colored ghosts, flares white as it passes the middle on the cut. For cinematic, epic cuts.",
+  "tags": [
+    "lens-flare",
+    "flare",
+    "anamorphic",
+    "cinematic",
+    "light",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 10031
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 249421
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 624817
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 1000
+}

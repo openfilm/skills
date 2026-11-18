@@ -1,0 +1,62 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l::before, .l::after, body::after { content: ""; position: fixed; pointer-events: none; }
+.l::before { inset: 0; background-image: radial-gradient(circle closest-side, #fff 0%, #fff 8%, rgba(255, 240, 210, 0.95) 18%, rgba(255, 200, 140, 0.45) 45%, rgba(255, 170, 100, 0.12) 75%, rgba(255, 160, 90, 0) 100%), radial-gradient(circle closest-side, rgba(255, 180, 120, 0.4), rgba(255, 180, 120, 0)), radial-gradient(circle closest-side, rgba(120, 200, 255, 0) 72%, rgba(120, 200, 255, 0.4) 86%, rgba(120, 200, 255, 0) 100%), radial-gradient(circle closest-side, rgba(150, 255, 200, 0.45), rgba(150, 255, 200, 0)), radial-gradient(circle closest-side, rgba(190, 140, 255, 0.18), rgba(190, 140, 255, 0.08) 80%, rgba(190, 140, 255, 0)), radial-gradient(circle closest-side, rgba(255, 210, 160, 0.35), rgba(255, 190, 130, 0.12) 50%, rgba(255, 180, 120, 0) 100%);
+  background-size: 70vmin 70vmin, 9vmin 9vmin, 22vmin 22vmin, 6vmin 6vmin, 32vmin 32vmin, 160vmin 160vmin; background-repeat: no-repeat;
+  animation: fsg 1000ms linear both; }
+.l::after { left: -50%; width: 200%; top: 50%; height: 1.4vh; margin-top: -0.7vh; border-radius: 50%;
+  background: linear-gradient(to right, rgba(80, 150, 255, 0), rgba(80, 150, 255, 0.5) 30%, rgba(225, 240, 255, 1) 50%, rgba(80, 150, 255, 0.5) 70%, rgba(80, 150, 255, 0));
+  box-shadow: 0 0 2.5vh 0.8vh rgba(90, 150, 255, 0.28); filter: blur(0.2vh);
+  animation: fss 1000ms linear both; }
+body::after { inset: 0; background: #fff9ef; animation: fsw 1000ms linear both; }
+@keyframes fsg {
+  0% { background-position: calc(-25vw - 35vmin) calc(44vh - 35vmin), calc(76.25vw - 4.5vmin) calc(52.1vh - 4.5vmin), calc(102.5vw - 11vmin) calc(54.2vh - 11vmin), calc(128.75vw - 3vmin) calc(56.3vh - 3vmin), calc(155vw - 16vmin) calc(58.4vh - 16vmin), calc(-25vw - 80vmin) calc(44vh - 80vmin); opacity: 0; }
+  5% { background-position: calc(-17.5vw - 35vmin) calc(43.6vh - 35vmin), calc(73.63vw - 4.5vmin) calc(52.24vh - 4.5vmin), calc(97.25vw - 11vmin) calc(54.48vh - 11vmin), calc(120.88vw - 3vmin) calc(56.72vh - 3vmin), calc(144.5vw - 16vmin) calc(58.96vh - 16vmin), calc(-17.5vw - 80vmin) calc(43.6vh - 80vmin); opacity: 0.189; }
+  10% { background-position: calc(-10vw - 35vmin) calc(43.2vh - 35vmin), calc(71vw - 4.5vmin) calc(52.38vh - 4.5vmin), calc(92vw - 11vmin) calc(54.76vh - 11vmin), calc(113vw - 3vmin) calc(57.14vh - 3vmin), calc(134vw - 16vmin) calc(59.52vh - 16vmin), calc(-10vw - 80vmin) calc(43.2vh - 80vmin); opacity: 0.583; }
+  15% { background-position: calc(-2.5vw - 35vmin) calc(42.8vh - 35vmin), calc(68.38vw - 4.5vmin) calc(52.52vh - 4.5vmin), calc(86.75vw - 11vmin) calc(55.04vh - 11vmin), calc(105.13vw - 3vmin) calc(57.56vh - 3vmin), calc(123.5vw - 16vmin) calc(60.08vh - 16vmin), calc(-2.5vw - 80vmin) calc(42.8vh - 80vmin); opacity: 0.926; }
+  20% { background-position: calc(5vw - 35vmin) calc(42.4vh - 35vmin), calc(65.75vw - 4.5vmin) calc(52.66vh - 4.5vmin), calc(81.5vw - 11vmin) calc(55.32vh - 11vmin), calc(97.25vw - 3vmin) calc(57.98vh - 3vmin), calc(113vw - 16vmin) calc(60.64vh - 16vmin), calc(5vw - 80vmin) calc(42.4vh - 80vmin); opacity: 1; }
+  25% { background-position: calc(12.5vw - 35vmin) calc(42vh - 35vmin), calc(63.13vw - 4.5vmin) calc(52.8vh - 4.5vmin), calc(76.25vw - 11vmin) calc(55.6vh - 11vmin), calc(89.38vw - 3vmin) calc(58.4vh - 3vmin), calc(102.5vw - 16vmin) calc(61.2vh - 16vmin), calc(12.5vw - 80vmin) calc(42vh - 80vmin); opacity: 1; }
+  30% { background-position: calc(20vw - 35vmin) calc(41.6vh - 35vmin), calc(60.5vw - 4.5vmin) calc(52.94vh - 4.5vmin), calc(71vw - 11vmin) calc(55.88vh - 11vmin), calc(81.5vw - 3vmin) calc(58.82vh - 3vmin), calc(92vw - 16vmin) calc(61.76vh - 16vmin), calc(20vw - 80vmin) calc(41.6vh - 80vmin); opacity: 1; }
+  35% { background-position: calc(27.5vw - 35vmin) calc(41.2vh - 35vmin), calc(57.88vw - 4.5vmin) calc(53.08vh - 4.5vmin), calc(65.75vw - 11vmin) calc(56.16vh - 11vmin), calc(73.63vw - 3vmin) calc(59.24vh - 3vmin), calc(81.5vw - 16vmin) calc(62.32vh - 16vmin), calc(27.5vw - 80vmin) calc(41.2vh - 80vmin); opacity: 1; }
+  40% { background-position: calc(35vw - 35vmin) calc(40.8vh - 35vmin), calc(55.25vw - 4.5vmin) calc(53.22vh - 4.5vmin), calc(60.5vw - 11vmin) calc(56.44vh - 11vmin), calc(65.75vw - 3vmin) calc(59.66vh - 3vmin), calc(71vw - 16vmin) calc(62.88vh - 16vmin), calc(35vw - 80vmin) calc(40.8vh - 80vmin); opacity: 1; }
+  45% { background-position: calc(42.5vw - 35vmin) calc(40.4vh - 35vmin), calc(52.63vw - 4.5vmin) calc(53.36vh - 4.5vmin), calc(55.25vw - 11vmin) calc(56.72vh - 11vmin), calc(57.88vw - 3vmin) calc(60.08vh - 3vmin), calc(60.5vw - 16vmin) calc(63.44vh - 16vmin), calc(42.5vw - 80vmin) calc(40.4vh - 80vmin); opacity: 1; }
+  50% { background-position: calc(50vw - 35vmin) calc(40vh - 35vmin), calc(50vw - 4.5vmin) calc(53.5vh - 4.5vmin), calc(50vw - 11vmin) calc(57vh - 11vmin), calc(50vw - 3vmin) calc(60.5vh - 3vmin), calc(50vw - 16vmin) calc(64vh - 16vmin), calc(50vw - 80vmin) calc(40vh - 80vmin); opacity: 1; }
+  55% { background-position: calc(57.5vw - 35vmin) calc(39.6vh - 35vmin), calc(47.38vw - 4.5vmin) calc(53.64vh - 4.5vmin), calc(44.75vw - 11vmin) calc(57.28vh - 11vmin), calc(42.12vw - 3vmin) calc(60.92vh - 3vmin), calc(39.5vw - 16vmin) calc(64.56vh - 16vmin), calc(57.5vw - 80vmin) calc(39.6vh - 80vmin); opacity: 1; }
+  60% { background-position: calc(65vw - 35vmin) calc(39.2vh - 35vmin), calc(44.75vw - 4.5vmin) calc(53.78vh - 4.5vmin), calc(39.5vw - 11vmin) calc(57.56vh - 11vmin), calc(34.25vw - 3vmin) calc(61.34vh - 3vmin), calc(29vw - 16vmin) calc(65.12vh - 16vmin), calc(65vw - 80vmin) calc(39.2vh - 80vmin); opacity: 1; }
+  65% { background-position: calc(72.5vw - 35vmin) calc(38.8vh - 35vmin), calc(42.12vw - 4.5vmin) calc(53.92vh - 4.5vmin), calc(34.25vw - 11vmin) calc(57.84vh - 11vmin), calc(26.37vw - 3vmin) calc(61.76vh - 3vmin), calc(18.5vw - 16vmin) calc(65.68vh - 16vmin), calc(72.5vw - 80vmin) calc(38.8vh - 80vmin); opacity: 1; }
+  70% { background-position: calc(80vw - 35vmin) calc(38.4vh - 35vmin), calc(39.5vw - 4.5vmin) calc(54.06vh - 4.5vmin), calc(29vw - 11vmin) calc(58.12vh - 11vmin), calc(18.5vw - 3vmin) calc(62.18vh - 3vmin), calc(8vw - 16vmin) calc(66.24vh - 16vmin), calc(80vw - 80vmin) calc(38.4vh - 80vmin); opacity: 1; }
+  75% { background-position: calc(87.5vw - 35vmin) calc(38vh - 35vmin), calc(36.88vw - 4.5vmin) calc(54.2vh - 4.5vmin), calc(23.75vw - 11vmin) calc(58.4vh - 11vmin), calc(10.62vw - 3vmin) calc(62.6vh - 3vmin), calc(-2.5vw - 16vmin) calc(66.8vh - 16vmin), calc(87.5vw - 80vmin) calc(38vh - 80vmin); opacity: 1; }
+  80% { background-position: calc(95vw - 35vmin) calc(37.6vh - 35vmin), calc(34.25vw - 4.5vmin) calc(54.34vh - 4.5vmin), calc(18.5vw - 11vmin) calc(58.68vh - 11vmin), calc(2.75vw - 3vmin) calc(63.02vh - 3vmin), calc(-13vw - 16vmin) calc(67.36vh - 16vmin), calc(95vw - 80vmin) calc(37.6vh - 80vmin); opacity: 1; }
+  85% { background-position: calc(102.5vw - 35vmin) calc(37.2vh - 35vmin), calc(31.63vw - 4.5vmin) calc(54.48vh - 4.5vmin), calc(13.25vw - 11vmin) calc(58.96vh - 11vmin), calc(-5.12vw - 3vmin) calc(63.44vh - 3vmin), calc(-23.5vw - 16vmin) calc(67.92vh - 16vmin), calc(102.5vw - 80vmin) calc(37.2vh - 80vmin); opacity: 0.926; }
+  90% { background-position: calc(110vw - 35vmin) calc(36.8vh - 35vmin), calc(29vw - 4.5vmin) calc(54.62vh - 4.5vmin), calc(8vw - 11vmin) calc(59.24vh - 11vmin), calc(-13vw - 3vmin) calc(63.86vh - 3vmin), calc(-34vw - 16vmin) calc(68.48vh - 16vmin), calc(110vw - 80vmin) calc(36.8vh - 80vmin); opacity: 0.583; }
+  95% { background-position: calc(117.5vw - 35vmin) calc(36.4vh - 35vmin), calc(26.38vw - 4.5vmin) calc(54.76vh - 4.5vmin), calc(2.75vw - 11vmin) calc(59.52vh - 11vmin), calc(-20.87vw - 3vmin) calc(64.28vh - 3vmin), calc(-44.5vw - 16vmin) calc(69.04vh - 16vmin), calc(117.5vw - 80vmin) calc(36.4vh - 80vmin); opacity: 0.189; }
+  100% { background-position: calc(125vw - 35vmin) calc(36vh - 35vmin), calc(23.75vw - 4.5vmin) calc(54.9vh - 4.5vmin), calc(-2.5vw - 11vmin) calc(59.8vh - 11vmin), calc(-28.75vw - 3vmin) calc(64.7vh - 3vmin), calc(-55vw - 16vmin) calc(69.6vh - 16vmin), calc(125vw - 80vmin) calc(36vh - 80vmin); opacity: 0; }
+}
+@keyframes fss {
+  0% { transform: translate(-75vw, -6vh) scaleY(1); opacity: 0; }
+  5% { transform: translate(-67.5vw, -6.4vh) scaleY(1); opacity: 0.189; }
+  10% { transform: translate(-60vw, -6.8vh) scaleY(1); opacity: 0.583; }
+  15% { transform: translate(-52.5vw, -7.2vh) scaleY(1); opacity: 0.926; }
+  20% { transform: translate(-45vw, -7.6vh) scaleY(1); opacity: 1; }
+  25% { transform: translate(-37.5vw, -8vh) scaleY(1.003); opacity: 1; }
+  30% { transform: translate(-30vw, -8.4vh) scaleY(1.027); opacity: 1; }
+  35% { transform: translate(-22.5vw, -8.8vh) scaleY(1.158); opacity: 1; }
+  40% { transform: translate(-15vw, -9.2vh) scaleY(1.552); opacity: 1; }
+  45% { transform: translate(-7.5vw, -9.6vh) scaleY(2.168); opacity: 1; }
+  50% { transform: translate(0vw, -10vh) scaleY(2.5); opacity: 1; }
+  55% { transform: translate(7.5vw, -10.4vh) scaleY(2.168); opacity: 1; }
+  60% { transform: translate(15vw, -10.8vh) scaleY(1.552); opacity: 1; }
+  65% { transform: translate(22.5vw, -11.2vh) scaleY(1.158); opacity: 1; }
+  70% { transform: translate(30vw, -11.6vh) scaleY(1.027); opacity: 1; }
+  75% { transform: translate(37.5vw, -12vh) scaleY(1.003); opacity: 1; }
+  80% { transform: translate(45vw, -12.4vh) scaleY(1); opacity: 1; }
+  85% { transform: translate(52.5vw, -12.8vh) scaleY(1); opacity: 0.926; }
+  90% { transform: translate(60vw, -13.2vh) scaleY(1); opacity: 0.583; }
+  95% { transform: translate(67.5vw, -13.6vh) scaleY(1); opacity: 0.189; }
+  100% { transform: translate(75vw, -14vh) scaleY(1); opacity: 0; }
+}
+@keyframes fsw {
+  0%, 30% { opacity: 0; animation-timing-function: cubic-bezier(0.6, 0, 1, 0.8); }
+  50% { opacity: 1; animation-timing-function: cubic-bezier(0.1, 0.4, 0.4, 1); }
+  80%, 100% { opacity: 0; }
+}

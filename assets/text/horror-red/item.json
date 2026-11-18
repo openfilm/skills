@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Horror",
+    "zh-CN": "惊悚血红",
+    "ja": "ホラー",
+    "ko": "호러",
+    "es": "Terror"
+  },
+  "about": "Blood-red letters with a dark glow. For horror, thrillers and creepy reveals.",
+  "tags": [
+    "horror",
+    "red",
+    "thriller"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 335
+    }
+  ]
+}

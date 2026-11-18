@@ -1,0 +1,41 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Sahara from Orbit",
+    "zh-CN": "轨道上的撒哈拉",
+    "ja": "軌道から見たサハラ",
+    "ko": "궤도에서 본 사하라",
+    "es": "El Sáhara desde la órbita"
+  },
+  "about": "The orange sands of North Africa curve away under scattered clouds, seen from the International Space Station with a solar array at the edge of the frame.",
+  "tags": [
+    "earth",
+    "orbit",
+    "space-station",
+    "desert",
+    "sahara",
+    "africa",
+    "planet"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Crew_Earth_Observations_(4K).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 15015,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 6870620,
+      "sha256": "27f30025ea4eb516d6a23b21c50a0ecd0d337dff2ace337cf02062be27eb0b44"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 304639
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Heartbeat",
+    "zh-CN": "心跳",
+    "ja": "心臓の鼓動",
+    "ko": "심장 박동",
+    "es": "Latido"
+  },
+  "about": "A steady heartbeat for suspense, fear or a close moment.",
+  "tags": [
+    "heartbeat",
+    "tension",
+    "body"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/heart-beat-s0218.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 8600,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 136304
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{"clips": [
+  {"track": 0, "at": 0.3, "time": [0, 2.7], "page": "stamp-title", "size": {"w": 1400, "h": 800}, "place": {"x": 0.5, "y": 0.5, "fit": 0.66},
+    "texts": {".t1": "Summer Journal", ".t2": "DAY 01 · THE COAST", ".t3": "TRAVEL DIARY"},
+    "props": [{"name": "Title", "type": "text", "at": ".t1"}, {"name": "Day", "type": "text", "at": ".t2"}, {"name": "Stamp", "type": "text", "at": ".t3"}]},
+  {"track": 0, "at": 3.6, "time": [0, 2.3], "page": "place-tag", "size": {"w": 1200, "h": 300}, "place": {"x": 0.3, "y": 0.84, "fit": 0.24},
+    "texts": {".t1": "Alpine Lake Trail", ".t2": "DAY 03 · 46.5° N"},
+    "props": [{"name": "Place", "type": "text", "at": ".t1"}, {"name": "Note", "type": "text", "at": ".t2"}]},
+  {"track": 0, "at": 6.6, "time": [0, 2.3], "page": "place-tag", "size": {"w": 1200, "h": 300}, "place": {"x": 0.3, "y": 0.84, "fit": 0.24},
+    "texts": {".t1": "Old Town at Dusk", ".t2": "DAY 05 · EVENING WALK"},
+    "props": [{"name": "Place", "type": "text", "at": ".t1"}, {"name": "Note", "type": "text", "at": ".t2"}]},
+  {"track": 0, "at": 9.5, "time": [0, 2.5], "page": "end-card", "size": {"w": 1500, "h": 600}, "place": {"x": 0.5, "y": 0.5, "fit": 0.48},
+    "texts": {".t1": "To be continued…", ".t2": "NEXT STOP · KYOTO"},
+    "props": [{"name": "Line", "type": "text", "at": ".t1"}, {"name": "Next stop", "type": "text", "at": ".t2"}], "fade": [0, 0.4]},
+  {"track": 1, "at": 2.8, "time": [0, 0.8], "page": "flash"},
+  {"track": 1, "at": 5.75, "time": [0, 0.9], "page": "route"},
+  {"track": 1, "at": 8.8, "time": [0, 0.8], "page": "flash"},
+  {"track": 3, "at": 0, "time": [0, 3.2], "picture": "example-1"},
+  {"track": 3, "at": 3.2, "time": [0, 3.0], "picture": "example-2"},
+  {"track": 3, "at": 6.2, "time": [0, 3.0], "picture": "example-3"},
+  {"track": 3, "at": 9.2, "time": [0, 2.8], "picture": "example-4", "fade": [0, 0.5]}
+]}

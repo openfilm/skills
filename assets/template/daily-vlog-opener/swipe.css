@@ -1,0 +1,7 @@
+/* Three coloured bars sweep across the frame and cover the cut at their middle (0.4 s of 0.8 s). */
+.w { position: fixed; inset: 0; overflow: hidden; }
+.b { position: absolute; top: -10%; bottom: -10%; left: -15%; width: 130%; transform: translateX(-120%) skewX(-14deg); animation: sw 0.66s cubic-bezier(0.75, 0, 0.25, 1) both; }
+.b1 { background: #ffd23f; }
+.b2 { background: #ff6b57; animation-delay: 0.06s; }
+.b3 { background: #fff4e6; animation-delay: 0.12s; }
+@keyframes sw { 0% { transform: translateX(-120%) skewX(-14deg); } 45%, 55% { transform: translateX(0) skewX(-14deg); } 100% { transform: translateX(120%) skewX(-14deg); } }

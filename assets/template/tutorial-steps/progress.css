@@ -1,0 +1,5 @@
+/* A thin progress bar along the top edge that fills over 13 s, the length of the template. */
+.w { position: fixed; inset: 0; }
+.track { position: absolute; left: 0; right: 0; top: 0; height: 1vh; background: rgba(13, 27, 42, 0.45); }
+.fill { display: block; height: 100%; background: linear-gradient(90deg, #2ec4b6, #ff9f1c); transform-origin: left; animation: fill 13s linear both; }
+@keyframes fill { from { transform: scaleX(0); } }

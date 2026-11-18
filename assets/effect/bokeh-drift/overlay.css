@@ -1,0 +1,139 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l::before { content: ""; position: fixed; left: 0; top: 0vh; width: 0.54vmin; height: 0.54vmin; border-radius: 50%;
+  box-shadow: 50.23vw 91.75vh 1.83vmin 8.38vmin rgba(255, 180, 120, 0.34), 44.01vw 20.23vh 1.17vmin 4.23vmin rgba(255, 160, 170, 0.3), 98.96vw 12.93vh 1.5vmin 6.15vmin rgba(255, 180, 120, 0.34), 99.38vw 29.11vh 1.95vmin 9.1vmin rgba(255, 210, 150, 0.4), 37.09vw 69.54vh 1.64vmin 6.65vmin rgba(255, 180, 120, 0.34), 31.71vw 38.4vh 1.64vmin 4.3vmin rgba(255, 236, 200, 0.42), -3.54vw 7.43vh 1.3vmin 4.84vmin rgba(255, 210, 150, 0.4), 8.58vw 76.76vh 1.6vmin 6.31vmin rgba(255, 236, 200, 0.42), 84.23vw 15.78vh 1.56vmin 9.01vmin rgba(255, 210, 150, 0.4), 83.6vw 68.41vh 1.23vmin 7.28vmin rgba(255, 160, 170, 0.3), 61.14vw 1.56vh 1.88vmin 7.93vmin rgba(255, 236, 200, 0.42), 84.85vw 55.61vh 1.5vmin 5.75vmin rgba(255, 160, 170, 0.3), 5.98vw 38.85vh 1.32vmin 4.36vmin rgba(255, 160, 170, 0.3), 43.19vw 44.4vh 1.25vmin 8.8vmin rgba(255, 180, 120, 0.34), 92.62vw 93.07vh 1.15vmin 4.93vmin rgba(255, 180, 120, 0.34), 106.2vw 95.43vh 1.68vmin 4.05vmin rgba(255, 210, 150, 0.4);
+  animation: bap 6000ms linear infinite, bat 3000ms linear infinite; }
+@keyframes bap {
+  0% { translate: 0vw 2.499vh; }
+  3.13% { translate: 0.585vw 2.437vh; }
+  6.25% { translate: 1.148vw 2.281vh; }
+  9.38% { translate: 1.667vw 2.037vh; }
+  12.5% { translate: 2.121vw 1.715vh; }
+  15.63% { translate: 2.494vw 1.328vh; }
+  18.75% { translate: 2.772vw 0.889vh; }
+  21.88% { translate: 2.942vw 0.416vh; }
+  25% { translate: 3vw -0.073vh; }
+  28.13% { translate: 2.942vw -0.559vh; }
+  31.25% { translate: 2.772vw -1.024vh; }
+  34.38% { translate: 2.494vw -1.449vh; }
+  37.5% { translate: 2.121vw -1.819vh; }
+  40.63% { translate: 1.667vw -2.118vh; }
+  43.75% { translate: 1.148vw -2.337vh; }
+  46.88% { translate: 0.585vw -2.465vh; }
+  50% { translate: 0vw -2.499vh; }
+  53.13% { translate: -0.585vw -2.437vh; }
+  56.25% { translate: -1.148vw -2.281vh; }
+  59.38% { translate: -1.667vw -2.037vh; }
+  62.5% { translate: -2.121vw -1.715vh; }
+  65.63% { translate: -2.494vw -1.328vh; }
+  68.75% { translate: -2.772vw -0.889vh; }
+  71.88% { translate: -2.942vw -0.416vh; }
+  75% { translate: -3vw 0.073vh; }
+  78.13% { translate: -2.942vw 0.559vh; }
+  81.25% { translate: -2.772vw 1.024vh; }
+  84.38% { translate: -2.494vw 1.449vh; }
+  87.5% { translate: -2.121vw 1.819vh; }
+  90.63% { translate: -1.667vw 2.118vh; }
+  93.75% { translate: -1.148vw 2.337vh; }
+  96.88% { translate: -0.585vw 2.465vh; }
+  100% { translate: 0vw 2.499vh; }
+}
+@keyframes bat {
+  0% { opacity: 0.888; }
+  25% { opacity: 0.615; }
+  50% { opacity: 0.782; }
+  75% { opacity: 0.63; }
+  100% { opacity: 0.888; }
+}
+.l::after { content: ""; position: fixed; left: 0; top: 0vh; width: 0.54vmin; height: 0.54vmin; border-radius: 50%;
+  box-shadow: 51.34vw 52.99vh 2.85vmin 12.08vmin rgba(255, 220, 180, 0.32), 54.41vw 8vh 2.74vmin 12.2vmin rgba(200, 230, 255, 0.32), 47.68vw 84.35vh 2.59vmin 12.62vmin rgba(255, 220, 180, 0.32), 10.65vw 17.85vh 2.4vmin 10.77vmin rgba(200, 230, 255, 0.32), 59.57vw 12.75vh 2.83vmin 11.99vmin rgba(200, 230, 255, 0.32), 89.93vw 80.54vh 3.06vmin 10.24vmin rgba(200, 230, 255, 0.32), 21.19vw 5.62vh 3.03vmin 14.7vmin rgba(150, 210, 255, 0.3), 9vw 74.36vh 2.49vmin 11.84vmin rgba(200, 230, 255, 0.32), 90.08vw 14.32vh 3.17vmin 13.64vmin rgba(200, 230, 255, 0.32), -5.05vw 7.67vh 3.16vmin 11.46vmin rgba(200, 230, 255, 0.32), 23.37vw 50.2vh 3.02vmin 8.7vmin rgba(200, 230, 255, 0.32), -2.77vw 44.45vh 2.88vmin 14.74vmin rgba(200, 230, 255, 0.32);
+  animation: bbp 6000ms linear infinite, bbt 2000ms linear infinite; }
+@keyframes bbp {
+  0% { translate: 3.637vw 0vh; }
+  3.13% { translate: 3.243vw 1.148vh; }
+  6.25% { translate: 2.723vw 2.121vh; }
+  9.38% { translate: 2.099vw 2.772vh; }
+  12.5% { translate: 1.395vw 3vh; }
+  15.63% { translate: 0.637vw 2.772vh; }
+  18.75% { translate: -0.146vw 2.121vh; }
+  21.88% { translate: -0.923vw 1.148vh; }
+  25% { translate: -1.665vw 0vh; }
+  28.13% { translate: -2.342vw -1.148vh; }
+  31.25% { translate: -2.93vw -2.121vh; }
+  34.38% { translate: -3.405vw -2.772vh; }
+  37.5% { translate: -3.749vw -3vh; }
+  40.63% { translate: -3.949vw -2.772vh; }
+  43.75% { translate: -3.997vw -2.121vh; }
+  46.88% { translate: -3.892vw -1.148vh; }
+  50% { translate: -3.637vw 0vh; }
+  53.13% { translate: -3.243vw 1.148vh; }
+  56.25% { translate: -2.723vw 2.121vh; }
+  59.38% { translate: -2.099vw 2.772vh; }
+  62.5% { translate: -1.395vw 3vh; }
+  65.63% { translate: -0.637vw 2.772vh; }
+  68.75% { translate: 0.146vw 2.121vh; }
+  71.88% { translate: 0.923vw 1.148vh; }
+  75% { translate: 1.665vw 0vh; }
+  78.13% { translate: 2.342vw -1.148vh; }
+  81.25% { translate: 2.93vw -2.121vh; }
+  84.38% { translate: 3.405vw -2.772vh; }
+  87.5% { translate: 3.749vw -3vh; }
+  90.63% { translate: 3.949vw -2.772vh; }
+  93.75% { translate: 3.997vw -2.121vh; }
+  96.88% { translate: 3.892vw -1.148vh; }
+  100% { translate: 3.637vw 0vh; }
+}
+@keyframes bbt {
+  0% { opacity: 0.86; }
+  25% { opacity: 0.898; }
+  50% { opacity: 0.649; }
+  75% { opacity: 0.83; }
+  100% { opacity: 0.86; }
+}
+body::before { content: ""; position: fixed; left: 0; top: 0vh; width: 0.54vmin; height: 0.54vmin; border-radius: 50%;
+  box-shadow: 25.43vw 7.57vh 0.85vmin 3.91vmin rgba(255, 210, 150, 0.4), -6.41vw 69.6vh 0.89vmin 2.97vmin rgba(255, 236, 200, 0.42), -4.47vw 92.81vh 0.72vmin 2.87vmin rgba(255, 236, 200, 0.42), 67.69vw 53.14vh 0.97vmin 4.04vmin rgba(255, 210, 150, 0.4), 27.37vw 89.17vh 0.75vmin 2.66vmin rgba(255, 210, 150, 0.4), 7.3vw 39.99vh 0.57vmin 2.28vmin rgba(255, 180, 120, 0.34), 29.59vw 17.01vh 0.87vmin 3.12vmin rgba(255, 180, 120, 0.34), 53.61vw 34.58vh 0.67vmin 2.59vmin rgba(255, 160, 170, 0.3), 11.82vw 1.6vh 0.85vmin 2.86vmin rgba(255, 210, 150, 0.4), 3.77vw 70.67vh 0.74vmin 1.98vmin rgba(255, 180, 120, 0.34), 39.81vw 85.37vh 0.58vmin 3.42vmin rgba(255, 180, 120, 0.34), 18vw 41.61vh 0.57vmin 3.46vmin rgba(255, 210, 150, 0.4), -4.54vw 59.54vh 0.82vmin 2.72vmin rgba(255, 180, 120, 0.34), 13.69vw 4.4vh 0.83vmin 2.99vmin rgba(255, 160, 170, 0.3), 79.28vw 25.37vh 0.86vmin 3.54vmin rgba(255, 180, 120, 0.34), 102.62vw 20.35vh 1.01vmin 1.97vmin rgba(255, 160, 170, 0.3), -0.12vw 25.43vh 1.06vmin 2.2vmin rgba(255, 180, 120, 0.34), 27.15vw 51.45vh 0.75vmin 3.44vmin rgba(255, 210, 150, 0.4), 102.33vw 53.34vh 1.03vmin 3.97vmin rgba(255, 210, 150, 0.4), 46.53vw 51.44vh 0.65vmin 3.7vmin rgba(255, 180, 120, 0.34), -1.77vw 36.15vh 0.86vmin 3.64vmin rgba(255, 236, 200, 0.42), 17.31vw 25.06vh 0.56vmin 3.62vmin rgba(255, 210, 150, 0.4);
+  animation: bcp 6000ms linear infinite, bct 1500ms linear infinite; }
+@keyframes bcp {
+  0% { translate: 1.683vw 0vh; }
+  3.13% { translate: 1.968vw 0.585vh; }
+  6.25% { translate: 1.954vw 1.148vh; }
+  9.38% { translate: 1.642vw 1.667vh; }
+  12.5% { translate: 1.081vw 2.121vh; }
+  15.63% { translate: 0.354vw 2.494vh; }
+  18.75% { translate: -0.426vw 2.772vh; }
+  21.88% { translate: -1.141vw 2.942vh; }
+  25% { translate: -1.683vw 3vh; }
+  28.13% { translate: -1.968vw 2.942vh; }
+  31.25% { translate: -1.954vw 2.772vh; }
+  34.38% { translate: -1.642vw 2.494vh; }
+  37.5% { translate: -1.081vw 2.121vh; }
+  40.63% { translate: -0.354vw 1.667vh; }
+  43.75% { translate: 0.426vw 1.148vh; }
+  46.88% { translate: 1.141vw 0.585vh; }
+  50% { translate: 1.683vw 0vh; }
+  53.13% { translate: 1.968vw -0.585vh; }
+  56.25% { translate: 1.954vw -1.148vh; }
+  59.38% { translate: 1.642vw -1.667vh; }
+  62.5% { translate: 1.081vw -2.121vh; }
+  65.63% { translate: 0.354vw -2.494vh; }
+  68.75% { translate: -0.426vw -2.772vh; }
+  71.88% { translate: -1.141vw -2.942vh; }
+  75% { translate: -1.683vw -3vh; }
+  78.13% { translate: -1.968vw -2.942vh; }
+  81.25% { translate: -1.954vw -2.772vh; }
+  84.38% { translate: -1.642vw -2.494vh; }
+  87.5% { translate: -1.081vw -2.121vh; }
+  90.63% { translate: -0.354vw -1.667vh; }
+  93.75% { translate: 0.426vw -1.148vh; }
+  96.88% { translate: 1.141vw -0.585vh; }
+  100% { translate: 1.683vw 0vh; }
+}
+@keyframes bct {
+  0% { opacity: 0.506; }
+  16.667% { opacity: 0.531; }
+  33.333% { opacity: 0.988; }
+  50% { opacity: 0.85; }
+  66.667% { opacity: 0.761; }
+  83.333% { opacity: 0.703; }
+  100% { opacity: 0.506; }
+}

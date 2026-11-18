@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Gold Crown",
+    "zh-CN": "金色皇冠",
+    "ja": "金の王冠",
+    "ko": "금관",
+    "es": "Corona dorada"
+  },
+  "about": "A shiny gold crown with jewels. For winners, the best pick and royalty jokes.",
+  "tags": [
+    "crown",
+    "winner",
+    "gold"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "pop",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 736746
+    }
+  ]
+}

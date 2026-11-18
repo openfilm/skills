@@ -1,0 +1,30 @@
+{
+  "name": {
+    "en": "City & Everyday Textures",
+    "zh-CN": "城市与日常质感",
+    "ja": "街と日常のテクスチャ",
+    "ko": "도시와 일상 질감",
+    "es": "Ciudad y texturas cotidianas"
+  },
+  "about": "CC0 city scenes and close-up textures with no people or brands in focus: skylines from day to night, bridges, escalators, a spiral stair, coffee, candy, marble, wood, rust and old brick.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "media/skyline-day-to-night",
+    "media/city-lights-night",
+    "media/city-sunrise-timelapse",
+    "media/chain-bridge-night",
+    "media/harbour-lights-night",
+    "media/skyscrapers-sky",
+    "media/escalators-underground",
+    "media/spiral-staircase",
+    "media/espresso-from-above",
+    "media/candy-texture",
+    "media/marble-texture",
+    "media/weathered-wood",
+    "media/rusty-chain",
+    "media/old-brick-wall"
+  ],
+  "cover": "cover.jpg"
+}

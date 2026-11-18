@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Soft Whisper",
+    "zh-CN": "轻声细语",
+    "ja": "ささやき",
+    "ko": "속삭임",
+    "es": "Susurro"
+  },
+  "about": "Light lavender letters with a gentle white outline. For quiet thoughts, inner voice and cute asides.",
+  "tags": [
+    "soft",
+    "cute",
+    "inner-voice"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 221
+    }
+  ]
+}

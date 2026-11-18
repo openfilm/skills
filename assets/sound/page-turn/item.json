@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Page Turn",
+    "zh-CN": "翻页",
+    "ja": "ページめくり",
+    "ko": "페이지 넘김",
+    "es": "Pasar página"
+  },
+  "about": "A big page turning, for a book, a chapter or the next part.",
+  "tags": [
+    "page",
+    "paper",
+    "book"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/great-page-that-turns-1-s0362.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 1745,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 38073
+    }
+  ]
+}

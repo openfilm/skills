@@ -1,0 +1,21 @@
+/* A dish card: name and price, then five stars pop in one by one (the last one half). 2.4 s. */
+.w { position: fixed; inset: 0; display: flex; align-items: center; padding-left: 4vh; box-sizing: border-box;
+  font-family: -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  animation: out 0.35s 1.65s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.card { display: flex; flex-direction: column; gap: 6vh; padding: 9vh 10vh; border-radius: 8vh; background: rgba(28, 23, 20, 0.9); color: #fff4e0;
+  border-left: 3vh solid #f2b134; box-shadow: 0 3vh 8vh rgba(0, 0, 0, 0.35); animation: open 0.6s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.top { display: flex; align-items: center; gap: 6vh; white-space: nowrap; }
+.t1 { font-size: 20vh; font-weight: 800; line-height: 1; }
+.t2 { padding: 2.4vh 4.4vh; border-radius: 99vh; background: #e4572e; color: #fff; font-size: 11vh; font-weight: 800; line-height: 1; animation: pop 0.4s 0.4s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+.stars { display: flex; gap: 3vh; }
+.st { display: block; width: 17vh; height: 17vh; background: #f2b134; clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: star 0.45s cubic-bezier(0.3, 1.8, 0.5, 1) both; }
+.st:nth-child(1) { animation-delay: 0.5s; }
+.st:nth-child(2) { animation-delay: 0.62s; }
+.st:nth-child(3) { animation-delay: 0.74s; }
+.st:nth-child(4) { animation-delay: 0.86s; }
+.st.half { animation-delay: 0.98s; background: linear-gradient(90deg, #f2b134 50%, rgba(255, 244, 224, 0.25) 50%); }
+@keyframes open { from { opacity: 0; transform: translateX(-10vh); clip-path: inset(0 100% 0 0 round 8vh); } to { clip-path: inset(0 0 0 0 round 8vh); } }
+@keyframes pop { from { opacity: 0; transform: scale(0.2); } }
+@keyframes star { from { opacity: 0; transform: scale(0) rotate(-72deg); } }
+@keyframes out { to { opacity: 0; transform: translateY(15%); } }

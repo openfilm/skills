@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Film Title",
+    "zh-CN": "电影片名",
+    "ja": "映画タイトル",
+    "ko": "영화 타이틀",
+    "es": "Título de cine"
+  },
+  "about": "Wide-spaced serif title in warm white with a soft shadow. For film openings, chapter cards and documentaries.",
+  "tags": [
+    "cinematic",
+    "serif",
+    "title"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 231
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "VHS Tape",
+    "zh-CN": "录像带",
+    "ja": "VHSテープ",
+    "ko": "VHS 테이프",
+    "es": "Cinta VHS"
+  },
+  "about": "Scan lines, a rolling tracking band, noise at the bottom edge, color fringes and stray glitch lines, like a played-back VHS tape. For 80s, 90s and found-footage looks.",
+  "tags": [
+    "vhs",
+    "retro",
+    "80s",
+    "90s",
+    "tape",
+    "glitch",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 23503
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 344663
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1601879
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 4000
+}

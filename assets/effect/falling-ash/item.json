@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Falling Ash",
+    "zh-CN": "飘落灰烬",
+    "ja": "舞い落ちる灰",
+    "ko": "떨어지는 재",
+    "es": "Ceniza"
+  },
+  "about": "Grey ash flakes tumble down slowly under a smoky sky tint. For aftermaths, wastelands, dark drama and post-apocalyptic scenes.",
+  "tags": [
+    "ash",
+    "dark",
+    "drama",
+    "smoke",
+    "apocalyptic",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 21079
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 217486
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 671534
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 6000
+}

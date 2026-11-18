@@ -1,0 +1,19 @@
+{
+  "name": {
+    "en": "Piano & Classical",
+    "zh-CN": "钢琴与古典",
+    "ja": "ピアノとクラシック",
+    "ko": "피아노와 클래식",
+    "es": "Piano y clásica"
+  },
+  "about": "Gentle piano and a real orchestra for warm, reflective and dramatic moments.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "music/lovely-piano",
+    "music/nostalgic-piano",
+    "music/beethoven-5-scherzo"
+  ],
+  "cover": "cover.jpg"
+}

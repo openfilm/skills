@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Keyboard Typing",
+    "zh-CN": "键盘打字",
+    "ja": "キーボード入力",
+    "ko": "키보드 타이핑",
+    "es": "Teclado"
+  },
+  "about": "Quick typing on a computer keyboard, for work, chat or code.",
+  "tags": [
+    "typing",
+    "keyboard",
+    "computer"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/quick-imac-keyboard-s1731.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 20000,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 462909
+    }
+  ]
+}

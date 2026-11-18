@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Laughing Face",
+    "zh-CN": "笑哭脸",
+    "ja": "大笑い",
+    "ko": "웃는 얼굴",
+    "es": "Cara riendo"
+  },
+  "about": "A round face laughing with tears of joy. For funny moments and reactions.",
+  "tags": [
+    "laugh",
+    "funny",
+    "reaction"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "wiggle",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 607451
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Earthrise",
+    "zh-CN": "地出",
+    "ja": "地球の出",
+    "ko": "지구돋이",
+    "es": "Salida de la Tierra"
+  },
+  "about": "The Earth, half lit, rising above the grey horizon of the Moon. Taken by the Apollo 8 crew in lunar orbit on 24 December 1968.",
+  "tags": [
+    "earth",
+    "moon",
+    "apollo",
+    "space",
+    "horizon",
+    "history"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:AS08-14-2383.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 1115699,
+      "sha256": "963c53c8c9e8a5fa24e0f8139a485e88f8bf22e8573baed609b18e2e6967b455"
+    }
+  ]
+}

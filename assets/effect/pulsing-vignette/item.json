@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Heartbeat Vignette",
+    "zh-CN": "心跳暗角",
+    "ja": "鼓動するビネット",
+    "ko": "심장박동 비네트",
+    "es": "Viñeta latente"
+  },
+  "about": "A dark vignette closes in on a double heartbeat, twice a loop, then relaxes. For tension, suspense, fear or a character in shock.",
+  "tags": [
+    "vignette",
+    "heartbeat",
+    "pulse",
+    "tension",
+    "suspense",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 4405
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 213156
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 594623
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 4000
+}

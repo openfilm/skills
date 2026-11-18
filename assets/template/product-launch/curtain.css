@@ -1,0 +1,11 @@
+/* An opening reveal: black, a glowing line grows across the middle, then the frame splits open from it. 1.4 s. */
+.w { position: fixed; inset: 0; overflow: hidden; }
+.half { position: absolute; left: 0; right: 0; height: 50.5%; background: #050508; }
+.top { top: 0; animation: up 0.75s 0.6s cubic-bezier(0.7, 0, 0.2, 1) both; }
+.bot { bottom: 0; animation: down 0.75s 0.6s cubic-bezier(0.7, 0, 0.2, 1) both; }
+.line { position: absolute; left: 0; right: 0; top: 50%; height: 0.6vh; margin-top: -0.3vh; background: linear-gradient(90deg, rgba(139, 123, 255, 0), #e9e6ff 30%, #ffffff 50%, #e9e6ff 70%, rgba(94, 231, 255, 0));
+  box-shadow: 0 0 3vh 1vh rgba(139, 123, 255, 0.7); animation: grow 0.6s cubic-bezier(0.3, 0, 0.2, 1) both, fadeout 0.6s 0.7s both; }
+@keyframes up { to { transform: translateY(-101%); } }
+@keyframes down { to { transform: translateY(101%); } }
+@keyframes grow { from { transform: scaleX(0); } }
+@keyframes fadeout { to { opacity: 0; transform: scaleY(6); } }

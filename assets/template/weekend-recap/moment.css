@@ -1,0 +1,12 @@
+/* A numbered moment: a yellow number tile flips in, the label slides out beside it. 1.8 s. */
+.w { position: fixed; inset: 0; display: flex; align-items: center; padding-left: 4vh; box-sizing: border-box;
+  font-family: 'Avenir Next Condensed', 'Avenir Next', 'Futura', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  animation: out 0.3s 1.5s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.num { position: relative; z-index: 1; display: grid; place-items: center; flex: none; width: 66vh; height: 66vh; border-radius: 10vh; background: #ffd23f; color: #1a1406;
+  font-size: 34vh; font-weight: 800; box-shadow: 0 2vh 6vh rgba(0, 0, 0, 0.3); animation: flip 0.5s cubic-bezier(0.3, 1.5, 0.5, 1) both; }
+.lab { margin-left: -6vh; padding: 0 9vh 0 13vh; height: 50vh; display: flex; align-items: center; border-radius: 0 99vh 99vh 0; background: #fff; color: #1a1406;
+  box-shadow: 0 2vh 6vh rgba(0, 0, 0, 0.25); animation: open 0.5s 0.2s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.t1 { font-size: 24vh; font-weight: 800; line-height: 1; white-space: nowrap; text-transform: uppercase; }
+@keyframes flip { from { opacity: 0; transform: perspective(80vh) rotateY(-90deg); } }
+@keyframes open { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes out { to { opacity: 0; transform: translateX(-6%); } }

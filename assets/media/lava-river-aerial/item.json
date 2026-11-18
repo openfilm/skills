@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "River of Lava from Above",
+    "zh-CN": "俯瞰熔岩河",
+    "ja": "上空から見た溶岩の川",
+    "ko": "위에서 본 용암의 강",
+    "es": "Río de lava desde el aire"
+  },
+  "about": "A helicopter view of a fast lava flow winding through green forest and fields, its channels glowing red under drifting smoke. Kīlauea, Hawaiʻi, 2018.",
+  "tags": [
+    "lava",
+    "volcano",
+    "aerial",
+    "eruption",
+    "smoke",
+    "hawaii"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Helicopter_overflight_of_a_fast-moving_lava_flow_emerging_from_fissure_20_on_....webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 20020,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 15238334,
+      "sha256": "48f61aaa31af734e5d1fd0172b595c3a9a34055df388c2cbf61fffbe59700060"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 162306
+    }
+  ]
+}

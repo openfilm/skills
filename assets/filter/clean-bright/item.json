@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Clean Bright",
+    "zh-CN": "干净明亮",
+    "ja": "クリーンブライト",
+    "ko": "깨끗하고 밝게",
+    "es": "Limpio y claro"
+  },
+  "about": "A little brighter and crisper with true colours. For tutorials, products and everyday clips.",
+  "tags": [
+    "clean",
+    "bright",
+    "natural"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 148
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 431878
+    }
+  ]
+}

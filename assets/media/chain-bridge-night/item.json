@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Bridge Lights at Night",
+    "zh-CN": "夜色中的桥灯",
+    "ja": "夜の橋の灯り",
+    "ko": "밤의 다리 불빛",
+    "es": "Luces del puente de noche"
+  },
+  "about": "A suspension bridge strung with lights crosses a dark river to a glowing city skyline at night. The Chain Bridge in Budapest.",
+  "tags": [
+    "city",
+    "night",
+    "bridge",
+    "river",
+    "lights",
+    "skyline"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 2103393,
+      "sha256": "d439d62b1ac04877c97219f910e39006ff6999aaa35951fbcad77d3a11363242"
+    }
+  ]
+}

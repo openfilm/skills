@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Skyline from Day to Night",
+    "zh-CN": "天际线由昼入夜",
+    "ja": "昼から夜へのスカイライン",
+    "ko": "낮에서 밤으로 가는 스카이라인",
+    "es": "Horizonte del día a la noche"
+  },
+  "about": "Clouds roll over a riverside skyline as daylight fades to blue hour and the towers light up one by one. A time-lapse of Shanghai from the Bund.",
+  "tags": [
+    "city",
+    "skyline",
+    "time-lapse",
+    "dusk",
+    "clouds",
+    "river"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Shanghai_Bund,_Lujiazui_Skyline_Timelapse.webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 20020,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 16250393,
+      "sha256": "c1f2e495c34e30a9fba82f9eb6ecd5598922806d03c04604296dc984294c9bf3"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 123803
+    }
+  ]
+}

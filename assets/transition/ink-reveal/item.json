@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Ink Reveal",
+    "zh-CN": "水墨晕染",
+    "ja": "墨のにじみ",
+    "ko": "잉크 번짐",
+    "es": "Revelado de tinta"
+  },
+  "about": "Drops of ink bloom with soft, feathered edges and run together into black over the cut, then thin away to reveal the next shot. For artistic, calm or Eastern-style edits.",
+  "tags": [
+    "ink",
+    "bloom",
+    "organic",
+    "artistic",
+    "eastern",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 19552
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 11005
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 678261
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 1200
+}

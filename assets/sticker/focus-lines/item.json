@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Focus Lines",
+    "zh-CN": "聚焦线",
+    "ja": "集中線",
+    "ko": "집중선",
+    "es": "Líneas de foco"
+  },
+  "about": "Black burst lines that draw the eye to the centre. For reveals and look-here moments.",
+  "tags": [
+    "focus",
+    "burst",
+    "handdrawn"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "pulse",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 29914
+    }
+  ]
+}

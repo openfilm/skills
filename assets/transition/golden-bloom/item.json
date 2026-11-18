@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Golden Bloom",
+    "zh-CN": "金色光晕",
+    "ja": "ゴールデンブルーム",
+    "ko": "골든 블룸",
+    "es": "Resplandor dorado"
+  },
+  "about": "A low sun swells from the lower corner with turning rays and floods the frame with golden white over the cut. For hopeful, sunny, uplifting moments.",
+  "tags": [
+    "sun",
+    "rays",
+    "golden",
+    "warm",
+    "hopeful",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 1897
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 181569
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 978911
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 1200
+}

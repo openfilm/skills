@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Light Leak Drift",
+    "zh-CN": "漂移漏光",
+    "ja": "漂う光漏れ",
+    "ko": "떠도는 빛샘",
+    "es": "Fuga de luz a la deriva"
+  },
+  "about": "Warm orange, gold and rose light leaks drift and breathe along the edges of the frame. For summer, nostalgic, dreamy and analog-camera looks.",
+  "tags": [
+    "light-leak",
+    "warm",
+    "film",
+    "nostalgic",
+    "dreamy",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 9027
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 249755
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 589236
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 6000
+}

@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Clock Ticking",
+    "zh-CN": "钟表滴答",
+    "ja": "時計の音",
+    "ko": "시계 째깍",
+    "es": "Reloj"
+  },
+  "about": "A clock ticking, for waiting, a deadline or time passing.",
+  "tags": [
+    "clock",
+    "tick",
+    "time"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/clock-s0007.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 8300,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 154632
+    }
+  ]
+}

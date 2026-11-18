@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Sticker Label",
+    "zh-CN": "贴纸标签",
+    "ja": "ステッカーラベル",
+    "ko": "스티커 라벨",
+    "es": "Etiqueta"
+  },
+  "about": "Black letters on a bright yellow rounded tag. For names, places and quick labels on screen.",
+  "tags": [
+    "label",
+    "tag",
+    "clean"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 268
+    }
+  ]
+}

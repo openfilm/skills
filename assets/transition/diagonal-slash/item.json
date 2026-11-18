@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Diagonal Slash",
+    "zh-CN": "斜切",
+    "ja": "ダイアゴナルスラッシュ",
+    "ko": "대각선 슬래시",
+    "es": "Corte diagonal"
+  },
+  "about": "A white edge and a black slab cut across the frame on a slant, cover it on the cut and sweep on out. For sport, action and bold title cuts.",
+  "tags": [
+    "wipe",
+    "diagonal",
+    "slash",
+    "bold",
+    "action",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 781
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 13230
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 399553
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 800
+}

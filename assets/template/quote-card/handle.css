@@ -1,0 +1,6 @@
+/* A small signature line for the account at the bottom: it fades up and stays. Any length. */
+.w { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; gap: 4vh; color: rgba(255, 255, 255, 0.88);
+  font-family: -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; animation: rise 0.8s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.dot { width: 16vh; height: 16vh; border-radius: 50%; background: #f6c177; }
+.t1 { font-size: 50vh; font-weight: 600; letter-spacing: 0.14em; white-space: nowrap; text-shadow: 0 2vh 6vh rgba(0, 0, 0, 0.5); }
+@keyframes rise { from { opacity: 0; transform: translateY(30%); } }

@@ -1,0 +1,16 @@
+/* A winner sticker: a gold crown drops in and rocks, sparkles twinkle and a small tag sits under it. 3 s. */
+.w { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-family: 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; }
+.crown { position: relative; width: 62vh; height: 46vh; background: linear-gradient(180deg, #ffe680, #ffcf33 55%, #e9a700);
+  clip-path: polygon(0 18%, 25% 52%, 50% 0, 75% 52%, 100% 18%, 92% 100%, 8% 100%); filter: drop-shadow(0 2vh 3vh rgba(0, 0, 0, 0.35));
+  transform-origin: 50% 100%; animation: drop 0.6s cubic-bezier(0.3, 1.5, 0.5, 1) both, rock 1.6s 0.6s ease-in-out infinite; }
+.gem { position: absolute; left: 50%; bottom: 14%; width: 10vh; height: 10vh; margin-left: -5vh; background: #ff5d73; transform: rotate(45deg); border-radius: 1vh; }
+.t1 { margin-top: 4vh; padding: 2.4vh 5vh; border-radius: 99vh; background: #1b1b3a; color: #ffcf33; font-size: 9vh; font-weight: 900; letter-spacing: 0.16em; white-space: nowrap;
+  animation: pop 0.45s 0.4s cubic-bezier(0.3, 1.7, 0.5, 1) both; }
+.sp { position: absolute; width: 12vh; height: 12vh; background: #fff6c2; clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%); animation: tw 1.1s ease-in-out infinite both; }
+.sp.a { left: 8%; top: 14%; }
+.sp.b { right: 8%; top: 34%; width: 9vh; height: 9vh; animation-delay: 0.5s; }
+@keyframes drop { from { opacity: 0; transform: translateY(-60vh) rotate(-20deg); } }
+@keyframes rock { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
+@keyframes pop { from { opacity: 0; transform: scale(0); } }
+@keyframes tw { 0%, 100% { transform: scale(0.2) rotate(0); opacity: 0.4; } 50% { transform: scale(1) rotate(45deg); opacity: 1; } }

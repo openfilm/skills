@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Morning Birds",
+    "zh-CN": "清晨鸟鸣",
+    "ja": "朝の鳥",
+    "ko": "아침 새소리",
+    "es": "Pájaros al amanecer"
+  },
+  "about": "Birds waking at dawn, for a morning, a garden or a fresh start.",
+  "tags": [
+    "ambience",
+    "birds",
+    "morning"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/awakening-birds-s0222.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 150000,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 1856086
+    }
+  ]
+}

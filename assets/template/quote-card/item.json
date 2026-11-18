@@ -1,0 +1,73 @@
+{
+  "cat": "template",
+  "name": {
+    "en": "Quote card",
+    "zh-CN": "金句卡片",
+    "ja": "名言カード",
+    "ko": "명언 카드",
+    "es": "Tarjeta de cita"
+  },
+  "about": "9 s, two slots that dissolve into each other under a soft vignette: two quotes that come into focus with their author, and a small signature line. For quotes and daily words.",
+  "tags": [
+    "quote",
+    "calm",
+    "serif",
+    "inspiration",
+    "social",
+    "minimal"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "template.json",
+  "durationMs": 9000,
+  "files": [
+    {
+      "path": "template.json",
+      "bytes": 1214
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 978895
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 167810
+    },
+    {
+      "path": "example-1.jpg",
+      "bytes": 127226
+    },
+    {
+      "path": "example-2.jpg",
+      "bytes": 126593
+    },
+    {
+      "path": "handle.css",
+      "bytes": 688
+    },
+    {
+      "path": "handle.html",
+      "bytes": 120
+    },
+    {
+      "path": "quote.css",
+      "bytes": 1751
+    },
+    {
+      "path": "quote.html",
+      "bytes": 244
+    },
+    {
+      "path": "scrim.css",
+      "bytes": 456
+    },
+    {
+      "path": "scrim.html",
+      "bytes": 22
+    }
+  ]
+}

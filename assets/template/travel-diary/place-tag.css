@@ -1,0 +1,14 @@
+/* A location tag: a map pin drops and bounces, the place and a small line open beside it. 2.3 s. */
+.w { position: fixed; inset: 0; display: flex; align-items: center; gap: 5vh; padding-left: 8vh; box-sizing: border-box;
+  font-family: -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  animation: out 0.35s 1.95s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.pin { position: relative; flex: none; width: 34vh; height: 34vh; margin-top: -10vh; border-radius: 50% 50% 50% 0; background: #ff5a3c; transform: rotate(-45deg);
+  box-shadow: -1vh 1vh 3vh rgba(0, 0, 0, 0.3); animation: drop 0.7s cubic-bezier(0.3, 1.5, 0.5, 1) both; }
+.hole { position: absolute; inset: 30%; border-radius: 50%; background: #fff; }
+.card { display: flex; flex-direction: column; gap: 3vh; padding: 7vh 9vh; border-radius: 6vh; background: rgba(255, 255, 255, 0.94); color: #14202b; white-space: nowrap;
+  box-shadow: 0 3vh 8vh rgba(0, 0, 0, 0.3); animation: open 0.6s 0.3s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.t1 { font-size: 20vh; font-weight: 800; line-height: 1; }
+.t2 { font-size: 11vh; font-weight: 700; line-height: 1; letter-spacing: 0.16em; color: #ff5a3c; }
+@keyframes drop { 0% { opacity: 0; transform: translateY(-80vh) rotate(-45deg); } 60% { opacity: 1; transform: translateY(4vh) rotate(-45deg); } 100% { transform: translateY(0) rotate(-45deg); } }
+@keyframes open { from { opacity: 0; clip-path: inset(0 100% 0 0 round 6vh); } to { opacity: 1; clip-path: inset(0 0 0 0 round 6vh); } }
+@keyframes out { to { opacity: 0; transform: translateY(15%); } }

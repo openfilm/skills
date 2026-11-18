@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Snowy Peak of Denali",
+    "zh-CN": "德纳里雪峰",
+    "ja": "デナリの雪の頂",
+    "ko": "디날리 설산",
+    "es": "Cumbre nevada del Denali"
+  },
+  "about": "The snow-covered massif of Denali rises above dark foothills, with cloud shadows sliding over its glaciers on a clear morning in Alaska.",
+  "tags": [
+    "mountain",
+    "snow",
+    "denali",
+    "alaska",
+    "national-park",
+    "glacier"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Eielson-_Denali,_fall_morning_(5728254288).jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 2992145,
+      "sha256": "8e94f6f7844bf0a69cf972cc21d7896867f233fe93135c2d958b9081d7b7a985"
+    }
+  ]
+}

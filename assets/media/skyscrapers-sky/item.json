@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Skyscrapers Against the Sky",
+    "zh-CN": "仰望摩天楼",
+    "ja": "空に伸びる超高層ビル",
+    "ko": "하늘로 솟은 마천루",
+    "es": "Rascacielos contra el cielo"
+  },
+  "about": "Looking up at three glass supertall towers rising into a blue sky with white clouds in Shanghai's Lujiazui district.",
+  "tags": [
+    "city",
+    "skyscraper",
+    "architecture",
+    "sky",
+    "glass",
+    "shanghai"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Shanghai_skyscrapers_5166285.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 2756652,
+      "sha256": "26be4dfcd873324a164704167fbb0b896ad53347cb0c862fee324a0f1173e6dc"
+    }
+  ]
+}

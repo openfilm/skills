@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Bubble Mint",
+    "zh-CN": "薄荷泡泡",
+    "ja": "バブルミント",
+    "ko": "버블 민트",
+    "es": "Burbuja menta"
+  },
+  "about": "Round mint letters in a soft dark box, cheerful and clean. For tips, labels and friendly captions.",
+  "tags": [
+    "variety",
+    "label",
+    "fresh"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 260
+    }
+  ]
+}

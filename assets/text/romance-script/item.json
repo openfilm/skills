@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Romance",
+    "zh-CN": "浪漫柔光",
+    "ja": "ロマンス",
+    "ko": "로맨스",
+    "es": "Romance"
+  },
+  "about": "Soft pink serif with a warm glow. For love stories, weddings and gentle moments.",
+  "tags": [
+    "romance",
+    "soft",
+    "wedding"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 308
+    }
+  ]
+}

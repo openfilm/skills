@@ -1,0 +1,85 @@
+{
+  "cat": "template",
+  "name": {
+    "en": "Daily vlog opener",
+    "zh-CN": "日常 Vlog 开场",
+    "ja": "日常Vlogオープニング",
+    "ko": "일상 브이로그 오프닝",
+    "es": "Apertura de vlog diario"
+  },
+  "about": "10 s, three slots: a REC-chip title with the date, a name pill lower third, colour-bar swipes over the cuts and a handwritten sign-off with a beating heart. For day-in-my-life vlogs.",
+  "tags": [
+    "vlog",
+    "daily",
+    "opener",
+    "title",
+    "lower-third",
+    "warm"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "template.json",
+  "durationMs": 10000,
+  "files": [
+    {
+      "path": "template.json",
+      "bytes": 1495
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 888801
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 226992
+    },
+    {
+      "path": "example-1.jpg",
+      "bytes": 158153
+    },
+    {
+      "path": "example-2.jpg",
+      "bytes": 307336
+    },
+    {
+      "path": "example-3.jpg",
+      "bytes": 523298
+    },
+    {
+      "path": "name-tag.css",
+      "bytes": 1506
+    },
+    {
+      "path": "name-tag.html",
+      "bytes": 183
+    },
+    {
+      "path": "opener.css",
+      "bytes": 2266
+    },
+    {
+      "path": "opener.html",
+      "bytes": 296
+    },
+    {
+      "path": "sign-off.css",
+      "bytes": 1810
+    },
+    {
+      "path": "sign-off.html",
+      "bytes": 182
+    },
+    {
+      "path": "swipe.css",
+      "bytes": 640
+    },
+    {
+      "path": "swipe.html",
+      "bytes": 94
+    }
+  ]
+}

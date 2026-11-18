@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Sad Trombone",
+    "zh-CN": "失败长号",
+    "ja": "悲しいトロンボーン",
+    "ko": "슬픈 트롬본",
+    "es": "Trombón triste"
+  },
+  "about": "The wah-wah sad trombone for a fail or a letdown.",
+  "tags": [
+    "fail",
+    "trombone",
+    "funny"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/kirbydx/sounds/175409/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 4819,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 98683
+    }
+  ]
+}

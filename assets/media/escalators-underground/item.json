@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Empty Escalators",
+    "zh-CN": "空荡的自动扶梯",
+    "ja": "無人のエスカレーター",
+    "ko": "텅 빈 에스컬레이터",
+    "es": "Escaleras mecánicas vacías"
+  },
+  "about": "Three long escalators climb symmetrically through a white vaulted tunnel in a modern underground station, with no one in sight.",
+  "tags": [
+    "escalator",
+    "underground",
+    "architecture",
+    "symmetry",
+    "station",
+    "modern"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Escalators_at_Auber_RER_station_in_Paris,_recently_renovated,_with_clean_and_modern_underground_architecture.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 1997977,
+      "sha256": "68757e559e7faa5bddc90f2ca2293712147620bb19a8c125cdb1c6863785ab75"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l { background: linear-gradient(112deg, rgba(255, 238, 205, 0) 18%, rgba(255, 238, 205, 0.1) 32%, rgba(255, 240, 210, 0.2) 42%, rgba(255, 238, 205, 0.1) 54%, rgba(255, 238, 205, 0) 70%);
+  -webkit-mask-image: linear-gradient(112deg, rgba(0, 0, 0, 0.25) 15%, #000 38%, #000 50%, rgba(0, 0, 0, 0.25) 75%); mask-image: linear-gradient(112deg, rgba(0, 0, 0, 0.25) 15%, #000 38%, #000 50%, rgba(0, 0, 0, 0.25) 75%);
+  animation: dl 6000ms ease-in-out infinite; }
+@keyframes dl { 0%, 100% { opacity: 0.85; } 50% { opacity: 1; } }
+.l::before { content: ""; position: fixed; left: 0; top: 0vh; width: 0.52vmin; height: 0.52vmin; border-radius: 50%;
+  box-shadow: 57.3vw 18.01vh 0.15vmin 0.01vmin rgba(255, 246, 225, 0.85), -4.25vw 4.56vh 0.22vmin 0.12vmin rgba(255, 255, 255, 0.6), 67.11vw 37.97vh 0.21vmin 0.03vmin rgba(255, 236, 200, 0.7), 35.18vw 28.87vh 0.29vmin 0.03vmin rgba(255, 236, 200, 0.7), 42.79vw 32.79vh 0.22vmin 0.02vmin rgba(255, 255, 255, 0.6), 39.38vw 4.48vh 0.21vmin 0.01vmin rgba(255, 246, 225, 0.85), 26.85vw 45.73vh 0.22vmin 0.15vmin rgba(255, 246, 225, 0.85), 35.19vw 14.71vh 0.31vmin 0vmin rgba(255, 236, 200, 0.7), 4.08vw 9.5vh 0.24vmin 0.02vmin rgba(255, 246, 225, 0.85), 23.84vw 46.18vh 0.16vmin 0.04vmin rgba(255, 255, 255, 0.6), 12.6vw 5.3vh 0.2vmin 0.19vmin rgba(255, 255, 255, 0.6), 79.28vw 6.46vh 0.23vmin 0.01vmin rgba(255, 255, 255, 0.6), 11.43vw 12.16vh 0.17vmin 0.14vmin rgba(255, 255, 255, 0.6), 101.43vw 18.49vh 0.24vmin 0.15vmin rgba(255, 255, 255, 0.6), 65.69vw 35.09vh 0.32vmin 0.19vmin rgba(255, 236, 200, 0.7), 80.33vw 26.67vh 0.35vmin 0.06vmin rgba(255, 236, 200, 0.7), 17.91vw 15.43vh 0.29vmin 0.08vmin rgba(255, 246, 225, 0.85), 2.97vw 38.74vh 0.16vmin 0.19vmin rgba(255, 255, 255, 0.6), 34.51vw 45.54vh 0.36vmin 0.03vmin rgba(255, 236, 200, 0.7), 9.92vw 24.72vh 0.22vmin 0.08vmin rgba(255, 246, 225, 0.85), 63.89vw 37.82vh 0.21vmin 0.18vmin rgba(255, 255, 255, 0.6), 58.15vw 1.95vh 0.15vmin 0.11vmin rgba(255, 246, 225, 0.85), 87.65vw 29vh 0.36vmin 0.16vmin rgba(255, 255, 255, 0.6), 91.72vw 1.65vh 0.36vmin 0.16vmin rgba(255, 246, 225, 0.85), 7.84vw 1.42vh 0.34vmin 0.03vmin rgba(255, 236, 200, 0.7), 11.46vw 18.97vh 0.15vmin 0.11vmin rgba(255, 255, 255, 0.6), 102.18vw 46.5vh 0.29vmin 0.17vmin rgba(255, 246, 225, 0.85), 19.72vw 34.02vh 0.33vmin 0.03vmin rgba(255, 236, 200, 0.7), 63.68vw 37.97vh 0.17vmin 0.17vmin rgba(255, 255, 255, 0.6), 41.61vw 49.31vh 0.27vmin 0.03vmin rgba(255, 255, 255, 0.6), 80.07vw 15.13vh 0.35vmin 0.07vmin rgba(255, 236, 200, 0.7), 26.9vw 37.04vh 0.38vmin 0.04vmin rgba(255, 255, 255, 0.6), 74.48vw 41.22vh 0.29vmin 0.02vmin rgba(255, 246, 225, 0.85), 70.33vw 32.68vh 0.16vmin 0.15vmin rgba(255, 246, 225, 0.85), 90.33vw 43.49vh 0.28vmin 0.06vmin rgba(255, 246, 225, 0.85), 80.73vw 44.95vh 0.38vmin 0.12vmin rgba(255, 246, 225, 0.85), 50.32vw 8.05vh 0.29vmin 0.13vmin rgba(255, 246, 225, 0.85), 2.02vw 48.64vh 0.27vmin 0.18vmin rgba(255, 246, 225, 0.85), 44.86vw 35.3vh 0.24vmin 0.06vmin rgba(255, 246, 225, 0.85), 59.73vw 17.62vh 0.18vmin 0.2vmin rgba(255, 236, 200, 0.7), 96.02vw 38.13vh 0.23vmin 0.18vmin rgba(255, 255, 255, 0.6), -1.52vw 19.07vh 0.28vmin 0.06vmin rgba(255, 255, 255, 0.6), -2.16vw 28.28vh 0.14vmin 0.05vmin rgba(255, 236, 200, 0.7), 27.48vw 6.74vh 0.3vmin 0.07vmin rgba(255, 246, 225, 0.85), 45.16vw 14.19vh 0.15vmin 0.05vmin rgba(255, 255, 255, 0.6), 90.99vw 47.97vh 0.38vmin 0.19vmin rgba(255, 255, 255, 0.6), 6.61vw 18.47vh 0.16vmin 0.03vmin rgba(255, 236, 200, 0.7), 21.3vw 5.41vh 0.37vmin 0.2vmin rgba(255, 255, 255, 0.6), 101.52vw 4.3vh 0.24vmin 0.01vmin rgba(255, 255, 255, 0.6), 101.63vw 26.98vh 0.35vmin 0.13vmin rgba(255, 246, 225, 0.85), 74.54vw 16.64vh 0.31vmin 0.04vmin rgba(255, 255, 255, 0.6), 55.94vw 26.09vh 0.34vmin 0.05vmin rgba(255, 236, 200, 0.7), 62.66vw 44.79vh 0.16vmin 0.05vmin rgba(255, 236, 200, 0.7), 7.5vw 48vh 0.29vmin 0.1vmin rgba(255, 246, 225, 0.85), 12.33vw 43.47vh 0.2vmin 0.2vmin rgba(255, 236, 200, 0.7), 29.12vw 18.24vh 0.2vmin 0.1vmin rgba(255, 255, 255, 0.6), 104.13vw 22.02vh 0.17vmin 0.06vmin rgba(255, 236, 200, 0.7), 3.4vw 47.01vh 0.31vmin 0.09vmin rgba(255, 255, 255, 0.6), 80.32vw 24.44vh 0.22vmin 0.04vmin rgba(255, 246, 225, 0.85), 2.75vw 20.39vh 0.32vmin 0.09vmin rgba(255, 246, 225, 0.85), 57.3vw 68.01vh 0.15vmin 0.01vmin rgba(255, 246, 225, 0.85), -4.25vw 54.56vh 0.22vmin 0.12vmin rgba(255, 255, 255, 0.6), 67.11vw 87.97vh 0.21vmin 0.03vmin rgba(255, 236, 200, 0.7), 35.18vw 78.87vh 0.29vmin 0.03vmin rgba(255, 236, 200, 0.7), 42.79vw 82.79vh 0.22vmin 0.02vmin rgba(255, 255, 255, 0.6), 39.38vw 54.48vh 0.21vmin 0.01vmin rgba(255, 246, 225, 0.85), 26.85vw 95.73vh 0.22vmin 0.15vmin rgba(255, 246, 225, 0.85), 35.19vw 64.71vh 0.31vmin 0vmin rgba(255, 236, 200, 0.7), 4.08vw 59.5vh 0.24vmin 0.02vmin rgba(255, 246, 225, 0.85), 23.84vw 96.18vh 0.16vmin 0.04vmin rgba(255, 255, 255, 0.6), 12.6vw 55.3vh 0.2vmin 0.19vmin rgba(255, 255, 255, 0.6), 79.28vw 56.46vh 0.23vmin 0.01vmin rgba(255, 255, 255, 0.6), 11.43vw 62.16vh 0.17vmin 0.14vmin rgba(255, 255, 255, 0.6), 101.43vw 68.49vh 0.24vmin 0.15vmin rgba(255, 255, 255, 0.6), 65.69vw 85.09vh 0.32vmin 0.19vmin rgba(255, 236, 200, 0.7), 80.33vw 76.67vh 0.35vmin 0.06vmin rgba(255, 236, 200, 0.7), 17.91vw 65.43vh 0.29vmin 0.08vmin rgba(255, 246, 225, 0.85), 2.97vw 88.74vh 0.16vmin 0.19vmin rgba(255, 255, 255, 0.6), 34.51vw 95.54vh 0.36vmin 0.03vmin rgba(255, 236, 200, 0.7), 9.92vw 74.72vh 0.22vmin 0.08vmin rgba(255, 246, 225, 0.85), 63.89vw 87.82vh 0.21vmin 0.18vmin rgba(255, 255, 255, 0.6), 58.15vw 51.95vh 0.15vmin 0.11vmin rgba(255, 246, 225, 0.85), 87.65vw 79vh 0.36vmin 0.16vmin rgba(255, 255, 255, 0.6), 91.72vw 51.65vh 0.36vmin 0.16vmin rgba(255, 246, 225, 0.85), 7.84vw 51.42vh 0.34vmin 0.03vmin rgba(255, 236, 200, 0.7), 11.46vw 68.97vh 0.15vmin 0.11vmin rgba(255, 255, 255, 0.6), 102.18vw 96.5vh 0.29vmin 0.17vmin rgba(255, 246, 225, 0.85), 19.72vw 84.02vh 0.33vmin 0.03vmin rgba(255, 236, 200, 0.7), 63.68vw 87.97vh 0.17vmin 0.17vmin rgba(255, 255, 255, 0.6), 41.61vw 99.31vh 0.27vmin 0.03vmin rgba(255, 255, 255, 0.6), 80.07vw 65.13vh 0.35vmin 0.07vmin rgba(255, 236, 200, 0.7), 26.9vw 87.04vh 0.38vmin 0.04vmin rgba(255, 255, 255, 0.6), 74.48vw 91.22vh 0.29vmin 0.02vmin rgba(255, 246, 225, 0.85), 70.33vw 82.68vh 0.16vmin 0.15vmin rgba(255, 246, 225, 0.85), 90.33vw 93.49vh 0.28vmin 0.06vmin rgba(255, 246, 225, 0.85), 80.73vw 94.95vh 0.38vmin 0.12vmin rgba(255, 246, 225, 0.85), 50.32vw 58.05vh 0.29vmin 0.13vmin rgba(255, 246, 225, 0.85), 2.02vw 98.64vh 0.27vmin 0.18vmin rgba(255, 246, 225, 0.85), 44.86vw 85.3vh 0.24vmin 0.06vmin rgba(255, 246, 225, 0.85), 59.73vw 67.62vh 0.18vmin 0.2vmin rgba(255, 236, 200, 0.7), 96.02vw 88.13vh 0.23vmin 0.18vmin rgba(255, 255, 255, 0.6), -1.52vw 69.07vh 0.28vmin 0.06vmin rgba(255, 255, 255, 0.6), -2.16vw 78.28vh 0.14vmin 0.05vmin rgba(255, 236, 200, 0.7), 27.48vw 56.74vh 0.3vmin 0.07vmin rgba(255, 246, 225, 0.85), 45.16vw 64.19vh 0.15vmin 0.05vmin rgba(255, 255, 255, 0.6), 90.99vw 97.97vh 0.38vmin 0.19vmin rgba(255, 255, 255, 0.6), 6.61vw 68.47vh 0.16vmin 0.03vmin rgba(255, 236, 200, 0.7), 21.3vw 55.41vh 0.37vmin 0.2vmin rgba(255, 255, 255, 0.6), 101.52vw 54.3vh 0.24vmin 0.01vmin rgba(255, 255, 255, 0.6), 101.63vw 76.98vh 0.35vmin 0.13vmin rgba(255, 246, 225, 0.85), 74.54vw 66.64vh 0.31vmin 0.04vmin rgba(255, 255, 255, 0.6), 55.94vw 76.09vh 0.34vmin 0.05vmin rgba(255, 236, 200, 0.7), 62.66vw 94.79vh 0.16vmin 0.05vmin rgba(255, 236, 200, 0.7), 7.5vw 98vh 0.29vmin 0.1vmin rgba(255, 246, 225, 0.85), 12.33vw 93.47vh 0.2vmin 0.2vmin rgba(255, 236, 200, 0.7), 29.12vw 68.24vh 0.2vmin 0.1vmin rgba(255, 255, 255, 0.6), 104.13vw 72.02vh 0.17vmin 0.06vmin rgba(255, 236, 200, 0.7), 3.4vw 97.01vh 0.31vmin 0.09vmin rgba(255, 255, 255, 0.6), 80.32vw 74.44vh 0.22vmin 0.04vmin rgba(255, 246, 225, 0.85), 2.75vw 70.39vh 0.32vmin 0.09vmin rgba(255, 246, 225, 0.85), 57.3vw 118.01vh 0.15vmin 0.01vmin rgba(255, 246, 225, 0.85), -4.25vw 104.56vh 0.22vmin 0.12vmin rgba(255, 255, 255, 0.6), 67.11vw 137.97vh 0.21vmin 0.03vmin rgba(255, 236, 200, 0.7), 35.18vw 128.87vh 0.29vmin 0.03vmin rgba(255, 236, 200, 0.7), 42.79vw 132.79vh 0.22vmin 0.02vmin rgba(255, 255, 255, 0.6), 39.38vw 104.48vh 0.21vmin 0.01vmin rgba(255, 246, 225, 0.85), 26.85vw 145.73vh 0.22vmin 0.15vmin rgba(255, 246, 225, 0.85), 35.19vw 114.71vh 0.31vmin 0vmin rgba(255, 236, 200, 0.7), 4.08vw 109.5vh 0.24vmin 0.02vmin rgba(255, 246, 225, 0.85), 23.84vw 146.18vh 0.16vmin 0.04vmin rgba(255, 255, 255, 0.6), 12.6vw 105.3vh 0.2vmin 0.19vmin rgba(255, 255, 255, 0.6), 79.28vw 106.46vh 0.23vmin 0.01vmin rgba(255, 255, 255, 0.6), 11.43vw 112.16vh 0.17vmin 0.14vmin rgba(255, 255, 255, 0.6), 101.43vw 118.49vh 0.24vmin 0.15vmin rgba(255, 255, 255, 0.6), 65.69vw 135.09vh 0.32vmin 0.19vmin rgba(255, 236, 200, 0.7), 80.33vw 126.67vh 0.35vmin 0.06vmin rgba(255, 236, 200, 0.7), 17.91vw 115.43vh 0.29vmin 0.08vmin rgba(255, 246, 225, 0.85), 2.97vw 138.74vh 0.16vmin 0.19vmin rgba(255, 255, 255, 0.6), 34.51vw 145.54vh 0.36vmin 0.03vmin rgba(255, 236, 200, 0.7), 9.92vw 124.72vh 0.22vmin 0.08vmin rgba(255, 246, 225, 0.85), 63.89vw 137.82vh 0.21vmin 0.18vmin rgba(255, 255, 255, 0.6), 58.15vw 101.95vh 0.15vmin 0.11vmin rgba(255, 246, 225, 0.85), 87.65vw 129vh 0.36vmin 0.16vmin rgba(255, 255, 255, 0.6), 91.72vw 101.65vh 0.36vmin 0.16vmin rgba(255, 246, 225, 0.85), 7.84vw 101.42vh 0.34vmin 0.03vmin rgba(255, 236, 200, 0.7), 11.46vw 118.97vh 0.15vmin 0.11vmin rgba(255, 255, 255, 0.6), 102.18vw 146.5vh 0.29vmin 0.17vmin rgba(255, 246, 225, 0.85), 19.72vw 134.02vh 0.33vmin 0.03vmin rgba(255, 236, 200, 0.7), 63.68vw 137.97vh 0.17vmin 0.17vmin rgba(255, 255, 255, 0.6), 41.61vw 149.31vh 0.27vmin 0.03vmin rgba(255, 255, 255, 0.6), 80.07vw 115.13vh 0.35vmin 0.07vmin rgba(255, 236, 200, 0.7), 26.9vw 137.04vh 0.38vmin 0.04vmin rgba(255, 255, 255, 0.6), 74.48vw 141.22vh 0.29vmin 0.02vmin rgba(255, 246, 225, 0.85), 70.33vw 132.68vh 0.16vmin 0.15vmin rgba(255, 246, 225, 0.85), 90.33vw 143.49vh 0.28vmin 0.06vmin rgba(255, 246, 225, 0.85), 80.73vw 144.95vh 0.38vmin 0.12vmin rgba(255, 246, 225, 0.85), 50.32vw 108.05vh 0.29vmin 0.13vmin rgba(255, 246, 225, 0.85), 2.02vw 148.64vh 0.27vmin 0.18vmin rgba(255, 246, 225, 0.85), 44.86vw 135.3vh 0.24vmin 0.06vmin rgba(255, 246, 225, 0.85), 59.73vw 117.62vh 0.18vmin 0.2vmin rgba(255, 236, 200, 0.7), 96.02vw 138.13vh 0.23vmin 0.18vmin rgba(255, 255, 255, 0.6), -1.52vw 119.07vh 0.28vmin 0.06vmin rgba(255, 255, 255, 0.6), -2.16vw 128.28vh 0.14vmin 0.05vmin rgba(255, 236, 200, 0.7), 27.48vw 106.74vh 0.3vmin 0.07vmin rgba(255, 246, 225, 0.85), 45.16vw 114.19vh 0.15vmin 0.05vmin rgba(255, 255, 255, 0.6), 90.99vw 147.97vh 0.38vmin 0.19vmin rgba(255, 255, 255, 0.6), 6.61vw 118.47vh 0.16vmin 0.03vmin rgba(255, 236, 200, 0.7), 21.3vw 105.41vh 0.37vmin 0.2vmin rgba(255, 255, 255, 0.6), 101.52vw 104.3vh 0.24vmin 0.01vmin rgba(255, 255, 255, 0.6), 101.63vw 126.98vh 0.35vmin 0.13vmin rgba(255, 246, 225, 0.85), 74.54vw 116.64vh 0.31vmin 0.04vmin rgba(255, 255, 255, 0.6), 55.94vw 126.09vh 0.34vmin 0.05vmin rgba(255, 236, 200, 0.7), 62.66vw 144.79vh 0.16vmin 0.05vmin rgba(255, 236, 200, 0.7), 7.5vw 148vh 0.29vmin 0.1vmin rgba(255, 246, 225, 0.85), 12.33vw 143.47vh 0.2vmin 0.2vmin rgba(255, 236, 200, 0.7), 29.12vw 118.24vh 0.2vmin 0.1vmin rgba(255, 255, 255, 0.6), 104.13vw 122.02vh 0.17vmin 0.06vmin rgba(255, 236, 200, 0.7), 3.4vw 147.01vh 0.31vmin 0.09vmin rgba(255, 255, 255, 0.6), 80.32vw 124.44vh 0.22vmin 0.04vmin rgba(255, 246, 225, 0.85), 2.75vw 120.39vh 0.32vmin 0.09vmin rgba(255, 246, 225, 0.85);
+  animation: daf 6000ms linear infinite, dap 6000ms linear infinite, dat 2000ms linear infinite; }
+@keyframes daf { 0% { transform: translate(0, 0); } 100% { transform: translate(0vh, -50vh); } }
+@keyframes dap {
+  0% { translate: 0vw 0vh; }
+  3.13% { translate: 0.459vw 0.293vh; }
+  6.25% { translate: 0.849vw 0.574vh; }
+  9.38% { translate: 1.109vw 0.833vh; }
+  12.5% { translate: 1.2vw 1.061vh; }
+  15.63% { translate: 1.109vw 1.247vh; }
+  18.75% { translate: 0.849vw 1.386vh; }
+  21.88% { translate: 0.459vw 1.471vh; }
+  25% { translate: 0vw 1.5vh; }
+  28.13% { translate: -0.459vw 1.471vh; }
+  31.25% { translate: -0.849vw 1.386vh; }
+  34.38% { translate: -1.109vw 1.247vh; }
+  37.5% { translate: -1.2vw 1.061vh; }
+  40.63% { translate: -1.109vw 0.833vh; }
+  43.75% { translate: -0.849vw 0.574vh; }
+  46.88% { translate: -0.459vw 0.293vh; }
+  50% { translate: 0vw 0vh; }
+  53.13% { translate: 0.459vw -0.293vh; }
+  56.25% { translate: 0.849vw -0.574vh; }
+  59.38% { translate: 1.109vw -0.833vh; }
+  62.5% { translate: 1.2vw -1.061vh; }
+  65.63% { translate: 1.109vw -1.247vh; }
+  68.75% { translate: 0.849vw -1.386vh; }
+  71.88% { translate: 0.459vw -1.471vh; }
+  75% { translate: 0vw -1.5vh; }
+  78.13% { translate: -0.459vw -1.471vh; }
+  81.25% { translate: -0.849vw -1.386vh; }
+  84.38% { translate: -1.109vw -1.247vh; }
+  87.5% { translate: -1.2vw -1.061vh; }
+  90.63% { translate: -1.109vw -0.833vh; }
+  93.75% { translate: -0.849vw -0.574vh; }
+  96.88% { translate: -0.459vw -0.293vh; }
+  100% { translate: 0vw 0vh; }
+}
+@keyframes dat {
+  0% { opacity: 0.832; }
+  12.5% { opacity: 0.423; }
+  25% { opacity: 0.674; }
+  37.5% { opacity: 0.445; }
+  50% { opacity: 0.858; }
+  62.5% { opacity: 0.689; }
+  75% { opacity: 0.692; }
+  87.5% { opacity: 0.497; }
+  100% { opacity: 0.832; }
+}
+.l::after { content: ""; position: fixed; left: 0; top: 0vh; width: 0.832vmin; height: 0.832vmin; border-radius: 50%;
+  box-shadow: 44.28vw 21.29vh 0.66vmin 0.09vmin rgba(255, 246, 225, 0.85), 41.81vw 33.61vh 0.4vmin 0.24vmin rgba(255, 255, 255, 0.6), 34.73vw 3.13vh 0.78vmin 0vmin rgba(255, 246, 225, 0.85), 32.05vw 21.27vh 0.87vmin 0.02vmin rgba(255, 236, 200, 0.7), 23.09vw 38.62vh 0.59vmin 0.25vmin rgba(255, 236, 200, 0.7), 95.39vw 12.99vh 0.5vmin 0.01vmin rgba(255, 236, 200, 0.7), 20.73vw 7.72vh 0.7vmin 0.08vmin rgba(255, 246, 225, 0.85), 99.28vw 28.3vh 0.79vmin 0.2vmin rgba(255, 236, 200, 0.7), 27.8vw 23.88vh 0.7vmin 0vmin rgba(255, 236, 200, 0.7), 76.25vw 39.24vh 0.5vmin 0.1vmin rgba(255, 246, 225, 0.85), 60.79vw 0.88vh 0.6vmin 0.13vmin rgba(255, 246, 225, 0.85), 35.28vw 24.37vh 0.57vmin 0.21vmin rgba(255, 255, 255, 0.6), 38.88vw 27.07vh 0.71vmin 0.14vmin rgba(255, 255, 255, 0.6), 24.55vw 20.42vh 0.52vmin 0.2vmin rgba(255, 255, 255, 0.6), 55.99vw 3.75vh 0.5vmin 0.14vmin rgba(255, 236, 200, 0.7), 99.27vw 27.03vh 0.39vmin 0.25vmin rgba(255, 236, 200, 0.7), 48.27vw 48.22vh 0.55vmin 0.13vmin rgba(255, 255, 255, 0.6), 89.51vw 31.86vh 0.49vmin 0.08vmin rgba(255, 236, 200, 0.7), 89.64vw 32.9vh 0.58vmin 0.15vmin rgba(255, 246, 225, 0.85), -2.75vw 14vh 0.62vmin 0.2vmin rgba(255, 255, 255, 0.6), 5.15vw 0.27vh 0.73vmin 0.23vmin rgba(255, 255, 255, 0.6), 32.36vw 49.51vh 0.67vmin 0.14vmin rgba(255, 255, 255, 0.6), 14.93vw 12.04vh 0.83vmin 0.13vmin rgba(255, 255, 255, 0.6), 70.28vw 2.14vh 0.48vmin 0.18vmin rgba(255, 255, 255, 0.6), 83.19vw 25.55vh 0.39vmin 0.11vmin rgba(255, 236, 200, 0.7), 56.34vw 0.01vh 0.86vmin 0.11vmin rgba(255, 255, 255, 0.6), 91.01vw 48.18vh 0.48vmin 0.06vmin rgba(255, 236, 200, 0.7), 60.56vw 41.5vh 0.88vmin 0.05vmin rgba(255, 255, 255, 0.6), 79.03vw 39.93vh 0.42vmin 0.05vmin rgba(255, 255, 255, 0.6), 12.57vw 31.37vh 0.85vmin 0.22vmin rgba(255, 255, 255, 0.6), 44.28vw 71.29vh 0.66vmin 0.09vmin rgba(255, 246, 225, 0.85), 41.81vw 83.61vh 0.4vmin 0.24vmin rgba(255, 255, 255, 0.6), 34.73vw 53.13vh 0.78vmin 0vmin rgba(255, 246, 225, 0.85), 32.05vw 71.27vh 0.87vmin 0.02vmin rgba(255, 236, 200, 0.7), 23.09vw 88.62vh 0.59vmin 0.25vmin rgba(255, 236, 200, 0.7), 95.39vw 62.99vh 0.5vmin 0.01vmin rgba(255, 236, 200, 0.7), 20.73vw 57.72vh 0.7vmin 0.08vmin rgba(255, 246, 225, 0.85), 99.28vw 78.3vh 0.79vmin 0.2vmin rgba(255, 236, 200, 0.7), 27.8vw 73.88vh 0.7vmin 0vmin rgba(255, 236, 200, 0.7), 76.25vw 89.24vh 0.5vmin 0.1vmin rgba(255, 246, 225, 0.85), 60.79vw 50.88vh 0.6vmin 0.13vmin rgba(255, 246, 225, 0.85), 35.28vw 74.37vh 0.57vmin 0.21vmin rgba(255, 255, 255, 0.6), 38.88vw 77.07vh 0.71vmin 0.14vmin rgba(255, 255, 255, 0.6), 24.55vw 70.42vh 0.52vmin 0.2vmin rgba(255, 255, 255, 0.6), 55.99vw 53.75vh 0.5vmin 0.14vmin rgba(255, 236, 200, 0.7), 99.27vw 77.03vh 0.39vmin 0.25vmin rgba(255, 236, 200, 0.7), 48.27vw 98.22vh 0.55vmin 0.13vmin rgba(255, 255, 255, 0.6), 89.51vw 81.86vh 0.49vmin 0.08vmin rgba(255, 236, 200, 0.7), 89.64vw 82.9vh 0.58vmin 0.15vmin rgba(255, 246, 225, 0.85), -2.75vw 64vh 0.62vmin 0.2vmin rgba(255, 255, 255, 0.6), 5.15vw 50.27vh 0.73vmin 0.23vmin rgba(255, 255, 255, 0.6), 32.36vw 99.51vh 0.67vmin 0.14vmin rgba(255, 255, 255, 0.6), 14.93vw 62.04vh 0.83vmin 0.13vmin rgba(255, 255, 255, 0.6), 70.28vw 52.14vh 0.48vmin 0.18vmin rgba(255, 255, 255, 0.6), 83.19vw 75.55vh 0.39vmin 0.11vmin rgba(255, 236, 200, 0.7), 56.34vw 50.01vh 0.86vmin 0.11vmin rgba(255, 255, 255, 0.6), 91.01vw 98.18vh 0.48vmin 0.06vmin rgba(255, 236, 200, 0.7), 60.56vw 91.5vh 0.88vmin 0.05vmin rgba(255, 255, 255, 0.6), 79.03vw 89.93vh 0.42vmin 0.05vmin rgba(255, 255, 255, 0.6), 12.57vw 81.37vh 0.85vmin 0.22vmin rgba(255, 255, 255, 0.6), 44.28vw 121.29vh 0.66vmin 0.09vmin rgba(255, 246, 225, 0.85), 41.81vw 133.61vh 0.4vmin 0.24vmin rgba(255, 255, 255, 0.6), 34.73vw 103.13vh 0.78vmin 0vmin rgba(255, 246, 225, 0.85), 32.05vw 121.27vh 0.87vmin 0.02vmin rgba(255, 236, 200, 0.7), 23.09vw 138.62vh 0.59vmin 0.25vmin rgba(255, 236, 200, 0.7), 95.39vw 112.99vh 0.5vmin 0.01vmin rgba(255, 236, 200, 0.7), 20.73vw 107.72vh 0.7vmin 0.08vmin rgba(255, 246, 225, 0.85), 99.28vw 128.3vh 0.79vmin 0.2vmin rgba(255, 236, 200, 0.7), 27.8vw 123.88vh 0.7vmin 0vmin rgba(255, 236, 200, 0.7), 76.25vw 139.24vh 0.5vmin 0.1vmin rgba(255, 246, 225, 0.85), 60.79vw 100.88vh 0.6vmin 0.13vmin rgba(255, 246, 225, 0.85), 35.28vw 124.37vh 0.57vmin 0.21vmin rgba(255, 255, 255, 0.6), 38.88vw 127.07vh 0.71vmin 0.14vmin rgba(255, 255, 255, 0.6), 24.55vw 120.42vh 0.52vmin 0.2vmin rgba(255, 255, 255, 0.6), 55.99vw 103.75vh 0.5vmin 0.14vmin rgba(255, 236, 200, 0.7), 99.27vw 127.03vh 0.39vmin 0.25vmin rgba(255, 236, 200, 0.7), 48.27vw 148.22vh 0.55vmin 0.13vmin rgba(255, 255, 255, 0.6), 89.51vw 131.86vh 0.49vmin 0.08vmin rgba(255, 236, 200, 0.7), 89.64vw 132.9vh 0.58vmin 0.15vmin rgba(255, 246, 225, 0.85), -2.75vw 114vh 0.62vmin 0.2vmin rgba(255, 255, 255, 0.6), 5.15vw 100.27vh 0.73vmin 0.23vmin rgba(255, 255, 255, 0.6), 32.36vw 149.51vh 0.67vmin 0.14vmin rgba(255, 255, 255, 0.6), 14.93vw 112.04vh 0.83vmin 0.13vmin rgba(255, 255, 255, 0.6), 70.28vw 102.14vh 0.48vmin 0.18vmin rgba(255, 255, 255, 0.6), 83.19vw 125.55vh 0.39vmin 0.11vmin rgba(255, 236, 200, 0.7), 56.34vw 100.01vh 0.86vmin 0.11vmin rgba(255, 255, 255, 0.6), 91.01vw 148.18vh 0.48vmin 0.06vmin rgba(255, 236, 200, 0.7), 60.56vw 141.5vh 0.88vmin 0.05vmin rgba(255, 255, 255, 0.6), 79.03vw 139.93vh 0.42vmin 0.05vmin rgba(255, 255, 255, 0.6), 12.57vw 131.37vh 0.85vmin 0.22vmin rgba(255, 255, 255, 0.6);
+  animation: dbf 3000ms linear infinite, dbp 6000ms linear infinite, dbt 1500ms linear infinite; }
+@keyframes dbf { 0% { transform: translate(0, 0); } 100% { transform: translate(0vh, -50vh); } }
+@keyframes dbp {
+  0% { translate: 1.683vw 0vh; }
+  3.13% { translate: 1.861vw 0.383vh; }
+  6.25% { translate: 1.968vw 0.707vh; }
+  9.38% { translate: 2vw 0.924vh; }
+  12.5% { translate: 1.954vw 1vh; }
+  15.63% { translate: 1.833vw 0.924vh; }
+  18.75% { translate: 1.642vw 0.707vh; }
+  21.88% { translate: 1.388vw 0.383vh; }
+  25% { translate: 1.081vw 0vh; }
+  28.13% { translate: 0.732vw -0.383vh; }
+  31.25% { translate: 0.354vw -0.707vh; }
+  34.38% { translate: -0.037vw -0.924vh; }
+  37.5% { translate: -0.426vw -1vh; }
+  40.63% { translate: -0.799vw -0.924vh; }
+  43.75% { translate: -1.141vw -0.707vh; }
+  46.88% { translate: -1.44vw -0.383vh; }
+  50% { translate: -1.683vw 0vh; }
+  53.13% { translate: -1.861vw 0.383vh; }
+  56.25% { translate: -1.968vw 0.707vh; }
+  59.38% { translate: -2vw 0.924vh; }
+  62.5% { translate: -1.954vw 1vh; }
+  65.63% { translate: -1.833vw 0.924vh; }
+  68.75% { translate: -1.642vw 0.707vh; }
+  71.88% { translate: -1.388vw 0.383vh; }
+  75% { translate: -1.081vw 0vh; }
+  78.13% { translate: -0.732vw -0.383vh; }
+  81.25% { translate: -0.354vw -0.707vh; }
+  84.38% { translate: 0.037vw -0.924vh; }
+  87.5% { translate: 0.426vw -1vh; }
+  90.63% { translate: 0.799vw -0.924vh; }
+  93.75% { translate: 1.141vw -0.707vh; }
+  96.88% { translate: 1.44vw -0.383vh; }
+  100% { translate: 1.683vw 0vh; }
+}
+@keyframes dbt {
+  0% { opacity: 0.95; }
+  16.667% { opacity: 0.566; }
+  33.333% { opacity: 0.494; }
+  50% { opacity: 0.403; }
+  66.667% { opacity: 0.502; }
+  83.333% { opacity: 0.681; }
+  100% { opacity: 0.95; }
+}
+body::before { content: ""; position: fixed; left: 0; top: 0vh; width: 1.3vmin; height: 1.3vmin; border-radius: 50%;
+  box-shadow: 33.08vw 40.41vh 1.98vmin 0.23vmin rgba(255, 240, 215, 0.45), 56.36vw 93.95vh 1.88vmin 0.03vmin rgba(255, 240, 215, 0.45), 39.95vw 31.14vh 1.58vmin 0.38vmin rgba(255, 240, 215, 0.45), 35.03vw 9.85vh 2.55vmin 0.5vmin rgba(255, 240, 215, 0.45), 39.54vw 5.08vh 2.06vmin 0.01vmin rgba(255, 240, 215, 0.45), 28.42vw 75.35vh 1.67vmin 0.31vmin rgba(255, 240, 215, 0.45), 54.8vw 58.16vh 1.63vmin 0.35vmin rgba(255, 240, 215, 0.45), 28.34vw 14.55vh 1.66vmin 0.46vmin rgba(255, 240, 215, 0.45);
+  animation: dcp 6000ms linear infinite; }
+@keyframes dcp {
+  0% { translate: 0vw 3.99vh; }
+  3.13% { translate: 1.171vw 3.969vh; }
+  6.25% { translate: 2.296vw 3.795vh; }
+  9.38% { translate: 3.333vw 3.475vh; }
+  12.5% { translate: 4.243vw 3.021vh; }
+  15.63% { translate: 4.989vw 2.452vh; }
+  18.75% { translate: 5.543vw 1.788vh; }
+  21.88% { translate: 5.885vw 1.056vh; }
+  25% { translate: 6vw 0.283vh; }
+  28.13% { translate: 5.885vw -0.501vh; }
+  31.25% { translate: 5.543vw -1.265vh; }
+  34.38% { translate: 4.989vw -1.981vh; }
+  37.5% { translate: 4.243vw -2.621vh; }
+  40.63% { translate: 3.333vw -3.16vh; }
+  43.75% { translate: 2.296vw -3.578vh; }
+  46.88% { translate: 1.171vw -3.858vh; }
+  50% { translate: 0vw -3.99vh; }
+  53.13% { translate: -1.171vw -3.969vh; }
+  56.25% { translate: -2.296vw -3.795vh; }
+  59.38% { translate: -3.333vw -3.475vh; }
+  62.5% { translate: -4.243vw -3.021vh; }
+  65.63% { translate: -4.989vw -2.452vh; }
+  68.75% { translate: -5.543vw -1.788vh; }
+  71.88% { translate: -5.885vw -1.056vh; }
+  75% { translate: -6vw -0.283vh; }
+  78.13% { translate: -5.885vw 0.501vh; }
+  81.25% { translate: -5.543vw 1.265vh; }
+  84.38% { translate: -4.989vw 1.981vh; }
+  87.5% { translate: -4.243vw 2.621vh; }
+  90.63% { translate: -3.333vw 3.16vh; }
+  93.75% { translate: -2.296vw 3.578vh; }
+  96.88% { translate: -1.171vw 3.858vh; }
+  100% { translate: 0vw 3.99vh; }
+}

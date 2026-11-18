@@ -1,0 +1,16 @@
+/* The call to action: a line, then a lime ticket with notched sides swings in and keeps pulsing gently. 3.5 s. */
+.w { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff;
+  font-family: 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif; }
+.glow { position: absolute; inset: 0; background: radial-gradient(closest-side, rgba(20, 6, 40, 0.7), rgba(20, 6, 40, 0)); animation: fade 0.6s both; }
+.t3 { position: relative; margin: 0 0 6vh; font-size: 7vh; font-weight: 800; letter-spacing: 0.3em; padding-left: 0.3em; white-space: nowrap; text-shadow: 0 0.6vh 2vh rgba(0, 0, 0, 0.5);
+  animation: fade 0.6s 0.1s both; }
+.ticket { position: relative; display: flex; align-items: center; gap: 6vh; padding: 7vh 12vh; background: #c6ff3d; color: #2a1052; border-radius: 3vh;
+  -webkit-mask: radial-gradient(circle at 0 50%, transparent 5vh, #000 5.2vh) left / 51% 100% no-repeat, radial-gradient(circle at 100% 50%, transparent 5vh, #000 5.2vh) right / 51% 100% no-repeat;
+  mask: radial-gradient(circle at 0 50%, transparent 5vh, #000 5.2vh) left / 51% 100% no-repeat, radial-gradient(circle at 100% 50%, transparent 5vh, #000 5.2vh) right / 51% 100% no-repeat;
+  animation: swing 0.7s 0.35s cubic-bezier(0.3, 1.5, 0.5, 1) both, pulse 1.2s 1.2s ease-in-out infinite; }
+.t1 { font-size: 13vh; font-weight: 900; letter-spacing: 0.04em; white-space: nowrap; }
+.cut { width: 0; height: 16vh; border-left: 0.8vh dashed rgba(42, 16, 82, 0.6); }
+.t2 { font-size: 8vh; font-weight: 700; white-space: nowrap; }
+@keyframes fade { from { opacity: 0; } }
+@keyframes swing { from { opacity: 0; transform: rotate(-12deg) scale(0.5); } }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }

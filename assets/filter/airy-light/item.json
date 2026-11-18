@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Airy Light",
+    "zh-CN": "日系空气感",
+    "ja": "エアリーライト",
+    "ko": "에어리 라이트",
+    "es": "Aireado"
+  },
+  "about": "Bright, soft and slightly cool, the airy film look of slice-of-life photos. For daily vlogs and portraits.",
+  "tags": [
+    "airy",
+    "bright",
+    "japanese"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 203
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 193169
+    }
+  ]
+}

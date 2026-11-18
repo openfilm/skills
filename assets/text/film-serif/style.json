@@ -1,0 +1,9 @@
+{
+  "vars": {
+    "--font": "'Songti SC', 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif",
+    "--weight": "700",
+    "--color": "#f3ead7",
+    "--spacing": "0.25em",
+    "--shadow": "0 0.06em 0.18em rgba(0,0,0,0.6)"
+  }
+}

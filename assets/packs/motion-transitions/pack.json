@@ -1,0 +1,25 @@
+{
+  "name": {
+    "en": "Motion Transitions",
+    "zh-CN": "动感转场",
+    "ja": "ダイナミックトランジション",
+    "ko": "다이내믹 전환",
+    "es": "Transiciones dinámicas"
+  },
+  "about": "Fast, punchy transitions: panel swipes, a diagonal slash, a zoom punch, an iris, blinds, ink, spinning shapes, a glitch tear and a whip pan. Each covers the frame at its middle: put the middle on the cut.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "transition/panel-swipe",
+    "transition/diagonal-slash",
+    "transition/zoom-punch",
+    "transition/iris-shutter",
+    "transition/blinds",
+    "transition/ink-reveal",
+    "transition/shape-stack",
+    "transition/glitch-slice",
+    "transition/whip-pan"
+  ],
+  "cover": "cover.jpg"
+}

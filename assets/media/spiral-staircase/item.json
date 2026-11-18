@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Spiral Staircase from Below",
+    "zh-CN": "仰望螺旋楼梯",
+    "ja": "下から見たらせん階段",
+    "ko": "아래에서 본 나선형 계단",
+    "es": "Escalera de caracol desde abajo"
+  },
+  "about": "Looking straight up a double spiral staircase with ornate railings to an octagonal glass skylight, in warm ochre tones. Vatican Museums.",
+  "tags": [
+    "staircase",
+    "spiral",
+    "architecture",
+    "symmetry",
+    "skylight",
+    "interior"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Spiral_staircase_in_the_Vatican_Museums_from_bottom_02.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 3009720,
+      "sha256": "436808dc877de89234433d19f3727e0517412bbcad37010447ed61fffd6acd8d"
+    }
+  ]
+}

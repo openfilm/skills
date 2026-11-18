@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Whip Pan",
+    "zh-CN": "甩镜",
+    "ja": "ホイップパン",
+    "ko": "휩 팬",
+    "es": "Barrido rápido"
+  },
+  "about": "Motion-blurred streaks race sideways and smear the frame over the cut, like a camera whipped from one shot to the next. For travel, action and fast-paced edits.",
+  "tags": [
+    "whip-pan",
+    "motion-blur",
+    "swipe",
+    "fast",
+    "travel",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 4601
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 68027
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 623235
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 700
+}

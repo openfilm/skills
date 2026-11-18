@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Documentary",
+    "zh-CN": "纪录片字幕",
+    "ja": "ドキュメンタリー",
+    "ko": "다큐멘터리",
+    "es": "Documental"
+  },
+  "about": "Plain white sans words with a subtle shadow, quiet and factual. For names, places and dates in documentaries.",
+  "tags": [
+    "documentary",
+    "lower-third",
+    "clean"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 260
+    }
+  ]
+}

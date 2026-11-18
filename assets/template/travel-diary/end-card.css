@@ -1,0 +1,14 @@
+/* The trip's end card: a serif line fades up, then the next stop with a dashed route and a plane flying off. 2.5 s. */
+.w { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; }
+.glow { position: absolute; inset: 0; background: radial-gradient(closest-side, rgba(8, 20, 30, 0.55), rgba(8, 20, 30, 0)); animation: fade 0.7s both; }
+.t1 { position: relative; margin: 0 0 5vh; font: italic 400 20vh/1.1 Georgia, 'Times New Roman', 'Songti SC', 'STSong', 'Noto Serif SC', serif; white-space: nowrap;
+  text-shadow: 0 1vh 4vh rgba(0, 0, 0, 0.45); animation: rise 1s 0.1s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.row { position: relative; display: flex; align-items: center; gap: 3vh; }
+.t2 { font: 700 6vh/1 -apple-system, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif; letter-spacing: 0.3em; white-space: nowrap;
+  text-shadow: 0 0.4vh 1.5vh rgba(0, 0, 0, 0.4); animation: fade 0.6s 0.7s both; }
+.dash { width: 30vh; border-top: 0.8vh dashed #ffb347; animation: draw 0.8s 0.9s cubic-bezier(0.3, 0.6, 0.3, 1) both; }
+.plane { width: 7vh; height: 7vh; background: #ffb347; clip-path: polygon(0 20%, 100% 50%, 0 80%, 22% 50%); animation: fly 1.2s 1.6s cubic-bezier(0.5, 0, 0.8, 0.4) both; }
+@keyframes fade { from { opacity: 0; } }
+@keyframes rise { from { opacity: 0; transform: translateY(6vh); filter: blur(1.2vh); } }
+@keyframes draw { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes fly { 0% { opacity: 0; transform: translateX(-30vh); } 20% { opacity: 1; transform: translateX(0); } 100% { opacity: 0; transform: translate(30vh, -12vh) rotate(-20deg); } }

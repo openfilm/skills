@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Speech Bubble",
+    "zh-CN": "对话气泡",
+    "ja": "吹き出し",
+    "ko": "말풍선",
+    "es": "Bocadillo"
+  },
+  "about": "A white hand-drawn speech bubble with a black outline. For thoughts and dialogue on screen.",
+  "tags": [
+    "bubble",
+    "speech",
+    "handdrawn"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "float",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 22850
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l::before, .l::after, body::before, body::after { content: ""; position: fixed; pointer-events: none; }
+body::before { inset: 0; background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.55) 100%); animation: zpv 600ms linear both; }
+.l::before { left: 50%; top: 50%; width: 260vmax; height: 260vmax; margin: -130vmax 0 0 -130vmax;
+  background: repeating-conic-gradient(from 0deg, rgba(255, 255, 255, 0.85) 0deg 0.3deg, rgba(255, 255, 255, 0) 0.6deg 6.1deg),
+    repeating-conic-gradient(from 1.7deg, rgba(255, 255, 255, 0.5) 0deg 0.2deg, rgba(255, 255, 255, 0) 0.45deg 4.3deg),
+    repeating-conic-gradient(from 0.9deg, rgba(255, 255, 255, 0.3) 0deg 0.6deg, rgba(255, 255, 255, 0) 1deg 9.7deg);
+  -webkit-mask-image: radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 7%, rgba(0, 0, 0, 0.85) 22%, #000 60%);
+  mask-image: radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 7%, rgba(0, 0, 0, 0.85) 22%, #000 60%);
+  animation: zpl 600ms linear both; }
+.l::after { left: 50%; top: 50%; width: 100vmax; height: 100vmax; margin: -50vmax 0 0 -50vmax; border-radius: 50%;
+  background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0.7) 80%, rgba(255, 255, 255, 0) 100%);
+  animation: zpr 600ms linear both; }
+body::after { inset: 0; background: radial-gradient(circle at 50% 50%, #fff 0%, #fff 30%, rgba(255, 255, 255, 0.92) 60%, rgba(255, 255, 255, 0.85) 100%);
+  animation: zpw 600ms linear both; }
+@keyframes zpv {
+  0% { opacity: 0; } 40% { opacity: 1; } 60% { opacity: 1; } 100% { opacity: 0; }
+}
+@keyframes zpl {
+  0% { opacity: 0; transform: scale(0.5) rotate(0deg); animation-timing-function: cubic-bezier(0.5, 0, 0.9, 0.5); }
+  15% { opacity: 1; }
+  50% { opacity: 1; transform: scale(1.5) rotate(4deg); animation-timing-function: cubic-bezier(0.1, 0.5, 0.4, 1); }
+  80% { opacity: 0; }
+  100% { opacity: 0; transform: scale(2.6) rotate(7deg); }
+}
+@keyframes zpr {
+  0%, 30% { opacity: 0; transform: scale(0.1); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  42% { opacity: 1; }
+  70% { opacity: 0; transform: scale(2.8); }
+  100% { opacity: 0; transform: scale(2.8); }
+}
+@keyframes zpw {
+  0%, 36% { opacity: 0; transform: scale(0.2); animation-timing-function: cubic-bezier(0.6, 0, 1, 0.7); }
+  50% { opacity: 1; transform: scale(1); animation-timing-function: cubic-bezier(0.05, 0.6, 0.3, 1); }
+  100% { opacity: 0; transform: scale(1); }
+}

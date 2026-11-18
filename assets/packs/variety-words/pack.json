@@ -1,0 +1,26 @@
+{
+  "name": {
+    "en": "Variety Words",
+    "zh-CN": "综艺花字",
+    "ja": "バラエティ文字",
+    "ko": "예능 자막",
+    "es": "Rótulos de variedades"
+  },
+  "about": "Loud, bright styled words for vlogs and variety edits: candy fills, thick outlines, glows and labels.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "text/candy-pop",
+    "text/shout-yellow",
+    "text/fire-glow",
+    "text/ice-blue",
+    "text/bubble-mint",
+    "text/comic-red",
+    "text/neon-pink",
+    "text/sticker-label",
+    "text/gold-award",
+    "text/whisper-soft"
+  ],
+  "cover": "cover.jpg"
+}

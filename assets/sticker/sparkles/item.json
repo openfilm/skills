@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Sparkles",
+    "zh-CN": "闪闪发光",
+    "ja": "キラキラ",
+    "ko": "반짝반짝",
+    "es": "Destellos"
+  },
+  "about": "Three shiny four-point sparkles. For something new, clean or magical.",
+  "tags": [
+    "sparkle",
+    "shine",
+    "magic"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "pulse",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 549434
+    }
+  ]
+}

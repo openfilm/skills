@@ -1,0 +1,21 @@
+{
+  "name": {
+    "en": "Knowledge & promo templates",
+    "zh-CN": "知识与推广模板",
+    "ja": "解説・プロモーションテンプレート",
+    "ko": "지식·홍보 템플릿",
+    "es": "Plantillas de conocimiento y promoción"
+  },
+  "about": "Five ready-made 9–13 s templates for teaching and promoting, filled with your own pictures and words: a step-by-step tutorial, a product launch, a top 3 countdown, a quote card and an event announcement.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "template/tutorial-steps",
+    "template/product-launch",
+    "template/top-3-countdown",
+    "template/quote-card",
+    "template/event-announcement"
+  ],
+  "cover": "cover.jpg"
+}

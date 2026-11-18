@@ -1,0 +1,41 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Clouds over the Ocean from Orbit",
+    "zh-CN": "轨道上看海上云层",
+    "ja": "軌道から見た海上の雲",
+    "ko": "궤도에서 본 바다 위 구름",
+    "es": "Nubes sobre el océano desde la órbita"
+  },
+  "about": "The curve of the Earth from the International Space Station: bright clouds drift over a deep blue ocean under the thin glow of the atmosphere. Filmed in 4K by the station crew.",
+  "tags": [
+    "earth",
+    "orbit",
+    "space-station",
+    "clouds",
+    "ocean",
+    "planet",
+    "blue"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:View_of_Planet_Earth_(4K).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 15015,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 7042768,
+      "sha256": "9d4d03859e7d3e6b1e71ecf92040bf41011a244b95eff7f7f8de7f0a7df954bc"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 249196
+    }
+  ]
+}

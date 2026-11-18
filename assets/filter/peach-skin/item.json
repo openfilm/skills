@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Peach Skin",
+    "zh-CN": "蜜桃肤色",
+    "ja": "ピーチスキン",
+    "ko": "피치 스킨",
+    "es": "Piel melocotón"
+  },
+  "about": "Gently warm with soft highlights that flatter skin. For faces, beauty and selfies.",
+  "tags": [
+    "portrait",
+    "skin",
+    "warm"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 204
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 193169
+    }
+  ]
+}

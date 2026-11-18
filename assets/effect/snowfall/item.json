@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Snowfall",
+    "zh-CN": "飘雪",
+    "ja": "降雪",
+    "ko": "눈 내림",
+    "es": "Nevada"
+  },
+  "about": "Gentle snow in three depths: fine far flakes, mid flakes and a few large soft ones near the lens, swaying as they fall. For winter, holiday and quiet night scenes.",
+  "tags": [
+    "snow",
+    "winter",
+    "christmas",
+    "calm",
+    "particles",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 25440
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 286598
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1054939
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 6000
+}

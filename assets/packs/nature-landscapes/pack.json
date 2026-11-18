@@ -1,0 +1,32 @@
+{
+  "name": {
+    "en": "Nature & Landscapes",
+    "zh-CN": "自然与风光",
+    "ja": "自然と風景",
+    "ko": "자연과 풍경",
+    "es": "Naturaleza y paisajes"
+  },
+  "about": "Public-domain and CC0 footage and photos of wild places: lava and geysers, a waterfall, a canyon river, ocean waves, a lightning storm, a moose in the frost, the Grand Canyon and Denali.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "media/lava-fountain",
+    "media/lava-river-aerial",
+    "media/lava-night",
+    "media/geyser-steam",
+    "media/hot-spring-timelapse",
+    "media/geyser-basin-steam",
+    "media/waterfall-cliff",
+    "media/canyon-river",
+    "media/joshua-tree-timelapse",
+    "media/ocean-waves",
+    "media/lightning-storm",
+    "media/moose-frosty-morning",
+    "media/foggy-meadow-sunrise",
+    "media/canyon-arch-sunrise",
+    "media/grand-canyon-panorama",
+    "media/denali-peak"
+  ],
+  "cover": "cover.jpg"
+}

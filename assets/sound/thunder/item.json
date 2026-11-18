@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Thunder",
+    "zh-CN": "雷声",
+    "ja": "雷鳴",
+    "ko": "천둥",
+    "es": "Trueno"
+  },
+  "about": "A long roll of thunder for a storm or a dramatic moment.",
+  "tags": [
+    "thunder",
+    "storm",
+    "weather"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/thunder-10-s3183.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 30600,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 376249
+    }
+  ]
+}

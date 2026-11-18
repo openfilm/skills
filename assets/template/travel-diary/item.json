@@ -1,0 +1,97 @@
+{
+  "cat": "template",
+  "name": {
+    "en": "Travel journal",
+    "zh-CN": "旅行手账",
+    "ja": "旅のジャーナル",
+    "ko": "여행 저널",
+    "es": "Diario de viaje"
+  },
+  "about": "12 s, four slots: a passport-stamp title, map-pin place tags, light-leak flashes and a flight-route wipe between, ending on a to-be-continued card. For trip diaries.",
+  "tags": [
+    "travel",
+    "vlog",
+    "diary",
+    "map",
+    "title",
+    "summer"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "template.json",
+  "durationMs": 12000,
+  "files": [
+    {
+      "path": "template.json",
+      "bytes": 1882
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 2118387
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 532326
+    },
+    {
+      "path": "example-1.jpg",
+      "bytes": 476324
+    },
+    {
+      "path": "example-2.jpg",
+      "bytes": 440577
+    },
+    {
+      "path": "example-3.jpg",
+      "bytes": 546791
+    },
+    {
+      "path": "example-4.jpg",
+      "bytes": 233379
+    },
+    {
+      "path": "end-card.css",
+      "bytes": 1683
+    },
+    {
+      "path": "end-card.html",
+      "bytes": 210
+    },
+    {
+      "path": "flash.css",
+      "bytes": 780
+    },
+    {
+      "path": "flash.html",
+      "bytes": 70
+    },
+    {
+      "path": "place-tag.css",
+      "bytes": 1608
+    },
+    {
+      "path": "place-tag.html",
+      "bytes": 174
+    },
+    {
+      "path": "route.css",
+      "bytes": 1242
+    },
+    {
+      "path": "route.html",
+      "bytes": 146
+    },
+    {
+      "path": "stamp-title.css",
+      "bytes": 2181
+    },
+    {
+      "path": "stamp-title.html",
+      "bytes": 217
+    }
+  ]
+}

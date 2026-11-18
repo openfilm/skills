@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Neon Skyline Time-lapse",
+    "zh-CN": "霓虹天际线延时",
+    "ja": "ネオンのスカイライン・タイムラプス",
+    "ko": "네온 스카이라인 타임랩스",
+    "es": "Horizonte de neón, time-lapse"
+  },
+  "about": "Skyscrapers across a river blaze with coloured lights and lasers as boats streak past, in a short night time-lapse of Shanghai's Lujiazui.",
+  "tags": [
+    "city",
+    "night",
+    "skyline",
+    "time-lapse",
+    "neon",
+    "river"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Timelapse_de_nuit_de_la_vue_du_quartier_de_Lujiazui.webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 8000,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 15350072,
+      "sha256": "8dad2d2c74448810125cd87df8564984344d15b3d876684f95228b4935b3ea49"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 307785
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Epic Gold",
+    "zh-CN": "史诗金字",
+    "ja": "エピックゴールド",
+    "ko": "에픽 골드",
+    "es": "Épico dorado"
+  },
+  "about": "Spaced serif letters with a brushed gold fill. For trailers, epic openings and grand reveals.",
+  "tags": [
+    "epic",
+    "gold",
+    "trailer"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 285
+    }
+  ]
+}

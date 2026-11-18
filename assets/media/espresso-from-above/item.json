@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Espresso from Above",
+    "zh-CN": "俯拍浓缩咖啡",
+    "ja": "上から見たエスプレッソ",
+    "ko": "위에서 본 에스프레소",
+    "es": "Espresso visto desde arriba"
+  },
+  "about": "A cup of espresso with golden crema on a black-rimmed saucer, shot from above on a bright white table with lots of space around it.",
+  "tags": [
+    "coffee",
+    "espresso",
+    "cup",
+    "minimal",
+    "table",
+    "morning"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Espresso_Coffee_01.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 1582222,
+      "sha256": "ada18931364b410a94216ed0436ac3c6ee7e26cc1db92c960c89b22897d6d5bd"
+    }
+  ]
+}

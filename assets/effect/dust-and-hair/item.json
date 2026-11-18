@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Dust & Hair",
+    "zh-CN": "灰尘与毛发",
+    "ja": "ほこりと毛",
+    "ko": "먼지와 머리카락",
+    "es": "Polvo y pelos"
+  },
+  "about": "Specks of dust and the odd curled hair flash for a frame or two, as on a projected print, over light grain. For vintage, home-movie and retro edits.",
+  "tags": [
+    "dust",
+    "hair",
+    "film",
+    "vintage",
+    "retro",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 26474
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 316700
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1532499
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 4000
+}

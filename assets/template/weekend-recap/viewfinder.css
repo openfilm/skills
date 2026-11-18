@@ -1,0 +1,15 @@
+/* A camcorder viewfinder over the whole piece: corner marks, a blinking REC dot and a battery that slowly drains. Any length. */
+.w { position: fixed; inset: 0; color: #fff; font-family: 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif; animation: fade 0.5s both; }
+.cn { position: absolute; width: 7vh; height: 7vh; border: 0 solid rgba(255, 255, 255, 0.92); filter: drop-shadow(0 0 0.6vh rgba(0, 0, 0, 0.4)); }
+.tl { left: 4vh; top: 4vh; border-width: 0.6vh 0 0 0.6vh; }
+.tr { right: 4vh; top: 4vh; border-width: 0.6vh 0.6vh 0 0; }
+.bl { left: 4vh; bottom: 4vh; border-width: 0 0 0.6vh 0.6vh; }
+.br { right: 4vh; bottom: 4vh; border-width: 0 0.6vh 0.6vh 0; }
+.rec { position: absolute; left: 7vh; top: 6.6vh; display: flex; align-items: center; gap: 1.4vh; font-size: 4.2vh; font-weight: 700; letter-spacing: 0.14em; text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5); }
+.dot { width: 2.8vh; height: 2.8vh; border-radius: 50%; background: #ff3b30; animation: blink 1s steps(2, start) infinite; }
+.bat { position: absolute; right: 7.4vh; top: 7vh; width: 6.4vh; height: 3vh; padding: 0.4vh; box-sizing: border-box; border: 0.4vh solid #fff; border-radius: 0.6vh; }
+.bat::after { content: ''; position: absolute; right: -1.2vh; top: 0.6vh; width: 0.6vh; height: 1.2vh; background: #fff; border-radius: 0 0.3vh 0.3vh 0; }
+.lvl { display: block; height: 100%; background: #fff; transform-origin: left; animation: drain 12s linear both; }
+@keyframes fade { from { opacity: 0; } }
+@keyframes blink { to { opacity: 0; } }
+@keyframes drain { from { transform: scaleX(1); } to { transform: scaleX(0.35); } }

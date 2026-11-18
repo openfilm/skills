@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Gold Glitter",
+    "zh-CN": "金色闪粉",
+    "ja": "金のラメ",
+    "ko": "골드 글리터",
+    "es": "Purpurina dorada"
+  },
+  "about": "Fine gold flecks drift down and twinkle, with a few soft glints between them. For luxury, weddings, awards and festive titles.",
+  "tags": [
+    "glitter",
+    "gold",
+    "sparkle",
+    "luxury",
+    "festive",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 26220
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 170378
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 634145
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 5000
+}

@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Projector Flicker",
+    "zh-CN": "放映机闪烁",
+    "ja": "映写機のちらつき",
+    "ko": "영사기 깜빡임",
+    "es": "Parpadeo de proyector"
+  },
+  "about": "The uneven flicker of an old film projector, with a warm hot center, darker edges and grain. For flashbacks, memories and old-cinema looks.",
+  "tags": [
+    "flicker",
+    "projector",
+    "film",
+    "vintage",
+    "flashback",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 17445
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 199521
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 725792
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 4000
+}

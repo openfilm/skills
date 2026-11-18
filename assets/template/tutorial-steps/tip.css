@@ -1,0 +1,11 @@
+/* A tip bubble: pops from its tail, floats gently, a TIP tag and one short line. 2 s. */
+.w { position: fixed; inset: 0; display: grid; place-items: center; font-family: 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  animation: out 0.3s 1.7s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.bub { position: relative; display: flex; align-items: center; gap: 5vh; padding: 10vh 10vh; border-radius: 10vh; background: #ff9f1c; color: #0d1b2a;
+  box-shadow: 0 3vh 8vh rgba(0, 0, 0, 0.3); transform-origin: 15% 100%; animation: pop 0.55s cubic-bezier(0.3, 1.6, 0.5, 1) both, bob 1.6s 0.6s ease-in-out infinite; }
+.bub::after { content: ''; position: absolute; left: 12%; bottom: -10vh; width: 14vh; height: 12vh; background: #ff9f1c; clip-path: polygon(0 0, 100% 0, 10% 100%); }
+.t3 { padding: 3vh 4.5vh; border-radius: 4vh; background: #0d1b2a; color: #ff9f1c; font: 700 9vh/1 Menlo, 'SF Mono', Consolas, monospace; letter-spacing: 0.1em; }
+.t1 { font-size: 15vh; font-weight: 800; line-height: 1; white-space: nowrap; }
+@keyframes pop { from { opacity: 0; transform: scale(0.2); } }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3vh); } }
+@keyframes out { to { opacity: 0; transform: scale(0.8); } }

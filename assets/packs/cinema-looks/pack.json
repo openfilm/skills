@@ -1,0 +1,24 @@
+{
+  "name": {
+    "en": "Cinema Looks",
+    "zh-CN": "电影色调",
+    "ja": "シネマルック",
+    "ko": "시네마 룩",
+    "es": "Looks de cine"
+  },
+  "about": "Film looks for any footage: teal and orange, bleach bypass, noir, matte, cool night, golden hour, vintage and vivid.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "filter/teal-orange",
+    "filter/bleach-bypass",
+    "filter/noir",
+    "filter/matte-fade",
+    "filter/cool-night",
+    "filter/golden-hour",
+    "filter/vintage-film",
+    "filter/vivid-punch"
+  ],
+  "cover": "cover.jpg"
+}

@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Night Rocket Launch",
+    "zh-CN": "夜间火箭发射",
+    "ja": "夜のロケット打ち上げ",
+    "ko": "야간 로켓 발사",
+    "es": "Lanzamiento nocturno de un cohete"
+  },
+  "about": "A tall rocket ignites on the pad at night, lighting up the steam and the towers, and climbs into the dark sky. NASA's Artemis I launch in 2022.",
+  "tags": [
+    "rocket",
+    "launch",
+    "night",
+    "fire",
+    "spaceflight",
+    "liftoff"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Artemis_I_Launch_(Artemis_I_Launch_2022_CU_tracking_from_Press_Site_compressed).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 20020,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 9542166,
+      "sha256": "14d3eb692bca99d990b1638c662e3bab02296388cf8a4037986490d03fcacd31"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 82278
+    }
+  ]
+}

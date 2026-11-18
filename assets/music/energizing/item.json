@@ -1,0 +1,31 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Energizing",
+    "zh-CN": "活力满满",
+    "ja": "エナジー",
+    "ko": "에너지",
+    "es": "Con energía"
+  },
+  "about": "An energetic, positive track for product videos, sport and promos.",
+  "tags": [
+    "upbeat",
+    "energetic",
+    "product"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/chill/Energizing.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 127300,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 2602180
+    }
+  ]
+}

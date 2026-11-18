@@ -1,0 +1,16 @@
+{"clips": [
+  {"track": 0, "at": 0.3, "time": [0, 3], "page": "opener", "size": {"w": 1600, "h": 700}, "place": {"x": 0.5, "y": 0.5, "fit": 0.62},
+    "texts": {".t1": "A Day in My Life", ".t2": "TUESDAY · NOV 17", ".t3": "VLOG · NO. 12"},
+    "props": [{"name": "Title", "type": "text", "at": ".t1"}, {"name": "Date", "type": "text", "at": ".t2"}, {"name": "Label", "type": "text", "at": ".t3"}], "fade": [0.2, 0]},
+  {"track": 0, "at": 4.0, "time": [0, 2.6], "page": "name-tag", "size": {"w": 1200, "h": 300}, "place": {"x": 0.3, "y": 0.84, "fit": 0.22},
+    "texts": {".t1": "@yourname", ".t2": "morning routine", ".t3": "Y"},
+    "props": [{"name": "Name", "type": "text", "at": ".t1"}, {"name": "Doing", "type": "text", "at": ".t2"}, {"name": "Initial", "type": "text", "at": ".t3"}]},
+  {"track": 0, "at": 7.3, "time": [0, 2.7], "page": "sign-off", "size": {"w": 1600, "h": 600}, "place": {"x": 0.5, "y": 0.52, "fit": 0.52},
+    "texts": {".t1": "See you tomorrow", ".t2": "SUBSCRIBE FOR MORE"},
+    "props": [{"name": "Sign-off", "type": "text", "at": ".t1"}, {"name": "Call to action", "type": "text", "at": ".t2"}], "fade": [0, 0.4]},
+  {"track": 1, "at": 3.2, "time": [0, 0.8], "page": "swipe"},
+  {"track": 1, "at": 6.4, "time": [0, 0.8], "page": "swipe"},
+  {"track": 3, "at": 0, "time": [0, 3.6], "picture": "example-1"},
+  {"track": 3, "at": 3.6, "time": [0, 3.2], "picture": "example-2"},
+  {"track": 3, "at": 6.8, "time": [0, 3.2], "picture": "example-3", "fade": [0, 0.5]}
+]}

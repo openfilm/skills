@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Winking Cat",
+    "zh-CN": "眨眼猫咪",
+    "ja": "ウインク猫",
+    "ko": "윙크 고양이",
+    "es": "Gato guiñando"
+  },
+  "about": "A chubby grey cat winking. For cute asides, pets and playful moments.",
+  "tags": [
+    "cat",
+    "cute",
+    "wink"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "bounce",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 596824
+    }
+  ]
+}

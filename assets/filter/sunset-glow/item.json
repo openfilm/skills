@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Sunset Glow",
+    "zh-CN": "夕阳暖光",
+    "ja": "サンセットグロウ",
+    "ko": "노을빛",
+    "es": "Atardecer"
+  },
+  "about": "Strong warm orange glow with gentle contrast. For evenings, beaches and road trips.",
+  "tags": [
+    "sunset",
+    "warm",
+    "orange"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 198
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 431878
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Mint Fresh",
+    "zh-CN": "薄荷清新",
+    "ja": "ミントフレッシュ",
+    "ko": "민트 프레시",
+    "es": "Menta"
+  },
+  "about": "Light and cool with a hint of green, clean as spring. For nature, outdoors and calm days.",
+  "tags": [
+    "fresh",
+    "mint",
+    "cool"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 201
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 431878
+    }
+  ]
+}

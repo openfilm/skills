@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Solar Flare",
+    "zh-CN": "太阳耀斑",
+    "ja": "太陽フレア",
+    "ko": "태양 플레어",
+    "es": "Llamarada solar"
+  },
+  "about": "The full disc of the Sun in extreme ultraviolet, glowing teal, as a strong flare bursts from an active region, seen by NASA's Solar Dynamics Observatory.",
+  "tags": [
+    "sun",
+    "solar-flare",
+    "star",
+    "space",
+    "plasma",
+    "science"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Sun_Emits_X1_5_Flare_on_May_10,_2022_(SVS14160_-_20220510_FlareX15_131A_4k_ProRes).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 13347,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 6389306,
+      "sha256": "daee52244b4d7bef43efc89364ed6591dfc0853f555f82289829069ae88178a9"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 96585
+    }
+  ]
+}

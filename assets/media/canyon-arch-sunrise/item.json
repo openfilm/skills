@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Canyon Arch at Sunrise",
+    "zh-CN": "日出时的峡谷石窗",
+    "ja": "日の出の峡谷の岩窓",
+    "ko": "일출 때의 협곡 바위 창",
+    "es": "Arco del cañón al amanecer"
+  },
+  "about": "First light turns a rock fin with a natural window glowing red and gold above the hazy depths of the Grand Canyon's North Rim.",
+  "tags": [
+    "grand-canyon",
+    "sunrise",
+    "rock",
+    "arch",
+    "national-park",
+    "landscape"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_National_Park,_North_Rim_Sunrise_on_Angel's_Window._0137_-_Flickr_-_Grand_Canyon_NPS.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 3677082,
+      "sha256": "089e5453f6ee0714f66d5fd97ab17e1620e39743e0c1a4542cf79aeffbd21189"
+    }
+  ]
+}

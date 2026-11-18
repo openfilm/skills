@@ -1,0 +1,28 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l::before, .l::after { content: ""; position: fixed; pointer-events: none; }
+.l::before { inset: 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.43), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.51), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.53), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.51), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.61), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.53), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.37), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0)),
+    linear-gradient(to bottom, rgb(214, 210, 206) 0% 4.46%, rgb(162, 158, 154) 4.46% 8.18%, rgb(147, 143, 139) 8.18% 11.74%, rgb(217, 213, 209) 11.74% 14.63%, rgb(238, 234, 230) 14.63% 16.38%, rgb(224, 220, 216) 16.38% 20.68%, rgb(211, 207, 203) 20.68% 21.35%, rgb(189, 185, 181) 21.35% 23.45%, rgb(237, 233, 229) 23.45% 25.49%, rgb(221, 217, 213) 25.49% 29.71%, rgb(166, 162, 158) 29.71% 30.41%, rgb(225, 221, 217) 30.41% 32.05%, rgb(168, 164, 160) 32.05% 33.26%, rgb(190, 186, 182) 33.26% 38.82%, rgb(165, 161, 157) 38.82% 39.83%, rgb(231, 227, 223) 39.83% 42.01%, rgb(183, 179, 175) 42.01% 47.54%, rgb(168, 164, 160) 47.54% 50.07%, rgb(162, 158, 154) 50.07% 55.02%, rgb(217, 213, 209) 55.02% 60.01%, rgb(194, 190, 186) 60.01% 64.64%, rgb(209, 205, 201) 64.64% 65.93%, rgb(208, 204, 200) 65.93% 69.42%, rgb(173, 169, 165) 69.42% 73.92%, rgb(205, 201, 197) 73.92% 74.56%, rgb(241, 237, 233) 74.56% 76.87%, rgb(177, 173, 169) 76.87% 81.84%, rgb(165, 161, 157) 81.84% 83.31%, rgb(230, 226, 222) 83.31% 85.31%, rgb(248, 244, 240) 85.31% 85.98%, rgb(177, 173, 169) 85.98% 90.37%, rgb(173, 169, 165) 90.37% 94.27%, rgb(146, 142, 138) 94.27% 95.27%, rgb(219, 215, 211) 95.27% 98.5%, rgb(166, 162, 158) 98.5% 100%);
+  background-size: 28.47vw 1.13vh, 84.96vw 1.27vh, 62.81vw 0.38vh, 42.65vw 1.17vh, 81.39vw 1.02vh, 91.98vw 0.64vh, 79.85vw 1.37vh, 53.21vw 0.31vh, 78.68vw 0.31vh, 82.88vw 0.5vh, 71.44vw 0.56vh, 93.93vw 1.02vh, 68.29vw 1.04vh, 48.44vw 1.02vh, 100% 100%;
+  background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, no-repeat;
+  filter: blur(1.1vh);
+  animation: wpa 700ms linear both, wpo 700ms linear both; }
+.l::after { top: 0; bottom: 0; left: 0; width: 60vw;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.55) 50%, rgba(255, 255, 255, 0));
+  animation: wpg 700ms cubic-bezier(0.5, 0, 0.5, 1) both; }
+@keyframes wpa {
+  0% { background-position: 28.52vw 95.39vh, 95.65vw 57.89vh, 52.95vw 29.4vh, 8.01vw 13.86vh, 9.76vw 41.25vh, 74.42vw 70.28vh, 11.14vw 60.57vh, 91.78vw 42.13vh, 10.07vw 81.64vh, 10.09vw 59.65vh, 23.98vw 68.13vh, 74.23vw 45.29vh, 14.47vw 1.93vh, 59.35vw 94.88vh, 0 0; }
+  100% { background-position: -428.41vw 95.39vh, -474.26vw 57.89vh, -472.68vw 29.4vh, -477.29vw 13.86vh, -553.03vw 41.25vh, -509.55vw 70.28vh, -548.55vw 60.57vh, -414.64vw 42.13vh, -547.29vw 81.64vh, -555.67vw 59.65vh, -518.9vw 68.13vh, -513.62vw 45.29vh, -522.12vw 1.93vh, -437.54vw 94.88vh, 0 0; }
+}
+@keyframes wpo {
+  0% { opacity: 0; animation-timing-function: cubic-bezier(0.6, 0, 0.9, 0.4); }
+  40%, 60% { opacity: 1; animation-timing-function: cubic-bezier(0.1, 0.6, 0.4, 1); }
+  100% { opacity: 0; }
+}
+@keyframes wpg {
+  0% { transform: translateX(110vw); opacity: 0; }
+  30% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translateX(-170vw); opacity: 0; }
+}

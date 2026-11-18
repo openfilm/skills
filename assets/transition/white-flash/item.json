@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "White Flash",
+    "zh-CN": "闪白",
+    "ja": "フラッシュ",
+    "ko": "화이트 플래시",
+    "es": "Destello blanco"
+  },
+  "about": "A glow swells from the middle and the frame flashes white on the cut, then fades fast. The classic flash cut for beats, reveals and memories.",
+  "tags": [
+    "flash",
+    "white",
+    "quick",
+    "beat",
+    "bright",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 1103
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 75298
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 519739
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 600
+}

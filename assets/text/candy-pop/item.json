@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Candy Pop",
+    "zh-CN": "糖果花字",
+    "ja": "キャンディポップ",
+    "ko": "캔디 팝",
+    "es": "Caramelo"
+  },
+  "about": "Pink-to-yellow candy fill with a thick white outline and a hard purple shadow. For playful highlights in vlogs and variety edits.",
+  "tags": [
+    "variety",
+    "cute",
+    "bright"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 304
+    }
+  ]
+}

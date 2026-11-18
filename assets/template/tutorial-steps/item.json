@@ -1,0 +1,101 @@
+{
+  "cat": "template",
+  "name": {
+    "en": "Step-by-step tutorial",
+    "zh-CN": "分步教程",
+    "ja": "ステップ解説",
+    "ko": "단계별 튜토리얼",
+    "es": "Tutorial paso a paso"
+  },
+  "about": "13 s, three slots: a chapter card, numbered step lower thirds with timers, a tip bubble, a progress bar along the top, clean push transitions and a check-mark end card. For how-tos.",
+  "tags": [
+    "tutorial",
+    "how-to",
+    "steps",
+    "explainer",
+    "lower-third",
+    "clean"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "template.json",
+  "durationMs": 13000,
+  "files": [
+    {
+      "path": "template.json",
+      "bytes": 2595
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 824794
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 268057
+    },
+    {
+      "path": "example-1.jpg",
+      "bytes": 222500
+    },
+    {
+      "path": "example-2.jpg",
+      "bytes": 199281
+    },
+    {
+      "path": "example-3.jpg",
+      "bytes": 196281
+    },
+    {
+      "path": "chapter.css",
+      "bytes": 1768
+    },
+    {
+      "path": "chapter.html",
+      "bytes": 221
+    },
+    {
+      "path": "done.css",
+      "bytes": 1690
+    },
+    {
+      "path": "done.html",
+      "bytes": 175
+    },
+    {
+      "path": "progress.css",
+      "bytes": 438
+    },
+    {
+      "path": "progress.html",
+      "bytes": 73
+    },
+    {
+      "path": "slide.css",
+      "bytes": 480
+    },
+    {
+      "path": "slide.html",
+      "bytes": 70
+    },
+    {
+      "path": "step.css",
+      "bytes": 1783
+    },
+    {
+      "path": "step.html",
+      "bytes": 230
+    },
+    {
+      "path": "tip.css",
+      "bytes": 1298
+    },
+    {
+      "path": "tip.html",
+      "bytes": 105
+    }
+  ]
+}

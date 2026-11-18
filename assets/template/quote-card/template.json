@@ -1,0 +1,13 @@
+{"clips": [
+  {"track": 0, "at": 0.4, "time": [0, 4.0], "page": "quote", "size": {"w": 1600, "h": 800}, "place": {"x": 0.5, "y": 0.46, "fit": 0.66},
+    "texts": {".t1": "The best time to start was yesterday. The next best time is now.", ".t2": "ANONYMOUS"},
+    "props": [{"name": "Quote", "type": "text", "at": ".t1"}, {"name": "Author", "type": "text", "at": ".t2"}]},
+  {"track": 0, "at": 4.8, "time": [0, 4.2], "page": "quote", "size": {"w": 1600, "h": 800}, "place": {"x": 0.5, "y": 0.46, "fit": 0.66},
+    "texts": {".t1": "Small steps, every day.", ".t2": "YOUR NAME"},
+    "props": [{"name": "Quote", "type": "text", "at": ".t1"}, {"name": "Author", "type": "text", "at": ".t2"}], "fade": [0, 0.5]},
+  {"track": 1, "at": 0.6, "time": [0, 8.4], "page": "handle", "size": {"w": 1000, "h": 100}, "place": {"x": 0.5, "y": 0.92, "fit": 0.055},
+    "texts": {".t1": "@yourname · daily words"}, "props": [{"name": "Signature", "type": "text", "at": ".t1"}], "fade": [0, 0.5]},
+  {"track": 2, "at": 0, "time": [0, 9], "page": "scrim", "fade": [0, 0.5]},
+  {"track": 3, "at": 4.2, "time": [0, 4.8], "picture": "example-2", "fade": [0.9, 0.6]},
+  {"track": 4, "at": 0, "time": [0, 5.1], "picture": "example-1"}
+]}

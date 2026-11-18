@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Ice Cool",
+    "zh-CN": "冰蓝花字",
+    "ja": "アイスクール",
+    "ko": "아이스 쿨",
+    "es": "Hielo"
+  },
+  "about": "Icy white-to-blue fill with a deep navy outline. For cool, calm or chilly moments and tech reveals.",
+  "tags": [
+    "variety",
+    "cool",
+    "blue"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 324
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+/* A band of party stripes rushes across the frame and covers the cut at its middle (0.4 s of 0.8 s). */
+.w { position: fixed; inset: 0; overflow: hidden; }
+.s { position: absolute; top: -50%; bottom: -50%; left: -30%; width: 160%;
+  background: repeating-linear-gradient(60deg, #ff5c8a 0 7vh, #ffd23f 7vh 14vh, #3ec5a8 14vh 21vh, #7b6cff 21vh 28vh, #fff4f8 28vh 35vh);
+  animation: run 0.8s cubic-bezier(0.75, 0, 0.25, 1) both; }
+@keyframes run { 0% { transform: translateX(105%) rotate(-8deg); } 42%, 58% { transform: translateX(0) rotate(-8deg); } 100% { transform: translateX(-105%) rotate(-8deg); } }

@@ -1,0 +1,93 @@
+{
+  "cat": "template",
+  "name": {
+    "en": "Event announcement",
+    "zh-CN": "活动预告",
+    "ja": "イベント告知",
+    "ko": "이벤트 공지",
+    "es": "Anuncio de evento"
+  },
+  "about": "12 s, three slots: a save-the-date title, a flip-down calendar page, a venue card, tile-grid transitions and a notched ticket call to action. For meetups, workshops and events.",
+  "tags": [
+    "event",
+    "announcement",
+    "promo",
+    "calendar",
+    "meetup",
+    "bold"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "template.json",
+  "durationMs": 12000,
+  "files": [
+    {
+      "path": "template.json",
+      "bytes": 1875
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1446318
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 161806
+    },
+    {
+      "path": "example-1.jpg",
+      "bytes": 353063
+    },
+    {
+      "path": "example-2.jpg",
+      "bytes": 102885
+    },
+    {
+      "path": "example-3.jpg",
+      "bytes": 151884
+    },
+    {
+      "path": "cta.css",
+      "bytes": 1855
+    },
+    {
+      "path": "cta.html",
+      "bytes": 217
+    },
+    {
+      "path": "date-block.css",
+      "bytes": 1569
+    },
+    {
+      "path": "date-block.html",
+      "bytes": 214
+    },
+    {
+      "path": "grid-wipe.css",
+      "bytes": 2457
+    },
+    {
+      "path": "grid-wipe.html",
+      "bytes": 702
+    },
+    {
+      "path": "info.css",
+      "bytes": 1596
+    },
+    {
+      "path": "info.html",
+      "bytes": 237
+    },
+    {
+      "path": "save-date.css",
+      "bytes": 1929
+    },
+    {
+      "path": "save-date.html",
+      "bytes": 202
+    }
+  ]
+}

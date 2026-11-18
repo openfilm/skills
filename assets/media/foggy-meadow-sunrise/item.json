@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Foggy Meadow at Sunrise",
+    "zh-CN": "晨雾中的草甸日出",
+    "ja": "霧の草原の日の出",
+    "ko": "안개 낀 초원의 일출",
+    "es": "Prado con niebla al amanecer"
+  },
+  "about": "A pale sun rises over a line of oak trees while a band of mist lies over a meadow of wildflowers. Sherburne National Wildlife Refuge, Minnesota.",
+  "tags": [
+    "fog",
+    "sunrise",
+    "meadow",
+    "trees",
+    "morning",
+    "calm"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Foggy_sunrise_in_Sherburne_National_Wildlife_Refuge.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 993617,
+      "sha256": "42e31c44ba392fd2783021aa2e55d621f0377ea8b77f77189af4e9e5ae9b9511"
+    }
+  ]
+}

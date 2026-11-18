@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Strobe",
+    "zh-CN": "频闪",
+    "ja": "ストロボ",
+    "ko": "스트로브",
+    "es": "Estroboscopio"
+  },
+  "about": "White strobe flashes come faster into the cut, hold white over it, then flicker twice after. For music videos, sport and high-energy beats.",
+  "tags": [
+    "strobe",
+    "flash",
+    "flicker",
+    "energy",
+    "music",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 640
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 51926
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 564720
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 700
+}

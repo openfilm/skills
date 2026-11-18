@@ -1,0 +1,86 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l::before { content: ""; position: fixed; inset: -12%; pointer-events: none;
+  background: repeating-conic-gradient(from 29.18deg at 37.18% 76.8%, rgba(255, 255, 255, 0.054) 0 0.00071deg, rgba(0, 0, 0, 0.066) 0.00083deg 0.00137deg),
+    repeating-conic-gradient(from 18.89deg at 28.01% 73.02%, rgba(255, 255, 255, 0.042) 0 0.00093deg, rgba(0, 0, 0, 0.048) 0.0011deg 0.00191deg);
+  filter: blur(0.05vmin); animation: sg 1000ms linear infinite; }
+@keyframes sg {
+  0% { transform: translate(3.52vmin, -7.38vmin) rotate(-0.088deg); animation-timing-function: steps(1, end); }
+  4.17% { transform: translate(-6.8vmin, 4.21vmin) rotate(-0.038deg); animation-timing-function: steps(1, end); }
+  8.33% { transform: translate(-0.21vmin, -5.41vmin) rotate(-0.473deg); animation-timing-function: steps(1, end); }
+  12.5% { transform: translate(0.84vmin, -4.88vmin) rotate(-0.833deg); animation-timing-function: steps(1, end); }
+  16.67% { transform: translate(3.42vmin, -0.37vmin) rotate(0.587deg); animation-timing-function: steps(1, end); }
+  20.83% { transform: translate(6.08vmin, -2.82vmin) rotate(0.381deg); animation-timing-function: steps(1, end); }
+  25% { transform: translate(-3.41vmin, 2.75vmin) rotate(0.053deg); animation-timing-function: steps(1, end); }
+  29.17% { transform: translate(5.31vmin, 0.64vmin) rotate(-0.977deg); animation-timing-function: steps(1, end); }
+  33.33% { transform: translate(6.04vmin, -3.03vmin) rotate(0.874deg); animation-timing-function: steps(1, end); }
+  37.5% { transform: translate(4.31vmin, -1.27vmin) rotate(0.429deg); animation-timing-function: steps(1, end); }
+  41.67% { transform: translate(-5.53vmin, -2.11vmin) rotate(0.445deg); animation-timing-function: steps(1, end); }
+  45.83% { transform: translate(-7.98vmin, -7.87vmin) rotate(-0.043deg); animation-timing-function: steps(1, end); }
+  50% { transform: translate(5.81vmin, 1.65vmin) rotate(0.364deg); animation-timing-function: steps(1, end); }
+  54.17% { transform: translate(4.58vmin, 1.35vmin) rotate(0.164deg); animation-timing-function: steps(1, end); }
+  58.33% { transform: translate(-6.87vmin, -2.04vmin) rotate(0.062deg); animation-timing-function: steps(1, end); }
+  62.5% { transform: translate(5.42vmin, -1.39vmin) rotate(-0.072deg); animation-timing-function: steps(1, end); }
+  66.67% { transform: translate(-0.05vmin, 1.13vmin) rotate(0.552deg); animation-timing-function: steps(1, end); }
+  70.83% { transform: translate(5.69vmin, 2.63vmin) rotate(-0.255deg); animation-timing-function: steps(1, end); }
+  75% { transform: translate(3.02vmin, 3.2vmin) rotate(-0.067deg); animation-timing-function: steps(1, end); }
+  79.17% { transform: translate(7.66vmin, 6.09vmin) rotate(0.425deg); animation-timing-function: steps(1, end); }
+  83.33% { transform: translate(2.83vmin, 7.24vmin) rotate(0.53deg); animation-timing-function: steps(1, end); }
+  87.5% { transform: translate(-7.09vmin, -6.94vmin) rotate(0.075deg); animation-timing-function: steps(1, end); }
+  91.67% { transform: translate(5.85vmin, -2.48vmin) rotate(0.08deg); animation-timing-function: steps(1, end); }
+  95.83% { transform: translate(-3.36vmin, -0.59vmin) rotate(0.104deg); animation-timing-function: steps(1, end); }
+  100% { transform: translate(3.52vmin, -7.38vmin) rotate(-0.088deg); }
+}
+.l::after { content: ""; position: fixed; inset: 0; background-image: linear-gradient(to right, rgba(255, 252, 240, 0), rgba(255, 252, 240, 0.6), rgba(255, 252, 240, 0)), linear-gradient(to right, rgba(255, 252, 240, 0), rgba(255, 252, 240, 0.6), rgba(255, 252, 240, 0)), linear-gradient(to right, rgba(20, 15, 10, 0), rgba(20, 15, 10, 0.55), rgba(20, 15, 10, 0)), linear-gradient(to right, rgba(255, 252, 240, 0), rgba(255, 252, 240, 0.6), rgba(255, 252, 240, 0)), linear-gradient(to right, rgba(255, 252, 240, 0), rgba(255, 252, 240, 0.6), rgba(255, 252, 240, 0)), linear-gradient(to right, rgba(20, 15, 10, 0), rgba(20, 15, 10, 0.55), rgba(20, 15, 10, 0)), linear-gradient(to right, rgba(255, 252, 240, 0), rgba(255, 252, 240, 0.6), rgba(255, 252, 240, 0)), linear-gradient(to right, rgba(255, 250, 235, 0), rgba(255, 250, 235, 0.35), rgba(255, 250, 235, 0)); background-repeat: no-repeat; filter: blur(0.04vmin);
+  animation: sc 4000ms linear infinite; }
+@keyframes sc {
+  0% { background-size: 0 0, 0 0, 0.21vw 100vh, 0 0, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 3.33vw 0vh, 0 0, 0 0, 0 0, 0 0, 18vw 0; animation-timing-function: steps(1, end); }
+  2.08% { background-size: 0 0, 0 0, 0.21vw 100vh, 0.17vw 36.14vh, 0 0, 0.24vw 100vh, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 3.54vw 0vh, 94.9vw 26.93vh, 0 0, 10.14vw 0vh, 0 0, 18.47vw 0; animation-timing-function: steps(1, end); }
+  4.17% { background-size: 0.33vw 100vh, 0 0, 0.21vw 100vh, 0.17vw 36.14vh, 0 0, 0.24vw 100vh, 0.25vw 100vh, 0.14vw 100vh; background-position: 29.69vw 0vh, 0 0, 3.7vw 0vh, 95.06vw 26.93vh, 0 0, 10.02vw 0vh, 14.51vw 0vh, 19.04vw 0; animation-timing-function: steps(1, end); }
+  6.25% { background-size: 0.33vw 100vh, 0 0, 0.21vw 100vh, 0.17vw 36.14vh, 0.2vw 100vh, 0 0, 0.25vw 100vh, 0.14vw 100vh; background-position: 29.54vw 0vh, 0 0, 3.95vw 0vh, 95.16vw 26.93vh, 56.52vw 0vh, 0 0, 14.07vw 0vh, 20.25vw 0; animation-timing-function: steps(1, end); }
+  8.33% { background-size: 0.33vw 100vh, 0.19vw 15.99vh, 0.21vw 100vh, 0.17vw 36.14vh, 0.2vw 100vh, 0 0, 0 0, 0.14vw 100vh; background-position: 29.32vw 0vh, 23.1vw 2.11vh, 4.22vw 0vh, 95.32vw 26.93vh, 56.53vw 0vh, 0 0, 0 0, 22.39vw 0; animation-timing-function: steps(1, end); }
+  10.42% { background-size: 0.33vw 100vh, 0.19vw 15.99vh, 0.21vw 100vh, 0.17vw 36.14vh, 0.2vw 100vh, 0 0, 0 0, 0.14vw 100vh; background-position: 29.2vw 0vh, 23.31vw 2.11vh, 4.34vw 0vh, 95.52vw 26.93vh, 56.65vw 0vh, 0 0, 0 0, 24.77vw 0; animation-timing-function: steps(1, end); }
+  12.5% { background-size: 0.33vw 100vh, 0.19vw 15.99vh, 0 0, 0.17vw 36.14vh, 0.2vw 100vh, 0 0, 0 0, 0.14vw 100vh; background-position: 29.11vw 0vh, 23.56vw 2.11vh, 0 0, 95.63vw 26.93vh, 56.8vw 0vh, 0 0, 0 0, 27.23vw 0; animation-timing-function: steps(1, end); }
+  14.58% { background-size: 0 0, 0 0, 0 0, 0.17vw 36.14vh, 0.2vw 100vh, 0 0, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 95.79vw 26.93vh, 56.87vw 0vh, 0 0, 0 0, 30.4vw 0; animation-timing-function: steps(1, end); }
+  16.67% { background-size: 0 0, 0 0, 0 0, 0.17vw 36.14vh, 0.2vw 100vh, 0.24vw 100vh, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 95.84vw 26.93vh, 56.93vw 0vh, 13.71vw 0vh, 0 0, 34.17vw 0; animation-timing-function: steps(1, end); }
+  18.75% { background-size: 0 0, 0 0, 0 0, 0 0, 0.2vw 100vh, 0.24vw 100vh, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 0 0, 57vw 0vh, 13.33vw 0vh, 0 0, 37.83vw 0; animation-timing-function: steps(1, end); }
+  20.83% { background-size: 0.33vw 100vh, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 60.71vw 0vh, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 41.53vw 0; animation-timing-function: steps(1, end); }
+  22.92% { background-size: 0.33vw 100vh, 0 0, 0 0, 0 0, 0 0, 0 0, 0.25vw 26.54vh, 0.14vw 100vh; background-position: 60.41vw 0vh, 0 0, 0 0, 0 0, 0 0, 0 0, 75.42vw 12.84vh, 45.79vw 0; animation-timing-function: steps(1, end); }
+  25% { background-size: 0.33vw 100vh, 0 0, 0 0, 0 0, 0 0, 0 0, 0.25vw 26.54vh, 0.14vw 100vh; background-position: 60.27vw 0vh, 0 0, 0 0, 0 0, 0 0, 0 0, 74.95vw 12.84vh, 50.2vw 0; animation-timing-function: steps(1, end); }
+  27.08% { background-size: 0.33vw 100vh, 0 0, 0.21vw 44.53vh, 0 0, 0 0, 0 0, 0.25vw 26.54vh, 0.14vw 100vh; background-position: 60.12vw 0vh, 0 0, 46.83vw 0.99vh, 0 0, 0 0, 0 0, 74.66vw 12.84vh, 54.16vw 0; animation-timing-function: steps(1, end); }
+  29.17% { background-size: 0 0, 0 0, 0.21vw 44.53vh, 0 0, 0 0, 0 0, 0.25vw 26.54vh, 0.14vw 100vh; background-position: 0 0, 0 0, 47.03vw 0.99vh, 0 0, 0 0, 0 0, 74.18vw 12.84vh, 58.09vw 0; animation-timing-function: steps(1, end); }
+  31.25% { background-size: 0 0, 0 0, 0.21vw 44.53vh, 0 0, 0 0, 0 0, 0.25vw 26.54vh, 0.14vw 100vh; background-position: 0 0, 0 0, 47.17vw 0.99vh, 0 0, 0 0, 0 0, 73.75vw 12.84vh, 62.32vw 0; animation-timing-function: steps(1, end); }
+  33.33% { background-size: 0.33vw 100vh, 0.19vw 25.22vh, 0.21vw 44.53vh, 0 0, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 24.65vw 0vh, 94.21vw 58.27vh, 47.35vw 0.99vh, 0 0, 0 0, 0 0, 0 0, 66.18vw 0; animation-timing-function: steps(1, end); }
+  35.42% { background-size: 0.33vw 100vh, 0.19vw 25.22vh, 0.21vw 44.53vh, 0 0, 0.2vw 41.68vh, 0 0, 0 0, 0.14vw 100vh; background-position: 24.8vw 0vh, 93.83vw 58.27vh, 47.47vw 0.99vh, 0 0, 15.76vw 48.03vh, 0 0, 0 0, 69.36vw 0; animation-timing-function: steps(1, end); }
+  37.5% { background-size: 0.33vw 100vh, 0.19vw 25.22vh, 0 0, 0 0, 0.2vw 41.68vh, 0.24vw 100vh, 0 0, 0.14vw 100vh; background-position: 24.88vw 0vh, 93.5vw 58.27vh, 0 0, 0 0, 15.79vw 48.03vh, 74.56vw 0vh, 0 0, 72.48vw 0; animation-timing-function: steps(1, end); }
+  39.58% { background-size: 0.33vw 100vh, 0 0, 0 0, 0.17vw 47.16vh, 0.2vw 41.68vh, 0.24vw 100vh, 0 0, 0.14vw 100vh; background-position: 24.95vw 0vh, 0 0, 0 0, 43.22vw 46.27vh, 15.78vw 48.03vh, 74.67vw 0vh, 0 0, 75.54vw 0; animation-timing-function: steps(1, end); }
+  41.67% { background-size: 0.33vw 100vh, 0 0, 0 0, 0.17vw 47.16vh, 0.2vw 41.68vh, 0.24vw 100vh, 0 0, 0.14vw 100vh; background-position: 24.97vw 0vh, 0 0, 0 0, 43.63vw 46.27vh, 15.88vw 48.03vh, 74.92vw 0vh, 0 0, 77.82vw 0; animation-timing-function: steps(1, end); }
+  43.75% { background-size: 0 0, 0 0, 0 0, 0.17vw 47.16vh, 0.2vw 41.68vh, 0.24vw 100vh, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 44.06vw 46.27vh, 15.89vw 48.03vh, 75.03vw 0vh, 0 0, 79.38vw 0; animation-timing-function: steps(1, end); }
+  45.83% { background-size: 0 0, 0 0, 0 0, 0.17vw 47.16vh, 0.2vw 41.68vh, 0.24vw 100vh, 0.25vw 100vh, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 44.49vw 46.27vh, 15.99vw 48.03vh, 75.06vw 0vh, 35.32vw 0vh, 80.85vw 0; animation-timing-function: steps(1, end); }
+  47.92% { background-size: 0 0, 0 0, 0 0, 0.17vw 47.16vh, 0 0, 0 0, 0.25vw 100vh, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 44.9vw 46.27vh, 0 0, 0 0, 34.78vw 0vh, 81.92vw 0; animation-timing-function: steps(1, end); }
+  50% { background-size: 0 0, 0 0, 0 0, 0.17vw 47.16vh, 0 0, 0 0, 0.25vw 100vh, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 45.2vw 46.27vh, 0 0, 0 0, 34.25vw 0vh, 82.01vw 0; animation-timing-function: steps(1, end); }
+  52.08% { background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 81.53vw 0; animation-timing-function: steps(1, end); }
+  54.17% { background-size: 0 0, 0 0, 0.21vw 100vh, 0 0, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 47.02vw 0vh, 0 0, 0 0, 0 0, 0 0, 80.95vw 0; animation-timing-function: steps(1, end); }
+  56.25% { background-size: 0 0, 0 0, 0.21vw 100vh, 0 0, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 47.47vw 0vh, 0 0, 0 0, 0 0, 0 0, 79.75vw 0; animation-timing-function: steps(1, end); }
+  58.33% { background-size: 0.33vw 100vh, 0.19vw 100vh, 0.21vw 100vh, 0 0, 0 0, 0 0, 0.25vw 36.04vh, 0.14vw 100vh; background-position: 34.29vw 0vh, 70.82vw 0vh, 47.9vw 0vh, 0 0, 0 0, 0 0, 40.83vw 29.53vh, 77.62vw 0; animation-timing-function: steps(1, end); }
+  60.42% { background-size: 0.33vw 100vh, 0.19vw 100vh, 0.21vw 100vh, 0 0, 0.2vw 100vh, 0 0, 0.25vw 36.04vh, 0.14vw 100vh; background-position: 34.11vw 0vh, 70.75vw 0vh, 48.38vw 0vh, 0 0, 79.09vw 0vh, 0 0, 40.41vw 29.53vh, 75.22vw 0; animation-timing-function: steps(1, end); }
+  62.5% { background-size: 0.33vw 100vh, 0.19vw 100vh, 0.21vw 100vh, 0 0, 0.2vw 100vh, 0.24vw 25.36vh, 0.25vw 36.04vh, 0.14vw 100vh; background-position: 33.97vw 0vh, 70.69vw 0vh, 48.72vw 0vh, 0 0, 79.22vw 0vh, 55.63vw 32.76vh, 40.07vw 29.53vh, 72.76vw 0; animation-timing-function: steps(1, end); }
+  64.58% { background-size: 0 0, 0.19vw 100vh, 0.21vw 100vh, 0 0, 0.2vw 100vh, 0.24vw 25.36vh, 0.25vw 36.04vh, 0.14vw 100vh; background-position: 0 0, 70.5vw 0vh, 49.24vw 0vh, 0 0, 79.49vw 0vh, 55.77vw 32.76vh, 39.68vw 29.53vh, 69.61vw 0; animation-timing-function: steps(1, end); }
+  66.67% { background-size: 0 0, 0.19vw 100vh, 0.21vw 100vh, 0.17vw 100vh, 0 0, 0.24vw 25.36vh, 0 0, 0.14vw 100vh; background-position: 0 0, 70.41vw 0vh, 49.62vw 0vh, 64.94vw 0vh, 0 0, 56.09vw 32.76vh, 0 0, 65.83vw 0; animation-timing-function: steps(1, end); }
+  68.75% { background-size: 0 0, 0.19vw 100vh, 0 0, 0.17vw 100vh, 0 0, 0.24vw 25.36vh, 0 0, 0.14vw 100vh; background-position: 0 0, 70.27vw 0vh, 0 0, 65.19vw 0vh, 0 0, 56.38vw 32.76vh, 0 0, 62.16vw 0; animation-timing-function: steps(1, end); }
+  70.83% { background-size: 0 0, 0.19vw 100vh, 0 0, 0.17vw 100vh, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 0 0, 70.23vw 0vh, 0 0, 65.34vw 0vh, 0 0, 0 0, 0 0, 58.47vw 0; animation-timing-function: steps(1, end); }
+  72.92% { background-size: 0 0, 0 0, 0 0, 0.17vw 100vh, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 65.65vw 0vh, 0 0, 0 0, 0 0, 54.21vw 0; animation-timing-function: steps(1, end); }
+  75% { background-size: 0 0, 0 0, 0 0, 0.17vw 100vh, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 65.93vw 0vh, 0 0, 0 0, 0 0, 49.8vw 0; animation-timing-function: steps(1, end); }
+  77.08% { background-size: 0 0, 0 0, 0 0, 0.17vw 100vh, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 66.14vw 0vh, 0 0, 0 0, 0 0, 45.84vw 0; animation-timing-function: steps(1, end); }
+  79.17% { background-size: 0 0, 0 0, 0 0, 0.17vw 100vh, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 66.4vw 0vh, 0 0, 0 0, 0 0, 41.91vw 0; animation-timing-function: steps(1, end); }
+  81.25% { background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0.24vw 41.89vh, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 96.09vw 2.29vh, 0 0, 37.69vw 0; animation-timing-function: steps(1, end); }
+  83.33% { background-size: 0 0, 0.19vw 100vh, 0 0, 0 0, 0.2vw 100vh, 0.24vw 41.89vh, 0 0, 0.14vw 100vh; background-position: 0 0, 55.35vw 0vh, 0 0, 0 0, 85.31vw 0vh, 96.59vw 2.29vh, 0 0, 33.82vw 0; animation-timing-function: steps(1, end); }
+  85.42% { background-size: 0 0, 0.19vw 100vh, 0 0, 0 0, 0.2vw 100vh, 0.24vw 41.89vh, 0.25vw 46.33vh, 0.14vw 100vh; background-position: 0 0, 55.89vw 0vh, 0 0, 0 0, 85.25vw 0vh, 97.01vw 2.29vh, 17.03vw 10.48vh, 30.63vw 0; animation-timing-function: steps(1, end); }
+  87.5% { background-size: 0.33vw 46.79vh, 0 0, 0 0, 0 0, 0.2vw 100vh, 0.24vw 41.89vh, 0.25vw 46.33vh, 0.14vw 100vh; background-position: 73.84vw 55.29vh, 0 0, 0 0, 0 0, 85.34vw 0vh, 97.47vw 2.29vh, 16.65vw 10.48vh, 27.52vw 0; animation-timing-function: steps(1, end); }
+  89.58% { background-size: 0.33vw 46.79vh, 0 0, 0 0, 0 0, 0.2vw 100vh, 0.24vw 41.89vh, 0.25vw 46.33vh, 0.14vw 100vh; background-position: 73.54vw 55.29vh, 0 0, 0 0, 0 0, 85.27vw 0vh, 97.87vw 2.29vh, 16.32vw 10.48vh, 24.46vw 0; animation-timing-function: steps(1, end); }
+  91.67% { background-size: 0.33vw 46.79vh, 0 0, 0.21vw 100vh, 0 0, 0.2vw 100vh, 0.24vw 41.89vh, 0.25vw 46.33vh, 0.14vw 100vh; background-position: 73.36vw 55.29vh, 0 0, 60.3vw 0vh, 0 0, 85.22vw 0vh, 98.36vw 2.29vh, 16.01vw 10.48vh, 22.17vw 0; animation-timing-function: steps(1, end); }
+  93.75% { background-size: 0.33vw 46.79vh, 0 0, 0.21vw 100vh, 0 0, 0.2vw 100vh, 0.24vw 41.89vh, 0.25vw 46.33vh, 0.14vw 100vh; background-position: 73.08vw 55.29vh, 0 0, 60.24vw 0vh, 0 0, 85.14vw 0vh, 98.75vw 2.29vh, 15.61vw 10.48vh, 20.61vw 0; animation-timing-function: steps(1, end); }
+  95.83% { background-size: 0.33vw 46.79vh, 0 0, 0.21vw 100vh, 0.17vw 22.07vh, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 72.86vw 55.29vh, 0 0, 60.1vw 0vh, 56.49vw 51.8vh, 0 0, 0 0, 0 0, 19.16vw 0; animation-timing-function: steps(1, end); }
+  97.92% { background-size: 0.33vw 46.79vh, 0.19vw 100vh, 0.21vw 100vh, 0.17vw 22.07vh, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 72.73vw 55.29vh, 68.6vw 0vh, 60.04vw 0vh, 55.91vw 51.8vh, 0 0, 0 0, 0 0, 18.08vw 0; animation-timing-function: steps(1, end); }
+  100% { background-size: 0 0, 0 0, 0.21vw 100vh, 0 0, 0 0, 0 0, 0 0, 0.14vw 100vh; background-position: 0 0, 0 0, 3.33vw 0vh, 0 0, 0 0, 0 0, 0 0, 18vw 0; }
+}

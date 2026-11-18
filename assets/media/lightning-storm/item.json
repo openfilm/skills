@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Lightning Storm Time-lapse",
+    "zh-CN": "雷暴延时",
+    "ja": "雷雨のタイムラプス",
+    "ko": "번개 폭풍 타임랩스",
+    "es": "Tormenta eléctrica, time-lapse"
+  },
+  "about": "A towering storm cloud flickers with lightning over dark hills as dusk turns to night, in a wide time-lapse over Colorado.",
+  "tags": [
+    "lightning",
+    "storm",
+    "time-lapse",
+    "clouds",
+    "night",
+    "weather"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Lightning_storm_over_Colorado,_USA.ogg"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 16800,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 11282199,
+      "sha256": "638ebc8b80c6bba2e95038a034bb716773cfa153049fd2b0221d39704aca6deb"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 47079
+    }
+  ]
+}

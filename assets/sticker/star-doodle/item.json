@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Star Doodle",
+    "zh-CN": "手绘星星",
+    "ja": "星の落書き",
+    "ko": "별 낙서",
+    "es": "Estrella dibujada"
+  },
+  "about": "A yellow hand-drawn star outline. For favourites and highlights.",
+  "tags": [
+    "star",
+    "doodle",
+    "handdrawn"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "spin",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 30595
+    }
+  ]
+}

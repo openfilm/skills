@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Pastel Dream",
+    "zh-CN": "粉彩梦境",
+    "ja": "パステルドリーム",
+    "ko": "파스텔 드림",
+    "es": "Sueño pastel"
+  },
+  "about": "Soft pastel colour with lifted blacks and a rosy touch. For dreamy, cute and romantic edits.",
+  "tags": [
+    "pastel",
+    "dreamy",
+    "soft"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 206
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 193169
+    }
+  ]
+}

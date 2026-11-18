@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Glow Wipe",
+    "zh-CN": "光边擦除",
+    "ja": "グローワイプ",
+    "ko": "글로우 와이프",
+    "es": "Barrido luminoso"
+  },
+  "about": "A slanted wall of white light with warm glowing edges sweeps from left to right, filling the frame on the cut. A clean, bright wipe for vlogs and travel.",
+  "tags": [
+    "wipe",
+    "glow",
+    "light",
+    "clean",
+    "bright",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 778
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 115199
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 787050
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 900
+}

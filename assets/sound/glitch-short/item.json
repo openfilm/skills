@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Short Glitch",
+    "zh-CN": "短故障",
+    "ja": "短いグリッチ",
+    "ko": "짧은 글리치",
+    "es": "Glitch corto"
+  },
+  "about": "A short digital glitch for a cut or a flicker on screen.",
+  "tags": [
+    "glitch",
+    "digital",
+    "cut"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/am_92/sounds/717346/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 1217,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 25624
+    }
+  ]
+}

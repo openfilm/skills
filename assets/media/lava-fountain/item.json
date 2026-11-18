@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Lava Fountain",
+    "zh-CN": "熔岩喷泉",
+    "ja": "溶岩噴泉",
+    "ko": "용암 분수",
+    "es": "Fuente de lava"
+  },
+  "about": "Bright orange lava fountains roar from a volcanic fissure behind a black spatter cone, under clouds of volcanic gas. Kīlauea, Hawaiʻi, 2018.",
+  "tags": [
+    "lava",
+    "volcano",
+    "eruption",
+    "fire",
+    "hawaii",
+    "geology"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Fountaining_from_Fissure_20_on_May_19,_2018,_around_3-47_PM,_HST._Photos_and....webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 14515,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 18212410,
+      "sha256": "a8a87c56f75437f953cb0690032171fdf33eca9cecbebe025a92b0dac7ff87fe"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 155604
+    }
+  ]
+}

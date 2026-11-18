@@ -1,0 +1,16 @@
+/* A lower third: a little candle with a flickering flame, a moment and the date. 2.2 s. */
+.w { position: fixed; inset: 0; display: flex; align-items: center; padding-left: 4vh; box-sizing: border-box;
+  font-family: 'Arial Rounded MT Bold', 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  animation: out 0.35s 1.85s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.pill { display: flex; align-items: center; gap: 6vh; height: 66vh; padding: 0 10vh 0 9vh; border-radius: 99vh; background: #fff; color: #3a1530;
+  box-shadow: 0 3vh 8vh rgba(0, 0, 0, 0.3); animation: open 0.6s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.candle { position: relative; flex: none; width: 9vh; height: 30vh; margin-top: 14vh; border-radius: 2vh; background: repeating-linear-gradient(-45deg, #ff5c8a 0 3vh, #ffd1e0 3vh 6vh); }
+.flame { position: absolute; left: 50%; top: -15vh; width: 9vh; height: 13vh; margin-left: -4.5vh; border-radius: 50% 50% 50% 50% / 62% 62% 38% 38%;
+  background: radial-gradient(circle at 50% 70%, #fff6c8 0, #ffd23f 45%, #ff9f43 100%); transform-origin: 50% 100%; animation: flick 0.5s 0.3s ease-in-out infinite alternate both; }
+.tx { display: flex; flex-direction: column; gap: 3vh; white-space: nowrap; animation: slide 0.6s 0.25s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.t1 { font-size: 22vh; font-weight: 900; line-height: 1; }
+.t2 { font-size: 11vh; font-weight: 800; line-height: 1; color: #ff5c8a; letter-spacing: 0.14em; }
+@keyframes open { from { clip-path: inset(0 100% 0 0 round 99vh); } to { clip-path: inset(0 0 0 0 round 99vh); } }
+@keyframes flick { from { transform: scale(0.9, 1) rotate(-6deg); } to { transform: scale(1.08, 1.12) rotate(5deg); } }
+@keyframes slide { from { opacity: 0; transform: translateX(-10vh); } }
+@keyframes out { to { opacity: 0; transform: translateY(15%); } }

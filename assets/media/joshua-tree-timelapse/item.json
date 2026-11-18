@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Desert Sunset Time-lapse",
+    "zh-CN": "沙漠日落延时",
+    "ja": "砂漠の夕日タイムラプス",
+    "ko": "사막 일몰 타임랩스",
+    "es": "Atardecer en el desierto, time-lapse"
+  },
+  "about": "Clouds race over a lone Joshua tree as the sun sets behind the mountains and the desert turns to blue dusk. Joshua Tree National Park.",
+  "tags": [
+    "time-lapse",
+    "desert",
+    "sunset",
+    "clouds",
+    "joshua-tree",
+    "national-park"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Timelapse_Joshua_Tree_Clouds_and_Sunset_Near_West_Entrance.webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 15015,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 16533693,
+      "sha256": "d66956f82aa415009449166e663088add5ea94e55789252caa21803f8dc4bd4e"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 395297
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Shape Stack",
+    "zh-CN": "几何叠层",
+    "ja": "シェイプスタック",
+    "ko": "도형 스택",
+    "es": "Formas apiladas"
+  },
+  "about": "Gold, coral and black diamonds spin open from the middle to fill the frame, then diamond holes open in turn onto the next shot. For playful, upbeat promos.",
+  "tags": [
+    "shapes",
+    "geometric",
+    "diamond",
+    "colorful",
+    "playful",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 28845
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 11004
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 417641
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 900
+}

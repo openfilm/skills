@@ -1,0 +1,7 @@
+/* Two plates of colour open from the middle, cover the cut and lift off upwards (cut at 0.4 s of 0.8 s). */
+.w { position: fixed; inset: 0; overflow: hidden; animation: lift 0.8s cubic-bezier(0.7, 0, 0.3, 1) both; }
+.c { position: absolute; inset: 0; }
+.c1 { background: #f2b134; animation: iris 0.8s cubic-bezier(0.6, 0, 0.3, 1) both; }
+.c2 { background: #e4572e; animation: iris 0.8s 0.06s cubic-bezier(0.6, 0, 0.3, 1) both; }
+@keyframes iris { 0% { clip-path: circle(0% at 50% 55%); } 45%, 100% { clip-path: circle(80% at 50% 55%); } }
+@keyframes lift { 0%, 52% { transform: translateY(0); } 100% { transform: translateY(-105%); } }

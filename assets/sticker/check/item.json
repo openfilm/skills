@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Check",
+    "zh-CN": "对勾",
+    "ja": "チェック",
+    "ko": "체크",
+    "es": "Marca"
+  },
+  "about": "A green marker check mark. For done, right answers and pros.",
+  "tags": [
+    "check",
+    "yes",
+    "handdrawn"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "pop",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 17653
+    }
+  ]
+}

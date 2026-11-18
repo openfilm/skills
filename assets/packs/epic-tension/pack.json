@@ -1,0 +1,20 @@
+{
+  "name": {
+    "en": "Epic & Tension",
+    "zh-CN": "史诗与紧张",
+    "ja": "エピックと緊張",
+    "ko": "에픽과 긴장",
+    "es": "Épica y tensión"
+  },
+  "about": "Orchestral and driving tracks for trailers, adventure, chases and action.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "music/adventure",
+    "music/emotional-blockbuster",
+    "music/city-run",
+    "music/action-strike"
+  ],
+  "cover": "cover.jpg"
+}

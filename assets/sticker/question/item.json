@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Question",
+    "zh-CN": "问号",
+    "ja": "はてなマーク",
+    "ko": "물음표",
+    "es": "Pregunta"
+  },
+  "about": "A yellow hand-drawn question mark. For doubts, quizzes and curious moments.",
+  "tags": [
+    "question",
+    "quiz",
+    "handdrawn"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "wiggle",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 18408
+    }
+  ]
+}

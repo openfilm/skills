@@ -1,0 +1,28 @@
+{
+  "name": {
+    "en": "Hand-drawn Marks",
+    "zh-CN": "手绘标注",
+    "ja": "手描きマーク",
+    "ko": "손그림 표시",
+    "es": "Marcas a mano"
+  },
+  "about": "Marker arrows, circles, underlines, checks, crosses, bubbles and focus lines to point things out on screen.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "sticker/arrow-curve",
+    "sticker/arrow-down",
+    "sticker/circle-scribble",
+    "sticker/underline",
+    "sticker/exclamation",
+    "sticker/question",
+    "sticker/check",
+    "sticker/cross",
+    "sticker/star-doodle",
+    "sticker/speech-bubble",
+    "sticker/heart-doodle",
+    "sticker/focus-lines"
+  ],
+  "cover": "cover.jpg"
+}

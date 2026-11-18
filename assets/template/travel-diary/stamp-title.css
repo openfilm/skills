@@ -1,0 +1,18 @@
+/* A trip's title: a passport stamp slams down, the title settles in serif italics, the day below it. 2.7 s. */
+.w { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff;
+  animation: out 0.4s 2.3s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.glow { position: absolute; inset: 4% 6%; background: radial-gradient(closest-side, rgba(8, 20, 30, 0.5), rgba(8, 20, 30, 0)); animation: fade 0.7s both; }
+.stamp { position: relative; display: grid; place-items: center; width: 28vh; height: 28vh; border: 1.4vh solid #ffb347; border-radius: 50%; color: #ffb347;
+  transform: rotate(-12deg); animation: slam 0.5s 0.05s cubic-bezier(0.5, 0, 0.6, 1.4) both; }
+.ring { position: absolute; inset: 1.6vh; border: 0.5vh dashed #ffb347; border-radius: 50%; }
+.t3 { position: relative; width: 19vh; text-align: center; font: 800 4.2vh/1.15 -apple-system, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif; letter-spacing: 0.12em; }
+.t1 { position: relative; margin: 3vh 0 2vh; font: italic 400 17vh/1.05 Georgia, 'Times New Roman', 'Songti SC', 'STSong', 'Noto Serif SC', serif; white-space: nowrap;
+  text-shadow: 0 1vh 4vh rgba(0, 0, 0, 0.4); animation: settle 1s 0.35s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.t2 { position: relative; margin: 0; padding: 1.6vh 3.4vh 1.6vh 4.4vh; border-top: 0.4vh solid rgba(255, 255, 255, 0.8); border-bottom: 0.4vh solid rgba(255, 255, 255, 0.8);
+  font: 700 4.6vh/1 -apple-system, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif; letter-spacing: 0.34em; white-space: nowrap;
+  animation: open 0.8s 0.85s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+@keyframes fade { from { opacity: 0; } }
+@keyframes slam { 0% { opacity: 0; transform: rotate(-30deg) scale(2.4); } 70% { opacity: 1; transform: rotate(-10deg) scale(0.92); } 100% { transform: rotate(-12deg) scale(1); } }
+@keyframes settle { from { opacity: 0; transform: scale(1.12); filter: blur(1.4vh); letter-spacing: 0.08em; } }
+@keyframes open { from { opacity: 0; clip-path: inset(0 50% 0 50%); } to { clip-path: inset(0 0 0 0); } }
+@keyframes out { to { opacity: 0; transform: scale(1.04); filter: blur(1vh); } }

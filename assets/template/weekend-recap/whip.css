@@ -1,0 +1,11 @@
+/* A whip pan: light streaks shoot across and a bright flash hides the cut at its middle (0.25 s of 0.5 s). */
+.w { position: fixed; inset: 0; overflow: hidden; }
+.k { position: absolute; left: 0; width: 140%; background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0)); animation: streak 0.5s cubic-bezier(0.6, 0, 0.4, 1) both; }
+.k1 { top: 8%; height: 9%; }
+.k2 { top: 26%; height: 16%; animation-delay: 0.03s; }
+.k3 { top: 46%; height: 12%; animation-delay: 0.01s; }
+.k4 { top: 62%; height: 18%; animation-delay: 0.04s; }
+.k5 { top: 86%; height: 8%; animation-delay: 0.02s; }
+.flash { position: absolute; inset: 0; background: #fffdf5; animation: flash 0.5s linear both; }
+@keyframes streak { from { transform: translateX(100%); } to { transform: translateX(-140%); } }
+@keyframes flash { 0%, 20% { opacity: 0; } 45%, 55% { opacity: 0.96; } 85%, 100% { opacity: 0; } }

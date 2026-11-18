@@ -1,0 +1,25 @@
+{
+  "name": {
+    "en": "Ambient Particles",
+    "zh-CN": "氛围粒子",
+    "ja": "空気感パーティクル",
+    "ko": "분위기 파티클",
+    "es": "Partículas ambientales"
+  },
+  "about": "Particles to lay over a shot for mood: snow, rain, embers, bokeh, dust in the light, fireflies, confetti, ash and gold glitter. Each loops seamlessly, so stretch it over any length.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "effect/snowfall",
+    "effect/rain-streaks",
+    "effect/rising-embers",
+    "effect/bokeh-drift",
+    "effect/dust-motes",
+    "effect/fireflies",
+    "effect/confetti",
+    "effect/falling-ash",
+    "effect/gold-glitter"
+  ],
+  "cover": "cover.jpg"
+}

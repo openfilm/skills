@@ -1,0 +1,21 @@
+{
+  "name": {
+    "en": "Life vlog templates",
+    "zh-CN": "生活 Vlog 模板",
+    "ja": "ライフVlogテンプレート",
+    "ko": "라이프 브이로그 템플릿",
+    "es": "Plantillas de vlog de vida diaria"
+  },
+  "about": "Five ready-made 10–12 s vlog templates to fill with your own pictures and words: a daily vlog opener, a travel journal, a food review, a birthday party and a weekend recap.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "template/daily-vlog-opener",
+    "template/travel-diary",
+    "template/food-review",
+    "template/birthday-party",
+    "template/weekend-recap"
+  ],
+  "cover": "cover.jpg"
+}

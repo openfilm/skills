@@ -1,0 +1,31 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Barroom Ballet",
+    "zh-CN": "酒馆芭蕾",
+    "ja": "酒場のバレエ",
+    "ko": "술집 발레",
+    "es": "Ballet de taberna"
+  },
+  "about": "A light, comic piece for clumsy, silly or cartoonish scenes.",
+  "tags": [
+    "comedy",
+    "silly",
+    "light"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/comedy/Barroom%20Ballet.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 55100,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 1125313
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": {
+    "en": "Upbeat & Playful",
+    "zh-CN": "轻快与俏皮",
+    "ja": "アップビートと遊び心",
+    "ko": "경쾌하고 장난스럽게",
+    "es": "Alegre y juguetona"
+  },
+  "about": "Bright, groovy and funny tracks for vlogs, products, lifestyle and comedy.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "music/adding-the-sun",
+    "music/downtown-boogie",
+    "music/energizing",
+    "music/backbeat",
+    "music/martini-sunset",
+    "music/flying",
+    "music/comfort-games",
+    "music/busybody",
+    "music/barroom-ballet"
+  ],
+  "cover": "cover.jpg"
+}

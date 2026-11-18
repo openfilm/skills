@@ -1,0 +1,8 @@
+/* A light beam sweeps diagonally over the frame and blooms to white over the cut at its middle (0.4 s of 0.8 s). */
+.w { position: fixed; inset: 0; overflow: hidden; }
+.beam { position: absolute; top: -60%; bottom: -60%; left: 50%; width: 70%; margin-left: -35%;
+  background: linear-gradient(90deg, rgba(139, 123, 255, 0) 0%, rgba(139, 123, 255, 0.55) 25%, rgba(233, 230, 255, 0.95) 45%, #ffffff 50%, rgba(201, 246, 255, 0.95) 55%, rgba(94, 231, 255, 0.5) 75%, rgba(94, 231, 255, 0) 100%);
+  animation: sweep 0.8s cubic-bezier(0.6, 0, 0.4, 1) both; }
+.white { position: absolute; inset: 0; background: #f5f3ff; animation: bloom 0.8s linear both; }
+@keyframes sweep { from { transform: translateX(-140%) rotate(18deg); } to { transform: translateX(140%) rotate(18deg); } }
+@keyframes bloom { 0%, 30% { opacity: 0; } 46%, 54% { opacity: 1; } 80%, 100% { opacity: 0; } }

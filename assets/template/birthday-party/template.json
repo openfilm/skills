@@ -1,0 +1,18 @@
+{"clips": [
+  {"track": 0, "at": 0.4, "time": [0, 3.0], "page": "hb-title", "size": {"w": 1600, "h": 800}, "place": {"x": 0.5, "y": 0.5, "fit": 0.64},
+    "texts": {".t1": "Happy Birthday", ".t2": "MIA TURNS 25"},
+    "props": [{"name": "Title", "type": "text", "at": ".t1"}, {"name": "Name", "type": "text", "at": ".t2"}]},
+  {"track": 0, "at": 4.0, "time": [0, 2.2], "page": "wish-note", "size": {"w": 1200, "h": 340}, "place": {"x": 0.3, "y": 0.84, "fit": 0.24},
+    "texts": {".t1": "Surprise party", ".t2": "NOV 17 · 8 PM"},
+    "props": [{"name": "Moment", "type": "text", "at": ".t1"}, {"name": "Date", "type": "text", "at": ".t2"}]},
+  {"track": 0, "at": 7.1, "time": [0, 2.9], "page": "cheers", "size": {"w": 1600, "h": 800}, "place": {"x": 0.5, "y": 0.5, "fit": 0.62},
+    "texts": {".t1": "Cheers to 25!", ".t2": "THANK YOU FOR COMING"},
+    "props": [{"name": "Toast", "type": "text", "at": ".t1"}, {"name": "Thanks", "type": "text", "at": ".t2"}], "fade": [0, 0.4]},
+  {"track": 1, "at": 0, "time": [0, 3.4], "page": "confetti"},
+  {"track": 1, "at": 6.8, "time": [0, 3.2], "page": "confetti", "fade": [0, 0.4]},
+  {"track": 2, "at": 3.2, "time": [0, 0.8], "page": "stripe-wipe"},
+  {"track": 2, "at": 6.4, "time": [0, 0.8], "page": "stripe-wipe"},
+  {"track": 3, "at": 0, "time": [0, 3.6], "picture": "example-1"},
+  {"track": 3, "at": 3.6, "time": [0, 3.2], "picture": "example-2"},
+  {"track": 3, "at": 6.8, "time": [0, 3.2], "picture": "example-3", "fade": [0, 0.5]}
+]}

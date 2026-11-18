@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Steaming Geyser Basin",
+    "zh-CN": "蒸汽升腾的间歇泉盆地",
+    "ja": "湯気立つ間欠泉盆地",
+    "ko": "김이 오르는 간헐천 분지",
+    "es": "Cuenca de géiseres humeante"
+  },
+  "about": "Great clouds of steam rise from hot springs along a river in Yellowstone on a spring morning, under a blue sky with white clouds.",
+  "tags": [
+    "yellowstone",
+    "steam",
+    "hot-spring",
+    "river",
+    "national-park",
+    "landscape"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Grand_Prismatic_Spring_and_Excelsior_Geyser_Crater_steaming_on_a_spring_morning_(42107875492).jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 2340563,
+      "sha256": "1adfea1f977e7d0f4ade1e218b4c840294f0edd895861bbc0e8d76a2f069111a"
+    }
+  ]
+}

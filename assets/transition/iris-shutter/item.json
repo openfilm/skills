@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Iris Shutter",
+    "zh-CN": "光圈快门",
+    "ja": "アイリスシャッター",
+    "ko": "조리개 셔터",
+    "es": "Diafragma"
+  },
+  "about": "Six camera blades turn closed to a point over the cut, then turn open on the next shot. For photo, camera and behind-the-scenes edits.",
+  "tags": [
+    "iris",
+    "shutter",
+    "camera",
+    "aperture",
+    "photo",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 9375
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 23130
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 438349
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 800
+}

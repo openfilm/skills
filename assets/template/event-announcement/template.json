@@ -1,0 +1,19 @@
+{"clips": [
+  {"track": 0, "at": 0.3, "time": [0, 3.3], "page": "save-date", "size": {"w": 1600, "h": 800}, "place": {"x": 0.5, "y": 0.5, "fit": 0.64},
+    "texts": {".t1": "Design Night Vol. 4", ".t2": "SAVE THE DATE", ".t3": "COMMUNITY MEETUP"},
+    "props": [{"name": "Event", "type": "text", "at": ".t1"}, {"name": "Line", "type": "text", "at": ".t2"}, {"name": "Tag", "type": "text", "at": ".t3"}]},
+  {"track": 0, "at": 4.35, "time": [0, 3.0], "page": "date-block", "size": {"w": 800, "h": 900}, "place": {"x": 0.2, "y": 0.5, "fit": 0.56},
+    "texts": {".t1": "12", ".t2": "DEC", ".t3": "FRI · 7 PM"},
+    "props": [{"name": "Day", "type": "text", "at": ".t1"}, {"name": "Month", "type": "text", "at": ".t2"}, {"name": "When", "type": "text", "at": ".t3"}]},
+  {"track": 0, "at": 8.45, "time": [0, 3.55], "page": "cta", "size": {"w": 1600, "h": 700}, "place": {"x": 0.5, "y": 0.5, "fit": 0.56},
+    "texts": {".t1": "REGISTER NOW", ".t2": "link in bio", ".t3": "FREE ENTRY · LIMITED SEATS"},
+    "props": [{"name": "Button", "type": "text", "at": ".t1"}, {"name": "Where", "type": "text", "at": ".t2"}, {"name": "Line", "type": "text", "at": ".t3"}], "fade": [0, 0.4]},
+  {"track": 1, "at": 3.6, "time": [0, 0.8], "page": "grid-wipe"},
+  {"track": 1, "at": 4.8, "time": [0, 2.5], "page": "info", "size": {"w": 1400, "h": 420}, "place": {"x": 0.66, "y": 0.82, "fit": 0.26},
+    "texts": {".t1": "The Loft · 88 Harbour St", ".t2": "Talks · Demos · Drinks"},
+    "props": [{"name": "Venue", "type": "text", "at": ".t1"}, {"name": "Programme", "type": "text", "at": ".t2"}]},
+  {"track": 1, "at": 7.6, "time": [0, 0.8], "page": "grid-wipe"},
+  {"track": 3, "at": 0, "time": [0, 4.0], "picture": "example-1"},
+  {"track": 3, "at": 4.0, "time": [0, 4.0], "picture": "example-2"},
+  {"track": 3, "at": 8.0, "time": [0, 4.0], "picture": "example-3", "fade": [0, 0.5]}
+]}

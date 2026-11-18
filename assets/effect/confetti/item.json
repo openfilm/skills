@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Confetti",
+    "zh-CN": "彩纸飘落",
+    "ja": "紙吹雪",
+    "ko": "색종이",
+    "es": "Confeti"
+  },
+  "about": "Colorful confetti squares, strips and dots flutter down in several depths. For celebrations, birthdays, wins and announcements.",
+  "tags": [
+    "confetti",
+    "party",
+    "celebration",
+    "birthday",
+    "colorful",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 13637
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 295111
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1017013
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 5000
+}

@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Coffee Shop",
+    "zh-CN": "咖啡馆",
+    "ja": "カフェ",
+    "ko": "카페",
+    "es": "Cafetería"
+  },
+  "about": "A busy coffee shop: voices, cups and a machine, as a bed under a scene.",
+  "tags": [
+    "ambience",
+    "cafe",
+    "indoor"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/coffee-shop-at-the-capucins-s2561.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 150000,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 1832903
+    }
+  ]
+}

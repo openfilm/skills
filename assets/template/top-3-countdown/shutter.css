@@ -1,0 +1,10 @@
+/* A shutter: coloured blades close from top and bottom, meet on the cut and open again (cut at 0.35 s of 0.7 s). */
+.w { position: fixed; inset: 0; overflow: hidden; }
+.b { position: absolute; left: 0; right: 0; height: 51%; }
+.top, .top2 { top: 0; animation: t 0.7s cubic-bezier(0.8, 0, 0.2, 1) both; }
+.bot, .bot2 { bottom: 0; animation: d 0.7s cubic-bezier(0.8, 0, 0.2, 1) both; }
+.top { background: #ffcf33; }
+.bot { background: #ff5d73; }
+.top2, .bot2 { background: #1b1b3a; animation-delay: 0.04s; }
+@keyframes t { 0% { transform: translateY(-101%); } 45%, 55% { transform: translateY(0); } 100% { transform: translateY(-101%); } }
+@keyframes d { 0% { transform: translateY(101%); } 45%, 55% { transform: translateY(0); } 100% { transform: translateY(101%); } }

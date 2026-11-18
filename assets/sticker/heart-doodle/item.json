@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Heart Doodle",
+    "zh-CN": "手绘爱心",
+    "ja": "ハートの落書き",
+    "ko": "하트 낙서",
+    "es": "Corazón dibujado"
+  },
+  "about": "A pink hand-drawn heart outline. For love and favourite moments.",
+  "tags": [
+    "heart",
+    "doodle",
+    "handdrawn"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "pulse",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 27845
+    }
+  ]
+}

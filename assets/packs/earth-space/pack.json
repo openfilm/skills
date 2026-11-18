@@ -1,0 +1,29 @@
+{
+  "name": {
+    "en": "Earth & Space",
+    "zh-CN": "地球与太空",
+    "ja": "地球と宇宙",
+    "ko": "지구와 우주",
+    "es": "La Tierra y el espacio"
+  },
+  "about": "Public-domain footage and pictures from NASA: the Earth from the space station, auroras, the night globe, the Moon's phases, the Sun, a night launch, Earthrise and deep space.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "media/iss-ocean-clouds",
+    "media/iss-sahara-curve",
+    "media/iss-red-sea",
+    "media/iss-desert-limb",
+    "media/iss-into-night",
+    "media/aurora-from-orbit",
+    "media/earth-night-globe",
+    "media/moon-phases",
+    "media/sun-flare",
+    "media/artemis-launch",
+    "media/hubble-deep-field",
+    "media/earthrise",
+    "media/blue-marble"
+  ],
+  "cover": "cover.jpg"
+}

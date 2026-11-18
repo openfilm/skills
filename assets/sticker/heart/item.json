@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Happy Heart",
+    "zh-CN": "开心爱心",
+    "ja": "ハッピーハート",
+    "ko": "행복한 하트",
+    "es": "Corazón feliz"
+  },
+  "about": "A glossy red heart with a happy face and sparkles. For love, likes and warm moments.",
+  "tags": [
+    "heart",
+    "love",
+    "cute"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "pulse",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 636578
+    }
+  ]
+}

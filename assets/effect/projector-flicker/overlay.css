@@ -1,0 +1,234 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l { background: radial-gradient(ellipse 70% 70% at 50% 48%, rgba(255, 240, 210, 0.06) 0%, rgba(0, 0, 0, 0) 45%, rgba(10, 6, 2, 0.45) 100%); }
+.l::before { content: ""; position: fixed; inset: 0; background: #fff6e4; animation: pw 4000ms linear infinite; }
+.l::after { content: ""; position: fixed; inset: 0; background: #0a0703; animation: pd 4000ms linear infinite; }
+@keyframes pw {
+  0% { opacity: 0.025; animation-timing-function: steps(1, end); }
+  1.04% { opacity: 0.026; animation-timing-function: steps(1, end); }
+  2.08% { opacity: 0.082; animation-timing-function: steps(1, end); }
+  3.13% { opacity: 0.015; animation-timing-function: steps(1, end); }
+  4.17% { opacity: 0.018; animation-timing-function: steps(1, end); }
+  5.21% { opacity: 0.022; animation-timing-function: steps(1, end); }
+  6.25% { opacity: 0.014; animation-timing-function: steps(1, end); }
+  7.29% { opacity: 0.015; animation-timing-function: steps(1, end); }
+  8.33% { opacity: 0.017; animation-timing-function: steps(1, end); }
+  9.38% { opacity: 0.03; animation-timing-function: steps(1, end); }
+  10.42% { opacity: 0.022; animation-timing-function: steps(1, end); }
+  11.46% { opacity: 0.007; animation-timing-function: steps(1, end); }
+  12.5% { opacity: 0.078; animation-timing-function: steps(1, end); }
+  13.54% { opacity: 0.028; animation-timing-function: steps(1, end); }
+  14.58% { opacity: 0.008; animation-timing-function: steps(1, end); }
+  15.63% { opacity: 0.03; animation-timing-function: steps(1, end); }
+  16.67% { opacity: 0.005; animation-timing-function: steps(1, end); }
+  17.71% { opacity: 0.016; animation-timing-function: steps(1, end); }
+  18.75% { opacity: 0.019; animation-timing-function: steps(1, end); }
+  19.79% { opacity: 0.004; animation-timing-function: steps(1, end); }
+  20.83% { opacity: 0.027; animation-timing-function: steps(1, end); }
+  21.88% { opacity: 0.002; animation-timing-function: steps(1, end); }
+  22.92% { opacity: 0.009; animation-timing-function: steps(1, end); }
+  23.96% { opacity: 0.029; animation-timing-function: steps(1, end); }
+  25% { opacity: 0.113; animation-timing-function: steps(1, end); }
+  26.04% { opacity: 0.121; animation-timing-function: steps(1, end); }
+  27.08% { opacity: 0.035; animation-timing-function: steps(1, end); }
+  28.13% { opacity: 0.009; animation-timing-function: steps(1, end); }
+  29.17% { opacity: 0.032; animation-timing-function: steps(1, end); }
+  30.21% { opacity: 0.028; animation-timing-function: steps(1, end); }
+  31.25% { opacity: 0.013; animation-timing-function: steps(1, end); }
+  32.29% { opacity: 0.026; animation-timing-function: steps(1, end); }
+  33.33% { opacity: 0.015; animation-timing-function: steps(1, end); }
+  34.38% { opacity: 0.101; animation-timing-function: steps(1, end); }
+  35.42% { opacity: 0.031; animation-timing-function: steps(1, end); }
+  36.46% { opacity: 0.027; animation-timing-function: steps(1, end); }
+  37.5% { opacity: 0.019; animation-timing-function: steps(1, end); }
+  38.54% { opacity: 0.007; animation-timing-function: steps(1, end); }
+  39.58% { opacity: 0.008; animation-timing-function: steps(1, end); }
+  40.63% { opacity: 0.009; animation-timing-function: steps(1, end); }
+  41.67% { opacity: 0.029; animation-timing-function: steps(1, end); }
+  42.71% { opacity: 0.013; animation-timing-function: steps(1, end); }
+  43.75% { opacity: 0.031; animation-timing-function: steps(1, end); }
+  44.79% { opacity: 0.025; animation-timing-function: steps(1, end); }
+  45.83% { opacity: 0.004; animation-timing-function: steps(1, end); }
+  46.88% { opacity: 0.027; animation-timing-function: steps(1, end); }
+  47.92% { opacity: 0.029; animation-timing-function: steps(1, end); }
+  48.96% { opacity: 0.008; animation-timing-function: steps(1, end); }
+  50% { opacity: 0.001; animation-timing-function: steps(1, end); }
+  51.04% { opacity: 0.01; animation-timing-function: steps(1, end); }
+  52.08% { opacity: 0.023; animation-timing-function: steps(1, end); }
+  53.13% { opacity: 0.096; animation-timing-function: steps(1, end); }
+  54.17% { opacity: 0.013; animation-timing-function: steps(1, end); }
+  55.21% { opacity: 0.088; animation-timing-function: steps(1, end); }
+  56.25% { opacity: 0.008; animation-timing-function: steps(1, end); }
+  57.29% { opacity: 0.012; animation-timing-function: steps(1, end); }
+  58.33% { opacity: 0.034; animation-timing-function: steps(1, end); }
+  59.38% { opacity: 0.021; animation-timing-function: steps(1, end); }
+  60.42% { opacity: 0.004; animation-timing-function: steps(1, end); }
+  61.46% { opacity: 0.004; animation-timing-function: steps(1, end); }
+  62.5% { opacity: 0.027; animation-timing-function: steps(1, end); }
+  63.54% { opacity: 0.006; animation-timing-function: steps(1, end); }
+  64.58% { opacity: 0.03; animation-timing-function: steps(1, end); }
+  65.63% { opacity: 0.021; animation-timing-function: steps(1, end); }
+  66.67% { opacity: 0.033; animation-timing-function: steps(1, end); }
+  67.71% { opacity: 0.017; animation-timing-function: steps(1, end); }
+  68.75% { opacity: 0.002; animation-timing-function: steps(1, end); }
+  69.79% { opacity: 0.035; animation-timing-function: steps(1, end); }
+  70.83% { opacity: 0.094; animation-timing-function: steps(1, end); }
+  71.88% { opacity: 0.022; animation-timing-function: steps(1, end); }
+  72.92% { opacity: 0.032; animation-timing-function: steps(1, end); }
+  73.96% { opacity: 0.019; animation-timing-function: steps(1, end); }
+  75% { opacity: 0.021; animation-timing-function: steps(1, end); }
+  76.04% { opacity: 0.008; animation-timing-function: steps(1, end); }
+  77.08% { opacity: 0.027; animation-timing-function: steps(1, end); }
+  78.13% { opacity: 0.029; animation-timing-function: steps(1, end); }
+  79.17% { opacity: 0.032; animation-timing-function: steps(1, end); }
+  80.21% { opacity: 0.015; animation-timing-function: steps(1, end); }
+  81.25% { opacity: 0.031; animation-timing-function: steps(1, end); }
+  82.29% { opacity: 0.029; animation-timing-function: steps(1, end); }
+  83.33% { opacity: 0.022; animation-timing-function: steps(1, end); }
+  84.38% { opacity: 0.015; animation-timing-function: steps(1, end); }
+  85.42% { opacity: 0.024; animation-timing-function: steps(1, end); }
+  86.46% { opacity: 0.027; animation-timing-function: steps(1, end); }
+  87.5% { opacity: 0.026; animation-timing-function: steps(1, end); }
+  88.54% { opacity: 0.026; animation-timing-function: steps(1, end); }
+  89.58% { opacity: 0.121; animation-timing-function: steps(1, end); }
+  90.63% { opacity: 0.128; animation-timing-function: steps(1, end); }
+  91.67% { opacity: 0.023; animation-timing-function: steps(1, end); }
+  92.71% { opacity: 0.009; animation-timing-function: steps(1, end); }
+  93.75% { opacity: 0.002; animation-timing-function: steps(1, end); }
+  94.79% { opacity: 0.019; animation-timing-function: steps(1, end); }
+  95.83% { opacity: 0.025; animation-timing-function: steps(1, end); }
+  96.88% { opacity: 0.017; animation-timing-function: steps(1, end); }
+  97.92% { opacity: 0.034; animation-timing-function: steps(1, end); }
+  98.96% { opacity: 0.017; animation-timing-function: steps(1, end); }
+  100% { opacity: 0.025; }
+}
+@keyframes pd {
+  0% { opacity: 0.01; animation-timing-function: steps(1, end); }
+  1.04% { opacity: 0.021; animation-timing-function: steps(1, end); }
+  2.08% { opacity: 0.142; animation-timing-function: steps(1, end); }
+  3.13% { opacity: 0.049; animation-timing-function: steps(1, end); }
+  4.17% { opacity: 0.016; animation-timing-function: steps(1, end); }
+  5.21% { opacity: 0.018; animation-timing-function: steps(1, end); }
+  6.25% { opacity: 0.009; animation-timing-function: steps(1, end); }
+  7.29% { opacity: 0.027; animation-timing-function: steps(1, end); }
+  8.33% { opacity: 0.042; animation-timing-function: steps(1, end); }
+  9.38% { opacity: 0.01; animation-timing-function: steps(1, end); }
+  10.42% { opacity: 0.047; animation-timing-function: steps(1, end); }
+  11.46% { opacity: 0.008; animation-timing-function: steps(1, end); }
+  12.5% { opacity: 0.005; animation-timing-function: steps(1, end); }
+  13.54% { opacity: 0.003; animation-timing-function: steps(1, end); }
+  14.58% { opacity: 0.03; animation-timing-function: steps(1, end); }
+  15.63% { opacity: 0.02; animation-timing-function: steps(1, end); }
+  16.67% { opacity: 0.01; animation-timing-function: steps(1, end); }
+  17.71% { opacity: 0.132; animation-timing-function: steps(1, end); }
+  18.75% { opacity: 0.008; animation-timing-function: steps(1, end); }
+  19.79% { opacity: 0.002; animation-timing-function: steps(1, end); }
+  20.83% { opacity: 0.124; animation-timing-function: steps(1, end); }
+  21.88% { opacity: 0.031; animation-timing-function: steps(1, end); }
+  22.92% { opacity: 0.012; animation-timing-function: steps(1, end); }
+  23.96% { opacity: 0.022; animation-timing-function: steps(1, end); }
+  25% { opacity: 0.012; animation-timing-function: steps(1, end); }
+  26.04% { opacity: 0.143; animation-timing-function: steps(1, end); }
+  27.08% { opacity: 0.031; animation-timing-function: steps(1, end); }
+  28.13% { opacity: 0.008; animation-timing-function: steps(1, end); }
+  29.17% { opacity: 0.004; animation-timing-function: steps(1, end); }
+  30.21% { opacity: 0.014; animation-timing-function: steps(1, end); }
+  31.25% { opacity: 0.028; animation-timing-function: steps(1, end); }
+  32.29% { opacity: 0.044; animation-timing-function: steps(1, end); }
+  33.33% { opacity: 0.012; animation-timing-function: steps(1, end); }
+  34.38% { opacity: 0.004; animation-timing-function: steps(1, end); }
+  35.42% { opacity: 0.033; animation-timing-function: steps(1, end); }
+  36.46% { opacity: 0.002; animation-timing-function: steps(1, end); }
+  37.5% { opacity: 0.03; animation-timing-function: steps(1, end); }
+  38.54% { opacity: 0.01; animation-timing-function: steps(1, end); }
+  39.58% { opacity: 0.006; animation-timing-function: steps(1, end); }
+  40.63% { opacity: 0.028; animation-timing-function: steps(1, end); }
+  41.67% { opacity: 0.013; animation-timing-function: steps(1, end); }
+  42.71% { opacity: 0.035; animation-timing-function: steps(1, end); }
+  43.75% { opacity: 0.037; animation-timing-function: steps(1, end); }
+  44.79% { opacity: 0.014; animation-timing-function: steps(1, end); }
+  45.83% { opacity: 0.045; animation-timing-function: steps(1, end); }
+  46.88% { opacity: 0.006; animation-timing-function: steps(1, end); }
+  47.92% { opacity: 0.016; animation-timing-function: steps(1, end); }
+  48.96% { opacity: 0.019; animation-timing-function: steps(1, end); }
+  50% { opacity: 0.153; animation-timing-function: steps(1, end); }
+  51.04% { opacity: 0.049; animation-timing-function: steps(1, end); }
+  52.08% { opacity: 0.012; animation-timing-function: steps(1, end); }
+  53.13% { opacity: 0.028; animation-timing-function: steps(1, end); }
+  54.17% { opacity: 0.048; animation-timing-function: steps(1, end); }
+  55.21% { opacity: 0.023; animation-timing-function: steps(1, end); }
+  56.25% { opacity: 0.028; animation-timing-function: steps(1, end); }
+  57.29% { opacity: 0.024; animation-timing-function: steps(1, end); }
+  58.33% { opacity: 0.014; animation-timing-function: steps(1, end); }
+  59.38% { opacity: 0; animation-timing-function: steps(1, end); }
+  60.42% { opacity: 0.006; animation-timing-function: steps(1, end); }
+  61.46% { opacity: 0.045; animation-timing-function: steps(1, end); }
+  62.5% { opacity: 0.009; animation-timing-function: steps(1, end); }
+  63.54% { opacity: 0.001; animation-timing-function: steps(1, end); }
+  64.58% { opacity: 0.006; animation-timing-function: steps(1, end); }
+  65.63% { opacity: 0.012; animation-timing-function: steps(1, end); }
+  66.67% { opacity: 0.047; animation-timing-function: steps(1, end); }
+  67.71% { opacity: 0.017; animation-timing-function: steps(1, end); }
+  68.75% { opacity: 0.046; animation-timing-function: steps(1, end); }
+  69.79% { opacity: 0.034; animation-timing-function: steps(1, end); }
+  70.83% { opacity: 0.044; animation-timing-function: steps(1, end); }
+  71.88% { opacity: 0.014; animation-timing-function: steps(1, end); }
+  72.92% { opacity: 0.046; animation-timing-function: steps(1, end); }
+  73.96% { opacity: 0.017; animation-timing-function: steps(1, end); }
+  75% { opacity: 0.032; animation-timing-function: steps(1, end); }
+  76.04% { opacity: 0.026; animation-timing-function: steps(1, end); }
+  77.08% { opacity: 0.02; animation-timing-function: steps(1, end); }
+  78.13% { opacity: 0.013; animation-timing-function: steps(1, end); }
+  79.17% { opacity: 0.027; animation-timing-function: steps(1, end); }
+  80.21% { opacity: 0.049; animation-timing-function: steps(1, end); }
+  81.25% { opacity: 0.03; animation-timing-function: steps(1, end); }
+  82.29% { opacity: 0.026; animation-timing-function: steps(1, end); }
+  83.33% { opacity: 0.189; animation-timing-function: steps(1, end); }
+  84.38% { opacity: 0.045; animation-timing-function: steps(1, end); }
+  85.42% { opacity: 0.01; animation-timing-function: steps(1, end); }
+  86.46% { opacity: 0.04; animation-timing-function: steps(1, end); }
+  87.5% { opacity: 0.032; animation-timing-function: steps(1, end); }
+  88.54% { opacity: 0.008; animation-timing-function: steps(1, end); }
+  89.58% { opacity: 0; animation-timing-function: steps(1, end); }
+  90.63% { opacity: 0.037; animation-timing-function: steps(1, end); }
+  91.67% { opacity: 0.018; animation-timing-function: steps(1, end); }
+  92.71% { opacity: 0.017; animation-timing-function: steps(1, end); }
+  93.75% { opacity: 0.005; animation-timing-function: steps(1, end); }
+  94.79% { opacity: 0.007; animation-timing-function: steps(1, end); }
+  95.83% { opacity: 0.002; animation-timing-function: steps(1, end); }
+  96.88% { opacity: 0.021; animation-timing-function: steps(1, end); }
+  97.92% { opacity: 0.019; animation-timing-function: steps(1, end); }
+  98.96% { opacity: 0.041; animation-timing-function: steps(1, end); }
+  100% { opacity: 0.01; }
+}
+body::before { content: ""; position: fixed; inset: -12%; pointer-events: none;
+  background: repeating-conic-gradient(from 21.89deg at 32.57% 59.29%, rgba(255, 255, 255, 0.063) 0 0.00071deg, rgba(0, 0, 0, 0.077) 0.00083deg 0.00137deg),
+    repeating-conic-gradient(from 51.3deg at 27.09% 67.78%, rgba(255, 255, 255, 0.049) 0 0.00093deg, rgba(0, 0, 0, 0.056) 0.0011deg 0.00191deg);
+  filter: blur(0.05vmin); animation: pg 1000ms linear infinite; }
+@keyframes pg {
+  0% { transform: translate(0.41vmin, -7.96vmin) rotate(0.326deg); animation-timing-function: steps(1, end); }
+  4.17% { transform: translate(-4.77vmin, 0.67vmin) rotate(-0.858deg); animation-timing-function: steps(1, end); }
+  8.33% { transform: translate(-7.93vmin, 6.73vmin) rotate(0.941deg); animation-timing-function: steps(1, end); }
+  12.5% { transform: translate(-4.64vmin, 6.94vmin) rotate(-0.235deg); animation-timing-function: steps(1, end); }
+  16.67% { transform: translate(-7.64vmin, -7.18vmin) rotate(-0.094deg); animation-timing-function: steps(1, end); }
+  20.83% { transform: translate(4.55vmin, 2.1vmin) rotate(-0.038deg); animation-timing-function: steps(1, end); }
+  25% { transform: translate(-1.49vmin, -4.81vmin) rotate(0.976deg); animation-timing-function: steps(1, end); }
+  29.17% { transform: translate(7.12vmin, -3.69vmin) rotate(0.89deg); animation-timing-function: steps(1, end); }
+  33.33% { transform: translate(5.65vmin, 7.74vmin) rotate(0.397deg); animation-timing-function: steps(1, end); }
+  37.5% { transform: translate(7.11vmin, 7.39vmin) rotate(0.889deg); animation-timing-function: steps(1, end); }
+  41.67% { transform: translate(-4.51vmin, 0.84vmin) rotate(-0.589deg); animation-timing-function: steps(1, end); }
+  45.83% { transform: translate(-3.33vmin, -4.59vmin) rotate(0.663deg); animation-timing-function: steps(1, end); }
+  50% { transform: translate(-1.52vmin, 1.31vmin) rotate(0.157deg); animation-timing-function: steps(1, end); }
+  54.17% { transform: translate(6.17vmin, 1.14vmin) rotate(0.751deg); animation-timing-function: steps(1, end); }
+  58.33% { transform: translate(3.42vmin, 1.17vmin) rotate(-0.455deg); animation-timing-function: steps(1, end); }
+  62.5% { transform: translate(5.63vmin, 4.97vmin) rotate(-0.591deg); animation-timing-function: steps(1, end); }
+  66.67% { transform: translate(-1.29vmin, -2.21vmin) rotate(0.316deg); animation-timing-function: steps(1, end); }
+  70.83% { transform: translate(-7.65vmin, -2.7vmin) rotate(-0.416deg); animation-timing-function: steps(1, end); }
+  75% { transform: translate(-3.89vmin, -3.16vmin) rotate(-0.473deg); animation-timing-function: steps(1, end); }
+  79.17% { transform: translate(-2.03vmin, -6.55vmin) rotate(-0.279deg); animation-timing-function: steps(1, end); }
+  83.33% { transform: translate(-6.67vmin, 6.86vmin) rotate(0.001deg); animation-timing-function: steps(1, end); }
+  87.5% { transform: translate(-6.16vmin, -0.17vmin) rotate(-0.052deg); animation-timing-function: steps(1, end); }
+  91.67% { transform: translate(-7.12vmin, -0.91vmin) rotate(0.334deg); animation-timing-function: steps(1, end); }
+  95.83% { transform: translate(-3.29vmin, -3.37vmin) rotate(0.853deg); animation-timing-function: steps(1, end); }
+  100% { transform: translate(0.41vmin, -7.96vmin) rotate(0.326deg); }
+}

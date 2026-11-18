@@ -1,0 +1,31 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "City Run",
+    "zh-CN": "城市追逐",
+    "ja": "シティ・ラン",
+    "ko": "시티 런",
+    "es": "Carrera urbana"
+  },
+  "about": "A short, tense chase cue for action, hurry and pursuit.",
+  "tags": [
+    "tension",
+    "chase",
+    "action"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/scoring/City%20Run.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 34700,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 719651
+    }
+  ]
+}

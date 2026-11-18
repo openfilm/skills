@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Bleach Bypass",
+    "zh-CN": "漂白效果",
+    "ja": "ブリーチバイパス",
+    "ko": "블리치 바이패스",
+    "es": "Blanqueo"
+  },
+  "about": "Low colour and hard contrast, gritty and metallic. For war, sport and tough drama.",
+  "tags": [
+    "gritty",
+    "desaturated",
+    "contrast"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 146
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 431878
+    }
+  ]
+}

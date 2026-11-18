@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Geyser Steam",
+    "zh-CN": "间歇泉蒸汽",
+    "ja": "間欠泉の蒸気",
+    "ko": "간헐천 증기",
+    "es": "Vapor de géiser"
+  },
+  "about": "A thick column of steam billows from Steamboat Geyser in Yellowstone National Park, rolling up against a cloudy sky and a line of pines.",
+  "tags": [
+    "geyser",
+    "steam",
+    "yellowstone",
+    "national-park",
+    "geothermal",
+    "forest"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Steamboat_Geyser_vigorously_in_steam_phase_the_day_after_the_March_15_eruption_(41117534124).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 10510,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 4889401,
+      "sha256": "cd3705dfb02ca17911c0b812d70abf43aee7d2b87a08e81ed0293879d9f85eee"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 109126
+    }
+  ]
+}
