@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Click",
+    "zh-CN": "点击",
+    "ja": "クリック",
+    "ko": "클릭",
+    "es": "Clic"
+  },
+  "about": "A clean click for a button, a cursor or a menu on screen.",
+  "tags": [
+    "click",
+    "ui",
+    "button"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 11,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 1617
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Teal & Orange",
+    "zh-CN": "青橙大片",
+    "ja": "ティール＆オレンジ",
+    "ko": "틸 앤 오렌지",
+    "es": "Verde azulado y naranja"
+  },
+  "about": "Warm skin and highlights against teal shadows, the blockbuster look. For trailers, travel and action.",
+  "tags": [
+    "cinematic",
+    "teal-orange",
+    "blockbuster"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 414
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 431878
+    }
+  ]
+}

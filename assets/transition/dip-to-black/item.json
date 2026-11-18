@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Dip to Black",
+    "zh-CN": "闪黑",
+    "ja": "暗転",
+    "ko": "블랙 전환",
+    "es": "Fundido a negro"
+  },
+  "about": "The edges darken first, then the frame dips to black over the cut and opens again from the middle. For a pause, a change of time or place.",
+  "tags": [
+    "black",
+    "fade",
+    "dip",
+    "vignette",
+    "calm",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 1005
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 56828
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 803272
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 1000
+}

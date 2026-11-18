@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Noir",
+    "zh-CN": "黑白电影",
+    "ja": "ノワール",
+    "ko": "누아르",
+    "es": "Noir"
+  },
+  "about": "Deep black-and-white with strong contrast. For mystery, memories and timeless moments.",
+  "tags": [
+    "black-and-white",
+    "noir",
+    "classic"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 146
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 431878
+    }
+  ]
+}

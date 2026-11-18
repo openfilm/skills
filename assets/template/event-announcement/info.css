@@ -1,0 +1,15 @@
+/* An info card: where and what, each line with its own small mark, opening one after the other. 2.5 s. */
+.w { position: fixed; inset: 0; display: flex; align-items: center; padding-left: 3vh; box-sizing: border-box;
+  font-family: 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  animation: out 0.35s 2.15s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.card { display: flex; flex-direction: column; gap: 6vh; padding: 9vh 11vh 9vh 9vh; border-radius: 5vh; background: #2a1052; color: #fff; border-left: 2.4vh solid #c6ff3d;
+  box-shadow: 0 3vh 8vh rgba(0, 0, 0, 0.35); animation: open 0.55s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.ln { display: flex; align-items: center; gap: 5vh; white-space: nowrap; animation: slide 0.5s 0.3s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.ln + .ln { animation-delay: 0.5s; }
+.pin { flex: none; width: 12vh; height: 12vh; border-radius: 50% 50% 50% 0; background: #ff4fa3; transform: rotate(-45deg); box-shadow: inset 0 0 0 3.4vh #ff4fa3, inset 0 0 0 6vh #fff; }
+.sq { flex: none; width: 11vh; height: 11vh; border-radius: 2.4vh; background: #c6ff3d; transform: rotate(12deg); }
+.t1 { font-size: 16vh; font-weight: 800; line-height: 1; }
+.t2 { font-size: 13vh; font-weight: 600; line-height: 1; color: #e7dcff; }
+@keyframes open { from { opacity: 0; clip-path: inset(0 100% 0 0 round 5vh); } to { opacity: 1; clip-path: inset(0 0 0 0 round 5vh); } }
+@keyframes slide { from { opacity: 0; transform: translateX(-6vh); } }
+@keyframes out { to { opacity: 0; transform: translateY(12%); } }

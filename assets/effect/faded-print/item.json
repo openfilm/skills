@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Faded Print",
+    "zh-CN": "褪色相片",
+    "ja": "色褪せたプリント",
+    "ko": "바랜 인화",
+    "es": "Copia desvaída"
+  },
+  "about": "Lifted, warm blacks, soft brown edges and gentle grain, like a print that has faded in the sun. For memories, the 70s and quiet nostalgic scenes.",
+  "tags": [
+    "faded",
+    "vintage",
+    "warm",
+    "70s",
+    "nostalgic",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 3736
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 248215
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 878125
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 5000
+}

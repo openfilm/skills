@@ -1,0 +1,102 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l::before, .l::after, body::before, body::after { content: ""; position: fixed; pointer-events: none; }
+.l::before { left: calc(10% - 60vmax); top: calc(88% - 60vmax); width: 120vmax; height: 120vmax; border-radius: 50%;
+  background: radial-gradient(circle closest-side, #fffbea 0%, #ffe8a6 16%, #ffae45 30%, #ee5a1c 44%, rgba(160, 30, 8, 0.8) 56%, rgba(70, 5, 0, 0.4) 66%, rgba(40, 0, 0, 0) 76%),
+    radial-gradient(circle closest-side at 62% 40%, rgba(255, 160, 60, 0.7), rgba(230, 70, 20, 0.5) 50%, rgba(120, 20, 0, 0) 72%);
+  animation: fba 1200ms linear both; }
+@keyframes fba {
+  0% { transform: scale(0.02) rotate(0deg); opacity: 0; }
+  4.17% { transform: scale(0.123) rotate(1.67deg); opacity: 0.67; }
+  8.33% { transform: scale(0.333) rotate(3.33deg); opacity: 0.845; }
+  12.5% { transform: scale(0.619) rotate(5deg); opacity: 0.998; }
+  16.67% { transform: scale(0.968) rotate(6.67deg); opacity: 0.866; }
+  20.83% { transform: scale(1.375) rotate(8.33deg); opacity: 0.931; }
+  25% { transform: scale(1.834) rotate(10deg); opacity: 0.955; }
+  29.17% { transform: scale(2.342) rotate(11.67deg); opacity: 0.85; }
+  33.33% { transform: scale(2.895) rotate(13.33deg); opacity: 1; }
+  37.5% { transform: scale(3.491) rotate(15deg); opacity: 0.858; }
+  41.67% { transform: scale(4.128) rotate(16.67deg); opacity: 0.942; }
+  45.83% { transform: scale(4.805) rotate(18.33deg); opacity: 0.945; }
+  50% { transform: scale(5.52) rotate(20deg); opacity: 0.857; }
+  54.17% { transform: scale(5.937) rotate(21.67deg); opacity: 1; }
+  58.33% { transform: scale(6.353) rotate(23.33deg); opacity: 0.852; }
+  62.5% { transform: scale(6.77) rotate(25deg); opacity: 0.953; }
+  66.67% { transform: scale(7.187) rotate(26.67deg); opacity: 0.891; }
+  70.83% { transform: scale(7.603) rotate(28.33deg); opacity: 0.734; }
+  75% { transform: scale(8.02) rotate(30deg); opacity: 0.702; }
+  79.17% { transform: scale(8.437) rotate(31.67deg); opacity: 0.453; }
+  83.33% { transform: scale(8.853) rotate(33.33deg); opacity: 0.349; }
+  87.5% { transform: scale(9.27) rotate(35deg); opacity: 0.19; }
+  91.67% { transform: scale(9.687) rotate(36.67deg); opacity: 0.072; }
+  95.83% { transform: scale(10.103) rotate(38.33deg); opacity: 0.01; }
+  100% { transform: scale(10.52) rotate(40deg); opacity: 0; }
+}
+.l::after { left: calc(88% - 60vmax); top: calc(14% - 60vmax); width: 120vmax; height: 120vmax; border-radius: 50%;
+  background: radial-gradient(circle closest-side, #fffbea 0%, #ffe8a6 16%, #ffae45 30%, #ee5a1c 44%, rgba(160, 30, 8, 0.8) 56%, rgba(70, 5, 0, 0.4) 66%, rgba(40, 0, 0, 0) 76%),
+    radial-gradient(circle closest-side at 62% 40%, rgba(255, 160, 60, 0.7), rgba(230, 70, 20, 0.5) 50%, rgba(120, 20, 0, 0) 72%);
+  animation: fbb 1200ms linear both; }
+@keyframes fbb {
+  0% { transform: scale(0.02) rotate(0deg); opacity: 0; }
+  4.17% { transform: scale(0.02) rotate(-1.67deg); opacity: 0; }
+  8.33% { transform: scale(0.02) rotate(-3.33deg); opacity: 0; }
+  12.5% { transform: scale(0.025) rotate(-5deg); opacity: 0.081; }
+  16.67% { transform: scale(0.212) rotate(-6.67deg); opacity: 0.655; }
+  20.83% { transform: scale(0.553) rotate(-8.33deg); opacity: 0.995; }
+  25% { transform: scale(1.009) rotate(-10deg); opacity: 0.873; }
+  29.17% { transform: scale(1.562) rotate(-11.67deg); opacity: 0.922; }
+  33.33% { transform: scale(2.204) rotate(-13.33deg); opacity: 0.964; }
+  37.5% { transform: scale(2.925) rotate(-15deg); opacity: 0.846; }
+  41.67% { transform: scale(3.721) rotate(-16.67deg); opacity: 0.998; }
+  45.83% { transform: scale(4.587) rotate(-18.33deg); opacity: 0.865; }
+  50% { transform: scale(5.52) rotate(-20deg); opacity: 0.933; }
+  54.17% { transform: scale(5.937) rotate(-21.67deg); opacity: 0.954; }
+  58.33% { transform: scale(6.353) rotate(-23.33deg); opacity: 0.851; }
+  62.5% { transform: scale(6.77) rotate(-25deg); opacity: 0.999; }
+  66.67% { transform: scale(7.187) rotate(-26.67deg); opacity: 0.818; }
+  70.83% { transform: scale(7.603) rotate(-28.33deg); opacity: 0.801; }
+  75% { transform: scale(8.02) rotate(-30deg); opacity: 0.663; }
+  79.17% { transform: scale(8.437) rotate(-31.67deg); opacity: 0.459; }
+  83.33% { transform: scale(8.853) rotate(-33.33deg); opacity: 0.363; }
+  87.5% { transform: scale(9.27) rotate(-35deg); opacity: 0.175; }
+  91.67% { transform: scale(9.687) rotate(-36.67deg); opacity: 0.078; }
+  95.83% { transform: scale(10.103) rotate(-38.33deg); opacity: 0.01; }
+  100% { transform: scale(10.52) rotate(-40deg); opacity: 0; }
+}
+body::before { left: calc(30% - 60vmax); top: calc(40% - 60vmax); width: 120vmax; height: 120vmax; border-radius: 50%;
+  background: radial-gradient(circle closest-side, #fffbea 0%, #ffe8a6 16%, #ffae45 30%, #ee5a1c 44%, rgba(160, 30, 8, 0.8) 56%, rgba(70, 5, 0, 0.4) 66%, rgba(40, 0, 0, 0) 76%),
+    radial-gradient(circle closest-side at 62% 40%, rgba(255, 160, 60, 0.7), rgba(230, 70, 20, 0.5) 50%, rgba(120, 20, 0, 0) 72%);
+  animation: fbc 1200ms linear both; }
+@keyframes fbc {
+  0% { transform: scale(0.02) rotate(0deg); opacity: 0; }
+  4.17% { transform: scale(0.02) rotate(-1.67deg); opacity: 0; }
+  8.33% { transform: scale(0.02) rotate(-3.33deg); opacity: 0; }
+  12.5% { transform: scale(0.02) rotate(-5deg); opacity: 0; }
+  16.67% { transform: scale(0.02) rotate(-6.67deg); opacity: 0; }
+  20.83% { transform: scale(0.038) rotate(-8.33deg); opacity: 0.138; }
+  25% { transform: scale(0.333) rotate(-10deg); opacity: 0.702; }
+  29.17% { transform: scale(0.845) rotate(-11.67deg); opacity: 0.974; }
+  33.33% { transform: scale(1.523) rotate(-13.33deg); opacity: 0.909; }
+  37.5% { transform: scale(2.342) rotate(-15deg); opacity: 0.885; }
+  41.67% { transform: scale(3.288) rotate(-16.67deg); opacity: 0.99; }
+  45.83% { transform: scale(4.35) rotate(-18.33deg); opacity: 0.84; }
+  50% { transform: scale(5.52) rotate(-20deg); opacity: 0.982; }
+  54.17% { transform: scale(5.937) rotate(-21.67deg); opacity: 0.898; }
+  58.33% { transform: scale(6.353) rotate(-23.33deg); opacity: 0.895; }
+  62.5% { transform: scale(6.77) rotate(-25deg); opacity: 0.983; }
+  66.67% { transform: scale(7.187) rotate(-26.67deg); opacity: 0.801; }
+  70.83% { transform: scale(7.603) rotate(-28.33deg); opacity: 0.839; }
+  75% { transform: scale(8.02) rotate(-30deg); opacity: 0.623; }
+  79.17% { transform: scale(8.437) rotate(-31.67deg); opacity: 0.485; }
+  83.33% { transform: scale(8.853) rotate(-33.33deg); opacity: 0.354; }
+  87.5% { transform: scale(9.27) rotate(-35deg); opacity: 0.173; }
+  91.67% { transform: scale(9.687) rotate(-36.67deg); opacity: 0.081; }
+  95.83% { transform: scale(10.103) rotate(-38.33deg); opacity: 0.009; }
+  100% { transform: scale(10.52) rotate(-40deg); opacity: 0; }
+}
+body::after { inset: 0; background: #fff6e2; animation: fbw 1200ms linear both; }
+@keyframes fbw {
+  0%, 30% { opacity: 0; animation-timing-function: cubic-bezier(0.6, 0, 1, 0.7); }
+  48%, 52% { opacity: 1; animation-timing-function: cubic-bezier(0.2, 0.4, 0.5, 1); }
+  76%, 100% { opacity: 0; }
+}

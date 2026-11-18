@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "River Through a Canyon",
+    "zh-CN": "穿过峡谷的河",
+    "ja": "峡谷を流れる川",
+    "ko": "협곡을 흐르는 강",
+    "es": "Río entre cañones"
+  },
+  "about": "A calm river winds between willow thickets and tall brown cliffs under a bright sky: the North Fork Owyhee Wild and Scenic River, Oregon.",
+  "tags": [
+    "river",
+    "canyon",
+    "cliffs",
+    "water",
+    "calm",
+    "oregon"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:North_Fork_Owyhee_Wild_%26_Scenic_River_(35066816690).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 15015,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 12055377,
+      "sha256": "546779aa08d757e1aaa6d7be04ead11b217f46cc940bf9cfb31db4206f855eaf"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 279268
+    }
+  ]
+}

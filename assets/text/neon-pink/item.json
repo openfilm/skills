@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Neon Pink",
+    "zh-CN": "霓虹粉",
+    "ja": "ネオンピンク",
+    "ko": "네온 핑크",
+    "es": "Neón rosa"
+  },
+  "about": "Thin white letters with a hot pink neon glow. For nightlife, music and late-night vlogs.",
+  "tags": [
+    "neon",
+    "night",
+    "glow"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 336
+    }
+  ]
+}

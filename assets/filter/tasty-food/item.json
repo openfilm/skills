@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Tasty Food",
+    "zh-CN": "美食鲜艳",
+    "ja": "おいしい色",
+    "ko": "맛있는 색",
+    "es": "Comida apetecible"
+  },
+  "about": "Richer colour and a touch of warmth that makes food look fresh. For cooking and restaurant clips.",
+  "tags": [
+    "food",
+    "vivid",
+    "warm"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 199
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 431878
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "cat": "template",
+  "name": {
+    "en": "Food review",
+    "zh-CN": "美食测评",
+    "ja": "グルメレビュー",
+    "ko": "맛집 리뷰",
+    "es": "Reseña gastronómica"
+  },
+  "about": "11 s, four slots: a plate-and-chopsticks title, a dish card with stars and price, a must-try badge, plate-colour iris wipes and a big score verdict. For food and restaurant reviews.",
+  "tags": [
+    "food",
+    "review",
+    "restaurant",
+    "rating",
+    "vlog",
+    "warm"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "template.json",
+  "durationMs": 11000,
+  "files": [
+    {
+      "path": "template.json",
+      "bytes": 1893
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1349645
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 413883
+    },
+    {
+      "path": "example-1.jpg",
+      "bytes": 389550
+    },
+    {
+      "path": "example-2.jpg",
+      "bytes": 269283
+    },
+    {
+      "path": "example-3.jpg",
+      "bytes": 347804
+    },
+    {
+      "path": "example-4.jpg",
+      "bytes": 275766
+    },
+    {
+      "path": "badge.css",
+      "bytes": 1423
+    },
+    {
+      "path": "badge.html",
+      "bytes": 211
+    },
+    {
+      "path": "circle-wipe.css",
+      "bytes": 637
+    },
+    {
+      "path": "circle-wipe.html",
+      "bytes": 70
+    },
+    {
+      "path": "menu-title.css",
+      "bytes": 2451
+    },
+    {
+      "path": "menu-title.html",
+      "bytes": 274
+    },
+    {
+      "path": "rating.css",
+      "bytes": 1956
+    },
+    {
+      "path": "rating.html",
+      "bytes": 255
+    },
+    {
+      "path": "verdict.css",
+      "bytes": 1636
+    },
+    {
+      "path": "verdict.html",
+      "bytes": 197
+    }
+  ]
+}

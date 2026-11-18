@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Swing Whoosh",
+    "zh-CN": "挥动嗖声",
+    "ja": "スイングウーッシュ",
+    "ko": "스윙 휙 소리",
+    "es": "Barrido de golpe"
+  },
+  "about": "A short swinging whoosh for a quick move or a cut on action.",
+  "tags": [
+    "whoosh",
+    "swing",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://freesound.org/people/anagar/sounds/267951/"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 2134,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 44269
+    }
+  ]
+}

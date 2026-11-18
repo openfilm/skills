@@ -2,6 +2,8 @@
 
 The assets track of the [OpenFilm Community](../README.md): original and independently verified CC0 assets for [OpenFilm](https://github.com/openfilm/openfilm). The community catalog starts with sounds, music, and CSS overlays that Studio can use as effects or transitions.
 
+Media items are plain video, image and audio files, such as stock footage, pictures and sound recordings: adding a media pack copies its files into a folder of your own library, under its first tab, Media.
+
 ## Use a community asset
 
 The Community group is available when running the OpenFilm desktop app from the [main branch](https://github.com/openfilm/openfilm#from-source) with `pnpm dev:desktop`. OpenFilm 0.3.0 predates Community support.

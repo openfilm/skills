@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Shout",
+    "zh-CN": "大喊黄字",
+    "ja": "シャウト",
+    "ko": "외침",
+    "es": "Grito"
+  },
+  "about": "Heavy yellow letters with a black outline and offset shadow, the classic variety-show shout. For punchlines and big reactions.",
+  "tags": [
+    "variety",
+    "bold",
+    "reaction"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 282
+    }
+  ]
+}

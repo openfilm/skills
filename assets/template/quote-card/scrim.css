@@ -1,0 +1,5 @@
+/* A soft vignette that darkens the picture's edges so words on it read well; it breathes very slightly. Any length. */
+.w { position: fixed; inset: 0; background: radial-gradient(ellipse at 50% 48%, rgba(6, 8, 14, 0.18) 0%, rgba(6, 8, 14, 0.45) 55%, rgba(6, 8, 14, 0.78) 100%);
+  animation: fade 1s both, breathe 6s 1s ease-in-out infinite; }
+@keyframes fade { from { opacity: 0; } }
+@keyframes breathe { 0%, 100% { opacity: 1; } 50% { opacity: 0.85; } }

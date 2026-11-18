@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Waterfall on a Cliff",
+    "zh-CN": "崖壁瀑布",
+    "ja": "崖の滝",
+    "ko": "절벽 폭포",
+    "es": "Cascada en el acantilado"
+  },
+  "about": "A slender waterfall slips down a grey rock face beside green trees into a shaded pool. Delaneys Falls, Tasmania, filmed in 4K.",
+  "tags": [
+    "waterfall",
+    "cliff",
+    "water",
+    "forest",
+    "rock",
+    "tasmania"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Delaneys_Falls.webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 16000,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 20939303,
+      "sha256": "151123cb07dcb1c8b5b15beeb8dc70b4497269ac3827ae1a4064e00992c4a5a7"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 911733
+    }
+  ]
+}

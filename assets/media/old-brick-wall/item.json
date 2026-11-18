@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Old Stone and Brick Wall",
+    "zh-CN": "古老的石砖墙",
+    "ja": "古い石とレンガの壁",
+    "ko": "오래된 돌과 벽돌 벽",
+    "es": "Muro antiguo de piedra y ladrillo"
+  },
+  "about": "A warm, sunlit old wall of rounded stones set between thin courses of brick, filling the whole frame. Alhambra, Granada.",
+  "tags": [
+    "wall",
+    "brick",
+    "stone",
+    "texture",
+    "old",
+    "warm"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Stones_and_bricks_wall,_Alhambra,_Granada,_Andalusia,_Spain.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 7114345,
+      "sha256": "b017f48f40d6eb03dfbcb9c613cea020bd1b17e9d064277cf4bdb0545e7807bc"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+/* A food show's title: a plate ring spins in, chopsticks slide across, the title and episode settle on the plate. 2.6 s. */
+.w { position: fixed; inset: 0; display: grid; place-items: center; color: #fff4e0;
+  font-family: -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  animation: out 0.4s 2.2s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.plate { position: absolute; width: 88vh; height: 88vh; border-radius: 50%; background: rgba(28, 23, 20, 0.82); box-shadow: 0 3vh 10vh rgba(0, 0, 0, 0.45);
+  animation: plate 0.7s cubic-bezier(0.3, 1.4, 0.5, 1) both; }
+.rim { position: absolute; inset: 3.5vh; border: 0.8vh dashed #f2b134; border-radius: 50%; animation: spin 6s linear infinite; }
+.stick { position: absolute; width: 80vh; height: 2.6vh; border-radius: 2vh; background: #e4572e; transform-origin: center; }
+.s1 { transform: translate(34vh, -30vh) rotate(-28deg); animation: s1 0.7s 0.35s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.s2 { transform: translate(38vh, -24vh) rotate(-22deg); animation: s2 0.7s 0.42s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.tx { position: relative; display: flex; flex-direction: column; align-items: center; }
+.t3 { padding: 1.6vh 3.6vh; border-radius: 99vh; background: #f2b134; color: #1c1714; font-weight: 800; font-size: 4.4vh; letter-spacing: 0.2em; white-space: nowrap;
+  animation: pop 0.45s 0.45s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+.t1 { margin: 2.5vh 0 2vh; font: italic 700 15vh/1.05 Georgia, 'Times New Roman', 'Songti SC', 'STSong', 'Noto Serif SC', serif; white-space: nowrap;
+  animation: rise 0.8s 0.55s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.t2 { margin: 0; font-weight: 700; font-size: 5vh; letter-spacing: 0.4em; padding-left: 0.4em; color: #f2b134; white-space: nowrap; animation: track 0.8s 0.85s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+@keyframes plate { from { opacity: 0; transform: scale(0.4) rotate(-90deg); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes s1 { from { opacity: 0; transform: translate(120vh, -60vh) rotate(-28deg); } }
+@keyframes s2 { from { opacity: 0; transform: translate(124vh, -54vh) rotate(-22deg); } }
+@keyframes pop { from { opacity: 0; transform: scale(0.2); } }
+@keyframes rise { from { opacity: 0; transform: translateY(5vh); filter: blur(1.2vh); } }
+@keyframes track { from { opacity: 0; letter-spacing: 0.8em; } }
+@keyframes out { to { opacity: 0; transform: scale(0.9); } }

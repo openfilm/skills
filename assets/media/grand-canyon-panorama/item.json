@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Grand Canyon Panorama",
+    "zh-CN": "大峡谷全景",
+    "ja": "グランドキャニオンのパノラマ",
+    "ko": "그랜드 캐니언 파노라마",
+    "es": "Panorama del Gran Cañón"
+  },
+  "about": "A wide panorama of the Grand Canyon from Hopi Point: layered red and grey buttes in evening light under a broad sky.",
+  "tags": [
+    "grand-canyon",
+    "panorama",
+    "landscape",
+    "national-park",
+    "desert",
+    "rock"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_Hopi_Point_(large)_(5411249056).jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 2114369,
+      "sha256": "822d1ee2ccb740e9e96ec30f66ea988e1b1735dcc9612898110f5679df97abaf"
+    }
+  ]
+}

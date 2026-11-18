@@ -1,0 +1,101 @@
+{
+  "cat": "template",
+  "name": {
+    "en": "Weekend recap",
+    "zh-CN": "周末回顾",
+    "ja": "週末のふりかえり",
+    "ko": "주말 리캡",
+    "es": "Resumen del fin de semana"
+  },
+  "about": "12 s, five slots under a camcorder viewfinder: a SAT + SUN title, numbered moment tags, whip-pan flashes on the cuts and a moonlit sign-off. For weekend and week recaps.",
+  "tags": [
+    "vlog",
+    "weekend",
+    "recap",
+    "camcorder",
+    "whip",
+    "fast"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "template.json",
+  "durationMs": 12000,
+  "files": [
+    {
+      "path": "template.json",
+      "bytes": 2408
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 2311072
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 335080
+    },
+    {
+      "path": "example-1.jpg",
+      "bytes": 273452
+    },
+    {
+      "path": "example-2.jpg",
+      "bytes": 656056
+    },
+    {
+      "path": "example-3.jpg",
+      "bytes": 446988
+    },
+    {
+      "path": "example-4.jpg",
+      "bytes": 376828
+    },
+    {
+      "path": "example-5.jpg",
+      "bytes": 224679
+    },
+    {
+      "path": "moment.css",
+      "bytes": 1373
+    },
+    {
+      "path": "moment.html",
+      "bytes": 104
+    },
+    {
+      "path": "outro.css",
+      "bytes": 1436
+    },
+    {
+      "path": "outro.html",
+      "bytes": 157
+    },
+    {
+      "path": "recap-title.css",
+      "bytes": 2227
+    },
+    {
+      "path": "recap-title.html",
+      "bytes": 226
+    },
+    {
+      "path": "viewfinder.css",
+      "bytes": 1635
+    },
+    {
+      "path": "viewfinder.html",
+      "bytes": 263
+    },
+    {
+      "path": "whip.css",
+      "bytes": 925
+    },
+    {
+      "path": "whip.html",
+      "bytes": 147
+    }
+  ]
+}

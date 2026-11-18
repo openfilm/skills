@@ -1,0 +1,42 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Film Burn",
+    "zh-CN": "胶片灼烧",
+    "ja": "フィルムバーン",
+    "ko": "필름 번",
+    "es": "Quemado de película"
+  },
+  "about": "Orange burns with white-hot centers spread from two corners, blow out to white over the cut, then fade off warm. For vintage, dreamy or retro edits.",
+  "tags": [
+    "film-burn",
+    "burn",
+    "film",
+    "vintage",
+    "warm",
+    "retro",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 7124
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 21722
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 550476
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 1200
+}

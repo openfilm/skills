@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Long Whoosh",
+    "zh-CN": "长嗖声",
+    "ja": "長いウーッシュ",
+    "ko": "긴 휙 소리",
+    "es": "Barrido largo"
+  },
+  "about": "A long air whoosh for a slow transition or a title sweeping in.",
+  "tags": [
+    "whoosh",
+    "transition",
+    "air"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/whoosh-1-s0572.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 10900,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 90469
+    }
+  ]
+}

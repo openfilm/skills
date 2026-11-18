@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Fire Glow",
+    "zh-CN": "火焰描边",
+    "ja": "ファイアグロウ",
+    "ko": "불꽃 글로우",
+    "es": "Brillo de fuego"
+  },
+  "about": "White letters wrapped in an orange-red glow, hot and loud. For hype moments, sport and challenges.",
+  "tags": [
+    "variety",
+    "hot",
+    "glow"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 336
+    }
+  ]
+}

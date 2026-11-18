@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Rain Streaks",
+    "zh-CN": "雨丝",
+    "ja": "雨筋",
+    "ko": "빗줄기",
+    "es": "Lluvia"
+  },
+  "about": "Slanted streaks of rain fall fast in two depths over a faint cool haze. For rainy streets, sad or moody moments and storms.",
+  "tags": [
+    "rain",
+    "weather",
+    "moody",
+    "sad",
+    "storm",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 13664
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 271202
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 595658
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 4000
+}

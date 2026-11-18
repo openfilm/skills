@@ -1,0 +1,9 @@
+{
+  "vars": {
+    "--font": "'ZCOOL KuaiLe', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif",
+    "--weight": "700",
+    "--color": "#b9a6ff",
+    "--stroke": "0.06em",
+    "--stroke-color": "#ffffff"
+  }
+}

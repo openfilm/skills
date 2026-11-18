@@ -1,0 +1,24 @@
+{
+  "name": {
+    "en": "Cinema Titles & Captions",
+    "zh-CN": "电影标题与字幕",
+    "ja": "映画タイトルと字幕",
+    "ko": "영화 타이틀과 자막",
+    "es": "Títulos y subtítulos de cine"
+  },
+  "about": "Film-style titles and readable captions: serif openings, subtitle bars, noir, epic gold and documentary lines.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "text/film-serif",
+    "text/subtitle-box",
+    "text/subtitle-outline",
+    "text/noir-italic",
+    "text/golden-epic",
+    "text/doc-lower",
+    "text/horror-red",
+    "text/romance-script"
+  ],
+  "cover": "cover.jpg"
+}

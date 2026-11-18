@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Ocean Waves",
+    "zh-CN": "海浪",
+    "ja": "海の波",
+    "ko": "바다 물결",
+    "es": "Olas del mar"
+  },
+  "about": "Rows of small waves roll across a blue-green sea and break into white foam, filling the whole frame. A calm, steady background.",
+  "tags": [
+    "ocean",
+    "waves",
+    "sea",
+    "water",
+    "texture",
+    "background"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Ocean_surface_waves_03.ogv"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 20000,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 26276709,
+      "sha256": "ae0e8fc4a28e6bca1b96f69566a6ea76d3c4dceed378216c6ecaa4ea7d29729d"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 215033
+    }
+  ]
+}

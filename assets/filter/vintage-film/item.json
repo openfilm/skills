@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Vintage Film",
+    "zh-CN": "复古胶片",
+    "ja": "ヴィンテージフィルム",
+    "ko": "빈티지 필름",
+    "es": "Película antigua"
+  },
+  "about": "Faded warm highlights with greenish shadows, like old colour stock. For memories and retro edits.",
+  "tags": [
+    "vintage",
+    "film",
+    "retro"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 554
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 431878
+    }
+  ]
+}

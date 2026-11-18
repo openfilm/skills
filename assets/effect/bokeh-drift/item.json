@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Bokeh Drift",
+    "zh-CN": "光斑漂浮",
+    "ja": "漂うボケ",
+    "ko": "보케 드리프트",
+    "es": "Bokeh flotante"
+  },
+  "about": "Soft out-of-focus discs of warm and cool light drift slowly and breathe across the frame. For dreamy, romantic, night-city and festive shots.",
+  "tags": [
+    "bokeh",
+    "lights",
+    "dreamy",
+    "romantic",
+    "soft",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 8320
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 273751
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1108569
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 6000
+}

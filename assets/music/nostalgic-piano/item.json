@@ -1,0 +1,31 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Nostalgic Piano",
+    "zh-CN": "怀旧钢琴",
+    "ja": "ノスタルジック・ピアノ",
+    "ko": "향수 피아노",
+    "es": "Piano nostálgico"
+  },
+  "about": "A reflective piano piece for looking back, farewells and quiet endings.",
+  "tags": [
+    "piano",
+    "nostalgic",
+    "calm"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/romantic/Nostalgic%20Piano.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 193300,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 3918267
+    }
+  ]
+}

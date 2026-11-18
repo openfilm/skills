@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Cross",
+    "zh-CN": "打叉",
+    "ja": "バツ",
+    "ko": "엑스",
+    "es": "Cruz"
+  },
+  "about": "A red marker cross. For wrong answers, cons and don'ts.",
+  "tags": [
+    "cross",
+    "no",
+    "handdrawn"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "pop",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 25583
+    }
+  ]
+}

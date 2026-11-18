@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "A Month of Moon Phases",
+    "zh-CN": "月相一个月",
+    "ja": "ひと月の月の満ち欠け",
+    "ko": "한 달의 달 위상",
+    "es": "Un mes de fases lunares"
+  },
+  "about": "The Moon goes from new to full and back to new in twenty seconds, rocking gently as it does, rendered from NASA lunar mapping data. It loops on the new moon.",
+  "tags": [
+    "moon",
+    "phases",
+    "lunar",
+    "night-sky",
+    "loop",
+    "time"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Moon_Phase_and_Libration,_2024_(SVS5187_-_phases_2024_plain_2160p30).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 20033,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 6193211,
+      "sha256": "1fcc859856d65a68eb8426c4efe59e66ddf58791ab664d9509db9ce16dabaa0a"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 120909
+    }
+  ]
+}

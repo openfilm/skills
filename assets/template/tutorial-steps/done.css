@@ -1,0 +1,13 @@
+/* The last card: a check mark draws in a teal circle, a closing line and what comes next. 1.8 s. */
+.w { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #f4f7fb;
+  font-family: 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif; }
+.glow { position: absolute; inset: 0; background: radial-gradient(closest-side, rgba(13, 27, 42, 0.88), rgba(13, 27, 42, 0)); animation: fade 0.4s both; }
+.ok { position: relative; width: 26vh; height: 26vh; border-radius: 50%; background: #2ec4b6; animation: pop 0.45s cubic-bezier(0.3, 1.7, 0.5, 1) both; }
+.tick { position: absolute; left: 7.6vh; top: 4.4vh; width: 8vh; height: 14vh; border: solid #0d1b2a; border-width: 0 3.2vh 3.2vh 0; transform: rotate(40deg); transform-origin: center;
+  animation: draw 0.35s 0.3s cubic-bezier(0.3, 0.8, 0.3, 1) both; }
+.t1 { position: relative; margin: 5vh 0 3vh; font-size: 15vh; line-height: 1; font-weight: 800; white-space: nowrap; text-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.4); animation: rise 0.5s 0.3s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.t2 { position: relative; margin: 0; font: 700 5.6vh/1 Menlo, 'SF Mono', Consolas, monospace; letter-spacing: 0.16em; color: #ff9f1c; white-space: nowrap; text-shadow: 0 0.4vh 1.6vh rgba(13, 27, 42, 0.9); animation: rise 0.5s 0.5s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+@keyframes fade { from { opacity: 0; } }
+@keyframes pop { from { transform: scale(0); } }
+@keyframes draw { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes rise { from { opacity: 0; transform: translateY(4vh); } }

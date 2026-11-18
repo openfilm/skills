@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Cheeky Flame",
+    "zh-CN": "小火苗",
+    "ja": "いたずら炎",
+    "ko": "장난 불꽃",
+    "es": "Llama pícara"
+  },
+  "about": "A lively flame with a cheeky grin. For hot takes, hype and spicy food.",
+  "tags": [
+    "fire",
+    "hot",
+    "hype"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "wiggle",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 605682
+    }
+  ]
+}

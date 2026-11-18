@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Subtitle Bar",
+    "zh-CN": "字幕条",
+    "ja": "字幕バー",
+    "ko": "자막 바",
+    "es": "Subtítulo"
+  },
+  "about": "Clean white words on a translucent dark bar, readable on any picture. For dialogue, interviews and translations.",
+  "tags": [
+    "subtitle",
+    "caption",
+    "readable"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 276
+    }
+  ]
+}

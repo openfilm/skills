@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Vivid Punch",
+    "zh-CN": "浓郁鲜艳",
+    "ja": "ビビッドパンチ",
+    "ko": "비비드 펀치",
+    "es": "Vívido"
+  },
+  "about": "Rich colour and punchy contrast that jumps off the screen. For ads, sport and food.",
+  "tags": [
+    "vivid",
+    "saturated",
+    "punchy"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 141
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 431878
+    }
+  ]
+}

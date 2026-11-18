@@ -1,0 +1,31 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Backbeat",
+    "zh-CN": "反拍",
+    "ja": "バックビート",
+    "ko": "백비트",
+    "es": "Contratiempo"
+  },
+  "about": "A short electronic beat for tech, intros and fast cuts.",
+  "tags": [
+    "electronic",
+    "beat",
+    "tech"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/electronic/Backbeat.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 46201,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 1058891
+    }
+  ]
+}

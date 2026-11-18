@@ -1,0 +1,15 @@
+/* A tutorial's chapter card: a dark panel wipes open, the chapter label, the title and what it takes slide in. 2 s. */
+.w { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; color: #f4f7fb;
+  font-family: 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  animation: out 0.35s 1.65s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.panel { display: flex; flex-direction: column; align-items: flex-start; padding: 9vh 11vh; border-radius: 4vh; background: rgba(13, 27, 42, 0.86); border-left: 2.4vh solid #2ec4b6;
+  box-shadow: 0 3vh 10vh rgba(0, 0, 0, 0.4); animation: open 0.6s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.kick { display: flex; align-items: center; gap: 2.4vh; animation: slide 0.5s 0.25s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.blk { width: 4vh; height: 4vh; border-radius: 0.8vh; background: #ff9f1c; animation: spin 1.2s 0.4s cubic-bezier(0.5, 0, 0.3, 1) both; }
+.t3 { font: 700 5vh/1 Menlo, 'SF Mono', Consolas, monospace; letter-spacing: 0.2em; color: #2ec4b6; white-space: nowrap; }
+.t1 { margin: 4vh 0 3vh; font-size: 12vh; line-height: 1.08; font-weight: 800; white-space: nowrap; animation: slide 0.6s 0.35s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.t2 { margin: 0; font-size: 6vh; font-weight: 500; color: rgba(244, 247, 251, 0.75); white-space: nowrap; animation: slide 0.6s 0.5s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+@keyframes open { from { clip-path: inset(0 100% 0 0 round 4vh); } to { clip-path: inset(0 0 0 0 round 4vh); } }
+@keyframes slide { from { opacity: 0; transform: translateX(-8vh); } }
+@keyframes spin { from { transform: rotate(-180deg) scale(0); } }
+@keyframes out { to { opacity: 0; transform: translateY(-4%); } }

@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Thumbs Up",
+    "zh-CN": "点赞",
+    "ja": "いいね",
+    "ko": "엄지 척",
+    "es": "Pulgar arriba"
+  },
+  "about": "A chunky cartoon thumbs-up. For approval, tips and a job well done.",
+  "tags": [
+    "like",
+    "approve",
+    "hand"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "bounce",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 583793
+    }
+  ]
+}

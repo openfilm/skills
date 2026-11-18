@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Cool Night",
+    "zh-CN": "冷调夜色",
+    "ja": "クールナイト",
+    "ko": "차가운 밤",
+    "es": "Noche fría"
+  },
+  "about": "Blue-leaning shadows and darker mids for night and tension. For thrillers, cities after dark and sad beats.",
+  "tags": [
+    "cool",
+    "night",
+    "blue"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 201
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 431878
+    }
+  ]
+}

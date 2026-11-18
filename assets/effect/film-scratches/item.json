@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Film Scratches",
+    "zh-CN": "胶片划痕",
+    "ja": "フィルムの傷",
+    "ko": "필름 스크래치",
+    "es": "Rayas de película"
+  },
+  "about": "Thin light and dark vertical scratches flash and wander over light grain, with one long scratch drifting across. For old-film, archive and silent-movie looks.",
+  "tags": [
+    "scratches",
+    "film",
+    "vintage",
+    "old",
+    "archive",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 16337
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 288924
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 885956
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 4000
+}

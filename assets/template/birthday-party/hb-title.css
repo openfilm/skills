@@ -1,0 +1,22 @@
+/* A birthday title: two balloons float up at the sides, the words bounce in big and round, the name pill pops below. 3 s. */
+.w { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff;
+  font-family: 'Arial Rounded MT Bold', 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  animation: out 0.4s 2.6s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.glow { position: absolute; inset: 4% 10%; background: radial-gradient(closest-side, rgba(40, 10, 30, 0.5), rgba(40, 10, 30, 0)); animation: fade 0.6s both; }
+.bl { position: absolute; top: 8vh; display: flex; flex-direction: column; align-items: center; animation: float 0.9s cubic-bezier(0.2, 0.9, 0.3, 1.2) both, bob 2.2s 0.9s ease-in-out infinite; }
+.bl.l { left: 4vh; }
+.bl.r { right: 4vh; animation-delay: 0.12s, 1s; }
+.ball { position: relative; width: 24vh; height: 30vh; border-radius: 50% 50% 48% 48% / 55% 55% 45% 45%; background: radial-gradient(circle at 34% 30%, #ffd1e0 0, #ff5c8a 34%, #d93a6c 100%); }
+.bl.r .ball { background: radial-gradient(circle at 34% 30%, #fff1b8 0, #ffd23f 34%, #e6a800 100%); }
+.ball::after { content: ''; position: absolute; left: 50%; bottom: -2vh; width: 4vh; height: 3vh; margin-left: -2vh; background: inherit; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.str { width: 0.5vh; height: 34vh; margin-top: 2vh; background: rgba(255, 255, 255, 0.8); }
+.t1 { position: relative; margin: 0 0 4vh; font-size: 19vh; line-height: 1; font-weight: 900; white-space: nowrap; letter-spacing: 0.01em;
+  text-shadow: 0 0.8vh 0 #ff5c8a, 0 1.6vh 4vh rgba(0, 0, 0, 0.35); animation: bounce 0.9s 0.3s cubic-bezier(0.3, 1.7, 0.5, 1) both; }
+.t2 { position: relative; margin: 0; padding: 2.4vh 5.4vh; border-radius: 99vh; background: #fff; color: #ff5c8a; font-size: 6.4vh; font-weight: 900; letter-spacing: 0.22em;
+  white-space: nowrap; box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.25); animation: pop 0.5s 0.9s cubic-bezier(0.3, 1.8, 0.5, 1) both; }
+@keyframes fade { from { opacity: 0; } }
+@keyframes float { from { opacity: 0; transform: translateY(70vh); } }
+@keyframes bob { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-3vh) rotate(3deg); } }
+@keyframes bounce { 0% { opacity: 0; transform: scale(0.3) translateY(10vh); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes pop { from { opacity: 0; transform: scale(0); } }
+@keyframes out { to { opacity: 0; transform: scale(1.1); } }

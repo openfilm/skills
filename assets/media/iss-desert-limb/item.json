@@ -1,0 +1,41 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Desert Horizon from Orbit",
+    "zh-CN": "轨道上的沙漠地平线",
+    "ja": "軌道から見た砂漠の地平線",
+    "ko": "궤도에서 본 사막 지평선",
+    "es": "Horizonte desértico desde la órbita"
+  },
+  "about": "A wide desert under towers of cloud, with the blue edge of the atmosphere along the horizon, slowly passing beneath the International Space Station.",
+  "tags": [
+    "earth",
+    "orbit",
+    "space-station",
+    "desert",
+    "horizon",
+    "clouds",
+    "atmosphere"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Crew_Earth_Observations_(4K).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 16016,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 4996086,
+      "sha256": "ee98e81d0dd9d56c162105334e401cf2f50123c3986827c4fbfdef248971b84f"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 222514
+    }
+  ]
+}

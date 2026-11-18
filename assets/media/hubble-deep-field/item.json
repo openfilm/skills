@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Hubble Deep Field",
+    "zh-CN": "哈勃深空",
+    "ja": "ハッブル・ディープ・フィールド",
+    "ko": "허블 딥 필드",
+    "es": "Campo profundo del Hubble"
+  },
+  "about": "A slow push into the Hubble Ultra Deep Field, where almost every point of light is a distant galaxy.",
+  "tags": [
+    "galaxies",
+    "deep-space",
+    "hubble",
+    "stars",
+    "universe",
+    "astronomy"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Hubble_Ultra_Deep_Field_Video_near_constellation_Fornax.webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 10911,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 4765676,
+      "sha256": "032fd5e2ac80ac57e9f2c820d3be9e0e385dfa5ff4aecf0c4049815c3e272627"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 253700
+    }
+  ]
+}

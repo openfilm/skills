@@ -1,0 +1,6 @@
+/* A clean push: a teal edge leads a dark panel across the frame, covering the cut at its middle (0.35 s of 0.7 s). */
+.w { position: fixed; inset: 0; overflow: hidden; }
+.p { position: absolute; inset: 0; animation: push 0.7s cubic-bezier(0.8, 0, 0.2, 1) both; }
+.p1 { background: #2ec4b6; }
+.p2 { background: #0d1b2a; animation-delay: 0.05s; }
+@keyframes push { 0% { transform: translateX(100%); } 45%, 55% { transform: translateX(0); } 100% { transform: translateX(-100%); } }

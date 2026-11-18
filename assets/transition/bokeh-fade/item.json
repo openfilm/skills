@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Bokeh Fade",
+    "zh-CN": "光斑溶解",
+    "ja": "ボケフェード",
+    "ko": "보케 페이드",
+    "es": "Fundido bokeh"
+  },
+  "about": "Soft out-of-focus discs of warm light swell and run together into white over the cut, then drift apart. For gentle, romantic and festive cuts.",
+  "tags": [
+    "bokeh",
+    "soft",
+    "dreamy",
+    "warm",
+    "romantic",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 4310
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 122836
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 755223
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 1200
+}

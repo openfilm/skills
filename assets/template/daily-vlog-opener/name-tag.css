@@ -1,0 +1,15 @@
+/* A lower third: a white pill opens from its round badge, a handle and what you are doing today. 2.6 s. */
+.w { position: fixed; inset: 0; display: flex; align-items: center; padding-left: 4vh; box-sizing: border-box;
+  font-family: -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  animation: out 0.4s 2.2s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.pill { display: flex; align-items: center; gap: 5vh; height: 64vh; padding: 0 9vh 0 6vh; border-radius: 99vh; background: #fffaf3; color: #2b1d16;
+  box-shadow: 0 3vh 8vh rgba(0, 0, 0, 0.3); animation: open 0.7s 0.15s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.av { display: grid; place-items: center; flex: none; width: 46vh; height: 46vh; border-radius: 50%; background: #ff6b57; color: #fff; font-size: 24vh; font-weight: 800;
+  animation: pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+.tx { display: flex; flex-direction: column; gap: 2vh; white-space: nowrap; animation: slide 0.6s 0.4s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.t1 { font-size: 22vh; font-weight: 800; line-height: 1; }
+.t2 { font-size: 14vh; font-weight: 600; line-height: 1; color: #ff6b57; letter-spacing: 0.04em; }
+@keyframes open { from { clip-path: inset(0 100% 0 0 round 99vh); } to { clip-path: inset(0 0 0 0 round 99vh); } }
+@keyframes pop { from { transform: scale(0); } }
+@keyframes slide { from { opacity: 0; transform: translateX(-12vh); } }
+@keyframes out { to { opacity: 0; transform: translateY(20%); } }

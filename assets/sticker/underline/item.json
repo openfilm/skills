@@ -1,0 +1,30 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Underline",
+    "zh-CN": "双下划线",
+    "ja": "二重下線",
+    "ko": "밑줄",
+    "es": "Subrayado"
+  },
+  "about": "Two yellow marker underlines. For stressing a word or a number.",
+  "tags": [
+    "underline",
+    "highlight",
+    "handdrawn"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 11151
+    }
+  ]
+}

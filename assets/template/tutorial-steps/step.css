@@ -1,0 +1,16 @@
+/* A step lower third: a numbered badge, the step and what to do, and a small timer bar along the bottom. 2-3 s. */
+.w { position: fixed; inset: 0; display: flex; align-items: center; padding-left: 3vh; box-sizing: border-box; color: #f4f7fb;
+  font-family: 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif; }
+.card { position: relative; display: flex; align-items: center; gap: 6vh; padding: 0 12vh 0 7vh; height: 76vh; border-radius: 6vh; background: rgba(13, 27, 42, 0.9);
+  overflow: hidden; box-shadow: 0 3vh 8vh rgba(0, 0, 0, 0.35); animation: open 0.55s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.num { display: grid; place-items: center; flex: none; width: 46vh; height: 46vh; border-radius: 50%; background: #2ec4b6; color: #0d1b2a; font-size: 28vh; font-weight: 800;
+  animation: pop 0.5s 0.15s cubic-bezier(0.3, 1.7, 0.5, 1) both; }
+.tx { display: flex; flex-direction: column; gap: 4vh; white-space: nowrap; animation: slide 0.5s 0.3s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.t3 { font: 700 9vh/1 Menlo, 'SF Mono', Consolas, monospace; letter-spacing: 0.14em; color: #ff9f1c; }
+.t1 { font-size: 19vh; font-weight: 800; line-height: 1; }
+.bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3vh; background: rgba(255, 255, 255, 0.12); }
+.fill { display: block; height: 100%; background: #2ec4b6; transform-origin: left; animation: fill 1.8s 0.4s linear both; }
+@keyframes open { from { opacity: 0; clip-path: inset(0 100% 0 0 round 6vh); } to { opacity: 1; clip-path: inset(0 0 0 0 round 6vh); } }
+@keyframes pop { from { transform: scale(0) rotate(-90deg); } }
+@keyframes slide { from { opacity: 0; transform: translateX(-6vh); } }
+@keyframes fill { from { transform: scaleX(0); } }

@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Blinds",
+    "zh-CN": "百叶窗",
+    "ja": "ブラインド",
+    "ko": "블라인드",
+    "es": "Persianas"
+  },
+  "about": "Dark slats turn shut one after another from top to bottom, close over the cut, then open the same way. A tidy, graphic cut for lists and chapters.",
+  "tags": [
+    "blinds",
+    "slats",
+    "stripes",
+    "graphic",
+    "tidy",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 14261
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 73049
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 540140
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 800
+}

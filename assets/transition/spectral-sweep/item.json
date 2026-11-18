@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Spectral Sweep",
+    "zh-CN": "光谱扫光",
+    "ja": "スペクトルスイープ",
+    "ko": "스펙트럼 스윕",
+    "es": "Barrido espectral"
+  },
+  "about": "A slanted band of light split into soft rainbow colors sweeps across, flashing white at its core over the cut. For fashion, music and dreamy edits.",
+  "tags": [
+    "rainbow",
+    "prism",
+    "sweep",
+    "colorful",
+    "dreamy",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 1068
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 164847
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 670139
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 900
+}

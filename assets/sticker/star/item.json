@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Smiling Star",
+    "zh-CN": "微笑星星",
+    "ja": "にっこり星",
+    "ko": "웃는 별",
+    "es": "Estrella sonriente"
+  },
+  "about": "A smiling yellow star with rosy cheeks. For praise, highlights and good news.",
+  "tags": [
+    "star",
+    "cute",
+    "praise"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "float",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 581054
+    }
+  ]
+}

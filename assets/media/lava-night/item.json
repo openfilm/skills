@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Lava at Night",
+    "zh-CN": "夜晚的熔岩",
+    "ja": "夜の溶岩",
+    "ko": "밤의 용암",
+    "es": "Lava de noche"
+  },
+  "about": "In the dark a fissure throws glowing spatter into the air while lava flows shine along the horizon under a red sky. Kīlauea, Hawaiʻi, 2018.",
+  "tags": [
+    "lava",
+    "volcano",
+    "night",
+    "eruption",
+    "glow",
+    "hawaii"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:This_video_shows_fountaining_at_Fissure_6_on_May_21,_2018,_around_2-45_AM_HST....webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 9009,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 3115322,
+      "sha256": "542d6c591b3e3d084e04d782f349b4d73a9b4d404704081cf122f2230cc0bd98"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 50841
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{"clips": [
+  {"track": 0, "at": 0.3, "time": [0, 2.6], "page": "menu-title", "size": {"w": 1400, "h": 900}, "place": {"x": 0.5, "y": 0.5, "fit": 0.72},
+    "texts": {".t1": "Tasting Notes", ".t2": "RAMEN NIGHT", ".t3": "EP. 08"},
+    "props": [{"name": "Title", "type": "text", "at": ".t1"}, {"name": "Subtitle", "type": "text", "at": ".t2"}, {"name": "Episode", "type": "text", "at": ".t3"}]},
+  {"track": 0, "at": 3.3, "time": [0, 2.0], "page": "rating", "size": {"w": 1300, "h": 420}, "place": {"x": 0.3, "y": 0.8, "fit": 0.3},
+    "texts": {".t1": "Tonkotsu Ramen", ".t2": "$14"},
+    "props": [{"name": "Dish", "type": "text", "at": ".t1"}, {"name": "Price", "type": "text", "at": ".t2"}]},
+  {"track": 0, "at": 6.0, "time": [0, 1.8], "page": "badge", "size": {"w": 600, "h": 600}, "place": {"x": 0.78, "y": 0.32, "fit": 0.48},
+    "texts": {".t1": "MUST TRY", ".t2": "open till 2 am"},
+    "props": [{"name": "Badge", "type": "text", "at": ".t1"}, {"name": "Note", "type": "text", "at": ".t2"}]},
+  {"track": 0, "at": 8.4, "time": [0, 2.6], "page": "verdict", "size": {"w": 1400, "h": 800}, "place": {"x": 0.5, "y": 0.5, "fit": 0.62},
+    "texts": {".t1": "9.2", ".t2": "Worth the queue.", ".t3": "VERDICT"},
+    "props": [{"name": "Score", "type": "text", "at": ".t1"}, {"name": "Review", "type": "text", "at": ".t2"}, {"name": "Label", "type": "text", "at": ".t3"}], "fade": [0, 0.4]},
+  {"track": 1, "at": 2.6, "time": [0, 0.8], "page": "circle-wipe"},
+  {"track": 1, "at": 5.2, "time": [0, 0.8], "page": "circle-wipe"},
+  {"track": 1, "at": 7.8, "time": [0, 0.8], "page": "circle-wipe"},
+  {"track": 3, "at": 0, "time": [0, 3.0], "picture": "example-1"},
+  {"track": 3, "at": 3.0, "time": [0, 2.6], "picture": "example-2"},
+  {"track": 3, "at": 5.6, "time": [0, 2.6], "picture": "example-3"},
+  {"track": 3, "at": 8.2, "time": [0, 2.8], "picture": "example-4", "fade": [0, 0.5]}
+]}

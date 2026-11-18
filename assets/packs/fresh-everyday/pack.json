@@ -1,0 +1,24 @@
+{
+  "name": {
+    "en": "Fresh Everyday",
+    "zh-CN": "生活清新",
+    "ja": "さわやか日常",
+    "ko": "상큼한 일상",
+    "es": "Fresco y cotidiano"
+  },
+  "about": "Light, flattering looks for daily life: airy, peach skin, tasty food, mint, pastel, sunset, clean and retro instant.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "filter/airy-light",
+    "filter/peach-skin",
+    "filter/tasty-food",
+    "filter/mint-fresh",
+    "filter/pastel-dream",
+    "filter/sunset-glow",
+    "filter/clean-bright",
+    "filter/retro-polaroid"
+  ],
+  "cover": "cover.jpg"
+}

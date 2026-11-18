@@ -1,0 +1,41 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Red Sea Coast from Orbit",
+    "zh-CN": "轨道上的红海海岸",
+    "ja": "軌道から見た紅海の海岸",
+    "ko": "궤도에서 본 홍해 해안",
+    "es": "Costa del mar Rojo desde la órbita"
+  },
+  "about": "Looking down from the International Space Station on a desert coastline and a long arm of the sea, with cumulus clouds over the water.",
+  "tags": [
+    "earth",
+    "orbit",
+    "space-station",
+    "coast",
+    "sea",
+    "desert",
+    "aerial"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Crew_Earth_Observations_(4K).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 8425,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 3969777,
+      "sha256": "b6e9ebdfadea361dd53db328f2e24fa37641c7adbba0d7a03b5d105faff6f16d"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 315370
+    }
+  ]
+}

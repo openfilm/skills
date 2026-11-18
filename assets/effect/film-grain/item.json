@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Film Grain",
+    "zh-CN": "胶片颗粒",
+    "ja": "フィルムグレイン",
+    "ko": "필름 그레인",
+    "es": "Grano de película"
+  },
+  "about": "Fine, living film grain that changes every frame, light enough to sit over any shot. For a filmic, organic finish on digital footage.",
+  "tags": [
+    "grain",
+    "film",
+    "texture",
+    "noise",
+    "cinematic",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 6698
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 330572
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1367208
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 4000
+}

@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Matte Fade",
+    "zh-CN": "哑光褪色",
+    "ja": "マットフェード",
+    "ko": "매트 페이드",
+    "es": "Mate"
+  },
+  "about": "Lifted blacks and soft highlights, a calm matte film look. For lifestyle, fashion and quiet stories.",
+  "tags": [
+    "matte",
+    "faded",
+    "soft"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 151
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 193169
+    }
+  ]
+}

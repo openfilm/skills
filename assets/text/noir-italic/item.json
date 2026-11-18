@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Noir",
+    "zh-CN": "黑色电影",
+    "ja": "ノワール",
+    "ko": "누아르",
+    "es": "Noir"
+  },
+  "about": "Italic serif in cold white with a long hard shadow. For mystery, crime and moody narration.",
+  "tags": [
+    "noir",
+    "serif",
+    "moody"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 231
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": {
+    "en": "Cute Stickers",
+    "zh-CN": "可爱贴纸",
+    "ja": "かわいいステッカー",
+    "ko": "귀여운 스티커",
+    "es": "Stickers bonitos"
+  },
+  "about": "Glossy cartoon stickers to put on any picture: hearts, stars, faces, a cat, coffee, rainbow, crown and more.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "sticker/heart",
+    "sticker/star",
+    "sticker/thumbs-up",
+    "sticker/laughing",
+    "sticker/fire",
+    "sticker/sparkles",
+    "sticker/winking-cat",
+    "sticker/happy-coffee",
+    "sticker/rainbow",
+    "sticker/crown"
+  ],
+  "cover": "cover.jpg"
+}

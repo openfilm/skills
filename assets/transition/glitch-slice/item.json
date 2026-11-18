@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Glitch Slice",
+    "zh-CN": "故障切片",
+    "ja": "グリッチスライス",
+    "ko": "글리치 슬라이스",
+    "es": "Corte glitch"
+  },
+  "about": "The frame tears into shifted black, cyan and magenta slices, blacks out on the cut and tears back. For tech, gaming and fast music cuts.",
+  "tags": [
+    "glitch",
+    "digital",
+    "slices",
+    "tech",
+    "gaming",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 14280
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 217910
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 569596
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 600
+}

@@ -1,0 +1,31 @@
+{
+  "cat": "music",
+  "name": {
+    "en": "Emotional Blockbuster",
+    "zh-CN": "动人大片",
+    "ja": "感動ブロックバスター",
+    "ko": "감동 블록버스터",
+    "es": "Épica emotiva"
+  },
+  "about": "A big, emotional cinematic build for trailers and turning points.",
+  "tags": [
+    "epic",
+    "cinematic",
+    "emotional"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://a.ocv.me/pub/stuff/music/freepd/epic/Emotional%20Blockbuster%202.mp3"
+  },
+  "version": 1,
+  "main": "music.m4a",
+  "durationMs": 128800,
+  "files": [
+    {
+      "path": "music.m4a",
+      "bytes": 2604485
+    }
+  ]
+}

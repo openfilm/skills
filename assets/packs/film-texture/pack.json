@@ -1,0 +1,25 @@
+{
+  "name": {
+    "en": "Film & Texture",
+    "zh-CN": "胶片与质感",
+    "ja": "フィルムと質感",
+    "ko": "필름과 질감",
+    "es": "Película y textura"
+  },
+  "about": "Analog texture to lay over a shot: film grain, scratches, dust and hair, a pulsing vignette, VHS tape, drifting light leaks, projector flicker, a faded print and a Super 8 gate. Each loops seamlessly.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "effect/film-grain",
+    "effect/film-scratches",
+    "effect/dust-and-hair",
+    "effect/pulsing-vignette",
+    "effect/vhs-tape",
+    "effect/light-leak-drift",
+    "effect/projector-flicker",
+    "effect/faded-print",
+    "effect/super8-gate"
+  ],
+  "cover": "cover.jpg"
+}

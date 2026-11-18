@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Weathered Wood Planks",
+    "zh-CN": "风化木板",
+    "ja": "風化した木の板",
+    "ko": "풍화된 나무 판자",
+    "es": "Tablas de madera envejecida"
+  },
+  "about": "Grey, sun-bleached planks of an old wooden table on a diagonal, with knots and cracks in the grain. A rustic texture for backgrounds.",
+  "tags": [
+    "wood",
+    "texture",
+    "planks",
+    "grey",
+    "rustic",
+    "background"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Weatherworn_top_of_wooden_table.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 3354173,
+      "sha256": "7ad924a3aa417d3f42ee220c35fbd25aeee6ca25946d0be11f2feec1729731ab"
+    }
+  ]
+}

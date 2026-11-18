@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Rusty Chain",
+    "zh-CN": "锈蚀铁链",
+    "ja": "錆びた鎖",
+    "ko": "녹슨 쇠사슬",
+    "es": "Cadena oxidada"
+  },
+  "about": "Heavy links of a very rusty chain tangled together, wet from rain, in rich orange and brown: an industrial texture full of detail.",
+  "tags": [
+    "rust",
+    "chain",
+    "metal",
+    "texture",
+    "industrial",
+    "orange"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Very_rusty_chain_in_rain_4.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 4589172,
+      "sha256": "6388760ba3f702d02dfe6d12ddcb2050c426967920152d0d81bbb61ca289e2d2"
+    }
+  ]
+}

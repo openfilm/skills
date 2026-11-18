@@ -1,0 +1,41 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Warm Leak",
+    "zh-CN": "暖色漏光",
+    "ja": "暖色の光漏れ",
+    "ko": "따뜻한 빛샘",
+    "es": "Fuga de luz cálida"
+  },
+  "about": "Orange, rose and gold light leaks drift in from the side, merge into a creamy white over the cut and drift off. For warm, nostalgic or romantic cuts.",
+  "tags": [
+    "light-leak",
+    "warm",
+    "film",
+    "soft",
+    "nostalgic",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 1911
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 136529
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 547647
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 1000
+}

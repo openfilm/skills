@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Rainbow Clouds",
+    "zh-CN": "彩虹云朵",
+    "ja": "虹と雲",
+    "ko": "무지개 구름",
+    "es": "Arcoíris"
+  },
+  "about": "A rainbow between two smiling clouds. For happy endings, weather and good vibes.",
+  "tags": [
+    "rainbow",
+    "happy",
+    "weather"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "float",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 651694
+    }
+  ]
+}

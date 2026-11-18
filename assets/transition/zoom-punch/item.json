@@ -1,0 +1,42 @@
+{
+  "cat": "transition",
+  "name": {
+    "en": "Zoom Punch",
+    "zh-CN": "冲击变焦",
+    "ja": "ズームパンチ",
+    "ko": "줌 펀치",
+    "es": "Golpe de zoom"
+  },
+  "about": "Speed lines burst out from the middle, a shock ring flies off and a white punch fills the frame on the cut. For hits, drops and reveals on the beat.",
+  "tags": [
+    "zoom",
+    "impact",
+    "speed-lines",
+    "punch",
+    "beat",
+    "energy",
+    "transition"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 2585
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 243640
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 970752
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 600
+}

@@ -1,0 +1,57 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l { background-image: linear-gradient(#121214, #121214), linear-gradient(#4a4a50, #4a4a50), linear-gradient(#f3f2ef, #f3f2ef);
+  background-size: 100% 100%; background-repeat: no-repeat; animation: ps 800ms linear both; }
+@keyframes ps {
+  0% { background-position: 102vw 0, 102vw 0, 102vw 0; }
+  2% { background-position: 102vw 0, 102vw 0, 102vw 0; }
+  4% { background-position: 102vw 0, 102vw 0, 102vw 0; }
+  6% { background-position: 102vw 0, 102vw 0, 82.93vw 0; }
+  8% { background-position: 102vw 0, 102vw 0, 66.4vw 0; }
+  10% { background-position: 102vw 0, 102vw 0, 52.22vw 0; }
+  12% { background-position: 102vw 0, 102vw 0, 40.23vw 0; }
+  14% { background-position: 102vw 0, 82.93vw 0, 30.22vw 0; }
+  16% { background-position: 102vw 0, 66.4vw 0, 22.03vw 0; }
+  18% { background-position: 102vw 0, 52.22vw 0, 15.47vw 0; }
+  20% { background-position: 102vw 0, 40.23vw 0, 10.37vw 0; }
+  22% { background-position: 82.93vw 0, 30.22vw 0, 6.53vw 0; }
+  24% { background-position: 66.4vw 0, 22.03vw 0, 3.78vw 0; }
+  26% { background-position: 52.22vw 0, 15.47vw 0, 1.93vw 0; }
+  28% { background-position: 40.23vw 0, 10.37vw 0, 0.82vw 0; }
+  30% { background-position: 30.22vw 0, 6.53vw 0, 0.24vw 0; }
+  32% { background-position: 22.03vw 0, 3.78vw 0, 0.03vw 0; }
+  34% { background-position: 15.47vw 0, 1.93vw 0, 0vw 0; }
+  36% { background-position: 10.37vw 0, 0.82vw 0, 0vw 0; }
+  38% { background-position: 6.53vw 0, 0.24vw 0, 0vw 0; }
+  40% { background-position: 3.78vw 0, 0.03vw 0, 0vw 0; }
+  42% { background-position: 1.93vw 0, 0vw 0, 0vw 0; }
+  44% { background-position: 0.82vw 0, 0vw 0, 0vw 0; }
+  46% { background-position: 0.24vw 0, 0vw 0, 0vw 0; }
+  48% { background-position: 0.03vw 0, 0vw 0, 0vw 0; }
+  50% { background-position: 0vw 0, 0vw 0, 0vw 0; }
+  52% { background-position: -0.03vw 0, 0vw 0, 0vw 0; }
+  54% { background-position: -0.24vw 0, 0vw 0, 0vw 0; }
+  56% { background-position: -0.82vw 0, 0vw 0, 0vw 0; }
+  58% { background-position: -1.93vw 0, 0vw 0, 0vw 0; }
+  60% { background-position: -3.78vw 0, -0.03vw 0, 0vw 0; }
+  62% { background-position: -6.53vw 0, -0.24vw 0, 0vw 0; }
+  64% { background-position: -10.37vw 0, -0.82vw 0, 0vw 0; }
+  66% { background-position: -15.47vw 0, -1.93vw 0, 0vw 0; }
+  68% { background-position: -22.03vw 0, -3.78vw 0, -0.03vw 0; }
+  70% { background-position: -30.22vw 0, -6.53vw 0, -0.24vw 0; }
+  72% { background-position: -40.23vw 0, -10.37vw 0, -0.82vw 0; }
+  74% { background-position: -52.22vw 0, -15.47vw 0, -1.93vw 0; }
+  76% { background-position: -66.4vw 0, -22.03vw 0, -3.78vw 0; }
+  78% { background-position: -82.93vw 0, -30.22vw 0, -6.53vw 0; }
+  80% { background-position: -102vw 0, -40.23vw 0, -10.37vw 0; }
+  82% { background-position: -102vw 0, -52.22vw 0, -15.47vw 0; }
+  84% { background-position: -102vw 0, -66.4vw 0, -22.03vw 0; }
+  86% { background-position: -102vw 0, -82.93vw 0, -30.22vw 0; }
+  88% { background-position: -102vw 0, -102vw 0, -40.23vw 0; }
+  90% { background-position: -102vw 0, -102vw 0, -52.22vw 0; }
+  92% { background-position: -102vw 0, -102vw 0, -66.4vw 0; }
+  94% { background-position: -102vw 0, -102vw 0, -82.93vw 0; }
+  96% { background-position: -102vw 0, -102vw 0, -102vw 0; }
+  98% { background-position: -102vw 0, -102vw 0, -102vw 0; }
+  100% { background-position: -102vw 0, -102vw 0, -102vw 0; }
+}

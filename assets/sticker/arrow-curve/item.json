@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Curved Arrow",
+    "zh-CN": "手绘弯箭头",
+    "ja": "手描き矢印",
+    "ko": "손그림 화살표",
+    "es": "Flecha curva"
+  },
+  "about": "A red hand-drawn arrow curving toward its point. For pointing things out.",
+  "tags": [
+    "arrow",
+    "handdrawn",
+    "point"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "wiggle",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 18961
+    }
+  ]
+}

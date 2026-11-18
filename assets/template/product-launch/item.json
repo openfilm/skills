@@ -1,0 +1,93 @@
+{
+  "cat": "template",
+  "name": {
+    "en": "Product launch",
+    "zh-CN": "新品发布",
+    "ja": "新製品発表",
+    "ko": "신제품 출시",
+    "es": "Lanzamiento de producto"
+  },
+  "about": "12 s, three slots: a split-open reveal, a gradient product name with a glint, two spec callouts, light-beam transitions and a glass end card with price and pre-order button. For launches.",
+  "tags": [
+    "product",
+    "launch",
+    "promo",
+    "tech",
+    "ad",
+    "dark"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "template.json",
+  "durationMs": 12000,
+  "files": [
+    {
+      "path": "template.json",
+      "bytes": 1824
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1260462
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 290331
+    },
+    {
+      "path": "example-1.jpg",
+      "bytes": 241327
+    },
+    {
+      "path": "example-2.jpg",
+      "bytes": 291486
+    },
+    {
+      "path": "example-3.jpg",
+      "bytes": 300444
+    },
+    {
+      "path": "beam.css",
+      "bytes": 870
+    },
+    {
+      "path": "beam.html",
+      "bytes": 71
+    },
+    {
+      "path": "curtain.css",
+      "bytes": 985
+    },
+    {
+      "path": "curtain.html",
+      "bytes": 102
+    },
+    {
+      "path": "headline.css",
+      "bytes": 1569
+    },
+    {
+      "path": "headline.html",
+      "bytes": 94
+    },
+    {
+      "path": "launch-card.css",
+      "bytes": 1914
+    },
+    {
+      "path": "launch-card.html",
+      "bytes": 281
+    },
+    {
+      "path": "spec.css",
+      "bytes": 1889
+    },
+    {
+      "path": "spec.html",
+      "bytes": 177
+    }
+  ]
+}

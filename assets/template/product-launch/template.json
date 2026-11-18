@@ -1,0 +1,18 @@
+{"clips": [
+  {"track": 0, "at": 0.9, "time": [0, 3.2], "page": "headline", "size": {"w": 1600, "h": 520}, "place": {"x": 0.5, "y": 0.82, "fit": 0.32},
+    "texts": {".t1": "Aura Sound", ".t2": "INTRODUCING"},
+    "props": [{"name": "Product", "type": "text", "at": ".t1"}, {"name": "Kicker", "type": "text", "at": ".t2"}]},
+  {"track": 0, "at": 4.8, "time": [0, 2.3], "page": "spec", "size": {"w": 1100, "h": 420}, "place": {"x": 0.24, "y": 0.2, "fit": 0.3},
+    "texts": {".t1": "24 h", ".t2": "battery life"}, "props": [{"name": "Figure", "type": "text", "at": ".t1"}, {"name": "Meaning", "type": "text", "at": ".t2"}]},
+  {"track": 0, "at": 8.4, "time": [0, 3.6], "page": "launch-card", "size": {"w": 1600, "h": 800}, "place": {"x": 0.36, "y": 0.27, "fit": 0.5},
+    "texts": {".t1": "Sound that fills the room.", ".t2": "$129", ".t3": "AVAILABLE DEC 1", ".t4": "Pre-order now"},
+    "props": [{"name": "Line", "type": "text", "at": ".t1"}, {"name": "Price", "type": "text", "at": ".t2"}, {"name": "Date", "type": "text", "at": ".t3"}, {"name": "Button", "type": "text", "at": ".t4"}], "fade": [0, 0.4]},
+  {"track": 1, "at": 0, "time": [0, 1.4], "page": "curtain"},
+  {"track": 1, "at": 4.0, "time": [0, 0.8], "page": "beam"},
+  {"track": 1, "at": 5.3, "time": [0, 2.3], "page": "spec", "size": {"w": 1100, "h": 420}, "place": {"x": 0.72, "y": 0.8, "fit": 0.3},
+    "texts": {".t1": "360°", ".t2": "room-filling sound"}, "props": [{"name": "Figure", "type": "text", "at": ".t1"}, {"name": "Meaning", "type": "text", "at": ".t2"}]},
+  {"track": 1, "at": 7.6, "time": [0, 0.8], "page": "beam"},
+  {"track": 3, "at": 0, "time": [0, 4.4], "picture": "example-1"},
+  {"track": 3, "at": 4.4, "time": [0, 3.6], "picture": "example-2"},
+  {"track": 3, "at": 8.0, "time": [0, 4.0], "picture": "example-3", "fade": [0, 0.5]}
+]}

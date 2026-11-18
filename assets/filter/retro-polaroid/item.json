@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Retro Instant",
+    "zh-CN": "复古拍立得",
+    "ja": "レトロインスタント",
+    "ko": "레트로 즉석사진",
+    "es": "Instantánea retro"
+  },
+  "about": "Faded, warm and slightly green in the shadows, like an instant photo. For memories and throwbacks.",
+  "tags": [
+    "retro",
+    "instant",
+    "faded"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 316
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 193169
+    }
+  ]
+}

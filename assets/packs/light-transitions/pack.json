@@ -1,0 +1,26 @@
+{
+  "name": {
+    "en": "Light Transitions",
+    "zh-CN": "光影转场",
+    "ja": "光のトランジション",
+    "ko": "빛 전환",
+    "es": "Transiciones de luz"
+  },
+  "about": "Transitions made of light: leaks, flashes, a lens flare, film burn, a glowing wipe, sun bloom, bokeh and a dip to black. Each covers the frame at its middle: put the middle on the cut.",
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "version": 1,
+  "items": [
+    "transition/warm-leak",
+    "transition/white-flash",
+    "transition/dip-to-black",
+    "transition/flare-sweep",
+    "transition/film-burn",
+    "transition/glow-wipe",
+    "transition/golden-bloom",
+    "transition/spectral-sweep",
+    "transition/strobe",
+    "transition/bokeh-fade"
+  ],
+  "cover": "cover.jpg"
+}

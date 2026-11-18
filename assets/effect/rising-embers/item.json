@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Rising Embers",
+    "zh-CN": "升腾火星",
+    "ja": "舞い上がる火の粉",
+    "ko": "피어오르는 불씨",
+    "es": "Brasas ascendentes"
+  },
+  "about": "Glowing orange sparks drift up from a flickering warm glow at the bottom, swaying and twinkling as they fade. For campfires, battles, epic and dramatic shots.",
+  "tags": [
+    "embers",
+    "fire",
+    "sparks",
+    "warm",
+    "epic",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 16838
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 376456
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 972774
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 5000
+}

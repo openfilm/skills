@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Super 8 Gate",
+    "zh-CN": "超8胶片框",
+    "ja": "スーパー8",
+    "ko": "슈퍼 8 프레임",
+    "es": "Ventanilla Super 8"
+  },
+  "about": "The rounded, softly burnt frame of a Super 8 projector gate that weaves a little, with warm flicker and heavy grain. For home movies, family memories and travel diaries.",
+  "tags": [
+    "super8",
+    "home-movie",
+    "film",
+    "frame",
+    "vintage",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 16246
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 321306
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1424220
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 4000
+}

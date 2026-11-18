@@ -1,0 +1,21 @@
+/* A recap title: two day chips stamp on, the title punches in and a marker stroke swipes under it. 2.2 s. */
+.w { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff;
+  font-family: 'Avenir Next Condensed', 'Avenir Next', 'Futura', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  animation: out 0.35s 1.85s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.glow { position: absolute; inset: 4% 4%; background: radial-gradient(closest-side, rgba(20, 14, 6, 0.5), rgba(20, 14, 6, 0)); animation: fade 0.5s both; }
+.days { position: relative; display: flex; align-items: center; gap: 2.4vh; }
+.d { padding: 1.8vh 3.6vh; border-radius: 1.6vh; background: #ffd23f; color: #1a1406; font-weight: 800; font-size: 6vh; letter-spacing: 0.16em; padding-left: calc(3.6vh + 0.16em);
+  transform: rotate(-4deg); animation: stamp 0.4s 0.05s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+.t4 { background: #fff; transform: rotate(3deg); animation-delay: 0.22s; }
+.plus { position: relative; width: 4vh; height: 4vh; animation: stamp 0.4s 0.14s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+.plus::before, .plus::after { content: ''; position: absolute; left: 1.5vh; top: 0; width: 1vh; height: 4vh; border-radius: 0.5vh; background: #fff; }
+.plus::after { transform: rotate(90deg); }
+.t1 { position: relative; z-index: 1; margin: 3vh 0 0; font-size: 22vh; line-height: 1; font-weight: 800; text-transform: uppercase; letter-spacing: 0.01em; white-space: nowrap;
+  text-shadow: 0 1vh 4vh rgba(0, 0, 0, 0.35); animation: punch 0.5s 0.35s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+.mark { position: relative; width: 70%; height: 6vh; margin-top: -7vh; border-radius: 3vh; background: #ffd23f; opacity: 0.85; transform-origin: left; transform: rotate(-1.5deg);
+  animation: swipe 0.45s 0.7s cubic-bezier(0.3, 0.8, 0.3, 1) both; }
+@keyframes fade { from { opacity: 0; } }
+@keyframes stamp { from { opacity: 0; transform: scale(2) rotate(-10deg); } }
+@keyframes punch { from { opacity: 0; transform: scale(0.6); } }
+@keyframes swipe { from { transform: rotate(-1.5deg) scaleX(0); } }
+@keyframes out { to { opacity: 0; transform: translateX(-4%); } }

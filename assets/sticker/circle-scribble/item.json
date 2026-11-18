@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Circle It",
+    "zh-CN": "手绘圈出",
+    "ja": "丸で囲む",
+    "ko": "동그라미",
+    "es": "Círculo"
+  },
+  "about": "A red marker circle to ring something on screen. For highlighting a detail.",
+  "tags": [
+    "circle",
+    "highlight",
+    "handdrawn"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "pulse",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 26219
+    }
+  ]
+}

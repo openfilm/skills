@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Comic Bang",
+    "zh-CN": "漫画爆字",
+    "ja": "コミックバン",
+    "ko": "만화 뱅",
+    "es": "Cómic"
+  },
+  "about": "Red letters with a thick yellow outline and black shadow, straight out of a comic panel. For impacts, surprises and sound words.",
+  "tags": [
+    "comic",
+    "impact",
+    "loud"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 283
+    }
+  ]
+}

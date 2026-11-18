@@ -1,0 +1,11 @@
+/* The recap's end: a crescent moon rises, the line punches in, a quiet see-you-soon below. 2.4 s. */
+.w { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff;
+  font-family: 'Avenir Next Condensed', 'Avenir Next', 'Futura', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; }
+.glow { position: absolute; inset: 0; background: radial-gradient(closest-side, rgba(20, 14, 6, 0.55), rgba(20, 14, 6, 0)); animation: fade 0.5s both; }
+.moon { position: relative; width: 16vh; height: 16vh; margin-bottom: 3vh; border-radius: 50%; box-shadow: 4vh -2vh 0 0 #ffd23f; transform: translateX(-2vh); animation: rise 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) both; }
+.t1 { position: relative; margin: 0 0 3vh; font-size: 22vh; line-height: 1; font-weight: 800; text-transform: uppercase; white-space: nowrap; text-shadow: 0 1vh 4vh rgba(0, 0, 0, 0.4);
+  animation: punch 0.5s 0.3s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+.t2 { position: relative; margin: 0; font-size: 6vh; font-weight: 700; letter-spacing: 0.36em; padding-left: 0.36em; white-space: nowrap; color: #ffd23f; text-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.6); animation: fade 0.6s 0.8s both; }
+@keyframes fade { from { opacity: 0; } }
+@keyframes rise { from { opacity: 0; transform: translate(-2vh, 10vh); } }
+@keyframes punch { from { opacity: 0; transform: scale(0.6); } }

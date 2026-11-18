@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Earth at Night, Turning",
+    "zh-CN": "夜晚的地球在转动",
+    "ja": "回る夜の地球",
+    "ko": "회전하는 밤의 지구",
+    "es": "La Tierra de noche, girando"
+  },
+  "about": "The whole Earth at night turns slowly on black, its cities glowing across Asia and the Indian Ocean, from NASA's Black Marble satellite imagery.",
+  "tags": [
+    "earth",
+    "night",
+    "globe",
+    "city-lights",
+    "planet",
+    "rotation"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:BlackMarble_2016_rotating_globe_at_night.webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 20000,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 7148336,
+      "sha256": "df067efd6396faedc4e950c63649b55071fba6e9940b190b7c3402db332362e6"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 167686
+    }
+  ]
+}

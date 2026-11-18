@@ -1,0 +1,42 @@
+{
+  "cat": "effect",
+  "name": {
+    "en": "Dust in the Light",
+    "zh-CN": "光中浮尘",
+    "ja": "光の中の塵",
+    "ko": "빛 속의 먼지",
+    "es": "Polvo en la luz"
+  },
+  "about": "Fine dust motes float and glint inside a slanted shaft of soft light. For calm interiors, memories, old rooms and quiet mornings.",
+  "tags": [
+    "dust",
+    "light",
+    "calm",
+    "nostalgic",
+    "interior",
+    "loop",
+    "overlay"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "files": [
+    {
+      "path": "overlay.css",
+      "bytes": 22656
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 164180
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 598768
+    }
+  ],
+  "main": "overlay.css",
+  "durationMs": 6000
+}

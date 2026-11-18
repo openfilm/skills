@@ -1,0 +1,14 @@
+/* The verdict: a label, the score slams in big, and a one-line review writes on. 2.6 s. */
+.w { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff4e0;
+  font-family: -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif; }
+.glow { position: absolute; inset: 0; background: radial-gradient(closest-side, rgba(28, 23, 20, 0.7), rgba(28, 23, 20, 0)); animation: fade 0.6s both; }
+.t3 { position: relative; padding: 1.8vh 4.4vh; border: 0.6vh solid #f2b134; border-radius: 99vh; color: #f2b134; font-weight: 800; font-size: 5vh; letter-spacing: 0.4em; padding-left: calc(4.4vh + 0.4em);
+  animation: fade 0.5s 0.1s both; }
+.score { position: relative; display: flex; align-items: baseline; gap: 1vh; margin: 1vh 0 0; animation: slam 0.55s 0.35s cubic-bezier(0.4, 0, 0.5, 1.5) both; }
+.t1 { font: 700 34vh/1 Georgia, 'Times New Roman', serif; color: #f2b134; text-shadow: 0 1.5vh 5vh rgba(0, 0, 0, 0.5); }
+.of { font: 700 10vh/1 Georgia, 'Times New Roman', serif; opacity: 0.85; }
+.t2 { position: relative; margin: 0; font: italic 400 9vh/1.2 Georgia, 'Times New Roman', 'Songti SC', 'STSong', serif; white-space: nowrap; text-shadow: 0 0.6vh 2vh rgba(0, 0, 0, 0.5);
+  animation: write 0.9s 0.95s cubic-bezier(0.4, 0.1, 0.4, 1) both; }
+@keyframes fade { from { opacity: 0; } }
+@keyframes slam { 0% { opacity: 0; transform: scale(2.2); } 60% { opacity: 1; transform: scale(0.94); } 100% { transform: scale(1); } }
+@keyframes write { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }

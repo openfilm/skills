@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Arrow Down",
+    "zh-CN": "向下箭头",
+    "ja": "下向き矢印",
+    "ko": "아래 화살표",
+    "es": "Flecha abajo"
+  },
+  "about": "A bold yellow arrow pointing down. For links, buttons and what comes next.",
+  "tags": [
+    "arrow",
+    "down",
+    "handdrawn"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "bounce",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 16339
+    }
+  ]
+}

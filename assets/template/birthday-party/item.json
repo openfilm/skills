@@ -1,0 +1,93 @@
+{
+  "cat": "template",
+  "name": {
+    "en": "Birthday party",
+    "zh-CN": "生日派对",
+    "ja": "誕生日パーティー",
+    "ko": "생일 파티",
+    "es": "Fiesta de cumpleaños"
+  },
+  "about": "10 s, three slots: a bouncing birthday title with balloons, falling confetti, a candle lower third, party-stripe wipes and a cheers end card. For birthdays and celebrations.",
+  "tags": [
+    "birthday",
+    "party",
+    "celebration",
+    "confetti",
+    "happy",
+    "title"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "template.json",
+  "durationMs": 10000,
+  "files": [
+    {
+      "path": "template.json",
+      "bytes": 1488
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1373832
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 287955
+    },
+    {
+      "path": "example-1.jpg",
+      "bytes": 218110
+    },
+    {
+      "path": "example-2.jpg",
+      "bytes": 205296
+    },
+    {
+      "path": "example-3.jpg",
+      "bytes": 249597
+    },
+    {
+      "path": "cheers.css",
+      "bytes": 1921
+    },
+    {
+      "path": "cheers.html",
+      "bytes": 208
+    },
+    {
+      "path": "confetti.css",
+      "bytes": 5621
+    },
+    {
+      "path": "confetti.html",
+      "bytes": 532
+    },
+    {
+      "path": "hb-title.css",
+      "bytes": 2530
+    },
+    {
+      "path": "hb-title.html",
+      "bytes": 276
+    },
+    {
+      "path": "stripe-wipe.css",
+      "bytes": 606
+    },
+    {
+      "path": "stripe-wipe.html",
+      "bytes": 43
+    },
+    {
+      "path": "wish-note.css",
+      "bytes": 1867
+    },
+    {
+      "path": "wish-note.html",
+      "bytes": 193
+    }
+  ]
+}

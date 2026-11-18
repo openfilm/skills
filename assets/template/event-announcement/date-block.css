@@ -1,0 +1,16 @@
+/* A calendar page flips down into place: the month in a pink band, the day huge, the weekday and time below. 3 s. */
+.w { position: fixed; inset: 0; display: grid; place-items: center; perspective: 200vh;
+  font-family: 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  animation: out 0.35s 2.65s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.cal { position: relative; display: flex; flex-direction: column; align-items: center; width: 74vh; height: 86vh; border-radius: 6vh; background: #fff; color: #2a1052; overflow: visible;
+  box-shadow: 0 4vh 10vh rgba(0, 0, 0, 0.4); transform-origin: 50% 0; animation: flip 0.8s cubic-bezier(0.3, 1.3, 0.5, 1) both; }
+.mo { display: grid; place-items: center; width: 100%; height: 24vh; border-radius: 6vh 6vh 0 0; background: #ff4fa3; color: #fff; }
+.t2 { font-size: 13vh; font-weight: 800; letter-spacing: 0.2em; padding-left: 0.2em; }
+.t1 { font-size: 38vh; line-height: 1.05; font-weight: 900; letter-spacing: -0.03em; animation: pop 0.5s 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+.t3 { font-size: 7.4vh; font-weight: 800; letter-spacing: 0.12em; white-space: nowrap; color: #7a3cff; }
+.rg { position: absolute; top: -3vh; width: 4vh; height: 9vh; border-radius: 2vh; background: #c6ff3d; z-index: 1; }
+.rg.a { left: 22%; }
+.rg.b { right: 22%; }
+@keyframes flip { from { opacity: 0; transform: rotateX(-100deg); } }
+@keyframes pop { from { opacity: 0; transform: scale(0.4); } }
+@keyframes out { to { opacity: 0; transform: translateY(-4%); } }

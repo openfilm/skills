@@ -1,0 +1,41 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Aurora from Orbit",
+    "zh-CN": "轨道上的极光",
+    "ja": "軌道から見たオーロラ",
+    "ko": "궤도에서 본 오로라",
+    "es": "Aurora desde la órbita"
+  },
+  "about": "Green and red curtains of the southern lights ripple over the night side of the Earth, time-lapse from the International Space Station.",
+  "tags": [
+    "aurora",
+    "southern-lights",
+    "earth",
+    "orbit",
+    "night",
+    "space-station",
+    "time-lapse"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Aurora_Australis_as_seen_from_ISS_(SVS31281_-_1080p25).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 20000,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 7723985,
+      "sha256": "a033ee39438841c960fa02e44969cf795bacad0bac838bfe776348bd0b84ad98"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 61319
+    }
+  ]
+}

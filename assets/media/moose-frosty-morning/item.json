@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Moose on a Frosty Morning",
+    "zh-CN": "霜晨中的驼鹿",
+    "ja": "霜の朝のヘラジカ",
+    "ko": "서리 내린 아침의 무스",
+    "es": "Alce en una mañana helada"
+  },
+  "about": "A bull moose walks through frosted grass and willows, backlit by golden morning mist. Seedskadee National Wildlife Refuge, Wyoming.",
+  "tags": [
+    "moose",
+    "wildlife",
+    "frost",
+    "morning",
+    "mist",
+    "golden"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Moose_at_Seedskadee_National_Wildlife_Refuge_(44827612214).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 18018,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 10846272,
+      "sha256": "9443015f7935ef8924af23a269e88ebf48545da6c97178a2c0f7f500bfc117ed"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 186588
+    }
+  ]
+}

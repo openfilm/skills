@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "Colourful Candy",
+    "zh-CN": "彩色糖果",
+    "ja": "カラフルなキャンディ",
+    "ko": "알록달록한 사탕",
+    "es": "Caramelos de colores"
+  },
+  "about": "A full frame of glossy jelly sweets in red, orange, yellow, green, pink and black: a bright, playful texture for backgrounds.",
+  "tags": [
+    "candy",
+    "texture",
+    "colorful",
+    "food",
+    "background",
+    "sweet"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Bonbons_color%C3%A9s.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 1080727,
+      "sha256": "83f585c3f3736ebe16765471a9c943ef252a1633765e620e0a36f69e9a5d4684"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "vars": {
+    "--font": "'Smiley Sans', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', 'Hiragino Sans GB', sans-serif",
+    "--weight": "900",
+    "--fill": "linear-gradient(180deg, #fff6c2 15%, #f5c542 55%, #b9771b 95%)",
+    "--stroke": "0.07em",
+    "--stroke-color": "#4a2a05",
+    "--shadow": "0.05em 0.07em 0 #2a1600"
+  }
+}

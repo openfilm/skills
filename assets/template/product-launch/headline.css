@@ -1,0 +1,13 @@
+/* A product headline: a small kicker tracks out, the name rises in a cool gradient and a light glint runs across it. 3.2 s. */
+.w { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-family: 'Avenir Next', -apple-system, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  animation: out 0.4s 2.8s cubic-bezier(0.6, 0, 0.8, 0.2) both; }
+.t2 { color: #d9d3ff; font-size: 11vh; font-weight: 700; text-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.6); letter-spacing: 0.6em; padding-left: 0.6em; white-space: nowrap; animation: track 1.2s 0.1s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.t1 { margin: 2vh 0 0; font-size: 46vh; line-height: 1.02; font-weight: 700; letter-spacing: -0.02em; white-space: nowrap; padding: 0 2vh;
+  background: linear-gradient(100deg, #ffffff 0%, #ffffff 40%, #ffffff 46%, #c9f6ff 50%, #ffffff 54%, #d9d3ff 75%, #8b7bff 100%); background-size: 250% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 1vh 4vh rgba(139, 123, 255, 0.45));
+  animation: rise 0.9s 0.35s cubic-bezier(0.2, 0.9, 0.2, 1) both, glint 1.6s 1s cubic-bezier(0.4, 0, 0.3, 1) both; }
+@keyframes track { from { opacity: 0; letter-spacing: 1.2em; } }
+@keyframes rise { from { opacity: 0; transform: translateY(12vh); filter: blur(3vh); } }
+@keyframes glint { from { background-position: 100% 0; } to { background-position: 0 0; } }
+@keyframes out { to { opacity: 0; transform: translateY(-6vh); filter: blur(2vh); } }

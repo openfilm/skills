@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Sunrise over the City Edge",
+    "zh-CN": "城市边缘的日出",
+    "ja": "街外れの日の出",
+    "ko": "도시 외곽의 일출",
+    "es": "Amanecer en las afueras"
+  },
+  "about": "The sun climbs through tall grasses on a hilltop above the rooftops of Berlin, the sky glowing orange, in a time-lapse of a summer sunrise.",
+  "tags": [
+    "sunrise",
+    "time-lapse",
+    "city",
+    "sky",
+    "orange",
+    "morning"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Time-lapse_sunrise_Berlin_Drachenberg.webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 20000,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 11279492,
+      "sha256": "8637f4debb424ee51fc5e9c7565a576deb0382c13f271b6b16c564e9917095c7"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 89361
+    }
+  ]
+}

@@ -21,8 +21,8 @@ function request(method, name, { bytes, type, match, create } = {}) {
     const body = join(dir, 'body');
     const headers = join(dir, 'headers');
     const config = `user = "${key}:${secret}"\n`;
-    const args = ['--config', '-', '--aws-sigv4', 'aws:amz:auto:s3', '--silent', '--max-time', '90',
-      '--retry', '3', '--retry-delay', '1', '--retry-max-time', '15', '--retry-all-errors', '--max-filesize', String(8 * MB),
+    const args = ['--config', '-', '--aws-sigv4', 'aws:amz:auto:s3', '--silent', '--max-time', '300',
+      '--retry', '3', '--retry-delay', '1', '--retry-max-time', '15', '--retry-all-errors', '--max-filesize', String(50 * MB),
       '--dump-header', headers, '--output', body, '--write-out', '%{http_code}', '--request', method];
     if (bytes) {
       const file = join(dir, 'upload');

@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "The Blue Marble",
+    "zh-CN": "蓝色弹珠",
+    "ja": "ブルー・マーブル",
+    "ko": "블루 마블",
+    "es": "La canica azul"
+  },
+  "about": "The whole sunlit Earth on black: Africa, Arabia and the swirl of Antarctic clouds, photographed by the Apollo 17 crew on the way to the Moon in 1972.",
+  "tags": [
+    "earth",
+    "planet",
+    "apollo",
+    "globe",
+    "africa",
+    "space"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 1997030,
+      "sha256": "ce10369424b9059bba600280cd6c7bb26cf60747788ab327105c44654a5db1a8"
+    }
+  ]
+}

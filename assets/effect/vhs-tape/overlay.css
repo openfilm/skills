@@ -1,0 +1,173 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l { background:
+    repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.18) 0 0.14vh, rgba(0, 0, 0, 0) 0.14vh 0.42vh),
+    linear-gradient(to right, rgba(255, 0, 120, 0.1), rgba(255, 0, 120, 0) 4%, rgba(0, 220, 255, 0) 96%, rgba(0, 220, 255, 0.1)),
+    radial-gradient(ellipse 80% 80% at 50% 50%, rgba(60, 40, 120, 0) 55%, rgba(30, 20, 60, 0.35) 100%),
+    linear-gradient(rgba(40, 80, 160, 0.07), rgba(160, 40, 140, 0.06)); }
+.l::before { content: ""; position: fixed; left: -2%; right: -2%; top: -20vh; height: 13vh;
+  background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0 0.25vh, rgba(255, 255, 255, 0) 0.25vh 0.8vh),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(220, 230, 255, 0.14) 40%, rgba(255, 255, 255, 0.24) 52%, rgba(220, 230, 255, 0.12) 64%, rgba(255, 255, 255, 0));
+  animation: vb 4000ms linear infinite, vj 4000ms linear infinite; }
+@keyframes vb { 0% { transform: translateY(0); } 100% { transform: translateY(140vh); } }
+@keyframes vj {
+  0% { translate: -0.46vw 0; animation-timing-function: steps(1, end); }
+  1.67% { translate: -0.79vw 0; animation-timing-function: steps(1, end); }
+  3.33% { translate: -0.11vw 0; animation-timing-function: steps(1, end); }
+  5% { translate: 0.53vw 0; animation-timing-function: steps(1, end); }
+  6.67% { translate: 0.08vw 0; animation-timing-function: steps(1, end); }
+  8.33% { translate: 0.02vw 0; animation-timing-function: steps(1, end); }
+  10% { translate: -0.67vw 0; animation-timing-function: steps(1, end); }
+  11.67% { translate: -0.32vw 0; animation-timing-function: steps(1, end); }
+  13.33% { translate: 0.49vw 0; animation-timing-function: steps(1, end); }
+  15% { translate: 0.24vw 0; animation-timing-function: steps(1, end); }
+  16.67% { translate: 0.74vw 0; animation-timing-function: steps(1, end); }
+  18.33% { translate: 0.19vw 0; animation-timing-function: steps(1, end); }
+  20% { translate: 0.45vw 0; animation-timing-function: steps(1, end); }
+  21.67% { translate: -0.24vw 0; animation-timing-function: steps(1, end); }
+  23.33% { translate: -0.79vw 0; animation-timing-function: steps(1, end); }
+  25% { translate: 0.43vw 0; animation-timing-function: steps(1, end); }
+  26.67% { translate: -0.77vw 0; animation-timing-function: steps(1, end); }
+  28.33% { translate: 0.13vw 0; animation-timing-function: steps(1, end); }
+  30% { translate: -0.53vw 0; animation-timing-function: steps(1, end); }
+  31.67% { translate: -0.13vw 0; animation-timing-function: steps(1, end); }
+  33.33% { translate: 0.74vw 0; animation-timing-function: steps(1, end); }
+  35% { translate: 0.25vw 0; animation-timing-function: steps(1, end); }
+  36.67% { translate: -0.51vw 0; animation-timing-function: steps(1, end); }
+  38.33% { translate: -0.78vw 0; animation-timing-function: steps(1, end); }
+  40% { translate: 0.66vw 0; animation-timing-function: steps(1, end); }
+  41.67% { translate: 0.4vw 0; animation-timing-function: steps(1, end); }
+  43.33% { translate: 0.64vw 0; animation-timing-function: steps(1, end); }
+  45% { translate: 0.41vw 0; animation-timing-function: steps(1, end); }
+  46.67% { translate: -0.34vw 0; animation-timing-function: steps(1, end); }
+  48.33% { translate: 0.2vw 0; animation-timing-function: steps(1, end); }
+  50% { translate: -0.1vw 0; animation-timing-function: steps(1, end); }
+  51.67% { translate: 0.34vw 0; animation-timing-function: steps(1, end); }
+  53.33% { translate: -0.27vw 0; animation-timing-function: steps(1, end); }
+  55% { translate: -0.38vw 0; animation-timing-function: steps(1, end); }
+  56.67% { translate: 0.76vw 0; animation-timing-function: steps(1, end); }
+  58.33% { translate: -0.79vw 0; animation-timing-function: steps(1, end); }
+  60% { translate: -0.73vw 0; animation-timing-function: steps(1, end); }
+  61.67% { translate: -0.3vw 0; animation-timing-function: steps(1, end); }
+  63.33% { translate: 0.29vw 0; animation-timing-function: steps(1, end); }
+  65% { translate: 0.46vw 0; animation-timing-function: steps(1, end); }
+  66.67% { translate: -0.74vw 0; animation-timing-function: steps(1, end); }
+  68.33% { translate: -0.2vw 0; animation-timing-function: steps(1, end); }
+  70% { translate: -0.61vw 0; animation-timing-function: steps(1, end); }
+  71.67% { translate: -0.37vw 0; animation-timing-function: steps(1, end); }
+  73.33% { translate: -0.21vw 0; animation-timing-function: steps(1, end); }
+  75% { translate: 0.4vw 0; animation-timing-function: steps(1, end); }
+  76.67% { translate: 0.79vw 0; animation-timing-function: steps(1, end); }
+  78.33% { translate: -0.78vw 0; animation-timing-function: steps(1, end); }
+  80% { translate: -0.54vw 0; animation-timing-function: steps(1, end); }
+  81.67% { translate: 0.22vw 0; animation-timing-function: steps(1, end); }
+  83.33% { translate: -0.61vw 0; animation-timing-function: steps(1, end); }
+  85% { translate: 0.08vw 0; animation-timing-function: steps(1, end); }
+  86.67% { translate: -0.3vw 0; animation-timing-function: steps(1, end); }
+  88.33% { translate: -0.75vw 0; animation-timing-function: steps(1, end); }
+  90% { translate: 0.33vw 0; animation-timing-function: steps(1, end); }
+  91.67% { translate: -0.35vw 0; animation-timing-function: steps(1, end); }
+  93.33% { translate: 0.32vw 0; animation-timing-function: steps(1, end); }
+  95% { translate: -0.05vw 0; animation-timing-function: steps(1, end); }
+  96.67% { translate: 0.68vw 0; animation-timing-function: steps(1, end); }
+  98.33% { translate: -0.56vw 0; animation-timing-function: steps(1, end); }
+  100% { translate: -0.46vw 0; }
+}
+.l::after { content: ""; position: fixed; inset: 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0% 1.24%, rgba(255, 255, 255, 0) 1.24% 3.8%, rgba(255, 255, 255, 0) 3.8% 5.63%, rgba(255, 255, 255, 0) 5.63% 8.47%, rgba(255, 255, 255, 0.36) 8.47% 13.57%, rgba(255, 255, 255, 0.24) 13.57% 18.96%, rgba(255, 255, 255, 0) 18.96% 19.87%, rgba(255, 255, 255, 0) 19.87% 24.64%, rgba(255, 255, 255, 0.52) 24.64% 25.62%, rgba(255, 255, 255, 0) 25.62% 30.7%, rgba(255, 255, 255, 0.47) 30.7% 32%, rgba(255, 255, 255, 0.29) 32% 34.66%, rgba(255, 255, 255, 0.59) 34.66% 36.63%, rgba(255, 255, 255, 0.48) 36.63% 37.61%, rgba(255, 255, 255, 0.26) 37.61% 40.37%, rgba(255, 255, 255, 0.36) 40.37% 43.66%, rgba(255, 255, 255, 0) 43.66% 45.23%, rgba(255, 255, 255, 0.47) 45.23% 47.82%, rgba(255, 255, 255, 0.27) 47.82% 50.9%, rgba(255, 255, 255, 0) 50.9% 55.31%, rgba(255, 255, 255, 0) 55.31% 60.71%, rgba(255, 255, 255, 0) 60.71% 64.77%, rgba(255, 255, 255, 0.58) 64.77% 69.94%, rgba(255, 255, 255, 0) 69.94% 74.28%, rgba(255, 255, 255, 0.45) 74.28% 77.5%, rgba(255, 255, 255, 0) 77.5% 80.89%, rgba(255, 255, 255, 0.21) 80.89% 81.64%, rgba(255, 255, 255, 0) 81.64% 82.18%, rgba(255, 255, 255, 0) 82.18% 86.01%, rgba(255, 255, 255, 0) 86.01% 87.23%, rgba(255, 255, 255, 0) 87.23% 89.43%, rgba(255, 255, 255, 0) 89.43% 90.16%, rgba(255, 255, 255, 0) 90.16% 91.26%, rgba(255, 255, 255, 0.42) 91.26% 94.68%, rgba(255, 255, 255, 0) 94.68% 99.83%, rgba(255, 255, 255, 0.26) 99.83% 100%), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.55) 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.55) 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.55) 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.55) 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0));
+  background-repeat: repeat-x, no-repeat, no-repeat, no-repeat, no-repeat;
+  animation: vn 4000ms linear infinite; }
+@keyframes vn {
+  0% { background-size: 100vw 1.63vh, 63.3vw 0.18vh, 0 0, 0 0, 0 0; background-position: 82.1vw 100%, 42.6vw 7.4vh, 43vw 95.4vh, 75.5vw 73.5vh, 78.4vw 58vh; animation-timing-function: steps(1, end); }
+  1.67% { background-size: 100vw 1.8vh, 41.3vw 0.32vh, 0 0, 0 0, 0 0; background-position: 83vw 100%, 75.7vw 79.8vh, 17.9vw 67.9vh, 11vw 7.1vh, 14.1vw 14vh; animation-timing-function: steps(1, end); }
+  3.33% { background-size: 100vw 3.13vh, 0 0, 0 0, 26vw 0.24vh, 0 0; background-position: 29.6vw 100%, 68.7vw 10.8vh, 75.1vw 48.1vh, 71vw 6.7vh, 43.8vw 86.9vh; animation-timing-function: steps(1, end); }
+  5% { background-size: 100vw 3.07vh, 0 0, 0 0, 0 0, 46.6vw 0.16vh; background-position: 9.6vw 100%, 72.8vw 85.2vh, 26.2vw 64.5vh, 46.7vw 49.7vh, 71.9vw 44.4vh; animation-timing-function: steps(1, end); }
+  6.67% { background-size: 100vw 3.26vh, 0 0, 29.7vw 0.22vh, 0 0, 0 0; background-position: 18.9vw 100%, 37.2vw 67.7vh, 39.2vw 2.4vh, 15.3vw 24.3vh, 32.7vw 40.3vh; animation-timing-function: steps(1, end); }
+  8.33% { background-size: 100vw 2.07vh, 0 0, 0 0, 49.3vw 0.32vh, 21.3vw 0.47vh; background-position: 58.8vw 100%, 39.4vw 18.7vh, 79.6vw 87.5vh, 58.5vw 5.7vh, 40vw 30.3vh; animation-timing-function: steps(1, end); }
+  10% { background-size: 100vw 2.23vh, 0 0, 19.3vw 0.48vh, 0 0, 0 0; background-position: 23vw 100%, 31vw 31vh, 46.1vw 61.7vh, 25vw 59.3vh, 10.3vw 32.8vh; animation-timing-function: steps(1, end); }
+  11.67% { background-size: 100vw 2.34vh, 0 0, 0 0, 24.1vw 0.44vh, 36.4vw 0.37vh; background-position: 54.9vw 100%, 34.6vw 26.5vh, 37.1vw 27.4vh, 24.1vw 37.5vh, 27.5vw 64vh; animation-timing-function: steps(1, end); }
+  13.33% { background-size: 100vw 2.19vh, 0 0, 0 0, 0 0, 0 0; background-position: 86.2vw 100%, 63.4vw 11.3vh, 21.8vw 56.7vh, 33.1vw 18.1vh, 24.9vw 33.7vh; animation-timing-function: steps(1, end); }
+  15% { background-size: 100vw 2.09vh, 0 0, 0 0, 53.8vw 0.46vh, 0 0; background-position: 4.8vw 100%, 69.8vw 14.6vh, 79.7vw 74.5vh, 24.6vw 18.6vh, 69vw 33.1vh; animation-timing-function: steps(1, end); }
+  16.67% { background-size: 100vw 2.39vh, 0 0, 0 0, 20.3vw 0.45vh, 26.7vw 0.38vh; background-position: 0.4vw 100%, 10.5vw 98.9vh, 26.1vw 42.6vh, 79.1vw 32.4vh, 0.7vw 44.1vh; animation-timing-function: steps(1, end); }
+  18.33% { background-size: 100vw 2.51vh, 0 0, 24.6vw 0.48vh, 0 0, 0 0; background-position: 71.9vw 100%, 36vw 51.6vh, 72.1vw 14.8vh, 9.7vw 80.2vh, 26.2vw 0.4vh; animation-timing-function: steps(1, end); }
+  20% { background-size: 100vw 3.22vh, 0 0, 17.7vw 0.18vh, 0 0, 26.4vw 0.36vh; background-position: 18.8vw 100%, 42.9vw 19.6vh, 75.5vw 86.6vh, 29.7vw 4.5vh, 63.7vw 73.8vh; animation-timing-function: steps(1, end); }
+  21.67% { background-size: 100vw 2.12vh, 0 0, 51.9vw 0.3vh, 0 0, 0 0; background-position: 23.5vw 100%, 5.4vw 43.6vh, 60.4vw 81.8vh, 25.3vw 95.2vh, 12vw 10.6vh; animation-timing-function: steps(1, end); }
+  23.33% { background-size: 100vw 1.73vh, 0 0, 0 0, 0 0, 0 0; background-position: 31.7vw 100%, 58.9vw 5vh, 73.6vw 26.3vh, 44.3vw 68.5vh, 27.2vw 47.9vh; animation-timing-function: steps(1, end); }
+  25% { background-size: 100vw 1.56vh, 0 0, 0 0, 0 0, 59.9vw 0.21vh; background-position: 14.4vw 100%, 4.6vw 12.8vh, 62.2vw 88.8vh, 13.9vw 83.5vh, 65.4vw 65.4vh; animation-timing-function: steps(1, end); }
+  26.67% { background-size: 100vw 3.46vh, 59.3vw 0.34vh, 0 0, 0 0, 0 0; background-position: 41.9vw 100%, 19.7vw 6.6vh, 30.9vw 5.6vh, 25.1vw 77vh, 23.8vw 0.8vh; animation-timing-function: steps(1, end); }
+  28.33% { background-size: 100vw 2.83vh, 0 0, 0 0, 0 0, 0 0; background-position: 64.7vw 100%, 5.3vw 66vh, 51.7vw 76.2vh, 41.1vw 97.3vh, 12.1vw 16.6vh; animation-timing-function: steps(1, end); }
+  30% { background-size: 100vw 3.2vh, 0 0, 62.9vw 0.29vh, 30.4vw 0.28vh, 33.6vw 0.33vh; background-position: 68.7vw 100%, 75.1vw 66.2vh, 76.9vw 92.9vh, 67.3vw 10.2vh, 65.3vw 97.8vh; animation-timing-function: steps(1, end); }
+  31.67% { background-size: 100vw 1.92vh, 0 0, 0 0, 0 0, 61.9vw 0.26vh; background-position: 84.9vw 100%, 66vw 20.8vh, 25vw 13.5vh, 44.4vw 88.8vh, 43.4vw 30.6vh; animation-timing-function: steps(1, end); }
+  33.33% { background-size: 100vw 2.06vh, 45.8vw 0.41vh, 0 0, 0 0, 0 0; background-position: 18.3vw 100%, 19.4vw 66.5vh, 79vw 9.3vh, 70.4vw 96.9vh, 70.4vw 81vh; animation-timing-function: steps(1, end); }
+  35% { background-size: 100vw 2.29vh, 0 0, 0 0, 0 0, 0 0; background-position: 80.9vw 100%, 31.1vw 53vh, 71.1vw 50.4vh, 74.5vw 90.3vh, 25.8vw 74.8vh; animation-timing-function: steps(1, end); }
+  36.67% { background-size: 100vw 2.25vh, 0 0, 0 0, 0 0, 33.9vw 0.29vh; background-position: 20.7vw 100%, 37.4vw 51.9vh, 18.4vw 48.8vh, 28.7vw 63vh, 78.1vw 99.6vh; animation-timing-function: steps(1, end); }
+  38.33% { background-size: 100vw 2.55vh, 0 0, 0 0, 42.9vw 0.4vh, 0 0; background-position: 2.3vw 100%, 11.4vw 40.5vh, 23.7vw 69.8vh, 13.4vw 61.2vh, 13.6vw 47.4vh; animation-timing-function: steps(1, end); }
+  40% { background-size: 100vw 2.98vh, 48.5vw 0.33vh, 0 0, 0 0, 0 0; background-position: 18.8vw 100%, 34.7vw 58.5vh, 25.1vw 91.7vh, 29.5vw 13.1vh, 29.5vw 30.4vh; animation-timing-function: steps(1, end); }
+  41.67% { background-size: 100vw 1.59vh, 0 0, 0 0, 0 0, 0 0; background-position: 31.8vw 100%, 67.1vw 64.5vh, 35.6vw 78.7vh, 68.7vw 51.8vh, 1.1vw 56.3vh; animation-timing-function: steps(1, end); }
+  43.33% { background-size: 100vw 2.55vh, 0 0, 0 0, 0 0, 0 0; background-position: 81.3vw 100%, 38.8vw 91.9vh, 50.2vw 60.5vh, 37vw 65.3vh, 13.6vw 52.4vh; animation-timing-function: steps(1, end); }
+  45% { background-size: 100vw 2.84vh, 0 0, 0 0, 0 0, 36.7vw 0.17vh; background-position: 34.9vw 100%, 40.5vw 13.4vh, 13.7vw 60.6vh, 5vw 74.5vh, 38.2vw 4.4vh; animation-timing-function: steps(1, end); }
+  46.67% { background-size: 100vw 1.76vh, 0 0, 0 0, 17vw 0.47vh, 0 0; background-position: 59.6vw 100%, 62.4vw 31.8vh, 63.6vw 55.4vh, 5.6vw 54.7vh, 0.7vw 62.7vh; animation-timing-function: steps(1, end); }
+  48.33% { background-size: 100vw 1.95vh, 0 0, 0 0, 0 0, 0 0; background-position: 0.5vw 100%, 44.2vw 94vh, 70.1vw 6.1vh, 52.9vw 23.3vh, 18.4vw 28.6vh; animation-timing-function: steps(1, end); }
+  50% { background-size: 100vw 1.89vh, 0 0, 0 0, 0 0, 0 0; background-position: 63.3vw 100%, 57.3vw 8vh, 74vw 91.9vh, 47.3vw 89.2vh, 74.4vw 74.2vh; animation-timing-function: steps(1, end); }
+  51.67% { background-size: 100vw 2.38vh, 0 0, 0 0, 0 0, 0 0; background-position: 24.4vw 100%, 30.1vw 12.8vh, 36.3vw 2vh, 26vw 14.6vh, 44.5vw 19.7vh; animation-timing-function: steps(1, end); }
+  53.33% { background-size: 100vw 2.22vh, 0 0, 0 0, 38vw 0.39vh, 0 0; background-position: 4.5vw 100%, 1.9vw 69.6vh, 56.5vw 21.2vh, 76.5vw 71.6vh, 79.2vw 47.4vh; animation-timing-function: steps(1, end); }
+  55% { background-size: 100vw 2.46vh, 27.2vw 0.49vh, 0 0, 0 0, 0 0; background-position: 6.4vw 100%, 1.6vw 96.5vh, 74.3vw 85.9vh, 53.7vw 32.2vh, 53.1vw 51.8vh; animation-timing-function: steps(1, end); }
+  56.67% { background-size: 100vw 2.72vh, 0 0, 0 0, 0 0, 0 0; background-position: 51vw 100%, 3.4vw 37.7vh, 37.4vw 11.3vh, 40.1vw 25.1vh, 76.7vw 54.6vh; animation-timing-function: steps(1, end); }
+  58.33% { background-size: 100vw 2.41vh, 0 0, 17.1vw 0.27vh, 0 0, 0 0; background-position: 92.9vw 100%, 14.6vw 2.6vh, 29.7vw 27.8vh, 58.7vw 29.6vh, 13.3vw 79.1vh; animation-timing-function: steps(1, end); }
+  60% { background-size: 100vw 1.6vh, 0 0, 18.5vw 0.21vh, 0 0, 0 0; background-position: 77.9vw 100%, 64.8vw 87.2vh, 72.8vw 94vh, 28.9vw 19.1vh, 56.6vw 79.3vh; animation-timing-function: steps(1, end); }
+  61.67% { background-size: 100vw 2.61vh, 0 0, 44.2vw 0.34vh, 0 0, 0 0; background-position: 87vw 100%, 35.8vw 33.9vh, 10.8vw 8.5vh, 3.2vw 26vh, 4.1vw 1.5vh; animation-timing-function: steps(1, end); }
+  63.33% { background-size: 100vw 2.61vh, 44.5vw 0.46vh, 0 0, 0 0, 0 0; background-position: 72.8vw 100%, 72.9vw 85.9vh, 12.5vw 45.7vh, 49.3vw 38.8vh, 54.1vw 37.7vh; animation-timing-function: steps(1, end); }
+  65% { background-size: 100vw 2.76vh, 0 0, 0 0, 32.1vw 0.29vh, 0 0; background-position: 72.7vw 100%, 50.1vw 29.1vh, 64.5vw 82.1vh, 53.9vw 34.5vh, 43.2vw 90vh; animation-timing-function: steps(1, end); }
+  66.67% { background-size: 100vw 3.24vh, 0 0, 0 0, 0 0, 19.7vw 0.35vh; background-position: 64.3vw 100%, 11.8vw 77.3vh, 50.3vw 53.6vh, 7.5vw 84.6vh, 21vw 95.7vh; animation-timing-function: steps(1, end); }
+  68.33% { background-size: 100vw 3.37vh, 0 0, 0 0, 0 0, 0 0; background-position: 17.7vw 100%, 0.5vw 34.6vh, 39.3vw 70.4vh, 38.8vw 35.3vh, 12.4vw 8.7vh; animation-timing-function: steps(1, end); }
+  70% { background-size: 100vw 2.46vh, 0 0, 0 0, 0 0, 0 0; background-position: 94.4vw 100%, 41.1vw 55.8vh, 19vw 80vh, 37.1vw 6.6vh, 53.6vw 50.9vh; animation-timing-function: steps(1, end); }
+  71.67% { background-size: 100vw 2.17vh, 0 0, 0 0, 41.5vw 0.25vh, 0 0; background-position: 57.6vw 100%, 68.8vw 56.6vh, 9.2vw 21.1vh, 2.1vw 68.8vh, 14.8vw 17.2vh; animation-timing-function: steps(1, end); }
+  73.33% { background-size: 100vw 3.35vh, 0 0, 0 0, 0 0, 0 0; background-position: 0.9vw 100%, 23.3vw 86.7vh, 5.2vw 72.8vh, 77.6vw 72.7vh, 0.2vw 47.1vh; animation-timing-function: steps(1, end); }
+  75% { background-size: 100vw 2.84vh, 0 0, 38.8vw 0.36vh, 22.2vw 0.33vh, 0 0; background-position: 32.8vw 100%, 20.8vw 68.7vh, 49.8vw 66.6vh, 12.5vw 24.4vh, 19.2vw 2.4vh; animation-timing-function: steps(1, end); }
+  76.67% { background-size: 100vw 2.75vh, 0 0, 57.1vw 0.36vh, 0 0, 0 0; background-position: 83.6vw 100%, 33.1vw 12.4vh, 33vw 3.6vh, 13vw 41.3vh, 12.7vw 4.9vh; animation-timing-function: steps(1, end); }
+  78.33% { background-size: 100vw 2.78vh, 29.2vw 0.48vh, 0 0, 0 0, 0 0; background-position: 87.6vw 100%, 50.3vw 72.5vh, 65.4vw 14.2vh, 41.1vw 37.7vh, 31.8vw 92.5vh; animation-timing-function: steps(1, end); }
+  80% { background-size: 100vw 3.43vh, 0 0, 0 0, 16.1vw 0.26vh, 0 0; background-position: 82.6vw 100%, 22vw 90.5vh, 31.7vw 81vh, 5vw 80.6vh, 7.8vw 97.1vh; animation-timing-function: steps(1, end); }
+  81.67% { background-size: 100vw 3.21vh, 46.2vw 0.3vh, 0 0, 0 0, 38.2vw 0.47vh; background-position: 21.5vw 100%, 55.4vw 60.9vh, 70.3vw 2.7vh, 24vw 80.9vh, 27.3vw 83.9vh; animation-timing-function: steps(1, end); }
+  83.33% { background-size: 100vw 3.39vh, 0 0, 0 0, 0 0, 0 0; background-position: 46vw 100%, 3.2vw 59.1vh, 28.4vw 56.1vh, 37.2vw 72.8vh, 55.3vw 39vh; animation-timing-function: steps(1, end); }
+  85% { background-size: 100vw 2.58vh, 0 0, 0 0, 60.2vw 0.5vh, 0 0; background-position: 54vw 100%, 0.1vw 44.2vh, 22.4vw 66.9vh, 69.5vw 81.5vh, 10.1vw 8.6vh; animation-timing-function: steps(1, end); }
+  86.67% { background-size: 100vw 2.32vh, 0 0, 0 0, 0 0, 0 0; background-position: 90.5vw 100%, 54.8vw 74vh, 1.4vw 34.9vh, 37.7vw 16.6vh, 61.1vw 40.8vh; animation-timing-function: steps(1, end); }
+  88.33% { background-size: 100vw 2.04vh, 0 0, 0 0, 0 0, 0 0; background-position: 37.6vw 100%, 48.2vw 89vh, 74.6vw 37.1vh, 41.6vw 99.3vh, 16.5vw 39.9vh; animation-timing-function: steps(1, end); }
+  90% { background-size: 100vw 2.22vh, 0 0, 0 0, 0 0, 0 0; background-position: 50.3vw 100%, 45.6vw 98.1vh, 75.6vw 70.6vh, 47vw 39.3vh, 5.3vw 3.2vh; animation-timing-function: steps(1, end); }
+  91.67% { background-size: 100vw 3.46vh, 49.1vw 0.2vh, 0 0, 0 0, 0 0; background-position: 6.9vw 100%, 24.3vw 83.6vh, 37.7vw 7.4vh, 59.9vw 13.4vh, 74.9vw 18vh; animation-timing-function: steps(1, end); }
+  93.33% { background-size: 100vw 1.83vh, 0 0, 0 0, 0 0, 0 0; background-position: 93.3vw 100%, 20vw 32vh, 56.8vw 82.3vh, 72.5vw 56.4vh, 41.8vw 58vh; animation-timing-function: steps(1, end); }
+  95% { background-size: 100vw 3.12vh, 0 0, 0 0, 0 0, 0 0; background-position: 15.4vw 100%, 64.9vw 0.4vh, 71.6vw 38.7vh, 33.2vw 89.7vh, 20.1vw 0.6vh; animation-timing-function: steps(1, end); }
+  96.67% { background-size: 100vw 1.73vh, 0 0, 0 0, 0 0, 0 0; background-position: 38.3vw 100%, 0.9vw 56.1vh, 4.4vw 65.1vh, 30vw 95.1vh, 42.7vw 53.4vh; animation-timing-function: steps(1, end); }
+  98.33% { background-size: 100vw 2.53vh, 0 0, 0 0, 0 0, 0 0; background-position: 10.3vw 100%, 44.1vw 23.6vh, 54vw 93.5vh, 16.7vw 55.1vh, 66.1vw 13.9vh; animation-timing-function: steps(1, end); }
+  100% { background-size: 100vw 1.63vh, 63.3vw 0.18vh, 0 0, 0 0, 0 0; background-position: 82.1vw 100%, 42.6vw 7.4vh, 43vw 95.4vh, 75.5vw 73.5vh, 78.4vw 58vh; }
+}
+body::before { content: ""; position: fixed; inset: -12%; pointer-events: none;
+  background: repeating-conic-gradient(from 55.35deg at 27.86% 38.62%, rgba(255, 255, 255, 0.054) 0 0.00071deg, rgba(0, 0, 0, 0.066) 0.00083deg 0.00137deg),
+    repeating-conic-gradient(from 28.04deg at 76.52% 65.33%, rgba(255, 255, 255, 0.042) 0 0.00093deg, rgba(0, 0, 0, 0.048) 0.0011deg 0.00191deg);
+  filter: blur(0.05vmin); animation: vg 1000ms linear infinite; }
+@keyframes vg {
+  0% { transform: translate(3.04vmin, 4.36vmin) rotate(-0.56deg); animation-timing-function: steps(1, end); }
+  4.17% { transform: translate(1.97vmin, -6.64vmin) rotate(0.184deg); animation-timing-function: steps(1, end); }
+  8.33% { transform: translate(3.52vmin, -0.67vmin) rotate(0.811deg); animation-timing-function: steps(1, end); }
+  12.5% { transform: translate(-4.33vmin, 4.48vmin) rotate(0.481deg); animation-timing-function: steps(1, end); }
+  16.67% { transform: translate(2.57vmin, -7.78vmin) rotate(-0.069deg); animation-timing-function: steps(1, end); }
+  20.83% { transform: translate(-3.19vmin, 6.34vmin) rotate(-0.424deg); animation-timing-function: steps(1, end); }
+  25% { transform: translate(4.08vmin, 3.58vmin) rotate(-0.493deg); animation-timing-function: steps(1, end); }
+  29.17% { transform: translate(-7.7vmin, 4.7vmin) rotate(-0.583deg); animation-timing-function: steps(1, end); }
+  33.33% { transform: translate(-3.64vmin, -6.03vmin) rotate(-0.06deg); animation-timing-function: steps(1, end); }
+  37.5% { transform: translate(7.87vmin, -4.07vmin) rotate(-0.838deg); animation-timing-function: steps(1, end); }
+  41.67% { transform: translate(5.58vmin, -2.93vmin) rotate(-0.185deg); animation-timing-function: steps(1, end); }
+  45.83% { transform: translate(7.77vmin, -3.65vmin) rotate(-0.228deg); animation-timing-function: steps(1, end); }
+  50% { transform: translate(-4.52vmin, 5.91vmin) rotate(0.445deg); animation-timing-function: steps(1, end); }
+  54.17% { transform: translate(6.06vmin, 0.18vmin) rotate(0.61deg); animation-timing-function: steps(1, end); }
+  58.33% { transform: translate(2.39vmin, -5.77vmin) rotate(0.272deg); animation-timing-function: steps(1, end); }
+  62.5% { transform: translate(1.24vmin, -2.96vmin) rotate(0.558deg); animation-timing-function: steps(1, end); }
+  66.67% { transform: translate(1.75vmin, -7.87vmin) rotate(0.864deg); animation-timing-function: steps(1, end); }
+  70.83% { transform: translate(-2.54vmin, -2.4vmin) rotate(0.749deg); animation-timing-function: steps(1, end); }
+  75% { transform: translate(-4.01vmin, -5.2vmin) rotate(0.667deg); animation-timing-function: steps(1, end); }
+  79.17% { transform: translate(-3.54vmin, 7.97vmin) rotate(-0.973deg); animation-timing-function: steps(1, end); }
+  83.33% { transform: translate(-2.38vmin, 4.14vmin) rotate(-0.372deg); animation-timing-function: steps(1, end); }
+  87.5% { transform: translate(2.57vmin, -6.77vmin) rotate(-0.84deg); animation-timing-function: steps(1, end); }
+  91.67% { transform: translate(3.76vmin, 0.4vmin) rotate(-0.493deg); animation-timing-function: steps(1, end); }
+  95.83% { transform: translate(6.88vmin, -7.21vmin) rotate(0.469deg); animation-timing-function: steps(1, end); }
+  100% { transform: translate(3.04vmin, 4.36vmin) rotate(-0.56deg); }
+}

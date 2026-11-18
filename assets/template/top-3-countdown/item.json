@@ -1,0 +1,85 @@
+{
+  "cat": "template",
+  "name": {
+    "en": "Top 3 countdown",
+    "zh-CN": "TOP 3 倒数",
+    "ja": "トップ3カウントダウン",
+    "ko": "TOP 3 카운트다운",
+    "es": "Cuenta atrás Top 3"
+  },
+  "about": "13 s, three slots: a TOP 3 title card, number-tile ranking cards from 3 down to 1, shutter transitions and a rocking gold crown for the winner. For rankings and top lists.",
+  "tags": [
+    "countdown",
+    "ranking",
+    "top-list",
+    "list",
+    "bold",
+    "fun"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "template.json",
+  "durationMs": 13000,
+  "files": [
+    {
+      "path": "template.json",
+      "bytes": 2126
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 1298909
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 516725
+    },
+    {
+      "path": "example-1.jpg",
+      "bytes": 322489
+    },
+    {
+      "path": "example-2.jpg",
+      "bytes": 523287
+    },
+    {
+      "path": "example-3.jpg",
+      "bytes": 458270
+    },
+    {
+      "path": "crown.css",
+      "bytes": 1850
+    },
+    {
+      "path": "crown.html",
+      "bytes": 155
+    },
+    {
+      "path": "rank.css",
+      "bytes": 1467
+    },
+    {
+      "path": "rank.html",
+      "bytes": 196
+    },
+    {
+      "path": "shutter.css",
+      "bytes": 769
+    },
+    {
+      "path": "shutter.html",
+      "bytes": 124
+    },
+    {
+      "path": "title-card.css",
+      "bytes": 1738
+    },
+    {
+      "path": "title-card.html",
+      "bytes": 200
+    }
+  ]
+}

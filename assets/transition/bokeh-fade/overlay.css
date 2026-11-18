@@ -1,0 +1,24 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l::before, .l::after, body::after { content: ""; position: fixed; pointer-events: none; }
+.l::before, .l::after { left: 50%; top: 50%; width: 2px; height: 2px; border-radius: 50%; }
+.l::before { box-shadow: 1.39vw 3.59vh 3.32vmin 11.67vmin rgba(255, 150, 170, 0.38), 4.56vw -50.4vh 3.09vmin 11.9vmin rgba(255, 170, 120, 0.42), -2.39vw 41.22vh 2.76vmin 12.71vmin rgba(255, 232, 186, 0.55), -40.7vw -38.58vh 2.33vmin 9.15vmin rgba(255, 170, 120, 0.42), 9.9vw -44.7vh 3.29vmin 11.5vmin rgba(255, 170, 120, 0.42), 41.31vw 36.65vh 3.81vmin 8.13vmin rgba(255, 232, 186, 0.55), -29.8vw -53.25vh 3.72vmin 16.71vmin rgba(255, 170, 120, 0.42), -42.42vw 29.23vh 2.54vmin 11.19vmin rgba(255, 232, 186, 0.55), 41.46vw -42.81vh 4.05vmin 14.66vmin rgba(255, 170, 120, 0.42), -56.95vw -50.79vh 4.02vmin 10.46vmin rgba(255, 232, 186, 0.55), -27.55vw 0.24vh 3.7vmin 5.16vmin rgba(255, 232, 186, 0.55), -54.59vw -6.66vh 3.4vmin 16.8vmin rgba(255, 170, 120, 0.42), -4.06vw -17.65vh 1.64vmin 13.53vmin rgba(255, 170, 120, 0.42), 31.14vw -23.95vh 3.16vmin 8.52vmin rgba(255, 150, 170, 0.38), -40.78vw -45.77vh 3.39vmin 12.11vmin rgba(255, 206, 140, 0.5), -15.7vw -14.69vh 4.31vmin 15.09vmin rgba(255, 232, 186, 0.55), -10.69vw 50.25vh 3.26vmin 9.65vmin rgba(255, 170, 120, 0.42), 1.74vw -58.97vh 4.14vmin 7.92vmin rgba(255, 170, 120, 0.42), -45.18vw -50.43vh 3.74vmin 11.08vmin rgba(255, 232, 186, 0.55), -47.6vw 7.16vh 3.37vmin 15.5vmin rgba(255, 150, 170, 0.38), 11.78vw 12.45vh 3.22vmin 10.33vmin rgba(255, 206, 140, 0.5), 18.21vw 18.1vh 4.49vmin 13.24vmin rgba(255, 206, 140, 0.5), -43.5vw 17.63vh 4.42vmin 8.47vmin rgba(255, 150, 170, 0.38), -14.82vw 31.28vh 3.46vmin 4.93vmin rgba(255, 170, 120, 0.42), 19.68vw -0.91vh 3.38vmin 6.93vmin rgba(255, 232, 186, 0.55), -22.21vw -48.96vh 3.16vmin 8.95vmin rgba(255, 206, 140, 0.5), 38vw 52.21vh 3.75vmin 4.07vmin rgba(255, 170, 120, 0.42), 42.05vw 8.31vh 3.6vmin 12.17vmin rgba(255, 206, 140, 0.5), -0.47vw -1.06vh 1.99vmin 14.5vmin rgba(255, 206, 140, 0.5), -49.83vw 59.71vh 3.34vmin 13.15vmin rgba(255, 150, 170, 0.38); animation: bfa 1200ms linear both; }
+.l::after { box-shadow: -34.73vw -41.96vh 2.44vmin 7.24vmin rgba(255, 190, 150, 0.35), -18.49vw -17.04vh 2.47vmin 7.21vmin rgba(255, 240, 210, 0.45), 17.88vw -59.4vh 3.34vmin 13.62vmin rgba(200, 220, 255, 0.3), -1.78vw 23.51vh 1.67vmin 16vmin rgba(200, 220, 255, 0.3), 30.52vw -27.08vh 3.22vmin 5.29vmin rgba(255, 240, 210, 0.45), -49.71vw -51.33vh 3.34vmin 7.31vmin rgba(255, 190, 150, 0.35), -41.37vw -22.42vh 3.38vmin 8.06vmin rgba(200, 220, 255, 0.3), 29.21vw 14.34vh 2.49vmin 14.79vmin rgba(255, 190, 150, 0.35), 37.91vw -50.15vh 1.75vmin 14.15vmin rgba(255, 240, 210, 0.45), -55.64vw 29.71vh 2.79vmin 6.68vmin rgba(255, 240, 210, 0.45), 12.85vw -33.08vh 2.25vmin 12.3vmin rgba(255, 190, 150, 0.35), -46.22vw 28.4vh 3.15vmin 10.14vmin rgba(255, 190, 150, 0.35), -35.61vw 45.64vh 1.92vmin 15.76vmin rgba(255, 240, 210, 0.45), 44.45vw -25.94vh 3.87vmin 15.19vmin rgba(255, 190, 150, 0.35), -4.02vw -6.69vh 4.18vmin 7.4vmin rgba(255, 190, 150, 0.35), -36.72vw -16.12vh 4.17vmin 16.19vmin rgba(255, 190, 150, 0.35), -13.56vw -53.73vh 1.78vmin 9.55vmin rgba(255, 190, 150, 0.35), -6.68vw 8.74vh 2.17vmin 6.9vmin rgba(200, 220, 255, 0.3), 14.52vw -38.85vh 3.48vmin 9.36vmin rgba(255, 190, 150, 0.35), 21.16vw 39.35vh 3.27vmin 15.8vmin rgba(255, 190, 150, 0.35), 27.39vw 43.21vh 2.25vmin 5.59vmin rgba(255, 190, 150, 0.35), 21.69vw -22.48vh 4.02vmin 14.81vmin rgba(200, 220, 255, 0.3); animation: bfb 1200ms linear both; }
+body::after { inset: 0; background: #fff4e4; animation: bfw 1200ms linear both; }
+@keyframes bfa {
+  0% { opacity: 0; transform: scale(0.35) rotate(-8deg); }
+  25% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.7) rotate(10deg); }
+}
+@keyframes bfb {
+  0% { opacity: 0; transform: scale(0.5) rotate(10deg); }
+  30% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: scale(2.1) rotate(-12deg); }
+}
+@keyframes bfw {
+  0%, 28% { opacity: 0; animation-timing-function: cubic-bezier(0.6, 0, 1, 0.8); }
+  48%, 52% { opacity: 1; animation-timing-function: cubic-bezier(0.2, 0.4, 0.5, 1); }
+  75%, 100% { opacity: 0; }
+}

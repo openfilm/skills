@@ -1,0 +1,13 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: transparent; }
+.l { position: fixed; inset: 0; pointer-events: none; }
+.l::before, .l::after { content: ""; position: fixed; left: 50%; top: 50%; width: 300vmax; height: 300vmax; margin: -150vmax 0 0 -150vmax; }
+.l::before { background: #f4f3f0; animation: dsw 800ms cubic-bezier(0.7, 0, 0.3, 1) both; }
+.l::after { background: linear-gradient(to right, #0f0f11 0 99.2%, #6a6a70 99.6%); animation: dsb 800ms cubic-bezier(0.7, 0, 0.3, 1) both; }
+@keyframes dsw {
+  0% { transform: rotate(-28deg) translateX(-195vmax); }
+  100% { transform: rotate(-28deg) translateX(235vmax); }
+}
+@keyframes dsb {
+  0% { transform: rotate(-28deg) translateX(-215vmax); }
+  100% { transform: rotate(-28deg) translateX(215vmax); }
+}

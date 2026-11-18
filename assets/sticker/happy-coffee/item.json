@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Happy Coffee",
+    "zh-CN": "开心咖啡",
+    "ja": "ハッピーコーヒー",
+    "ko": "행복한 커피",
+    "es": "Café feliz"
+  },
+  "about": "A steaming coffee cup with a happy face. For mornings, cafés and breaks.",
+  "tags": [
+    "coffee",
+    "morning",
+    "cute"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "float",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 647997
+    }
+  ]
+}

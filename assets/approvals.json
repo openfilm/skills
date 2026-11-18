@@ -1,10 +1,906 @@
 {
-  "sound/glass-pulse": {
-    "fingerprint": "d55cb4c5d6e95bb6c8cf0dcb8cb296463ac4e462af9ca09998b0af64ac34ed39",
-    "evidence": "Original OpenFilm starter asset synthesized from two sine waves with ffmpeg. No samples or generated audio service."
+  "effect/bokeh-drift": {
+    "fingerprint": "55e22a1cb0764bcb79ad0b173f16eb3007ac019d5f42aee3833ac85aa5db2ca8",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
   },
-  "transition/glitch": {
-    "fingerprint": "8351f60ef6e0cfb6f0f12342f49fd3ca14d667562a4fd81a6a61175acb4b4e5e",
-    "evidence": "Original CC0 OpenFilm Glitch overlay with a new preview made from its CSS and a synthetic background."
+  "effect/confetti": {
+    "fingerprint": "a630db3c10fee1f5e4f0a446bff5c749dc0c6de1df821eb61ccd28f93ff98593",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/dust-and-hair": {
+    "fingerprint": "abd83a7014bd8cc22b41632f2f7306f4826c657cd3a4c239c26b835c9102fa76",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/dust-motes": {
+    "fingerprint": "3a562f0965cf9510968a1bc0bafbe32565f86ea0360ff611c8a226643ef08034",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/faded-print": {
+    "fingerprint": "2d1cbe56bf332df87949819bb442e15a820e15b3dd7505bdff7fd4db44562ff6",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/falling-ash": {
+    "fingerprint": "9db74c12ec7c416ce2fe3779359d1388bf745ca4c52f34b3781ad0eef65c4d85",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/film-grain": {
+    "fingerprint": "864b6d3e0aafbcd4ae7c69c87d1c6a491101682760473776cc7953b4b6b43226",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/film-scratches": {
+    "fingerprint": "e0904118a7de3334dd566bc5605b9c74712d286995d85c76adb42ef3015b9731",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/fireflies": {
+    "fingerprint": "7df9a4fb88457c913758eb789c4ee7339b24ebe6ec22abeba7aaf2d63d2928b6",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/gold-glitter": {
+    "fingerprint": "b8cf6a868752e302217be13b480fc58c5f5502473ae8de426d87d5da2087b005",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/light-leak-drift": {
+    "fingerprint": "831b38d74c89af44f1fc9d84a57766d890d2531fac648bdbfac9859a3ffee6bf",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/projector-flicker": {
+    "fingerprint": "cca673bc11c9a2c7e6f30a70f760f1fcd970a6b1bdeb17b5b5b029eca849a851",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/pulsing-vignette": {
+    "fingerprint": "3c00ea4888ce1013d0c5bdcdddd7e07ea2dbfc543c00dda45c6967b4e4e9f487",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/rain-streaks": {
+    "fingerprint": "c6e2f149821fb9c42fb3dbffbad184e26ee122d239c003d516394bacc9030011",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/rising-embers": {
+    "fingerprint": "69f90486b0f440a96e4f5b22410af024aff3285c8d6ea848187b1da3db8b3edb",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/snowfall": {
+    "fingerprint": "1b48a9ee444ffee3db1677b580d8ad64879587d4cbbe409490ded1216457a1cd",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/super8-gate": {
+    "fingerprint": "9f3fe44e8b55880f7e16e562f681b3c8a055e40e2f04849c48d69a85f949bf28",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "effect/vhs-tape": {
+    "fingerprint": "3fd31e5ba3c37821492c27fb9adaae98f964c77a55fd8b6f97e667ca618e29d8",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "filter/airy-light": {
+    "fingerprint": "ed1b31a7a74a396fa96c12aebb8281c5267904eec394a7f059663257b7637806",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/bleach-bypass": {
+    "fingerprint": "3c7fd0f3bb0f3431ad196c2512a5d7a4fa2b6915b9d73b60bdd4400fa27c9d1c",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/clean-bright": {
+    "fingerprint": "d708c8f4ee2d162a0721959caf96dcf0d06519dcd62e241bf3039d4df16f087d",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/cool-night": {
+    "fingerprint": "f16a123a32866695423d0c1a20fb01a9447fad3ecf2e9d3bd686fe4f5d4697d8",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/golden-hour": {
+    "fingerprint": "030ae0ddd748211eafecac3ec4a6a107959c44ed3500b95841f247344c0c06b7",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/matte-fade": {
+    "fingerprint": "5c158a93c0731f1ed3a7ae770434b65bd6ba5b0d615c75228e12447818d566e7",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/mint-fresh": {
+    "fingerprint": "9025e8ed9a515f6638ca130398dbd80cd5b712731031f524626cd95a4a4eae6e",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/noir": {
+    "fingerprint": "523606b2033a87290278a9c5eca38a915ee21b5f3f188e761bd96f6893d9948b",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/pastel-dream": {
+    "fingerprint": "735f40f40f1ecf0957c2bca98cea5382846e5e2f1fd6b3117eece1ae7ef8fb1d",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/peach-skin": {
+    "fingerprint": "2f5cbc9f54e1c3e2ea9dbfdb7f02e47cad55e82e852ad8db7322131b10e52e57",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/retro-polaroid": {
+    "fingerprint": "aeb3ee628c3ff3c4e628499c6ae7371ca61c24dbd5bbdcb58af62fc4971084cb",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/sunset-glow": {
+    "fingerprint": "2aa12adf26dc9e3e189b3bc40f36319a6f3c7ba088812be609304abe82dd002e",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/tasty-food": {
+    "fingerprint": "a3353b30970f00f99d06a4fa1730a4055789693321b782facdd6a1944385fe94",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/teal-orange": {
+    "fingerprint": "a3f0cf02e0c116761b7d62d8f9947ad1ef31a07ae6aaf56e03c9d1ee110ddaaa",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/vintage-film": {
+    "fingerprint": "f4d561355cd2c0899d2fb384b96272401316c43813d7de333a271e67ab29cfd4",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "filter/vivid-punch": {
+    "fingerprint": "cc1fd782137553476c6b1c512c2dec62d4fe94981b6d742e595d57f24c0c1a86",
+    "evidence": "An original grade written by the contributor. Its sample picture was made with an image generator."
+  },
+  "media/artemis-launch": {
+    "fingerprint": "83eb8b4ad0bca7e845304235b8bafdf155bfcae963729a377f0a204f38f75e6f",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Artemis_I_Launch_(Artemis_I_Launch_2022_CU_tracking_from_Press_Site_compressed).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/aurora-from-orbit": {
+    "fingerprint": "74198af0ceabd2b64e110ba209ca774db2d4de81123bce7ce8c34ec03ec55aee",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Aurora_Australis_as_seen_from_ISS_(SVS31281_-_1080p25).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/blue-marble": {
+    "fingerprint": "cac73eb328973a3169a52cee5f8d810601f8296d42c2c53c3568d1c57300571d",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/candy-texture": {
+    "fingerprint": "ae997f5a903517db31a606da14b2963e24d7e57333d91d7a0a38ab55eb38f8b7",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Bonbons_color%C3%A9s.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/canyon-arch-sunrise": {
+    "fingerprint": "3fed8524b761b117285b9ac9e3f11d28ac7788963a7f3feb74155a2e944d4092",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Grand_Canyon_National_Park,_North_Rim_Sunrise_on_Angel's_Window._0137_-_Flickr_-_Grand_Canyon_NPS.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/canyon-river": {
+    "fingerprint": "8f9e9af20431a8c1d1bc43c18e4c2a040b7498ae6d3c9418346d0170c20857b7",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:North_Fork_Owyhee_Wild_%26_Scenic_River_(35066816690).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/chain-bridge-night": {
+    "fingerprint": "2ce17c92b3f563861bb4bf33b9b68caa0d943f200e33bb2494cccf4d459e376d",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_Chain_Bridge_in_Budapest_at_night.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/city-lights-night": {
+    "fingerprint": "30de97c2884ac9a77601f5e2d06da8c886c84fc85c56b31bbb798c8cb7f34191",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Timelapse_de_nuit_de_la_vue_du_quartier_de_Lujiazui.webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/city-sunrise-timelapse": {
+    "fingerprint": "b9aa0e73b85538f29cc340ad9f3d91d2ff2a56d403b9657552386a361abca22e",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Time-lapse_sunrise_Berlin_Drachenberg.webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/denali-peak": {
+    "fingerprint": "76355a12275e4ff0d283fde22e7c71e65b4ef11ab8e0824f5a70e5a9aa1fc34b",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Eielson-_Denali,_fall_morning_(5728254288).jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/earth-night-globe": {
+    "fingerprint": "48eb14552c4474d40af49adb2361c3774595d60494974a06a63b19b657c4eedf",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:BlackMarble_2016_rotating_globe_at_night.webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/earthrise": {
+    "fingerprint": "9784f5513ac540e1ba7e4e15b8daea0e2cf45e447f03575e77ab843c7405971f",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:AS08-14-2383.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/escalators-underground": {
+    "fingerprint": "0b9ba72475253c8369a40e36da271ef7defbe55f66b6c476ef3a9218cdeba3e0",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Escalators_at_Auber_RER_station_in_Paris,_recently_renovated,_with_clean_and_modern_underground_architecture.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/espresso-from-above": {
+    "fingerprint": "b5545291353ea1b1cf3aac5696e28b1b2470739b73e529ce7ec8b7392c12f713",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Espresso_Coffee_01.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/foggy-meadow-sunrise": {
+    "fingerprint": "e965906f70bca848fb6b717c4c8c5c2405e37f8c176041223f8ba90736e7987b",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Foggy_sunrise_in_Sherburne_National_Wildlife_Refuge.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/geyser-basin-steam": {
+    "fingerprint": "ae7744c5b11da4088d8e1eb3c31054414ad662c47ba20c13cd2615b2f699d8a9",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Grand_Prismatic_Spring_and_Excelsior_Geyser_Crater_steaming_on_a_spring_morning_(42107875492).jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/geyser-steam": {
+    "fingerprint": "d535fcc2c3a8427c57c5a4a57e4135db845e554b51c7775c685926ce26f56057",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Steamboat_Geyser_vigorously_in_steam_phase_the_day_after_the_March_15_eruption_(41117534124).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/grand-canyon-panorama": {
+    "fingerprint": "388e40a4ceb1e9c4d4c8c79d930ebe5a38fe5f2a273823796b8f7e24bfe96e83",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Grand_Canyon_Hopi_Point_(large)_(5411249056).jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/harbour-lights-night": {
+    "fingerprint": "89ff0ca18b9968d7fa10cae504187b5cf403074525a46aca7db6a49e7a72b2ce",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Hong_Kong_Harbour_view_from_International_Commerce_Center_Building.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/hot-spring-timelapse": {
+    "fingerprint": "e02ef03ebeb1779ebe10980ef7dd7627e2c3ea8a565263edf9b26870f3826dbb",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Grand_Prismatic_Spring_(timelapse).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/hubble-deep-field": {
+    "fingerprint": "3ce9d4fa7fb6a0502cf35b1ad934dcc3f019314ad48ebd97065b6ba837e404c3",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Hubble_Ultra_Deep_Field_Video_near_constellation_Fornax.webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/iss-desert-limb": {
+    "fingerprint": "4709db8f33193d3742d10ee2a1a43fe2c5e2e58e85c23c576872e9aa066175b2",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Crew_Earth_Observations_(4K).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/iss-into-night": {
+    "fingerprint": "c5160a391fda88e2a2e0adfe3cdb5d9cceee7c7f377aaeafe211cb080de49bb7",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:View_of_Planet_Earth_(4K).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/iss-ocean-clouds": {
+    "fingerprint": "1a807ee4c1f1c09c2d4a47d427124af921d465344ef545419233bacdc5322e48",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:View_of_Planet_Earth_(4K).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/iss-red-sea": {
+    "fingerprint": "11925a7eb8add99d2469f75559ee94ab13e5cc4b2632354878fbb539040cebb0",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Crew_Earth_Observations_(4K).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/iss-sahara-curve": {
+    "fingerprint": "3d525891b505ca33c5e098bac49f5f4fe2eeba8d384e5f3e0c73023aecb42025",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Crew_Earth_Observations_(4K).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/joshua-tree-timelapse": {
+    "fingerprint": "49d82ac17bd2f14c5a0418348d3e05a0c1edbd01eb913e992a5098b9d533eaa1",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Timelapse_Joshua_Tree_Clouds_and_Sunset_Near_West_Entrance.webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/lava-fountain": {
+    "fingerprint": "aa50f9c3920151639691c69627e7cb45a42bcd9eaf12f14c1fdf1844b6e97bb5",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Fountaining_from_Fissure_20_on_May_19,_2018,_around_3-47_PM,_HST._Photos_and....webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/lava-night": {
+    "fingerprint": "0d3ea3f9756d9ac40cc7fb27bb7372368722de2c8323c9acbbbeecea77aa3d77",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:This_video_shows_fountaining_at_Fissure_6_on_May_21,_2018,_around_2-45_AM_HST....webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/lava-river-aerial": {
+    "fingerprint": "0a7a8552052bc585ff274e1b865a4037e7d0216ac2ced17b489358adbf8af3fc",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Helicopter_overflight_of_a_fast-moving_lava_flow_emerging_from_fissure_20_on_....webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/lightning-storm": {
+    "fingerprint": "6eb45e802bc17ed46ec6ace7869fe0d17a7518b08f1caca83fe2a41a4fdc9ca9",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Lightning_storm_over_Colorado,_USA.ogg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/marble-texture": {
+    "fingerprint": "faa5ee319f291cf0b1a0ed8b17bee845d0ca26f0b3ba3d8c19a3c104163ed9f4",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Marble_Kymi_Euboea_Greece.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/moon-phases": {
+    "fingerprint": "a752a7dc94a7235c9685a76a41b95c64e37520cd5d649454e39a4314150c1161",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Moon_Phase_and_Libration,_2024_(SVS5187_-_phases_2024_plain_2160p30).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/moose-frosty-morning": {
+    "fingerprint": "cd55e6f001d81762b5a628c82390904ee5b6e16221aff7eb9d7993b79f871fb7",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Moose_at_Seedskadee_National_Wildlife_Refuge_(44827612214).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/ocean-waves": {
+    "fingerprint": "d3be1843da8d4bcfdd0ff52996f3894da0e0ccbd0a2fa5df3038bbc4a6752b71",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Ocean_surface_waves_03.ogv) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/old-brick-wall": {
+    "fingerprint": "561e10133f7b560855039a44dc9208be3869779b6b811ff4ed8d3421e59f5d9a",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Stones_and_bricks_wall,_Alhambra,_Granada,_Andalusia,_Spain.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/rusty-chain": {
+    "fingerprint": "1c6f0407df8eab6a180f315b41270a1110415e84f6c09fd6742f5701cd5b6ef9",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Very_rusty_chain_in_rain_4.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/skyline-day-to-night": {
+    "fingerprint": "93df52e9d7dcdf21eacab530e13ea45e9b46c4a93b30898170d9bd5843fa1679",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Shanghai_Bund,_Lujiazui_Skyline_Timelapse.webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/skyscrapers-sky": {
+    "fingerprint": "e11edc60a5b8b567964d173ccd6c11845ddff68292ce89bb9f409c36bcab5817",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Shanghai_skyscrapers_5166285.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/spiral-staircase": {
+    "fingerprint": "441036fda86764f41d76a7aa7d8610b70c9f78f754770f051b25745e503f42d8",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Spiral_staircase_in_the_Vatican_Museums_from_bottom_02.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/sun-flare": {
+    "fingerprint": "d8202861df94fd5ad7589b709959cb0ba618ba3449e1802b5c9e9edbdd88d008",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Sun_Emits_X1_5_Flare_on_May_10,_2022_(SVS14160_-_20220510_FlareX15_131A_4k_ProRes).webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/waterfall-cliff": {
+    "fingerprint": "ea5ddd735731be93b8637901faf583d7ac462ce91ed9b01d5129174b4b38a76a",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Delaneys_Falls.webm) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "media/weathered-wood": {
+    "fingerprint": "1090c4a5897441dcf6eac115456d7762bc9b8dab506d0e497fc74f878045e301",
+    "evidence": "Wikimedia Commons file page (https://commons.wikimedia.org/wiki/File:Weatherworn_top_of_wooden_table.jpg) checked through the Commons API: marked Public domain (a US federal government work) or CC0 by its author. Trimmed and re-encoded by the contributor; no identifiable people or readable trademarks."
+  },
+  "music/action-strike": {
+    "fingerprint": "b2724a5046fb2660d91db4ef2afa9c27e463b09b1292df31ca06750d6f485025",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/adding-the-sun": {
+    "fingerprint": "6960e561f3a8a2b224044123f71562be49f511dccde2a23cc44ccdf09fbcef4f",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/adventure": {
+    "fingerprint": "95dbfbbdf00f6cbd6a29ea03171cb2621f11ed7ce2ff932f3a169fe8ce848838",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/backbeat": {
+    "fingerprint": "324dc75fa8244fd8e3b58ec05e993dd4b18ebfabc73aaec2caff543001cba85c",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/barroom-ballet": {
+    "fingerprint": "b4452df9b564c05e7d4f16f786871ea4a02893bbbf7b0636ae0d829777c21dbb",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/beethoven-5-scherzo": {
+    "fingerprint": "49b4f4a2bf119d19b787c2cfc13d882e0fdf26af1fe34696d93f3a14a24aa55c",
+    "evidence": "Wikimedia Commons: a Musopen recording of a public-domain work, marked Public Domain on its file page. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/busybody": {
+    "fingerprint": "9547fde82f79b52eb0cde61ebb0ba80ba55f98730ca1b3c1a9000b033c431f4f",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/city-run": {
+    "fingerprint": "b0e41a406dd4e191675ec2dfade6f425e6625d7f06ddde1fe8d6ac8ef949b14f",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/comfort-games": {
+    "fingerprint": "13fb55ad8b6f3fe1fc6b3b8433f90d93c2e5d42aaf3a4b823db0e16693252500",
+    "evidence": "Free Music Archive: the track's page by HoliznaCC0 lists the CC0 1.0 Universal licence. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/downtown-boogie": {
+    "fingerprint": "18bf24337ce0820a557e7280104ba3ab31a69e310bce91d89a3ad205ec55ed84",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/emotional-blockbuster": {
+    "fingerprint": "74ee9f1176d05d5fb55eb36373944eb5f9ebc77094edc97adfea05b0b406e756",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/energizing": {
+    "fingerprint": "0a0113adba798bc42f62942e9c4bfb160d84387a88883c45c0353f4eabfc0d74",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/flying": {
+    "fingerprint": "04311d3189a2e11663857e40616c26b5eb6adfd21728ac4fe86248d6d6706116",
+    "evidence": "Free Music Archive: the track's page by HoliznaCC0 lists the CC0 1.0 Universal licence. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/lovely-piano": {
+    "fingerprint": "926b8476cfaf6dfdf5577c8c9a9dd02c11e978fea6ab66bd98fc4fc07d53171b",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/martini-sunset": {
+    "fingerprint": "d4783fec0040fd2c090e643cd4a7c18d627fa16987bce67112aa97f9383fa82d",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "music/nostalgic-piano": {
+    "fingerprint": "68036c8dcda7b06de6dde04d51e85b3b20bb1b2f0b1563dd2bef8529f2c0413e",
+    "evidence": "FreePD.com (2008–2025) dedicated all its music under CC0 1.0 and allowed its use in apps that make videos; taken from a public mirror that keeps the site's legal text. Loudness levelled to -14 LUFS, encoded to AAC."
+  },
+  "sound/applause": {
+    "fingerprint": "b409369d28869783f617e113e5791a2b29ac68f3113da0986adee488d4b2f94b",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/bell-ding": {
+    "fingerprint": "52a67410b2222626134b64eff8a35e6dff9f89d1566e0678387f950ad3a52ef6",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/birds-morning": {
+    "fingerprint": "b2e368d65631e0e8e77b66eb6f0b4d03aa54aed481c7094dad6cfd0ffcee43f8",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/boing": {
+    "fingerprint": "70fbe35422cb36c7c75cefd1c833ec53cbac8651804dcd991829f553382aa034",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/boom-metal": {
+    "fingerprint": "f802c7c8e6b19d75be99600bbabbde932d6265df3f775575cb38fae004465a5c",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/boom-trailer": {
+    "fingerprint": "a8120992312c032379dd529f53b8908ea8b250ca9c47e4b986649ba6dda92a80",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/camera-shutter": {
+    "fingerprint": "08f5b7c6b253eaa168c5f45c82d26f222d492b73b5438328b215af0c22888f42",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/champagne-cork": {
+    "fingerprint": "afeb1b7211e9c398c574eb7a8adfb67300a482c70276ca81fa2a6df390d76d01",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/click": {
+    "fingerprint": "448bed7bc3b95c80ccab3f2b1ad947244bf0b7aa5753d8c2f4fac35f50b068c2",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC."
+  },
+  "sound/clock-tick": {
+    "fingerprint": "f500b726be926f2f7c1f4d99c993ed45ef25d62a08667cfd8454b9a1ceb99b98",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/coffee-shop": {
+    "fingerprint": "50e1cd2abb5aaa10cf9632f85f2411691347025286615aa5b55359a40ab2ebd6",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/confirm": {
+    "fingerprint": "e0c3323056d582479a3aff07e794a2bdee77d27f115e042c5cde255c91ca6788",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC."
+  },
+  "sound/ding-ding": {
+    "fingerprint": "40eb914f4c52199ad0b53d54b31268fad3fb66ccf134cce89bb161f8f66ebcc6",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/door-open": {
+    "fingerprint": "739e65eeaa40e72e33a8c913c7118c749ea529575e16d68cd852ed34ee07f97c",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/drop": {
+    "fingerprint": "54d25c61ebdfdb744116f22ae1308fa33463c2ad5abeaea60fcaa1acdcb44089",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC."
+  },
+  "sound/error": {
+    "fingerprint": "cf512ea9ed5522ec01339632f4ad2cc4b35fbd4910a18b3a85f78365b7721e8e",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC."
+  },
+  "sound/expand": {
+    "fingerprint": "f01bda580a21a1adc8517f785b09cae8a8fa4fdae0a6786acfb241bc27abcbdc",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC."
+  },
+  "sound/glass-tap": {
+    "fingerprint": "20b919ed866ff6b67b134312e1705b3778593e25f38b97adf702250796c248db",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC."
+  },
+  "sound/glitch-growl": {
+    "fingerprint": "6715512e69754d745948fce814ba4da1c96e3ce0a23bff1f16a2f9678274045f",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/glitch-short": {
+    "fingerprint": "dd616450c0da20c03061c60aa065a7e16d4dca34c0e443cfbc8a886a60e142de",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/glitch-ui": {
+    "fingerprint": "9567009351ab49ba6a62c9c36acdff156ad975e90e7aab67fe5f06bb27caa400",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC."
+  },
+  "sound/heartbeat": {
+    "fingerprint": "79d515db6c527e07adb25cf85478eb4907075bdd65e53e7a17f114f876c36036",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/idea": {
+    "fingerprint": "0f6be286ef970c5a2ecbf7e4737cc9e99d857f4e2608be6a1ccbe542b3517fc1",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/keyboard-typing": {
+    "fingerprint": "fe3b2b339215790c47ebc500f6792baca322f7a80a8afd71309008dc5f62d117",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/message": {
+    "fingerprint": "3d4ef9d796bb676d758d1e3a35d728327a871c2ac0f60776f4a80939584d178a",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/page-turn": {
+    "fingerprint": "bd8d463c332190157513c2907f36e32cb6de29351a312ac78d1a63140accdc83",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/paris-street": {
+    "fingerprint": "523ad1a58b61d44aa31a2900fb69e19d3ec90d3eaa0474ebb6741078706af70e",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/pluck": {
+    "fingerprint": "b2054635b09123accd0c6fdd135a4e6688198052ba357741313676418a4200d8",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC."
+  },
+  "sound/question": {
+    "fingerprint": "d3e92cc5e4d9760a4d9aff1f2443f94f8323a9faeb889c1b44310ad78909bde3",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC."
+  },
+  "sound/rain-thunder": {
+    "fingerprint": "9f749e2ae6300baca3ae044733846a517bc6001117d70d28626621d7e001095b",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/register-beep": {
+    "fingerprint": "1fb05aace4d6d06a0aea802341d1ce5d662d678076b1abcc013e0acf81efeaeb",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/riser-doppler": {
+    "fingerprint": "3f684e30a5a6569502e2a65fcbcb642c94aa60efe9c30870530834d2e2b51fd2",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/riser-noise": {
+    "fingerprint": "b518b70e11c320aecc99338b3c0861aba77aa8e6925e759c9afa4283f8fe7a09",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/ruler-boing": {
+    "fingerprint": "459e43fdb6d663cb4152498b459eecad2ed9fe8d11a92751a1d27f7b5167dc2f",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/sad-trombone": {
+    "fingerprint": "e89821576574e706f8e3432b46ddff1b273c0c4e749a78de37782845104960ac",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/sad-trumpet": {
+    "fingerprint": "a5b97173b3ba5790d64a2b6241c0080bcfb69fdf7899b77b27d3e076944f0e51",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/switch": {
+    "fingerprint": "ea9929d1a6ef051d331e6773aa414d5e8c038c615825738272bcbc85501fc52e",
+    "evidence": "Kenney Interface Sounds 1.0: the pack's License.txt dedicates it under CC0 1.0 (Creative Commons Zero). Original WAV; levelled and encoded to AAC."
+  },
+  "sound/thunder": {
+    "fingerprint": "1d15bdf4a7dd8138e280e1efabeda7a212c32ebe22f7cd1412da72e5ec6aa979",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/whoosh-light": {
+    "fingerprint": "8b41fd9f670ffb78c67f3087e092ef01c1764b16cfdc30ea518b7b7e02894d4d",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/whoosh-long": {
+    "fingerprint": "3aa100152eb02e574de77067c2a064d0da76a0ac68163727fe861d4f09567bc7",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/whoosh-short": {
+    "fingerprint": "305f5a694d8bbe5519980aed0f62d5143dde46486c282759524c0bdf086bbb93",
+    "evidence": "BigSoundBank (recorded by Joseph Sardin): the item's page and the site's licence page dedicate it under CC0 1.0. Original WAV/FLAC from that page; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sound/whoosh-swing": {
+    "fingerprint": "69e6be89077ba07bd9465bc3dca890d117b6b772a781194c9553556c09f436a1",
+    "evidence": "Freesound: the sound's page lists the Creative Commons 0 licence. Taken from the page's high-quality preview; silence trimmed, loudness levelled, encoded to AAC."
+  },
+  "sticker/arrow-curve": {
+    "fingerprint": "b0797d2baf1af08d7e329636d844babcb697a1f2a8fd60e7eeec78365c087a05",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/arrow-down": {
+    "fingerprint": "06064dbb88201b3c1101e251cc079bf994876ec59f15fb579cf3d01faec31b0e",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/check": {
+    "fingerprint": "a0fbb2a848e85a0c6c2de7e6690480deb5ce7444b9240252f1618776667cec97",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/circle-scribble": {
+    "fingerprint": "69ee0729036bcc2baeab38c68810707414d07a9e29bfe4228fe04df710bda2da",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/cross": {
+    "fingerprint": "4045d042d92a42ff697aa0c1d4353220f2a247102fb4180afdea86a4853ace38",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/crown": {
+    "fingerprint": "8b69e51724831a7b4e84cd51b5804d98c11b7969c50a42634553e8ab448794c8",
+    "evidence": "Made by the contributor with an image generator; background keyed to transparency."
+  },
+  "sticker/exclamation": {
+    "fingerprint": "6852156f958ada304ed32fec83811b542326acd0643988d9819a36b91f031bb2",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/fire": {
+    "fingerprint": "bca7b6060b541f1257ddf9b429e49cc5bd1fa587d29d85c512aa0a7fbea2b7e4",
+    "evidence": "Made by the contributor with an image generator; background keyed to transparency."
+  },
+  "sticker/focus-lines": {
+    "fingerprint": "805539947a65a2b4ff93c512f0f7aa56154d6f9d8434a87ea52ebba3ff256f27",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/happy-coffee": {
+    "fingerprint": "d97780524fbe2df5cbf937566c97872bc3d08c6acc48d49870c0b6270b4c32d8",
+    "evidence": "Made by the contributor with an image generator; background keyed to transparency."
+  },
+  "sticker/heart": {
+    "fingerprint": "96f4033d7770446bca55e6fb75a910986cd85396f39ce5016ac9a4f874bd9e25",
+    "evidence": "Made by the contributor with an image generator; background keyed to transparency."
+  },
+  "sticker/heart-doodle": {
+    "fingerprint": "3bf440f0c66ac3116f73c80391a2ff86285977e5e0aa3cde8e28c77b86ca7a42",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/laughing": {
+    "fingerprint": "43b6ef47fb3a4936b0783fb5872e12a4228f374d00d15079d4a3f21fcbea0bae",
+    "evidence": "Made by the contributor with an image generator; background keyed to transparency."
+  },
+  "sticker/question": {
+    "fingerprint": "6967460a88165352d2091bdf58474598125c8c342b52ad7c2d9872261d42f6ca",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/rainbow": {
+    "fingerprint": "dea7289fa7e572e9b3e66154362fb22e5d67d51bc47b27a2628c8d44f645ae09",
+    "evidence": "Made by the contributor with an image generator; background keyed to transparency."
+  },
+  "sticker/sparkles": {
+    "fingerprint": "bbb5ed06890b8d13933e536cf1bdf72d2713f0671b8101b4a2da2542fa9462e8",
+    "evidence": "Made by the contributor with an image generator; background keyed to transparency."
+  },
+  "sticker/speech-bubble": {
+    "fingerprint": "1eae738f98e426d0f4700b2f7a1577c4116978174b7886d2347d035fc6509482",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/star": {
+    "fingerprint": "07642af431c4f0b253b2f4908e9dca02a6b50eadf184112821ff897a511d90a4",
+    "evidence": "Made by the contributor with an image generator; background keyed to transparency."
+  },
+  "sticker/star-doodle": {
+    "fingerprint": "cbeab03080be9d7296732bd4f59e49cb5356a0881d116c12bf60a87d63e32b1e",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/thumbs-up": {
+    "fingerprint": "57b540c4c9f9d8192bf81629e3eca7e69877b81d8d59d31b576c5a1d73275ee5",
+    "evidence": "Made by the contributor with an image generator; background keyed to transparency."
+  },
+  "sticker/underline": {
+    "fingerprint": "c968699e87dd1d806c752f47ecd1c8b4c7005d9ea119fd0eae5606854bcea354",
+    "evidence": "Drawn in code by the contributor."
+  },
+  "sticker/winking-cat": {
+    "fingerprint": "646b2dd5a2a92d56fd209e7e0652792d029495ec1fd47bf8c450939d1237fa58",
+    "evidence": "Made by the contributor with an image generator; background keyed to transparency."
+  },
+  "template/birthday-party": {
+    "fingerprint": "b1526e938e46f1ee7394cac4daaecdb48f4d280a3f386cdd21e4f4619336013f",
+    "evidence": "Original pages (markup and CSS) and timeline written by the contributor. Its slot pictures and preview backgrounds were made with an image generator; the preview was rendered from the template."
+  },
+  "template/daily-vlog-opener": {
+    "fingerprint": "af1c1280760346939a2a9a6d785d62d3ff020dab62f4ec935b8cc0165fc97935",
+    "evidence": "Original pages (markup and CSS) and timeline written by the contributor. Its slot pictures and preview backgrounds were made with an image generator; the preview was rendered from the template."
+  },
+  "template/event-announcement": {
+    "fingerprint": "9b09fabdc26caca1666a7922bb9247df1303be3fe457e155b408cb719b1af014",
+    "evidence": "Original pages (markup and CSS) and timeline written by the contributor. Its slot pictures and preview backgrounds were made with an image generator; the preview was rendered from the template."
+  },
+  "template/food-review": {
+    "fingerprint": "d494dc8e6ce0bb7e9162bfa9ed76296e80bdc44123da708d45d2793b1b59cbce",
+    "evidence": "Original pages (markup and CSS) and timeline written by the contributor. Its slot pictures and preview backgrounds were made with an image generator; the preview was rendered from the template."
+  },
+  "template/product-launch": {
+    "fingerprint": "cd89f9a0a2f42e381bdbf9ce794df44be03f47ee0b30057a3c0979e1c70d65f9",
+    "evidence": "Original pages (markup and CSS) and timeline written by the contributor. Its slot pictures and preview backgrounds were made with an image generator; the preview was rendered from the template."
+  },
+  "template/quote-card": {
+    "fingerprint": "34221298364706f7d765dc48389fcdf01b7c910be4ab61251599f919e362074f",
+    "evidence": "Original pages (markup and CSS) and timeline written by the contributor. Its slot pictures and preview backgrounds were made with an image generator; the preview was rendered from the template."
+  },
+  "template/top-3-countdown": {
+    "fingerprint": "e42e3395a300d4e4d6d62acdacfcd00c56a67ee20169967f2b4c14f36e26f8ae",
+    "evidence": "Original pages (markup and CSS) and timeline written by the contributor. Its slot pictures and preview backgrounds were made with an image generator; the preview was rendered from the template."
+  },
+  "template/travel-diary": {
+    "fingerprint": "a1ffacfa1efaaeca198019572a0ce5f37b4ececfb3b1a54f55e7c9be67710162",
+    "evidence": "Original pages (markup and CSS) and timeline written by the contributor. Its slot pictures and preview backgrounds were made with an image generator; the preview was rendered from the template."
+  },
+  "template/tutorial-steps": {
+    "fingerprint": "981b26018e37a8be75aa1d1487992093ce26b7126a14de3f92b4758129fc79ef",
+    "evidence": "Original pages (markup and CSS) and timeline written by the contributor. Its slot pictures and preview backgrounds were made with an image generator; the preview was rendered from the template."
+  },
+  "template/weekend-recap": {
+    "fingerprint": "227e689c980399aaaf15599c7b897cb2e139a9e89eca048c468b3927c66d2fd4",
+    "evidence": "Original pages (markup and CSS) and timeline written by the contributor. Its slot pictures and preview backgrounds were made with an image generator; the preview was rendered from the template."
+  },
+  "text/bubble-mint": {
+    "fingerprint": "2fe80ef117e5a7c406351948340838ebc3b4b0fbe71f083c281c2c43874b615b",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/candy-pop": {
+    "fingerprint": "f925a56ccd1fd6404b500f4b953a1a8a75652665de4ef1540f86949d2ee8211d",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/comic-red": {
+    "fingerprint": "0ecebcc4071416ef8bd13cc6ff2595542ea9520ecf582562a4e174679f70a89d",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/doc-lower": {
+    "fingerprint": "84f03fdcb3f14f3575cdf39fa6d3e6b54c1be25ec7571b9fa83797f55c1ebbcc",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/film-serif": {
+    "fingerprint": "4e6ea2a1feff54b72246b9e3f50b05ca234429fe83ed1fa7c3cc0dded38b0ee6",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/fire-glow": {
+    "fingerprint": "bdec86f8377673a38a24c32c5ff4d601d1a611b45d12998af825bf457956fc6d",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/gold-award": {
+    "fingerprint": "bbd0bb481c39e1c194af96f41734d9dded62adede71893996c5149edc0478904",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/golden-epic": {
+    "fingerprint": "5fd56ca02928e6ac0409ab00c73db62955600eacbc3a1ae0915976b1e4e33cc3",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/horror-red": {
+    "fingerprint": "058824469775afce6a8f6b09d6537acbc09d549389383974d637679944bdc614",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/ice-blue": {
+    "fingerprint": "c89f6343c13e47299941bb2829dfc4fb71ae9cb939f4079703d934d39d9b24c0",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/neon-pink": {
+    "fingerprint": "742f923c9ab4c7fa9b71717b50fbfea50ba9ee6af5d046992f2a1af92b473fa4",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/noir-italic": {
+    "fingerprint": "1c92d871cf978627a64da94dfc0797ebe76ca326f0e5d8a67ac4d30a2aa9edb6",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/romance-script": {
+    "fingerprint": "58d316ca409e2566edb030ee85a2a8f82f5e4780e7d3e2a7ac9b6d15b20402c8",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/shout-yellow": {
+    "fingerprint": "90ad6192245273b78f7ce5c5b4d6c294ac241186fa61dc51905ab50c25b89a97",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/sticker-label": {
+    "fingerprint": "a6244185448606571531c4090c38bba2b10b1e2400b15ab881f4b87aeb92378e",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/subtitle-box": {
+    "fingerprint": "cdefc095f197e92eed5e26b751527352824f3fbd1250112bd1893565b08dbdc6",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/subtitle-outline": {
+    "fingerprint": "9f16387aa2283556644c6ca74aab66f3d2efcc077870e569d88fb89f46233926",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "text/whisper-soft": {
+    "fingerprint": "3a2361199d78441deb2265e8532ea0c7d9033fcfed9c454823df0cc8d142142e",
+    "evidence": "An original text style written by the contributor: variables of OpenFilm's text component."
+  },
+  "transition/blinds": {
+    "fingerprint": "ffc729d36555be22f12b03f117d4b20ba93f98c873748d3d0ee52a561a191c10",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/bokeh-fade": {
+    "fingerprint": "9ebc6d939528dc57607a53bf44fd7c1125b8feccdd63b3074602281b3af1825b",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/diagonal-slash": {
+    "fingerprint": "0bb48e96ed646c8ea69588677ee7d2e378d30eb3eb5716710d9c66cc6d53b955",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/dip-to-black": {
+    "fingerprint": "d4be939588b052454fb155299eefba35471bd46f60b33d6506d226d4ad78e145",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/film-burn": {
+    "fingerprint": "47b7b56677003ba50ab632fa800c424ab76e63a43cdd15874034daf46c68fc33",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/flare-sweep": {
+    "fingerprint": "d195cad33b8665658704efc3c04b319bb0f7b8ec8bfd7f9802eb3b6ea7a0e77b",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/glitch-slice": {
+    "fingerprint": "8f4970063106d93bffdea3793ac53a240fabfcfc11e5cd2c45d0703cd3201e4b",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/glow-wipe": {
+    "fingerprint": "cc6e10193380197daaf0eb2ffc2b001790db81bb386a10467c166878109f43ca",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/golden-bloom": {
+    "fingerprint": "465a5d637b02b012ad966cf6250d7189e3a8742bc2dc64ba4b87434682b4883e",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/ink-reveal": {
+    "fingerprint": "f6f12ea37bae1e6131989e4bcadc39a507247fc07af3f9e70e78f259b4eec960",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/iris-shutter": {
+    "fingerprint": "3a0497746b35ea292ee5165e7c5efdbd3a91f07951332fa7cd7e156afb815727",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/panel-swipe": {
+    "fingerprint": "61856ca596a1b68f39f2c7ec6a6c07ced3d0b5d96722546d5b3edad587a29734",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/shape-stack": {
+    "fingerprint": "77bda635fed34673b0d0cee0b38e7db648b54a51f5215970d71a58bc92118cfc",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/spectral-sweep": {
+    "fingerprint": "565dce83882c1c982e4bfcd3d7378f71b2dd6e636122d85b4c5c54a6408d50fe",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/strobe": {
+    "fingerprint": "46052e18dff530e5cd9dd9fc1dba264e60bc2b1a079571044f5f58b5a64cad2a",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/warm-leak": {
+    "fingerprint": "895a696122013f7f0025fa358cdd88fd1ae777929d728d59408965f33606dcdc",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/whip-pan": {
+    "fingerprint": "8e772fbb05367f7c62225a28c12debd6d403c99a79273b3038958811f77a9e94",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/white-flash": {
+    "fingerprint": "d4c4a57098ed4c8806094eebb2f2a8811181f840a3eb68beb64164adac2f31f8",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "transition/zoom-punch": {
+    "fingerprint": "edb96aa0e0d736cc8d50a3fbcb6260c2429d4048530d684881ba43f26bc8fa05",
+    "evidence": "Original CSS written by the contributor. Its preview was rendered from that CSS over background pictures the contributor made with an image generator."
+  },
+  "packs/ambience": {
+    "fingerprint": "e2f5bbeb4a518dcd3863c9ad6d452410aeb0f284ae3007635d1f15b9c00aa6e0",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/ambient-particles": {
+    "fingerprint": "ecfeca2bf0cfc3d7a90ba5d364714e847ff82776ea3e33860fcc29352ad965cf",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/cinema-looks": {
+    "fingerprint": "aa90be6b2cb033a080c2b6e8b37f8f9da23a87d7dd105d1b9d7cb283c205c865",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/cinema-titles": {
+    "fingerprint": "4018a43b991c8adbe05fda6c0e8eaaae4cf35da4fab83805510a8c88fe3d4107",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/city-textures": {
+    "fingerprint": "96146609074322b94989fa0f4ce870bbe0b0ee6f798f969e0dff7934b93c6d1c",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/clicks-alerts": {
+    "fingerprint": "53bf74cb3eb8f612a412ce256a4737190462639a6a6bf4c9cac4014673cf7ff2",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/cute-stickers": {
+    "fingerprint": "6c8db07a03bc38e1e35c19aa6bbe25b9c54de62a7398e676e85803bf0b5fdd06",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/earth-space": {
+    "fingerprint": "cd73bf5cafd9cc31687c4f91057ee0c75686c4970c7b270a04444dbd8fd1e1c2",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/epic-tension": {
+    "fingerprint": "425e56aebd5d1883529a0b6986d6b8a1386c8f1dd1c70d2b3acf92a8acac0a08",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/everyday-comedy": {
+    "fingerprint": "5600a66e30b677bfb32706ba6b8724ded9c614aad906a9c29347a487b076bbe6",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/film-texture": {
+    "fingerprint": "73cf81d5537b93efbd87d7e809594955d8539d49c964c8f0b4621c85f153a0fb",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/fresh-everyday": {
+    "fingerprint": "595951b729b3705773ceda008bfef530ab7026df07fdcf2f5aa32040f96d9b71",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/hand-marks": {
+    "fingerprint": "996a0a533002727858d200a49ba52e6e106d954194f7c4b510c96389d2b15587",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/knowledge-promo-templates": {
+    "fingerprint": "e0c0a13a5057197cf2f82fbacedd0e62d91b20f234d00908ccfadca1174e7dfb",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/life-vlog-templates": {
+    "fingerprint": "bd3ca02d5071df0b67f829ac0d080da99f8fc3b46b443387d93c3bd178b08b9b",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/light-transitions": {
+    "fingerprint": "a8efe9b58a6e6385722a118befbc8a707337a08ec3d478417373ad8331f8b036",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/motion-transitions": {
+    "fingerprint": "3a7ff546c236f9816979999a00cc144c2cec08e45efe5c41d9a7310f22421b8b",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/nature-landscapes": {
+    "fingerprint": "57a4376f424da90fef144bec6742bc9c8400671dd09b54dc3a9c1fb5b526e016",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/piano-classical": {
+    "fingerprint": "ff4201c0ebdfa7ed0ab029e28f0cc17cb049037ee9f7255fa7cc496d94daa361",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/upbeat-comedy": {
+    "fingerprint": "ae43fd0fce6b8ed043de4c99f3e1a51458eaa132bc5fed41eb9d08bcaf270643",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/variety-words": {
+    "fingerprint": "c5551fc4e6e56e37ab1feb80e608b929bbe4488a6e51079e1d29e668ee080348",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
+  },
+  "packs/whooshes-hits": {
+    "fingerprint": "fe6aa36b5348ca390acb47af50896476af5f6c5bc15978c5cc5d08db0be6c0e3",
+    "evidence": "The contributor's pack of their own items, each with its own source and evidence. Its pack cover was made by the contributor with an image generator."
   }
 }

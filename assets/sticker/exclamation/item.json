@@ -1,0 +1,31 @@
+{
+  "cat": "sticker",
+  "name": {
+    "en": "Exclamation",
+    "zh-CN": "感叹号",
+    "ja": "びっくりマーク",
+    "ko": "느낌표",
+    "es": "Exclamación"
+  },
+  "about": "A bold red exclamation mark. For surprises, warnings and must-knows.",
+  "tags": [
+    "exclamation",
+    "alert",
+    "handdrawn"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "sticker.png",
+  "durationMs": 3000,
+  "idle": "pop",
+  "files": [
+    {
+      "path": "sticker.png",
+      "bytes": 10240
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "cat": "text",
+  "name": {
+    "en": "Outlined Caption",
+    "zh-CN": "描边字幕",
+    "ja": "縁取り字幕",
+    "ko": "외곽선 자막",
+    "es": "Subtítulo contorno"
+  },
+  "about": "White words with a thin black outline and no box, the classic film caption. For dialogue over bright and busy pictures.",
+  "tags": [
+    "subtitle",
+    "caption",
+    "outline"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "style.json",
+  "files": [
+    {
+      "path": "style.json",
+      "bytes": 240
+    }
+  ]
+}

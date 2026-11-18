@@ -1,0 +1,40 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Rainbow Hot Spring Time-lapse",
+    "zh-CN": "彩虹温泉延时",
+    "ja": "虹色の温泉タイムラプス",
+    "ko": "무지개 온천 타임랩스",
+    "es": "Fuente termal multicolor, time-lapse"
+  },
+  "about": "Steam drifts across Grand Prismatic Spring in Yellowstone, its turquoise pool ringed with orange and yellow, in a time-lapse from the overlook.",
+  "tags": [
+    "hot-spring",
+    "yellowstone",
+    "time-lapse",
+    "steam",
+    "national-park",
+    "colorful"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Grand_Prismatic_Spring_(timelapse).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 18000,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 18486129,
+      "sha256": "c6d71b8fcc72f59df718974bf1f854330689627f005ccf1185b67daadc79d277"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 168686
+    }
+  ]
+}

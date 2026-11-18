@@ -1,0 +1,7 @@
+/* A warm light leak blooms over the cut and burns to white at its middle (0.4 s of 0.8 s). */
+.w { position: fixed; inset: 0; overflow: hidden; }
+.leak { position: absolute; inset: -40%; background: radial-gradient(circle at 50% 50%, #fffaf0 0%, rgba(255, 196, 120, 0.95) 22%, rgba(255, 110, 60, 0.6) 42%, rgba(255, 80, 40, 0) 62%);
+  animation: leak 0.8s cubic-bezier(0.4, 0, 0.3, 1) both; }
+.wash { position: absolute; inset: 0; background: #fff7ea; animation: wash 0.8s linear both; }
+@keyframes leak { 0% { opacity: 0; transform: translateX(-45%) scale(0.6); } 45% { opacity: 1; transform: translateX(0) scale(1.4); } 100% { opacity: 0; transform: translateX(40%) scale(1.8); } }
+@keyframes wash { 0%, 25% { opacity: 0; } 45%, 55% { opacity: 1; } 85%, 100% { opacity: 0; } }

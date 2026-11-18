@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Applause",
+    "zh-CN": "掌声",
+    "ja": "拍手",
+    "ko": "박수",
+    "es": "Aplausos"
+  },
+  "about": "Applause from about 150 people, for a win or a bow.",
+  "tags": [
+    "applause",
+    "crowd",
+    "cheer"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/applause-150-people-s0019.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 20000,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 444018
+    }
+  ]
+}

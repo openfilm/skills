@@ -80,7 +80,7 @@
       "description": "Its items, in the order shown: existing item IDs, each in at most one pack, of any category.",
       "items": {
         "type": "string",
-        "pattern": "^(sound|music|transition|effect)/[a-z0-9]+(?:-[a-z0-9]+)*$"
+        "pattern": "^(media|sound|music|transition|effect)/[a-z0-9]+(?:-[a-z0-9]+)*$"
       }
     },
     "cover": {

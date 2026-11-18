@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Error",
+    "zh-CN": "错误",
+    "ja": "エラー",
+    "ko": "오류",
+    "es": "Error"
+  },
+  "about": "A short error tone for a wrong answer or a failed try.",
+  "tags": [
+    "error",
+    "wrong",
+    "ui"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 104,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 3541
+    }
+  ]
+}

@@ -3,7 +3,11 @@ import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } f
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
-import { ROOT, hash, inspect, inspectPacks, text } from './check.mjs';
+import { hash, inspect, inspectPacks, text } from './check.mjs';
+import { fileURLToPath } from 'node:url';
+
+/* the two starter items, kept here as test material since the Community's library was emptied */
+const FIXTURES = fileURLToPath(new URL('./fixtures/', import.meta.url));
 import { blobsOf, build, versionsRaised } from './build.mjs';
 
 const ITEMS = ['sound/glass-pulse', 'transition/glitch'];
@@ -13,7 +17,7 @@ const SOURCE = '0'.repeat(40);
 function library(t) {
   const root = mkdtempSync(join(tmpdir(), 'openfilm-packs-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));
-  for (const id of ITEMS) cpSync(join(ROOT, id), join(root, id), { recursive: true });
+  for (const id of ITEMS) cpSync(join(FIXTURES, id), join(root, id), { recursive: true });
   writeFileSync(join(root, 'revoked.json'), '[]\n');
   const approvals = Object.fromEntries(ITEMS.map((id) => [id, {
     fingerprint: inspect(id, { root }).fingerprint, evidence: 'Original first-party work reviewed by a maintainer.',
@@ -48,7 +52,7 @@ test('a catalog with no packs is what it was before packs', (t) => {
 test('a pack builds into the catalog with its cover as a blob', (t) => {
   const { root, pack, approvePacks } = library(t);
   const { dir } = pack('starter', { cover: 'cover.jpg' });
-  const cover = readFileSync(join(ROOT, 'transition/glitch/poster.jpg'));
+  const cover = readFileSync(join(FIXTURES, 'transition/glitch/poster.jpg'));
   writeFileSync(join(dir, 'cover.jpg'), cover);
   assert.throws(() => build({ root, source: SOURCE }), /packs\/starter: maintainer approval/);
   approvePacks();
@@ -97,12 +101,12 @@ test('the check refuses a pack that breaks the rules', (t) => {
   pack('starter', { tags: ['extra'] });
   refused(/invalid pack.json fields/);
   pack('starter');
-  writeFileSync(join(dir, 'cover.jpg'), readFileSync(join(ROOT, 'transition/glitch/poster.jpg')));
+  writeFileSync(join(dir, 'cover.jpg'), readFileSync(join(FIXTURES, 'transition/glitch/poster.jpg')));
   refused(/unexpected file: cover.jpg/);
   pack('starter', { cover: 'cover.jpg' });
   writeFileSync(join(dir, 'cover.jpg'), Buffer.alloc(1024 * 1024 + 1, 0xff));
   refused(/at most 1 MiB/);
-  writeFileSync(join(dir, 'cover.jpg'), readFileSync(join(ROOT, 'transition/glitch/preview.mp4')));
+  writeFileSync(join(dir, 'cover.jpg'), readFileSync(join(FIXTURES, 'transition/glitch/preview.mp4')));
   refused(/mjpeg/);
   rmSync(join(dir, 'cover.jpg'));
   pack('starter');

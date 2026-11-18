@@ -1,0 +1,34 @@
+/* Confetti falls in a burst from the top, spinning and swaying, then keeps drifting down. Any length. */
+.w { position: fixed; inset: 0; overflow: hidden; }
+.p { position: absolute; top: -8%; width: 1.6vh; height: 2.6vh; border-radius: 0.3vh; animation: fall 3s linear infinite both; }
+@keyframes fall { 0% { transform: translate(0, 0) rotate(0deg) rotateY(0deg); } 25% { transform: translate(3vh, 30vh) rotate(160deg) rotateY(180deg); } 50% { transform: translate(-2vh, 60vh) rotate(320deg) rotateY(360deg); } 75% { transform: translate(3vh, 90vh) rotate(480deg) rotateY(540deg); } 100% { transform: translate(-1vh, 120vh) rotate(640deg) rotateY(720deg); } }
+.p:nth-child(1) { left: 1.3%; background: #ff5c8a; border-radius: 50%; transform: scale(0.91); animation-duration: 3.18s; animation-delay: 0.07s; width: 1.46vh; height: 1.46vh; }
+.p:nth-child(2) { left: 5.5%; background: #ffd23f; transform: scale(1.06); animation-duration: 2.47s; animation-delay: 0.46s; width: 1.7vh; height: 2.76vh; }
+.p:nth-child(3) { left: 6.8%; background: #3ec5a8; transform: scale(1.1); animation-duration: 2.48s; animation-delay: 0.08s; width: 1.76vh; height: 2.86vh; }
+.p:nth-child(4) { left: 11.6%; background: #7b6cff; transform: scale(1.38); animation-duration: 2.55s; animation-delay: 0.2s; width: 2.21vh; height: 3.59vh; }
+.p:nth-child(5) { left: 15.8%; background: #ff9f43; border-radius: 50%; transform: scale(1.46); animation-duration: 3.09s; animation-delay: 0.36s; width: 2.34vh; height: 2.34vh; }
+.p:nth-child(6) { left: 20.5%; background: #4fc3f7; transform: scale(0.83); animation-duration: 3.43s; animation-delay: 0.26s; width: 1.33vh; height: 2.16vh; }
+.p:nth-child(7) { left: 20.4%; background: #ffffff; transform: scale(0.88); animation-duration: 2.77s; animation-delay: 0.73s; width: 1.41vh; height: 2.29vh; }
+.p:nth-child(8) { left: 23.9%; background: #ff5c8a; transform: scale(1.21); animation-duration: 3.17s; animation-delay: 0.34s; width: 1.94vh; height: 3.15vh; }
+.p:nth-child(9) { left: 28.7%; background: #ffd23f; border-radius: 50%; transform: scale(0.84); animation-duration: 2.47s; animation-delay: 0.19s; width: 1.34vh; height: 1.34vh; }
+.p:nth-child(10) { left: 32.5%; background: #3ec5a8; transform: scale(1.1); animation-duration: 2.78s; animation-delay: 0.53s; width: 1.76vh; height: 2.86vh; }
+.p:nth-child(11) { left: 34.9%; background: #7b6cff; transform: scale(1.01); animation-duration: 3.35s; animation-delay: 0.63s; width: 1.62vh; height: 2.63vh; }
+.p:nth-child(12) { left: 37.4%; background: #ff9f43; transform: scale(1.2); animation-duration: 3.03s; animation-delay: 0.79s; width: 1.92vh; height: 3.12vh; }
+.p:nth-child(13) { left: 42.6%; background: #4fc3f7; border-radius: 50%; transform: scale(1.0); animation-duration: 3.58s; animation-delay: 0.11s; width: 1.6vh; height: 1.6vh; }
+.p:nth-child(14) { left: 44.7%; background: #ffffff; transform: scale(1.33); animation-duration: 2.58s; animation-delay: 0.44s; width: 2.13vh; height: 3.46vh; }
+.p:nth-child(15) { left: 46.5%; background: #ff5c8a; transform: scale(1.27); animation-duration: 3.32s; animation-delay: 0.52s; width: 2.03vh; height: 3.3vh; }
+.p:nth-child(16) { left: 53.2%; background: #ffd23f; transform: scale(1.02); animation-duration: 3.23s; animation-delay: 0.53s; width: 1.63vh; height: 2.65vh; }
+.p:nth-child(17) { left: 55.3%; background: #3ec5a8; border-radius: 50%; transform: scale(1.12); animation-duration: 3.41s; animation-delay: 0.85s; width: 1.79vh; height: 1.79vh; }
+.p:nth-child(18) { left: 58.2%; background: #7b6cff; transform: scale(1.26); animation-duration: 2.47s; animation-delay: 0.63s; width: 2.02vh; height: 3.28vh; }
+.p:nth-child(19) { left: 62.2%; background: #ff9f43; transform: scale(1.5); animation-duration: 3.39s; animation-delay: 0.26s; width: 2.4vh; height: 3.9vh; }
+.p:nth-child(20) { left: 64.4%; background: #4fc3f7; transform: scale(1.27); animation-duration: 2.43s; animation-delay: 0.42s; width: 2.03vh; height: 3.3vh; }
+.p:nth-child(21) { left: 66.9%; background: #ffffff; border-radius: 50%; transform: scale(0.88); animation-duration: 2.47s; animation-delay: 0.69s; width: 1.41vh; height: 1.41vh; }
+.p:nth-child(22) { left: 70.0%; background: #ff5c8a; transform: scale(0.97); animation-duration: 2.87s; animation-delay: 0.78s; width: 1.55vh; height: 2.52vh; }
+.p:nth-child(23) { left: 73.1%; background: #ffd23f; transform: scale(1.11); animation-duration: 3.06s; animation-delay: 0.8s; width: 1.78vh; height: 2.89vh; }
+.p:nth-child(24) { left: 79.4%; background: #3ec5a8; transform: scale(1.4); animation-duration: 2.73s; animation-delay: 0.37s; width: 2.24vh; height: 3.64vh; }
+.p:nth-child(25) { left: 80.9%; background: #7b6cff; border-radius: 50%; transform: scale(1.42); animation-duration: 3.55s; animation-delay: 0.14s; width: 2.27vh; height: 2.27vh; }
+.p:nth-child(26) { left: 83.5%; background: #ff9f43; transform: scale(0.96); animation-duration: 2.68s; animation-delay: 0.44s; width: 1.54vh; height: 2.5vh; }
+.p:nth-child(27) { left: 88.4%; background: #4fc3f7; transform: scale(0.98); animation-duration: 2.4s; animation-delay: 0.38s; width: 1.57vh; height: 2.55vh; }
+.p:nth-child(28) { left: 90.9%; background: #ffffff; transform: scale(1.2); animation-duration: 3.54s; animation-delay: 0.62s; width: 1.92vh; height: 3.12vh; }
+.p:nth-child(29) { left: 94.8%; background: #ff5c8a; border-radius: 50%; transform: scale(1.23); animation-duration: 3.21s; animation-delay: 0.05s; width: 1.97vh; height: 1.97vh; }
+.p:nth-child(30) { left: 99.6%; background: #ffd23f; transform: scale(1.35); animation-duration: 3.45s; animation-delay: 0.72s; width: 2.16vh; height: 3.51vh; }

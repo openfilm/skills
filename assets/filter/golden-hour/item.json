@@ -1,0 +1,33 @@
+{
+  "cat": "filter",
+  "name": {
+    "en": "Golden Hour",
+    "zh-CN": "金色时刻",
+    "ja": "ゴールデンアワー",
+    "ko": "골든 아워",
+    "es": "Hora dorada"
+  },
+  "about": "Warm golden light across the frame, like the last hour of sun. For romance, travel and nostalgia.",
+  "tags": [
+    "warm",
+    "golden",
+    "sunset"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "own"
+  },
+  "version": 1,
+  "main": "grade.json",
+  "files": [
+    {
+      "path": "grade.json",
+      "bytes": 200
+    },
+    {
+      "path": "sample.jpg",
+      "bytes": 431878
+    }
+  ]
+}

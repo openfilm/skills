@@ -1,0 +1,41 @@
+{
+  "cat": "media",
+  "media": "video",
+  "name": {
+    "en": "Orbit into Night",
+    "zh-CN": "驶入夜色的轨道",
+    "ja": "夜へ向かう軌道",
+    "ko": "밤으로 들어가는 궤도",
+    "es": "Órbita hacia la noche"
+  },
+  "about": "From the International Space Station the ocean and clouds fade from day into darkness as the station crosses the line between day and night.",
+  "tags": [
+    "earth",
+    "orbit",
+    "space-station",
+    "dusk",
+    "night",
+    "terminator",
+    "clouds"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:View_of_Planet_Earth_(4K).webm"
+  },
+  "version": 1,
+  "main": "media.mp4",
+  "durationMs": 16016,
+  "files": [
+    {
+      "path": "media.mp4",
+      "bytes": 6873801,
+      "sha256": "0c38ee62ac63759549bb316e05595db2e225011b6a85b58f7ed9125b2962df4d"
+    },
+    {
+      "path": "poster.jpg",
+      "bytes": 238118
+    }
+  ]
+}

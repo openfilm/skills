@@ -1,0 +1,21 @@
+{"clips": [
+  {"track": 0, "at": 2.6, "time": [0, 2.7], "page": "rank", "size": {"w": 1400, "h": 520}, "place": {"x": 0.33, "y": 0.79, "fit": 0.3},
+    "texts": {".t1": "North Loft Café", ".t2": "3", ".t3": "best for working"},
+    "props": [{"name": "Place", "type": "text", "at": ".t1"}, {"name": "Rank", "type": "text", "at": ".t2"}, {"name": "Why", "type": "text", "at": ".t3"}], "fade": [0, 0.25]},
+  {"track": 0, "at": 6.0, "time": [0, 2.9], "page": "rank", "size": {"w": 1400, "h": 520}, "place": {"x": 0.33, "y": 0.79, "fit": 0.3},
+    "texts": {".t1": "The Green Room", ".t2": "2", ".t3": "sunniest window seats"},
+    "props": [{"name": "Place", "type": "text", "at": ".t1"}, {"name": "Rank", "type": "text", "at": ".t2"}, {"name": "Why", "type": "text", "at": ".t3"}], "fade": [0, 0.25]},
+  {"track": 0, "at": 9.6, "time": [0, 3.4], "page": "rank", "size": {"w": 1400, "h": 520}, "place": {"x": 0.33, "y": 0.79, "fit": 0.3},
+    "texts": {".t1": "Paper & Bean", ".t2": "1", ".t3": "books, lamps, the best flat white"},
+    "props": [{"name": "Place", "type": "text", "at": ".t1"}, {"name": "Rank", "type": "text", "at": ".t2"}, {"name": "Why", "type": "text", "at": ".t3"}], "fade": [0, 0.4]},
+  {"track": 1, "at": 0, "time": [0, 2.5], "page": "title-card",
+    "texts": {".t1": "Cozy Cafés in Town", ".t2": "COUNTDOWN · MY PICKS", ".t3": "TOP 3"},
+    "props": [{"name": "Topic", "type": "text", "at": ".t1"}, {"name": "Line", "type": "text", "at": ".t2"}, {"name": "Headline", "type": "text", "at": ".t3"}]},
+  {"track": 1, "at": 5.25, "time": [0, 0.7], "page": "shutter"},
+  {"track": 1, "at": 8.85, "time": [0, 0.7], "page": "shutter"},
+  {"track": 1, "at": 9.9, "time": [0, 3.1], "page": "crown", "size": {"w": 700, "h": 700}, "place": {"x": 0.82, "y": 0.27, "fit": 0.38},
+    "texts": {".t1": "MY PICK"}, "props": [{"name": "Tag", "type": "text", "at": ".t1"}], "fade": [0, 0.4]},
+  {"track": 3, "at": 0, "time": [0, 5.6], "picture": "example-1"},
+  {"track": 3, "at": 5.6, "time": [0, 3.6], "picture": "example-2"},
+  {"track": 3, "at": 9.2, "time": [0, 3.8], "picture": "example-3", "fade": [0, 0.5]}
+]}

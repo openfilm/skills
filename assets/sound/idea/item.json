@@ -1,0 +1,31 @@
+{
+  "cat": "sound",
+  "name": {
+    "en": "Idea",
+    "zh-CN": "灵感",
+    "ja": "ひらめき",
+    "ko": "아이디어",
+    "es": "Idea"
+  },
+  "about": "A bright chime for an idea, a tip or a key point.",
+  "tags": [
+    "idea",
+    "chime",
+    "tip"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://bigsoundbank.com/idea-1-s1398.html"
+  },
+  "version": 1,
+  "main": "sound.m4a",
+  "durationMs": 2606,
+  "files": [
+    {
+      "path": "sound.m4a",
+      "bytes": 44349
+    }
+  ]
+}

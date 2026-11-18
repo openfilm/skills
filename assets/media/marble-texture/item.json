@@ -1,0 +1,35 @@
+{
+  "cat": "media",
+  "media": "image",
+  "name": {
+    "en": "White Marble",
+    "zh-CN": "白色大理石",
+    "ja": "白い大理石",
+    "ko": "흰 대리석",
+    "es": "Mármol blanco"
+  },
+  "about": "Close-up of rough white marble with soft grey and beige veins, filling the frame: a clean natural texture for backgrounds and titles.",
+  "tags": [
+    "marble",
+    "texture",
+    "stone",
+    "white",
+    "background",
+    "natural"
+  ],
+  "by": "riverisbuilding",
+  "license": "CC0-1.0",
+  "source": {
+    "kind": "cc0",
+    "url": "https://commons.wikimedia.org/wiki/File:Marble_Kymi_Euboea_Greece.jpg"
+  },
+  "version": 1,
+  "main": "media.jpg",
+  "files": [
+    {
+      "path": "media.jpg",
+      "bytes": 1933941,
+      "sha256": "f3ba5fd9e77acac60123810485b119c2acec2c84e5b6625038cb8bfa3ef3dfbc"
+    }
+  ]
+}
