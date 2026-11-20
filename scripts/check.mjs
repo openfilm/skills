@@ -23,7 +23,7 @@
 // every time.
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, posix, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -143,6 +143,9 @@ export function fetchAt(repo, commit) {
   const dir = mkdtempSync(join(tmpdir(), 'openfilm-skill-'));
   const git = (/** @type {string[]} */ a) => execFileSync('git', ['-C', dir, ...a], { stdio: ['ignore', 'ignore', 'pipe'] });
   git(['init', '-q']);
+  /* files as committed: no line-end conversion, whatever core.autocrlf or the repository's .gitattributes say (Git for Windows sets core.autocrlf) */
+  mkdirSync(join(dir, '.git', 'info'), { recursive: true });
+  writeFileSync(join(dir, '.git', 'info', 'attributes'), '* -text\n');
   git(['fetch', '-q', '--depth', '1', repo, commit]);
   git(['checkout', '-q', 'FETCH_HEAD']);
   return dir;
