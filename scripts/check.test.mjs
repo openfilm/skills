@@ -1,10 +1,11 @@
 // node --test scripts/*.test.mjs
 import assert from 'node:assert/strict';
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
-import { buildIndex, checkListing, checkRegistry, checkRevoked, checkUnique, indexText, problems, uidOf } from './check.mjs';
+import { buildIndex, checkListing, checkRegistry, checkRevoked, checkUnique, fetchAt, indexText, problems, uidOf } from './check.mjs';
 import { folderDigest } from './digest.mjs';
 
 const listed = [{ name: 'replicate', repo: 'https://github.com/openfilm/skill-replicate', commit: 'e'.repeat(40) }];
@@ -148,5 +149,25 @@ test('the check reads registry/, revoked.json, and whether index.json is their b
     assert.ok(out.some((p) => /still listed/.test(p)), out.join('\n'));
   } finally {
     rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('a fetched skill reads as committed, line ends and all', () => {
+  const src = mkdtempSync(join(tmpdir(), 'check-src-'));
+  let dir;
+  try {
+    const git = (/** @type {string[]} */ a) => execFileSync('git', ['-C', src, '-c', 'user.name=t', '-c', 'user.email=t@t', ...a], { encoding: 'utf8' }).trim();
+    git(['init', '-q']);
+    // what Git for Windows' core.autocrlf does, on any system
+    writeFileSync(join(src, '.gitattributes'), '* text eol=crlf\n');
+    writeFileSync(join(src, 'SKILL.md'), 'one\ntwo\n');
+    git(['add', '.']);
+    git(['commit', '-q', '-m', 'a skill']);
+    const commit = git(['rev-parse', 'HEAD']);
+    dir = fetchAt(src, commit);
+    assert.equal(readFileSync(join(dir, 'SKILL.md'), 'utf8'), 'one\ntwo\n');
+  } finally {
+    rmSync(src, { recursive: true, force: true });
+    if (dir) rmSync(dir, { recursive: true, force: true });
   }
 });
