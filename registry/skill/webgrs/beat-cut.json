@@ -1,0 +1,29 @@
+{
+  "name": "beat-cut",
+  "repo": "https://github.com/WEBGRS/openfilm-beat-cut",
+  "path": "skills/beat-cut",
+  "version": "0.4.1",
+  "commit": "ff7f83fc2269085084f825581ee48624b1c87b88",
+  "files": [
+    {
+      "path": "cover.jpg",
+      "size": 61526,
+      "sha256": "5a375d82be6da6a6415e6770cdb8ad75c2a4c2f9d7ad77d690b444d0d764f0d7"
+    },
+    {
+      "path": "openfilm.json",
+      "size": 7760,
+      "sha256": "8c2d769fa270b4929ed4d2a841367f1995606b08cd4537d9a540fb3ba29e6da6"
+    },
+    {
+      "path": "scripts/beats.mjs",
+      "size": 106475,
+      "sha256": "a00893d0e5663bc12132bbca5830f109daf73415bd0cdc23fef7af63b966a254"
+    },
+    {
+      "path": "SKILL.md",
+      "size": 4308,
+      "sha256": "6c9f5e1c9be4b30c0f43b1fb70edcbb9c95264023b1aef9e2af9875020d0bbec"
+    }
+  ]
+}
